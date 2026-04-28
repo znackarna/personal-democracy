@@ -1,0 +1,191 @@
+# Zdroje pro týdenní pipeline.
+#
+# Kategorie:
+#   czech_media   — česká redakční média (zpravodajství, investigace)
+#   open_data     — strukturovaná data státu (parlament, rejstříky, soudy)
+#   watchdog      — neziskové watchdog organizace
+#   international — mezinárodní instituce a indexy
+#
+# Typ:
+#   rss   — RSS/Atom feed, čte se přes rss-parser
+#   api   — strukturované JSON API
+#   html  — fallback HTML scrape, používat jen kde RSS chybí
+#
+# URL je odkaz, ze kterého pipeline čte. Pole `homepage` je info pro lidi.
+# Pole `notes` je volitelný komentář pro reviewery a budoucí Claude session.
+#
+# POZOR: některé URL jsou orientační a vyžadují ověření při implementaci
+# fetch-sources.ts. Před prvním produkčním během každý feed otestovat ručně.
+
+version: 1
+sources:
+  # ============================================================
+  # Česká redakční média
+  # ============================================================
+  - id: denik-n
+    name: Deník N
+    category: czech_media
+    type: rss
+    url: https://denikn.cz/feed/
+    homepage: https://denikn.cz/
+    notes: Předplatné u některých článků; pipeline pracuje s titulkem a perexem.
+
+  - id: irozhlas
+    name: iROZHLAS
+    category: czech_media
+    type: rss
+    url: https://www.irozhlas.cz/rss/irozhlas
+    homepage: https://www.irozhlas.cz/
+
+  - id: ct24
+    name: ČT24
+    category: czech_media
+    type: rss
+    url: https://ct24.ceskatelevize.cz/rss
+    homepage: https://ct24.ceskatelevize.cz/
+    notes: URL ověřit, ČT občas přesouvá feed.
+
+  - id: hn
+    name: Hospodářské noviny
+    category: czech_media
+    type: rss
+    url: https://hn.cz/?m=rss
+    homepage: https://hn.cz/
+
+  - id: aktualne
+    name: Aktuálně.cz
+    category: czech_media
+    type: rss
+    url: https://www.aktualne.cz/rss/
+    homepage: https://www.aktualne.cz/
+
+  - id: investigace-cz
+    name: Investigace.cz
+    category: czech_media
+    type: rss
+    url: https://www.investigace.cz/feed/
+    homepage: https://www.investigace.cz/
+    notes: Investigativní novinařina, často pomalejší kadence ale velmi vysoká relevance.
+
+  - id: a2larm
+    name: A2larm
+    category: czech_media
+    type: rss
+    url: https://a2larm.cz/feed/
+    homepage: https://a2larm.cz/
+
+  - id: seznam-zpravy
+    name: Seznam Zprávy
+    category: czech_media
+    type: rss
+    url: https://www.seznamzpravy.cz/rss
+    homepage: https://www.seznamzpravy.cz/
+
+  # ============================================================
+  # Otevřená data státu
+  # ============================================================
+  - id: hlidac-statu
+    name: Hlídač státu
+    category: open_data
+    type: api
+    url: https://www.hlidacstatu.cz/api/v2/
+    homepage: https://www.hlidacstatu.cz/
+    notes: Vyžaduje API klíč (zdarma po registraci). Hlasování PSP, smlouvy, dotace.
+
+  - id: psp-cz
+    name: Poslanecká sněmovna PČR
+    category: open_data
+    type: html
+    url: https://www.psp.cz/sqw/hp.sqw
+    homepage: https://www.psp.cz/
+    notes: Otevřená data v různých formátech, nejednotný API. Sledovat hlasování a zkrácená čtení.
+
+  - id: senat-cz
+    name: Senát PČR
+    category: open_data
+    type: html
+    url: https://www.senat.cz/
+    homepage: https://www.senat.cz/
+
+  - id: ustavni-soud
+    name: Ústavní soud ČR
+    category: open_data
+    type: html
+    url: https://www.usoud.cz/aktualne
+    homepage: https://www.usoud.cz/
+
+  - id: nejvyssi-soud
+    name: Nejvyšší soud
+    category: open_data
+    type: html
+    url: https://www.nsoud.cz/
+    homepage: https://www.nsoud.cz/
+
+  - id: nejvyssi-spravni-soud
+    name: Nejvyšší správní soud
+    category: open_data
+    type: html
+    url: https://www.nssoud.cz/
+    homepage: https://www.nssoud.cz/
+
+  # ============================================================
+  # Watchdogy
+  # ============================================================
+  - id: ti-cz
+    name: Transparency International ČR
+    category: watchdog
+    type: rss
+    url: https://www.transparency.cz/feed/
+    homepage: https://www.transparency.cz/
+
+  - id: rekonstrukce-statu
+    name: Rekonstrukce státu
+    category: watchdog
+    type: html
+    url: https://www.rekonstrukcestatu.cz/aktuality
+    homepage: https://www.rekonstrukcestatu.cz/
+
+  - id: iure
+    name: Iuridicum Remedium
+    category: watchdog
+    type: rss
+    url: https://www.iure.org/feed
+    homepage: https://www.iure.org/
+
+  - id: frank-bold
+    name: Frank Bold
+    category: watchdog
+    type: html
+    url: https://frankbold.org/
+    homepage: https://frankbold.org/
+
+  # ============================================================
+  # Mezinárodní instituce
+  # ============================================================
+  - id: greco
+    name: GRECO (Council of Europe)
+    category: international
+    type: html
+    url: https://www.coe.int/en/web/greco/evaluations/czech-republic
+    homepage: https://www.coe.int/en/web/greco
+
+  - id: venice-commission
+    name: Venice Commission
+    category: international
+    type: html
+    url: https://www.venice.coe.int/
+    homepage: https://www.venice.coe.int/
+
+  - id: ec-rule-of-law
+    name: European Commission Rule of Law Report
+    category: international
+    type: html
+    url: https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/upholding-rule-law/rule-law/rule-law-mechanism_en
+    homepage: https://commission.europa.eu/
+
+  - id: eclr
+    name: European Court of Human Rights — ČR
+    category: international
+    type: html
+    url: https://hudoc.echr.coe.int/
+    homepage: https://hudoc.echr.coe.int/

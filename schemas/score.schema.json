@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://democracy-index.cz/schemas/score.schema.json",
+  "title": "ScoreSnapshot",
+  "description": "Weekly computed score snapshot. Appended to data/scores/timeline.json by src/pipeline/score.ts.",
+  "type": "object",
+  "required": [
+    "week",
+    "computed_at",
+    "overall_score",
+    "pillars",
+    "active_events_count",
+    "structural_baseline"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "week": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-W(0[1-9]|[1-4][0-9]|5[0-3])$",
+      "description": "ISO 8601 week, e.g. 2026-W17."
+    },
+    "computed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "overall_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "pillars": {
+      "type": "object",
+      "required": ["electoral", "governance", "judicial", "media", "civil", "corruption"],
+      "additionalProperties": false,
+      "properties": {
+        "electoral": { "type": "number", "minimum": 0, "maximum": 100 },
+        "governance": { "type": "number", "minimum": 0, "maximum": 100 },
+        "judicial": { "type": "number", "minimum": 0, "maximum": 100 },
+        "media": { "type": "number", "minimum": 0, "maximum": 100 },
+        "civil": { "type": "number", "minimum": 0, "maximum": 100 },
+        "corruption": { "type": "number", "minimum": 0, "maximum": 100 }
+      }
+    },
+    "active_events_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of active events with non-zero aged impact at computed_at."
+    },
+    "structural_baseline": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-Q[1-4]$",
+      "description": "Identifier of the structural snapshot used as baseline, e.g. 2026-Q2."
+    }
+  }
+}
