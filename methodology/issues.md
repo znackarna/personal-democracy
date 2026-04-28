@@ -62,4 +62,8 @@ Events 009 (Grolich KDU sjezd) a 010 (NATO tribunál) mají `direction: 0` nebo 
 
 **Návrh fix:** přitvrdit pre-filter prompt — drop articles describing routine party events (volby vedení), standard diplomatic moves bez controversy, ceremoniální akce.
 
-**Status:** open. Tyto issue budou řešené v iteraci 4 (před zapnutím GH Actions cronu) — orchestrátor a infrastruktura fungují, ale prompty potřebují kalibraci.
+**Status:** ✅ resolved v iteraci 4 (commit 14d9b1f).
+
+- Issue 1 (halucinované roky): vyřešeno přidáním `Today` + `Reference week` headeru do user message v `extract-events.ts` a předáním `published_at` per článek. Re-run: 14/14 events s datem 2026 (předtím 6/17).
+- Issue 2 (duplikace): vyřešeno novým modulem `src/pipeline/dedupe.ts` (Czech-aware Jaccard přes 5-znakové prefixy, conflict detection → `disputed`). Re-run: NCOZ Příbram kauza správně sloučená do jednoho disputed eventu.
+- Issue 3 (noise): vyřešeno přitvrzením pre-filter promptu o explicitní drop kategorie (sjezdy, ceremonial, background context). Re-run: 0/14 events s `direction: 0` (předtím 2/17).

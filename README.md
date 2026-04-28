@@ -2,7 +2,7 @@
 
 Týdně aktualizovaný index stavu demokracie v České republice. Cílem **není** nahradit zavedené roční indexy (V-Dem, EIU, Freedom House), ale **doplnit je o rychlejší detekci směru pohybu** mezi jejich aktualizacemi.
 
-> **Stav: WIP, iterace 1.** Foundation a deterministická skórovací funkce. Pipeline (sběr zpráv, klasifikace) ani veřejný dashboard zatím neexistují. Detail metodiky a architektury je v [CLAUDE.md](CLAUDE.md).
+> **Stav: WIP, iterace 4 dokončená.** Pipeline funguje end-to-end (fetch → pre-filter → klasifikace → dedupe → skóre). Strukturální baseline je zatím **placeholder** (real V-Dem/EIU mapování je iter 5). Veřejný dashboard zatím neexistuje (iter 6). Detail metodiky a architektury je v [CLAUDE.md](CLAUDE.md).
 
 ## Jak to funguje
 
@@ -23,32 +23,75 @@ Veškerá aritmetika je deterministická a má unit testy ([`src/pipeline/score.
 
 | Cesta | Obsah |
 |---|---|
-| `methodology/` | Definice pilířů, rubric závažnosti, váhy, changelog |
-| `schemas/` | JSON schémata pro events a score snapshoty |
+| `methodology/` | Definice pilířů, rubric závažnosti, váhy, changelog, otevřené issues |
+| `schemas/` | JSON schémata pro events, score snapshoty, structural baseline |
 | `src/lib/types.ts` | Zod schémata (single source of truth pro TS typy) |
+| `src/lib/claude.ts` | Anthropic SDK wrapper s prompt cachingem |
+| `src/lib/feeds.ts` | RSS parser wrapper, dedupe podle URL |
 | `src/pipeline/score.ts` | Čistá deterministická skórovací funkce |
-| `tests/` | Vitest testy, povinné 100% coverage pro `score.ts` |
-| `config/sources.yaml` | Seznam zdrojů pro budoucí pipeline |
-| `data/` | Strukturální baseline, týdenní events, historie skóre (zatím prázdné) |
-| `prompts/` | Prompty pro Claude (zatím stuby) |
-| `CLAUDE.md` | Trvalý kontext pro Claude Code, plný projektový spec |
+| `src/pipeline/fetch-sources.ts` | Sběr zpráv ze zdrojů v `config/sources.yaml` |
+| `src/pipeline/pre-filter.ts` | Haiku 4.5 relevance gate |
+| `src/pipeline/extract-events.ts` | Sonnet 4.6 klasifikace s methodology kontextem |
+| `src/pipeline/dedupe.ts` | Slučování duplicitních events napříč zdroji |
+| `src/pipeline/validate.ts` | AJV validace JSON schémat |
+| `src/pipeline/run-weekly.ts` | Orchestrátor + CLI |
+| `tests/` | 67 vitest testů, 100% coverage pro `score.ts` |
+| `config/sources.yaml` | Seznam RSS feedů a (plánovaných) API/HTML zdrojů |
+| `data/structural/` | Quarterly baseline (`2026-Q2.json` zatím placeholder) |
+| `data/events/` | Týdenní soubory s klasifikovanými events (`2026-W17.json` první živý běh) |
+| `data/scores/` | `timeline.json` historie skóre |
+| `prompts/` | Plné prompty pro Haiku pre-filter a Sonnet klasifikaci |
+| `CLAUDE.md` | Trvalý kontext pro Claude Code, plný projektový spec + status iterací |
 
 ## Lokální běh
 
 ```bash
 npm install
-npm test          # vitest, score function
-npm run typecheck # tsc --noEmit
-npm run lint      # eslint
+cp .env.example .env  # a doplnit ANTHROPIC_API_KEY z console.anthropic.com
+
+# Lint, typecheck, testy
+npm run typecheck
+npm run lint
+npm test
+
+# Dry-run pipeline (bez LLM, jen fetch + skóre)
+npm run pipeline:weekly -- --week=2026-W17 --baseline=2026-Q2 --skip-llm
+
+# Plný týdenní běh (Haiku + Sonnet, ~$0.50)
+npm run pipeline:weekly -- --week=2026-W17 --baseline=2026-Q2 \
+  --sources=denik-n,irozhlas,aktualne,investigace-cz
 ```
+
+Výstup živého běhu se zapisuje do [`data/events/{week}.json`](data/events/) a [`data/scores/timeline.json`](data/scores/timeline.json). Eventy mají `reviewer: "auto"` a vyžadují lidský review před commitem do produkce.
+
+## Příklad výstupu (2026-W17, iterace 4)
+
+```
+fetched:        90 articles
+pre-filtered:   28 kept
+classified:     14 valid events
+overall score:  68.4 (z baseline 70.3)
+per-pillar:
+  electoral   78
+  governance  57
+  judicial    72.7
+  media       66.5
+  civil       80.2
+  corruption  58.5
+```
+
+Score je smysluplný relativně k baseline, ale **publikovat ho zatím nelze** — baseline je placeholder, real mapping z V-Dem/EIU je iter 5.
 
 ## Roadmap
 
-- **Iterace 1 (current):** Foundation + score.ts + methodology drafty.
-- **Iterace 2:** Pipeline (`fetch-sources`, `pre-filter`, `extract-events`, `validate`), prompty, počáteční strukturální baseline pro 2026-Q2.
-- **Iterace 3:** Next.js dashboard se statickým exportem, deploy na Vercel.
-- **Iterace 4:** GitHub Actions workflows (`weekly-pipeline`, `validate-pr`, `recompute-scores`).
-- **Iterace 5+:** Backtesting na 2018–2020, kvartální validace proti V-Dem/EIU.
+- ✅ **Iterace 1:** Foundation + `score.ts` + methodology drafty.
+- ✅ **Iterace 2:** Pipeline core (fetch, pre-filter, extract, validate) + prompty.
+- ✅ **Iterace 3:** Orchestrátor `run-weekly.ts` + první živý běh.
+- ✅ **Iterace 4:** Prompt tuning + dedupe modul, vyřešené issues z prvního běhu.
+- ▶ **Iterace 5 (current):** Real strukturální baseline z V-Dem 2024 / EIU / FH / RSF / TI / WJP s dokumentovaným mapováním.
+- **Iterace 6:** Next.js + Tailwind dashboard, static export, deploy na Vercel.
+- **Iterace 7:** GitHub Actions workflows (`weekly-pipeline`, `validate-pr`, `recompute-scores`).
+- **Iterace 8+:** Backtesting na 2018–2020, kvartální validace proti V-Dem/EIU.
 
 ## Licence
 

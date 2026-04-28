@@ -3,6 +3,21 @@
 > Tento soubor je trvalý kontext pro Claude Code. Čti ho na začátku každé session.
 > Aktualizuje se ručně commitem, nikdy ne automaticky agentem.
 
+## Aktuální stav (2026-04-28)
+
+| Iterace | Status | Co je v ní |
+|---|---|---|
+| 1 | ✅ done | Repo foundation, JSON schémata + Zod typy, `score.ts` čistá deterministická funkce s 100% coverage, methodology v0.1 (pillars, severity_rubric, weights). |
+| 2 | ✅ done | Pipeline core: `claude.ts` SDK wrapper s prompt cachingem, `feeds.ts` rss-parser, `fetch-sources.ts`, `pre-filter.ts` (Haiku 4.5), `extract-events.ts` (Sonnet 4.6), `validate.ts` (AJV). Plné prompty. 56 testů. |
+| 3 | ✅ done | `run-weekly.ts` orchestrátor + CLI (`npm run pipeline:weekly`), placeholder strukturální baseline pro 2026-Q2, první živý běh proti 4 RSS feedům: 90 článků → 28 pre-filtered → 14 events. |
+| 4 | ✅ done | Prompt fixes (datumy, noise filtering) + `dedupe.ts` modul (Czech-aware Jaccard, conflict detection → `disputed`). Re-run prokázal vyřešení tří issues. |
+| 5 | ▶ next | Real strukturální baseline z V-Dem 2024 / EIU 2024 / FH 2025 / RSF 2025 / TI CPI 2024 / WJP 2024 + dokumentované per-pillar mapování. |
+| 6 | pending | Next.js + Tailwind dashboard, static export, deploy na Vercel. |
+| 7 | pending | GitHub Actions: weekly-pipeline, validate-pr, recompute-scores. |
+| 8+ | pending | Backtesting 2018–2020, kvartální validace proti EIU/V-Dem. |
+
+Detail aktivních úkolů a technického dluhu v [`methodology/issues.md`](methodology/issues.md).
+
 ## Cíl projektu
 
 Týdenní automatizované sledování stavu demokracie v České republice. **Cílem není nahradit** zavedené indexy (EIU, V-Dem, Freedom House), ale **doplnit je o rychlejší detekci směru pohybu** mezi jejich ročními aktualizacemi.
@@ -257,28 +272,32 @@ Dashboard nepotřebuje SSR. Build čte `data/scores/timeline.json` a `data/event
 ```bash
 # Setup
 npm install
+cp .env.example .env  # a doplnit ANTHROPIC_API_KEY
 
-# Lokální vývoj dashboardu
-npm run dev
-
-# Build dashboardu (static export do `out/`)
-npm run build
-
-# Pipeline lokálně (s .env z .env.example)
-npm run pipeline:fetch -- --week current
-npm run pipeline:extract -- --week 2026-W17
-npm run pipeline:score -- --rebuild
-
-# Validace eventů proti schématu
-npm run validate -- data/events/2026-W17.json
-
-# Testy
+# Lint, typecheck, testy
+npm run typecheck
+npm run lint
 npm test
-npm run test:watch
+npm run test:coverage  # pro kontrolu, že score.ts má 100 %
 
-# Backtesting
-npm run pipeline:replay -- --from 2024-Q1 --to 2025-Q4
+# Týdenní pipeline lokálně (současný stav iterace 4)
+npm run pipeline:weekly -- --week=2026-W17 --baseline=2026-Q2 \
+  --sources=denik-n,irozhlas,aktualne,investigace-cz
+
+# Pipeline bez LLM (plumbing test, žádné Claude volání)
+npm run pipeline:weekly -- --week=2026-W17 --baseline=2026-Q2 --skip-llm
+
+# (Plánováno iter 6+)
+# npm run dev          # Next.js dev server
+# npm run build        # static export do out/
+# npm run pipeline:replay -- --from 2024-Q1 --to 2025-Q4   # backtesting
 ```
+
+CLI flags pro `pipeline:weekly`:
+- `--week=YYYY-Wxx` (povinné) — týden, který se zpracovává; používá se pro ID events i jako referenční rámec pro klasifikaci
+- `--baseline=YYYY-Qx` (povinné) — quarter strukturálního baseline (`data/structural/{quarter}.json`)
+- `--sources=id1,id2,...` (volitelné) — filtr ID zdrojů z `config/sources.yaml`; default = všechny RSS
+- `--skip-llm` (volitelné) — vynechá pre-filter a klasifikaci, pouze fetch + score plumbing
 
 ## GitHub Actions workflows
 
@@ -312,17 +331,22 @@ npm run pipeline:replay -- --from 2024-Q1 --to 2025-Q4
 - **Production branch:** `main`
 - **Preview deployments:** zapnuté pro všechny PR (užitečné pro review event změn před merge)
 
-## Initial setup (jednorázově, před první týdnem)
+## Initial setup — historie
 
-1. `npm create next-app@latest` (App Router, TS, Tailwind, ESLint).
-2. Přidat strukturu adresářů, schemas, prompts, methodology.
-3. Sepsat `methodology/pillars.md` — co každý pilíř konkrétně měří, podrobně.
-4. Sepsat `methodology/severity_rubric.md` s 5–10 příklady na každou úroveň závažnosti.
-5. Vyplnit počáteční strukturální skóre z V-Dem/EIU dat (2025) do `data/structural/2026-Q2.json`.
-6. Naimplementovat `src/pipeline/score.ts` jako čistou funkci + vitest testy. Před vším ostatním.
-7. Otestovat pipeline retroaktivně na 4–8 týdnech zpětně pro kalibraci závažností.
-8. Připojit Vercel k repu, ověřit static export.
-9. Teprve potom zapnout GitHub Actions cron.
+Tyto kroky byly provedené v iteracích 1–4. Ponecháno jako záznam pořadí, ne aktivní TODO.
+
+1. ✅ Repo struktura, schemas, prompts, methodology stuby (iter 1)
+2. ✅ `methodology/pillars.md` plný draft (iter 1)
+3. ✅ `methodology/severity_rubric.md` s ČR příklady (iter 1)
+4. ✅ `src/pipeline/score.ts` čistá funkce + 22 vitest testů, 100 % coverage (iter 1)
+5. ✅ Pipeline core: `claude.ts`, `feeds.ts`, `fetch-sources.ts`, `pre-filter.ts`, `extract-events.ts`, `validate.ts` + 38 dalších testů (iter 2)
+6. ✅ `run-weekly.ts` orchestrátor + CLI, placeholder baseline 2026-Q2.json, první živý běh (iter 3)
+7. ✅ Prompt tuning + dedupe modul, vyřešené 3 issues z prvního běhu (iter 4)
+8. ⏳ Real strukturální skóre z V-Dem/EIU/FH/RSF/TI/WJP dat → `data/structural/2026-Q2.json` (iter 5, plánované)
+9. ⏳ `npm create next-app` (App Router, TS, Tailwind, ESLint) v `src/app/` (iter 6, plánované)
+10. ⏳ Backtesting na 2018–2020 (iter 8+)
+11. ⏳ Připojit Vercel k repu, ověřit static export (iter 6 / 7)
+12. ⏳ Teprve potom zapnout GitHub Actions cron (iter 7)
 
 ## Co Claude Code typicky řeší v této code base
 
