@@ -2,21 +2,61 @@
   "quarter": "2026-Q2",
   "computed_at": "2026-04-28T00:00:00.000Z",
   "pillars": {
-    "electoral": 78.0,
-    "governance": 65.0,
-    "judicial": 72.0,
-    "media": 68.0,
-    "civil": 80.0,
-    "corruption": 60.0
+    "electoral": 91.8,
+    "governance": 86.3,
+    "judicial": 83.9,
+    "media": 92.0,
+    "civil": 96.9,
+    "corruption": 59.0
   },
   "sources": [
     {
       "index": "V-Dem",
       "year": 2024,
-      "value": 0.78,
+      "value": 0.817,
+      "pillar": "electoral",
       "url": "https://v-dem.net/data/the-v-dem-dataset/",
-      "notes": "PLACEHOLDER — pillar values are not derived from a published mapping. Replace with proper extraction in iteration 4 or earlier review."
+      "notes": "Liberal Democracy Index 2024. Used for electoral pillar (proxy for V-Dem EDI which we don't extract per-component yet)."
+    },
+    {
+      "index": "EIU",
+      "year": 2024,
+      "value": 8.08,
+      "pillar": "governance",
+      "url": "https://d1qqtien6gys07.cloudfront.net/wp-content/uploads/2025/03/Democracy_INDEX_2024.pdf",
+      "notes": "EIU Democracy Index 2024. CZ rank 23, classified as 'full democracy' for first time since 2013."
+    },
+    {
+      "index": "FH-FitW",
+      "year": 2025,
+      "value": 95,
+      "url": "https://freedomhouse.org/country/czechia/freedom-world/2025",
+      "notes": "Freedom in the World 2025 aggregate (PR 37/40 + CL 58/60). Per-category subscores used in mapping: A=4, B=3.75, C=3.67, D=4, E=4, F=3.75, G=3.75 (each /4)."
+    },
+    {
+      "index": "RSF",
+      "year": 2025,
+      "value": 83.96,
+      "pillar": "media",
+      "url": "https://rsf.org/en/index",
+      "notes": "Press Freedom Index 2025. CZ jumped to 10th place, citing increase in public broadcasting funding."
+    },
+    {
+      "index": "TI-CPI",
+      "year": 2024,
+      "value": 59,
+      "pillar": "corruption",
+      "url": "https://www.transparency.org/en/cpi/2024/index/cze",
+      "notes": "Corruption Perceptions Index 2024. CZ rank 39/180. +3 oproti 2023."
+    },
+    {
+      "index": "WJP",
+      "year": 2024,
+      "value": 0.74,
+      "pillar": "judicial",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2024",
+      "notes": "Rule of Law Index 2024. CZ rank 20/140 (15/31 v EU+EFTA+NA). Per-factor scores nedostupné z webu, použit overall jako proxy pro judicial. Iter 6+ doplnit z WJP Excel datasetu."
     }
   ],
-  "notes": "PLACEHOLDER baseline for iteration 3 first run. Pillar scores are plausible-looking values for CZ context but are NOT extracted from V-Dem/EIU/FH/RSF/TI/WJP. The mapping (which V-Dem component → which pillar, with what weighting) is methodologically sensitive and requires explicit per-pillar derivation that is deferred to a future iteration. See methodology/issues.md for the open question. Do not publish public scores from this baseline; use it only for end-to-end pipeline validation."
+  "notes": "v0.2 mapping per methodology/structural_mapping.md. Vážený overall: 85.0. Limitace: WJP per-factor a V-Dem per-component data nejsou v tomto iter extrahované — corruption pilíř má jen 1 zdroj (TI CPI), governance/judicial používají WJP overall jako proxy. Iter 6+ to upřesní. Pro srovnání: EIU 2024 přímo dává 80.8, V-Dem LDI 81.7 — náš agregát 85.0 je o ~3 body výš díky zahrnutí FH (95)."
 }
