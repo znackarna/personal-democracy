@@ -53,8 +53,14 @@ export async function findWeeklySnapshots(opts: WaybackOptions): Promise<CdxRow[
 
   const fromCompact = opts.from.replace(/-/g, '');
   const toCompact = opts.to.replace(/-/g, '');
-  const url = `${CDX_API}?url=${encodeURIComponent(opts.feedUrl)}&from=${fromCompact}&to=${toCompact}&output=json&filter=statuscode:200&filter=mimetype:application/rss%2Bxml&filter=mimetype:text/xml&filter=mimetype:application/xml&fl=timestamp,original,statuscode&collapse=timestamp:8`;
-  // collapse:timestamp:8 dedupes by YYYYMMDD prefix → at most one snapshot per day
+  // Pozn.: CDX `&filter=` klauzule jsou ANDované (ne ORované), takže nelze
+  // požadovat (mimetype=rss OR mimetype=xml OR mimetype=html). Místo toho
+  // mimetype filter úplně vynecháme — některé feedy se v daném snapshotu
+  // servírují jako text/html nebo octet-stream a stejně obsahují validní RSS.
+  // Pokud snapshot není parsovatelný, fetchArchivedRssRange to chytí v try/catch
+  // a snapshot se přeskočí. statuscode:200 + collapse:timestamp:8 (max 1/den)
+  // jsou dostatečné filtry.
+  const url = `${CDX_API}?url=${encodeURIComponent(opts.feedUrl)}&from=${fromCompact}&to=${toCompact}&output=json&filter=statuscode:200&fl=timestamp,original,statuscode&collapse=timestamp:8`;
 
   const fetchText = opts.fetchText ?? defaultFetchText;
   const raw = await fetchText(url);
