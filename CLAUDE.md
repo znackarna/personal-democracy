@@ -22,7 +22,8 @@
 | 13 | ✅ done | Web UX vylepšení: PillarDetail komponenta (per-pilíř karty), IndexComparison (srovnání s externími indexy), ScoreSummary s WoW deltou, InfoBox callouts, Vercel Analytics, /metodika/zdroje/ stránka s auto-renderovanou tabulkou z config/sources.yaml. |
 | 14 | ✅ done | Czech URLs: `/metodika/`, `/udalosti/`, slugy bez diakritiky (`pilire`, `zavaznost`, `vahy`, `model-dohledu`, `strukturalni-mapovani`, `zdroje`, `zmeny`, `otevrene-otazky`, `validace-2026-q2`). Filesystem `methodology/*.md` a `data/events/*.json` zůstávají (source-of-truth, ne URL). |
 | 15 | ✅ done | `/udalosti/` filtrace + paginace (15/stránka): chips pro pilíř + závažnost (multi-toggle), dropdown pro rok. Klientský `EventsList.tsx`, in-memory filtrace. |
-| 16+ | ▶ next | Plný backtesting 2018–2020 (vyžaduje historický archiv + ~$80 LLM nákladů), prompt tuning na základě dispute logu, řešení source-intensity asymmetry mezi obdobími (viz `methodology/issues.md`), případně doplnění chybějících 2025 týdnů z dalších archivů (W08, W15, W30, W36, W39-40, W44-45, W52). |
+| 16 | ✅ done | Daily classify + weekly aggregate split: `run-daily.ts` + `aggregate-weekly.ts`, cron `0 6 * * *`. Řeší ztráty ~30-60 % obsahu kvůli rychlé RSS retenci (iROZHLAS ~1 den). URL-dedupe gate před pre-filterem drží náklad v $13-17/měsíc. 10 nových testů. |
+| 17+ | ▶ next | Plný backtesting 2018–2020 (vyžaduje historický archiv + ~$80 LLM nákladů), prompt tuning na základě dispute logu, řešení source-intensity asymmetry mezi obdobími (viz `methodology/issues.md`), případně doplnění chybějících 2025 týdnů z dalších archivů (W08, W15, W30, W36, W39-40, W44-45, W52). |
 
 Detail aktivních úkolů a technického dluhu v [`methodology/issues.md`](methodology/issues.md).
 
@@ -224,20 +225,44 @@ democracy-index-cz/
 └── public/                        # statická aktiva pro Next.js
 ```
 
-## Týdenní workflow (cílový stav po iter 7+8)
+## Pipeline workflow (varianta B z 2026-04-29 — daily classify, weekly aggregate)
 
-GitHub Actions workflow `weekly-pipeline.yml`, trigger: cron `0 6 * * 1` (Po 06:00 UTC), pokrývá uplynulý týden (Po–Ne).
+GitHub Actions workflow `weekly-pipeline.yml` (filename zachován kvůli historii runů, name attribute = `pipeline`). Trigger: cron `0 6 * * *` (každý den 06:00 UTC). Důvod denní cadence: rychle se točící RSS feedy (iROZHLAS retence ~1 den, HN ~3 dny) — týdenní cron při této retenci ztrácel ~30-60 % týdenního obsahu. Detail: [`methodology/issues.md`](methodology/issues.md) → záznam o source-intensity asymmetry (paralelní problém).
 
-1. **Sběr** — `src/pipeline/fetch-sources.ts` stáhne všechny zdroje pomocí `rss-parser` + native `fetch`, dedupuje podle URL/titulku, ukládá do `tmp/raw/` (mimo Git).
-2. **Pre-filter** — `pre-filter.ts` použije Claude Haiku 4.5, aby z hrubého feedu vyfiltroval relevantní zprávy.
-3. **Klasifikace** — `extract-events.ts` použije Claude Sonnet 4.6 s `prompts/classification.md` + `methodology/{pillars,severity_rubric}.md` jako cached system. Vyplní `pillar`, `severity`, `direction`, `duration`, `rationale`. Validuje proti `schemas/event.schema.json` přes AJV.
-4. **Dedupe** — `dedupe.ts` sloučí events napříč zdroji popisující stejnou událost; konflikty direction/severity → `status: disputed`.
-5. **Self-audit** — separátní Sonnet call s `prompts/audit.md` projde anti-bias checklist proti vygenerovaným events. Audit výstup se zapíše do daily reportu. Audit může event downgradeovat na `needs_review` při nálezu, ale nepřepisuje klasifikaci.
-6. **Source-count → severity cap** — deterministická TS funkce: events se severity ≥ 3 musí mít ≥ 2 nezávislé zdroje, severity ≥ 4 musí mít ≥ 3. Jinak se severity automaticky downgradeuje na nejvyšší podporovanou úroveň.
-7. **Výpočet skóre** — `src/pipeline/score.ts` přečte baseline + všechny živé events, aplikuje stárnutí, spočítá vážený průměr, zapíše do `data/scores/timeline.json`.
-8. **Daily report** — wrap-up skript napíše `data/reports/YYYY-MM-DD.md` se seznamem zkontrolovaných zdrojů, počtem pre-filtered, per-event detailním zdůvodněním a self-audit výstupem.
-9. **Anomaly detection** — pokud nový týden má > 5 events nebo jakýkoli severity 5, otevře se GitHub issue „Anomaly: please verify". **Index se publikuje normálně, issue je oversight ping, ne blocker.**
-10. **Auto-commit** — pipeline commituje events + scores + report do `main` (žádné PR). Vercel deploy.
+### Daily fáze (každý den, vč. pondělí)
+
+`src/pipeline/run-daily.ts`:
+
+1. **Sběr** — `fetch-sources.ts` stáhne všech 19 aktivních zdrojů.
+2. **URL-dedupe** — načte všechny URL z events souborů z posledních 4 týdnů (= horní hranice typické RSS retence) a dropne articles, jejichž URL už byly klasifikovány. Typicky drop ~80 % fetchnutých articles. **Klíčová cost optimization**, jediný důvod, proč daily NENÍ 7× dražší než weekly.
+3. **Pre-filter** — Haiku 4.5 jen na nové články.
+4. **Group by week of `published_at`** — drives správný file routing pro late-arriving articles (např. nedělní článek viděný v pondělním fetchu jde do W17, ne W18).
+5. **Per-week classify** — Sonnet 4.6 s `--start-seq` continuing existing NNN. Cap severity. Cross-day dedupe vůči existujícím events (sloučení do `status: disputed` při konfliktu).
+6. **Write/merge** — append do `data/events/<week>.json`.
+
+Daily NEPOČÍTÁ skóre, NEPÍŠE report ani NEDETEKUJE anomálie.
+
+### Weekly aggregate fáze (jen pondělí)
+
+`src/pipeline/aggregate-weekly.ts`, target = uplynulý kompletní ISO týden (`last monday`):
+
+7. **Self-audit** — Sonnet pass s `prompts/audit.md` projde anti-bias checklist nad accumulated events za uplynulý týden. Auditor může event downgradeovat na `needs_review`, nepřepisuje klasifikaci.
+8. **Score snapshot** — `score.ts` přečte baseline + všechny events files (current + history), aplikuje aging, vypočte vážený průměr, append do `data/scores/timeline.json` (replace any existing entry pro tento týden).
+9. **Detect anomalies** — 5 triggerů s per-source threshold scaling.
+10. **Daily report** — `data/reports/YYYY-MM-DD.md` se snapshot + per-event detail.
+11. **Auto-commit + open anomaly issues** — `data: aggregate YYYY-Wxx [skip ci]` (nebo `daily YYYY-Wxx + aggregate YYYY-W(xx-1)` v pondělí).
+
+### CLI
+
+```bash
+# Denně:
+npm run pipeline:daily -- --week=2026-W18 [--sources=...]
+
+# Pondělí (po daily):
+npm run pipeline:aggregate -- --week=2026-W17 --baseline=2026-Q2 [--skip-audit] [--active-source-count=19]
+```
+
+`run-weekly.ts` zůstává pro emergency / manual full-pipeline runs (fetch + classify + aggregate v jednom shotu), ale cron ho už nepoužívá.
 
 **Měsíční oversight (1. v měsíci):** automaticky otevřený issue s 10 náhodnými events z minulého měsíce a otázkou „Souhlasíš s klasifikací?". Non-blocking, kalibrace.
 
@@ -354,11 +379,21 @@ npm run test:coverage  # pro kontrolu, že score.ts má 100 %
 npm run dev
 npm run build  # static export do out/
 
-# Týdenní pipeline lokálně (default 19 zdrojů, s --sources lze omezit)
+# Daily pipeline (fetch + classify + URL-dedupe + merge do current week file).
+# Toto je to, co cron spouští každý den. Nepočítá score, nepíše report.
+npm run pipeline:daily -- --week=2026-W18 [--sources=...]
+
+# Weekly aggregate (audit + score + anomaly + report). Cron volá v pondělí
+# pro uplynulý kompletní týden (= last monday do včera neděle).
+npm run pipeline:aggregate -- --week=2026-W17 --baseline=2026-Q2
+
+# Full one-shot pipeline (fetch + classify + audit + score + report v jednom).
+# Pro emergency / manual use mimo cron.
 npm run pipeline:weekly -- --week=2026-W17 --baseline=2026-Q2
 
-# Pipeline bez LLM (plumbing test, žádné Claude volání)
+# Pipeline bez LLM (plumbing test, žádné Claude volání).
 npm run pipeline:weekly -- --week=2026-W17 --baseline=2026-Q2 --skip-llm
+npm run pipeline:daily   -- --week=2026-W18 --skip-llm
 
 # Backfill historie z curated seedu (JSON s {date, url, headline, outlet})
 npm run pipeline:backfill -- --seed=data/seeds/2025-curated.json --baseline=2026-Q2 --skip-audit

@@ -106,3 +106,23 @@ Persistent události se akumulují, ale když přestane proudit data (curated se
 4. **Rolling window severity benchmark.** Místo srovnávat absolutní skóre srovnávat 90-day rolling window proti baseline pro ten samý okno. Sníží efekt sudden expansion zdrojů, ale i sníží signál ze skutečných šoků.
 
 **Status:** open. Doporučení: pro krátkodobou prezentaci (do 2026-Q3) řešení 3 (disclaimer + dokumentace). Pro dlouhodobou srovnatelnost zvážit kombinaci 1 + 2.
+
+## 2026-04-29 — Pipeline cadence: daily classify + weekly aggregate
+
+**Kontext:** Týdenní cron (Po 06:00 UTC) ztrácel významnou část obsahu kvůli krátké RSS retenci některých feedů:
+- iROZHLAS retence ~1 den (20 items / ~20 articles/day) — týdenním cronem dostáváme ~14 % obsahu
+- HN, Aktuálně, ČT24 retence ~3 dny — týdně ztratíme ~57 %
+- Deník N retence ~5 dní — ztrata ~30 %
+
+**Změna provedená 2026-04-29 (iter 16):** pipeline rozdělen na dvě fáze.
+
+- **Daily run** (`run-daily.ts`, cron `0 6 * * *`): fetch + URL-dedupe + Haiku pre-filter + Sonnet classify + cap + merge do `data/events/<current-week>.json`. Žádný score / report / anomaly check.
+- **Weekly aggregate** (`aggregate-weekly.ts`, jen pondělí): audit accumulated events + score snapshot + anomaly detection + report + commit.
+
+**Klíčová optimization** je URL-dedupe gate před pre-filterem: každý daily fetch typicky vidí ~80 % articles, které už byly klasifikovány v předchozích dnech (RSS feedy se mění jen okrajově den za dnem). Tyhle se dropnou ještě před voláním Anthropic API. Bez této optimization by daily byl 7× dražší než weekly.
+
+**Cost impact:** weekly cost ~$3-4, daily cost (s URL-dedupe) ~$3-4. Audit běží jen 1× týdně (pondělí), což drží náklad pod $20/měsíc.
+
+**Methodology je beze změny** — score function, váhy, rubric, pilíře, anti-bias zůstávají identické. Mění se jen frekvence pozorování (= měřící hustota), ne měřítko ani interpretace.
+
+**Status:** ✅ implementováno (commit ed pondělí, viz CLAUDE.md iter 16).

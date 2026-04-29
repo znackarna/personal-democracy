@@ -16,6 +16,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,js,json,md,yaml,yml}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,json,md,yaml,yml}\"",
     "pipeline:weekly": "tsx src/pipeline/run-weekly.ts",
+    "pipeline:daily": "tsx src/pipeline/run-daily.ts",
+    "pipeline:aggregate": "tsx src/pipeline/aggregate-weekly.ts",
     "pipeline:recompute": "tsx src/pipeline/recompute-scores.ts",
     "pipeline:monthly-spotcheck": "tsx src/pipeline/monthly-spotcheck.ts",
     "pipeline:validate": "tsx src/pipeline/validate-external.ts",

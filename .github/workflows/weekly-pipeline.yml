@@ -1,22 +1,28 @@
-name: weekly pipeline
+name: pipeline
 
 on:
-  # Po 06:00 UTC = 07:00/08:00 v ČR (zima/léto). Pokrývá uplynulý týden Po–Ne.
+  # Denně 06:00 UTC = 07:00/08:00 v ČR (zima/léto). Daily fetch + classify
+  # zachytí rychle se točící RSS feedy (iROZHLAS retence ~1 den, HN ~3 dny).
+  # V pondělí navíc proběhne agregace uplynulého kompletního týdne.
   schedule:
-    - cron: '0 6 * * 1'
+    - cron: '0 6 * * *'
   # Manuální trigger z UI Actions tabu — užitečné pro test po deployi nebo
-  # ad-hoc běh mimo pondělní cyklus.
+  # ad-hoc běh mimo cron cyklus.
   workflow_dispatch:
     inputs:
+      mode:
+        description: 'daily | aggregate | both (default: auto-detect by day-of-week)'
+        required: false
+        default: ''
       week:
-        description: 'ISO week to process (default: previous full week)'
+        description: 'ISO week (default: current for daily, previous for aggregate)'
         required: false
       baseline:
-        description: 'Structural baseline quarter (default: 2026-Q2)'
+        description: 'Structural baseline quarter'
         required: false
         default: '2026-Q2'
       sources:
-        description: 'Comma-separated source ids (default: 8 CZ media + ÚS + PSP + 5 foreign + 3 Hlídač surfaces)'
+        description: 'Comma-separated source ids (default: all 19 active)'
         required: false
         default: 'denik-n,irozhlas,ct24,hn,aktualne,investigace-cz,a2larm,seznam-zpravy,ti-cz,ustavni-soud,psp-cz,politico-eu,bbc-europe,euronews,visegrad-insight,brno-daily,hlidac-statu,hlidac-smlouvy,hlidac-dotace'
 
@@ -25,7 +31,7 @@ permissions:
   issues: write
 
 concurrency:
-  group: weekly-pipeline
+  group: pipeline
   cancel-in-progress: false
 
 jobs:
@@ -43,15 +49,11 @@ jobs:
         run: |
           if [ -z "$ANTHROPIC_API_KEY" ]; then
             echo "::error::ANTHROPIC_API_KEY repository secret is not set."
-            echo "Set it at: https://github.com/${{ github.repository }}/settings/secrets/actions/new"
-            echo "Use the same value as your local .env (from console.anthropic.com → Settings → API Keys)."
             exit 1
           fi
           echo "✓ ANTHROPIC_API_KEY is configured (${#ANTHROPIC_API_KEY} chars)"
-          # Hlídač státu key is optional — pipeline only uses it if hlidac-statu
-          # is in the --sources list. Warn but don't fail if it's missing.
           if [ -z "$HLIDAC_API_KEY" ]; then
-            echo "::warning::HLIDAC_API_KEY not set — hlidac-statu source will fail if listed in --sources."
+            echo "::warning::HLIDAC_API_KEY not set — Hlídač sources will fail if listed in --sources."
           else
             echo "✓ HLIDAC_API_KEY is configured (${#HLIDAC_API_KEY} chars)"
           fi
@@ -68,69 +70,88 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
-      - name: Compute target week
-        id: week
+      - name: Compute weeks + mode
+        id: vars
         run: |
-          # Default: previous full ISO week (Mon-Sun ending the day before today UTC).
-          # User-provided input overrides.
-          if [ -n "${{ inputs.week }}" ]; then
-            echo "value=${{ inputs.week }}" >> "$GITHUB_OUTPUT"
-          else
-            # date -u prints UTC; %V is ISO week number.
-            YEAR=$(date -u -d 'last monday' +%G)
-            WEEK=$(date -u -d 'last monday' +%V)
-            echo "value=${YEAR}-W${WEEK}" >> "$GITHUB_OUTPUT"
+          # Daily: zpracuje aktuální ISO týden (kam routujeme nově klasifikované events).
+          # Aggregate: zpracuje uplynulý kompletní ISO týden (Po-Ne ending včera).
+          # Mode auto-detection: pondělí = both (daily fetches new + aggregate previous);
+          # ostatní dny = daily only.
+          CURRENT_YEAR=$(date -u +%G)
+          CURRENT_WEEK=$(date -u +%V)
+          PREV_YEAR=$(date -u -d 'last monday' +%G)
+          PREV_WEEK=$(date -u -d 'last monday' +%V)
+          DOW=$(date -u +%u)  # 1=Mon..7=Sun
+
+          MODE="${{ inputs.mode }}"
+          if [ -z "$MODE" ]; then
+            if [ "$DOW" = "1" ]; then
+              MODE="both"
+            else
+              MODE="daily"
+            fi
           fi
 
-      - name: Run pipeline
+          DAILY_WEEK="${{ inputs.week }}"
+          if [ -z "$DAILY_WEEK" ]; then DAILY_WEEK="${CURRENT_YEAR}-W${CURRENT_WEEK}"; fi
+
+          AGGREGATE_WEEK="${{ inputs.week }}"
+          if [ -z "$AGGREGATE_WEEK" ]; then AGGREGATE_WEEK="${PREV_YEAR}-W${PREV_WEEK}"; fi
+
+          echo "mode=${MODE}" >> "$GITHUB_OUTPUT"
+          echo "daily_week=${DAILY_WEEK}" >> "$GITHUB_OUTPUT"
+          echo "aggregate_week=${AGGREGATE_WEEK}" >> "$GITHUB_OUTPUT"
+          echo "▶ mode=${MODE} daily_week=${DAILY_WEEK} aggregate_week=${AGGREGATE_WEEK}"
+
+      - name: Run daily pipeline (fetch + classify + merge)
+        if: ${{ steps.vars.outputs.mode == 'daily' || steps.vars.outputs.mode == 'both' }}
         env:
-          WEEK: ${{ steps.week.outputs.value }}
-          BASELINE: ${{ inputs.baseline || '2026-Q2' }}
+          WEEK: ${{ steps.vars.outputs.daily_week }}
           SOURCES: ${{ inputs.sources || 'denik-n,irozhlas,ct24,hn,aktualne,investigace-cz,a2larm,seznam-zpravy,ti-cz,ustavni-soud,psp-cz,politico-eu,bbc-europe,euronews,visegrad-insight,brno-daily,hlidac-statu,hlidac-smlouvy,hlidac-dotace' }}
         run: |
+          npm run pipeline:daily -- --week="$WEEK" --sources="$SOURCES"
+
+      - name: Run weekly aggregation (audit + score + anomalies + report)
+        if: ${{ steps.vars.outputs.mode == 'aggregate' || steps.vars.outputs.mode == 'both' }}
+        env:
+          WEEK: ${{ steps.vars.outputs.aggregate_week }}
+          BASELINE: ${{ inputs.baseline || '2026-Q2' }}
+        run: |
           mkdir -p tmp
-          npm run pipeline:weekly -- \
+          # 19 = výchozí počet aktivních zdrojů; per-source threshold v
+          # detect-anomalies škáluje podle něj. Pokud chceš dynamický počet,
+          # workflow by musel sledovat per-day fetch result — pro v1 stačí
+          # pevná hodnota odpovídající live source listu.
+          npm run pipeline:aggregate -- \
             --week="$WEEK" \
             --baseline="$BASELINE" \
-            --sources="$SOURCES" \
+            --active-source-count=19 \
             --emit-anomalies-json=tmp/anomalies.json
 
       - name: Ensure anomaly label exists
-        if: ${{ hashFiles('tmp/anomalies.json') != '' }}
+        if: ${{ (steps.vars.outputs.mode == 'aggregate' || steps.vars.outputs.mode == 'both') && hashFiles('tmp/anomalies.json') != '' }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        # --force makes this idempotent: creates if missing, updates color/desc
-        # if exists. So we don't need a one-time bootstrap workflow.
         run: |
           gh label create anomaly \
             --color FBCA04 \
-            --description "Auto-opened by weekly-pipeline; oversight ping, non-blocking." \
+            --description "Auto-opened by pipeline; oversight ping, non-blocking." \
             --force
 
       - name: Open anomaly issues
-        if: ${{ hashFiles('tmp/anomalies.json') != '' }}
-        # Per methodology/governance.md vrstva 4: anomálie je non-blocking.
-        # Pokud GH API selže, pipeline data se musí pořád commitnout.
+        if: ${{ (steps.vars.outputs.mode == 'aggregate' || steps.vars.outputs.mode == 'both') && hashFiles('tmp/anomalies.json') != '' }}
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          WEEK: ${{ steps.week.outputs.value }}
+          WEEK: ${{ steps.vars.outputs.aggregate_week }}
         run: |
-          if [ ! -s tmp/anomalies.json ]; then
-            echo "No anomalies file populated."
-            exit 0
-          fi
+          if [ ! -s tmp/anomalies.json ]; then echo "No anomalies file populated."; exit 0; fi
           COUNT=$(jq 'length' tmp/anomalies.json)
-          if [ "$COUNT" = "0" ]; then
-            echo "No anomalies for $WEEK."
-            exit 0
-          fi
+          if [ "$COUNT" = "0" ]; then echo "No anomalies for $WEEK."; exit 0; fi
           DATE=$(date -u +%Y-%m-%d)
           echo "Opening $COUNT anomaly issue(s) for $WEEK..."
-          # Body is built per-anomaly in tmp/issue-body.md via printf so we
-          # avoid multi-line bash variables that would break YAML indentation.
           jq -c '.[]' tmp/anomalies.json | while IFS= read -r anomaly; do
             TRIGGER=$(echo "$anomaly" | jq -r '.trigger')
             LEVEL=$(echo "$anomaly" | jq -r '.level')
@@ -145,10 +166,7 @@ jobs:
               printf 'Daily report: [`data/reports/%s.md`](../blob/main/data/reports/%s.md)\n' "$DATE" "$DATE"
               printf 'Events: [`data/events/%s.json`](../blob/main/data/events/%s.json)\n' "$WEEK" "$WEEK"
             } > tmp/issue-body.md
-            gh issue create \
-              --title "$TITLE" \
-              --body-file tmp/issue-body.md \
-              --label anomaly
+            gh issue create --title "$TITLE" --body-file tmp/issue-body.md --label anomaly
           done
 
       - name: Commit results
@@ -160,5 +178,15 @@ jobs:
             echo "No changes to commit."
             exit 0
           fi
-          git commit -m "data: weekly pipeline ${{ steps.week.outputs.value }} [skip ci]"
+          MODE="${{ steps.vars.outputs.mode }}"
+          DAILY_WEEK="${{ steps.vars.outputs.daily_week }}"
+          AGG_WEEK="${{ steps.vars.outputs.aggregate_week }}"
+          if [ "$MODE" = "both" ]; then
+            MSG="data: daily ${DAILY_WEEK} + aggregate ${AGG_WEEK} [skip ci]"
+          elif [ "$MODE" = "aggregate" ]; then
+            MSG="data: aggregate ${AGG_WEEK} [skip ci]"
+          else
+            MSG="data: daily ${DAILY_WEEK} [skip ci]"
+          fi
+          git commit -m "$MSG"
           git push origin main
