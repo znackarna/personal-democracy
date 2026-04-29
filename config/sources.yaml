@@ -88,9 +88,15 @@ sources:
     name: Hlídač státu
     category: open_data
     type: api
-    url: https://www.hlidacstatu.cz/api/v2/
+    url: https://api.hlidacstatu.cz/api/v2/
     homepage: https://www.hlidacstatu.cz/
-    notes: Vyžaduje API klíč (zdarma po registraci). Hlasování PSP, smlouvy, dotace.
+    notes: |
+      Adapter implementován v src/lib/hlidac.ts. Vyžaduje HLIDAC_API_KEY env var
+      (zdarma po registraci na hlidacstatu.cz/api). Iter 1 surface: sponzoring
+      (dary politickým stranám) — fan-out přes 9 hlavních CZ stran, threshold
+      100 000 Kč, posledních 30 dní (configurable přes windowDays).
+      TODO: ověřit IČO pro SPD (22875327) a Motoristé (22878660) — vrací prázdno.
+      TODO iter 2: smlouvy s issues, dotace pro watchlist entit.
 
   - id: psp-cz
     name: Poslanecká sněmovna PČR

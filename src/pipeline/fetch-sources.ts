@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import yaml from 'js-yaml';
 import { z } from 'zod';
 import { dedupeArticles, fetchRssFeed, type FeedFetchOptions } from '../lib/feeds';
+import { fetchPartyDonationsAsArticles } from '../lib/hlidac';
 import { type RawArticle } from '../lib/types';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -32,12 +33,18 @@ export interface FetchOptions extends FeedFetchOptions {
   /** Override the path to the sources YAML config. */
   configPath?: string;
   /**
-   * Skip non-RSS sources (api, html). Defaults to true in iteration 2 because
-   * those adapters are not yet implemented; flip when they ship.
+   * Skip non-RSS sources (api, html). Defaults to true. Implemented adapters
+   * (currently `hlidac-statu`) ignore this flag and run anyway when their
+   * source id is present.
    */
   skipNonRss?: boolean;
   /** Restrict to source ids matching this set (default: all sources in config). */
   sourceIds?: readonly string[];
+  /**
+   * Date window for adapters that take one (e.g. Hlídač sponzoring).
+   * Defaults to last 30 days ending today.
+   */
+  windowDays?: number;
 }
 
 export interface FetchResult {
@@ -71,27 +78,61 @@ export async function fetchAllSources(options: FetchOptions = {}): Promise<Fetch
 
   const perSource: FetchResult['perSource'] = [];
   const all: RawArticle[] = [];
+  const windowDays = options.windowDays ?? 30;
 
   for (const source of sources) {
-    if (source.type !== 'rss') {
-      if (skipNonRss) {
-        perSource.push({ id: source.id, type: source.type, count: 0, error: 'skipped (adapter not implemented)' });
-        continue;
+    if (source.type === 'rss') {
+      try {
+        const items = await fetchRssFeed(source.url, source.name, options);
+        all.push(...items);
+        perSource.push({ id: source.id, type: source.type, count: items.length });
+      } catch (err) {
+        perSource.push({
+          id: source.id,
+          type: source.type,
+          count: 0,
+          error: (err as Error).message,
+        });
       }
-      perSource.push({ id: source.id, type: source.type, count: 0, error: 'unsupported type' });
       continue;
     }
 
-    try {
-      const items = await fetchRssFeed(source.url, source.name, options);
-      all.push(...items);
-      perSource.push({ id: source.id, type: source.type, count: items.length });
-    } catch (err) {
+    // Implemented non-RSS adapters dispatch by source id.
+    if (source.id === 'hlidac-statu') {
+      try {
+        const today = new Date();
+        const from = new Date(today.getTime() - windowDays * 86_400_000);
+        const items = await fetchPartyDonationsAsArticles({
+          fromDate: from.toISOString().slice(0, 10),
+          toDate: today.toISOString().slice(0, 10),
+        });
+        all.push(...items);
+        perSource.push({ id: source.id, type: source.type, count: items.length });
+      } catch (err) {
+        perSource.push({
+          id: source.id,
+          type: source.type,
+          count: 0,
+          error: (err as Error).message,
+        });
+      }
+      continue;
+    }
+
+    // No adapter for this id yet.
+    if (skipNonRss) {
       perSource.push({
         id: source.id,
         type: source.type,
         count: 0,
-        error: (err as Error).message,
+        error: 'skipped (adapter not implemented)',
+      });
+    } else {
+      perSource.push({
+        id: source.id,
+        type: source.type,
+        count: 0,
+        error: 'unsupported type',
       });
     }
   }
