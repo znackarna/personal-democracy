@@ -129,7 +129,7 @@ function PillarDetailCard({
         </div>
 
         <Link
-          href={`/methodology/pillars/#${pillarAnchorId(pillar)}`}
+          href={`/metodika/pilire/#${pillarAnchorId(pillar)}`}
           className="mt-auto pt-2 text-xs font-medium text-slate-600 underline hover:text-slate-900"
         >
           Plný popis pilíře v metodice →

@@ -17,17 +17,17 @@ Strukturální skóre vychází z šesti zavedených mezinárodních indexů, kt
 | [TI Corruption Perceptions Index](https://www.transparency.org/en/cpi) | Transparency International | ročně (leden/únor) | corruption |
 | [WJP Rule of Law Index](https://worldjusticeproject.org/rule-of-law-index/) | World Justice Project | ročně (říjen/listopad) | judicial + governance |
 
-Detail toho, jak se z těchto šesti indexů složí pillarscores 0–100, popisuje [strukturální mapping](/methodology/structural-mapping/). Aktuální baseline je ve souboru `data/structural/2026-Q2.json` v repu.
+Detail toho, jak se z těchto šesti indexů složí pillarscores 0–100, popisuje [strukturální mapování](/metodika/strukturalni-mapovani/). Aktuální baseline je ve souboru `data/structural/2026-Q2.json` v repu.
 
 ## Týdenní zdroje (event monitoring)
 
-Týdenní pipeline (`weekly-pipeline` GitHub Actions workflow, pondělí 06:00 UTC) prochází všechny aktivní zdroje, předfiltruje články přes Claude Haiku 4.5, klasifikuje je přes Claude Sonnet 4.6 a navrhne události s odůvodněním podle [rubric závažnosti](/methodology/severity/). Stav „aktivní" znamená, že zdroj má funkční adapter — buď je to RSS feed (čte se přes `rss-parser`), nebo má dedikovaný TypeScript adapter v [`src/lib/`](https://github.com/znackarna/personal-democracy/tree/main/src/lib). Stav „nezapojený" je placeholder — zdroj je v yamlu evidovaný pro budoucí adapter, ale momentálně se z něj nečte.
+Týdenní pipeline (`weekly-pipeline` GitHub Actions workflow, pondělí 06:00 UTC) prochází všechny aktivní zdroje, předfiltruje články přes Claude Haiku 4.5, klasifikuje je přes Claude Sonnet 4.6 a navrhne události s odůvodněním podle [rubric závažnosti](/metodika/zavaznost/). Stav „aktivní" znamená, že zdroj má funkční adapter — buď je to RSS feed (čte se přes `rss-parser`), nebo má dedikovaný TypeScript adapter v [`src/lib/`](https://github.com/znackarna/personal-democracy/tree/main/src/lib). Stav „nezapojený" je placeholder — zdroj je v yamlu evidovaný pro budoucí adapter, ale momentálně se z něj nečte.
 
 <!-- SOURCES_TABLE -->
 
 ## Proč právě tyhle zdroje
 
-**Česká média.** Záměrně širší ideologické spektrum: od levicovějšího A2larmu přes centristický Deník N po konzervativní Hospodářské noviny. Investigace.cz má pomalejší kadenci, ale velmi vysokou per-item relevanci. Veřejnoprávní ČT24 i iROZHLAS slouží jako nezávislý referenční bod. Cílem rozmanitosti je [anti-bias](/methodology/governance/) — žádný jeden outlet nesmí dominovat sourcům více než 50 % týdenních events.
+**Česká média.** Záměrně širší ideologické spektrum: od levicovějšího A2larmu přes centristický Deník N po konzervativní Hospodářské noviny. Investigace.cz má pomalejší kadenci, ale velmi vysokou per-item relevanci. Veřejnoprávní ČT24 i iROZHLAS slouží jako nezávislý referenční bod. Cílem rozmanitosti je [anti-bias](/metodika/model-dohledu/) — žádný jeden outlet nesmí dominovat sourcům více než 50 % týdenních events.
 
 **Otevřená data státu.** Strukturální events (přerušená schůze PSP, ústavní nález, proplacená sponzorská smlouva) jsou hodnotnější než mediální komentář — dají se ověřit přímo u zdroje. Hlídač státu (zdarma po registraci na hlidacstatu.cz/api) zpřístupňuje databázi sponzoringu, smluv s anomáliemi a dotací. PSP nemá RSS, čteme přehled schůzí HTML scraperem. Ústavní soud má nedokumentovaný, ale stabilní RSS feed.
 
@@ -41,4 +41,4 @@ Přidání nového zdroje je dvouminutový commit do [`config/sources.yaml`](htt
 
 Odstranění zdroje proběhne, jakmile jeho feed přestane fungovat (typicky HTTP 5xx déle než dva týdny). Příklad: Iuridicum Remedium byl dropped 2026-04-29 po trvalém HTTP 500 — záznam zůstává v yamlu jako komentář, aby šel snadno vrátit, až svůj feed opraví.
 
-Změny zdrojů se nelogují v [methodology CHANGELOG](/methodology/changelog/), který je rezervovaný pro úpravy metodiky (váhy, rubric, pilíře, governance). Historii zdrojů zjistíš `git log -- config/sources.yaml`.
+Změny zdrojů se nelogují v [methodology CHANGELOG](/metodika/zmeny/), který je rezervovaný pro úpravy metodiky (váhy, rubric, pilíře, governance). Historii zdrojů zjistíš `git log -- config/sources.yaml`.

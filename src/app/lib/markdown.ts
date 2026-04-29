@@ -24,63 +24,63 @@ export interface MethodologyDoc {
 
 /**
  * Curated registry. Order = order shown in TOC. The slug becomes the URL
- * (`/methodology/<slug>/`); the file is read from `methodology/<file>.md`.
+ * (`/metodika/<slug>/`); the file is read from `methodology/<file>.md`.
  *
  * Files in `methodology/` not in this list (e.g. validation_2026-Q2.md) are
  * served from the catch-all route below.
  */
 export const METHODOLOGY_DOCS: readonly MethodologyDoc[] = [
   {
-    slug: 'pillars',
+    slug: 'pilire',
     file: 'pillars',
     title: 'Šest pilířů',
     description:
       'Co každý ze 6 pilířů (volby, vládnutí, justice, média, svobody, korupce) měří, jak se mapuje na zdroje a co do něj nepatří.',
   },
   {
-    slug: 'severity',
+    slug: 'zavaznost',
     file: 'severity_rubric',
     title: 'Rubric závažnosti',
     description:
       'Pětistupňová škála závažnosti událostí 1–5 s konkrétními ČR příklady, pravidly eskalace/de-eskalace a kritérii „needs_review".',
   },
   {
-    slug: 'weights',
+    slug: 'vahy',
     file: 'weights',
     title: 'Váhy pilířů',
     description:
       'Zdůvodnění aktuálních vah 15/20/20/15/15/15, diskuze alternativ a pravidla pro budoucí změny vah.',
   },
   {
-    slug: 'governance',
+    slug: 'model-dohledu',
     file: 'governance',
-    title: 'Governance model',
+    title: 'Model dohledu',
     description:
       'Šest vrstev oversight (self-audit, source-count cap, daily reports, anomaly detection, monthly spot-check, public dispute) místo mandatory pre-merge review.',
   },
   {
-    slug: 'structural-mapping',
+    slug: 'strukturalni-mapovani',
     file: 'structural_mapping',
-    title: 'Strukturální mapping',
+    title: 'Strukturální mapování',
     description:
       'Jak konkrétně se z V-Dem 2024 / EIU 2024 / FH 2025 / RSF / TI / WJP počítá strukturální baseline pro každý pilíř.',
   },
   {
-    slug: 'sources',
+    slug: 'zdroje',
     file: 'sources',
     title: 'Zdroje dat',
     description:
       'Odkud index čerpá — 8 českých redakčních médií, otevřená data PSP a soudů, watchdog organizace, mezinárodní zpravodajství. Aktuální tabulka generovaná z config/sources.yaml.',
   },
   {
-    slug: 'changelog',
+    slug: 'zmeny',
     file: 'CHANGELOG',
     title: 'Changelog',
     description:
       'Historie verzí metodiky. Každá změna pilířů, vah, rubric nebo governance modelu je zaznamenaná zde.',
   },
   {
-    slug: 'issues',
+    slug: 'otevrene-otazky',
     file: 'issues',
     title: 'Otevřené otázky',
     description:
@@ -114,7 +114,7 @@ export async function listValidationReports(): Promise<Array<{ slug: string; qua
     .filter((f) => /^validation_\d{4}-Q[1-4]\.md$/.test(f))
     .map((f) => {
       const quarter = f.replace(/^validation_/, '').replace(/\.md$/, '');
-      return { slug: `validation-${quarter.toLowerCase()}`, quarter };
+      return { slug: `validace-${quarter.toLowerCase()}`, quarter };
     })
     .sort((a, b) => b.quarter.localeCompare(a.quarter));
 }
@@ -132,7 +132,7 @@ export async function renderValidationReport(quarter: string): Promise<string | 
 /**
  * Convert a Markdown file to HTML. Pre-processes `.md` links to point at our
  * web routes (so cross-references inside methodology files resolve to
- * `/methodology/<slug>/` instead of dead `.md` paths). Also expands the
+ * `/metodika/<slug>/` instead of dead `.md` paths). Also expands the
  * `<!-- SOURCES_TABLE -->` marker into a live table generated from
  * config/sources.yaml — used by methodology/sources.md to stay in sync.
  */
@@ -278,9 +278,9 @@ const FILE_TO_SLUG: Record<string, string> = Object.fromEntries(
  * Rewrites links in Markdown source so methodology cross-references resolve
  * on the web rather than as broken .md paths.
  *
- * - `pillars.md` → `/methodology/pillars/`
- * - `governance.md` → `/methodology/governance/`
- * - `validation_2026-Q2.md` → `/methodology/validation-2026-q2/`
+ * - `pillars.md` → `/metodika/pilire/`
+ * - `governance.md` → `/metodika/model-dohledu/`
+ * - `validation_2026-Q2.md` → `/metodika/validace-2026-q2/`
  * - GitHub-style relative paths (`../blob/main/methodology/x.md`) → web route
  *
  * Any `.md` link we don't recognize is left alone (renders as-is, broken
@@ -291,11 +291,11 @@ function rewriteInternalLinks(md: string): string {
   return md.replace(/\]\(([^)\s]+\.md)(#[^)]*)?\)/g, (match, target: string, anchor?: string) => {
     const filename = path.basename(target);
     if (FILE_TO_SLUG[filename]) {
-      return `](/methodology/${FILE_TO_SLUG[filename]}/${anchor ?? ''})`;
+      return `](/metodika/${FILE_TO_SLUG[filename]}/${anchor ?? ''})`;
     }
     const validation = /^validation_(\d{4}-Q[1-4])\.md$/.exec(filename);
     if (validation) {
-      return `](/methodology/validation-${validation[1]!.toLowerCase()}/${anchor ?? ''})`;
+      return `](/metodika/validace-${validation[1]!.toLowerCase()}/${anchor ?? ''})`;
     }
     return match;
   });

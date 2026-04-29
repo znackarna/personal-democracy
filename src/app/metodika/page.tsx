@@ -12,18 +12,18 @@ export default async function MethodologyIndexPage() {
           Plný popis toho, jak index vznikne — od strukturálního baseline přes klasifikaci
           týdenních událostí až k oversight modelu, který drží kvalitu bez mandatory pre-merge
           review. Každý dokument je živý, verzovaný v Gitu a měnitelný jen přes commit
-          s odůvodněním v <Link href="/methodology/changelog/" className="underline hover:text-slate-900">CHANGELOGu</Link>.
+          s odůvodněním v <Link href="/metodika/zmeny/" className="underline hover:text-slate-900">CHANGELOGu</Link>.
         </p>
       </section>
 
       <section>
         <h2 className="mb-4 text-xl font-semibold text-slate-900">Hlavní dokumenty</h2>
         <div className="grid gap-4 sm:grid-cols-2">
-          {METHODOLOGY_DOCS.filter((d) => d.slug !== 'changelog' && d.slug !== 'issues').map(
+          {METHODOLOGY_DOCS.filter((d) => d.slug !== 'zmeny' && d.slug !== 'otevrene-otazky').map(
             (doc) => (
               <Link
                 key={doc.slug}
-                href={`/methodology/${doc.slug}/`}
+                href={`/metodika/${doc.slug}/`}
                 className="block rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-slate-300 hover:shadow"
               >
                 <h3 className="text-base font-semibold text-slate-900">{doc.title}</h3>
@@ -38,11 +38,11 @@ export default async function MethodologyIndexPage() {
       <section>
         <h2 className="mb-4 text-xl font-semibold text-slate-900">Audit trail</h2>
         <div className="grid gap-4 sm:grid-cols-2">
-          {METHODOLOGY_DOCS.filter((d) => d.slug === 'changelog' || d.slug === 'issues').map(
+          {METHODOLOGY_DOCS.filter((d) => d.slug === 'zmeny' || d.slug === 'otevrene-otazky').map(
             (doc) => (
               <Link
                 key={doc.slug}
-                href={`/methodology/${doc.slug}/`}
+                href={`/metodika/${doc.slug}/`}
                 className="block rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-slate-300 hover:shadow"
               >
                 <h3 className="text-base font-semibold text-slate-900">{doc.title}</h3>
@@ -66,10 +66,10 @@ export default async function MethodologyIndexPage() {
             {validations.map((v) => (
               <li key={v.slug}>
                 <Link
-                  href={`/methodology/${v.slug}/`}
+                  href={`/metodika/${v.slug}/`}
                   className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 hover:border-slate-300 hover:text-slate-900"
                 >
-                  validation_{v.quarter} →
+                  validace_{v.quarter} →
                 </Link>
               </li>
             ))}

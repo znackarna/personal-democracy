@@ -14,10 +14,10 @@ export function Header() {
           <Link href="/" className="text-slate-700 hover:text-slate-900">
             Přehled
           </Link>
-          <Link href="/events/" className="text-slate-700 hover:text-slate-900">
+          <Link href="/udalosti/" className="text-slate-700 hover:text-slate-900">
             Události
           </Link>
-          <Link href="/methodology/" className="text-slate-700 hover:text-slate-900">
+          <Link href="/metodika/" className="text-slate-700 hover:text-slate-900">
             Metodika
           </Link>
         </nav>

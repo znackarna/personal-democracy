@@ -28,8 +28,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </a>
             . Klasifikuje Claude Sonnet 4.6, skóre počítá deterministická TS funkce.
             Detail metodologie na{' '}
-            <a href="/methodology/" className="underline hover:text-slate-900">
-              /methodology/
+            <a href="/metodika/" className="underline hover:text-slate-900">
+              /metodika/
             </a>
             .
           </p>

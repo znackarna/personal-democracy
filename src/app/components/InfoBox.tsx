@@ -54,7 +54,7 @@ export function InfoBox({ title, readMore, children, variant = 'info' }: Props) 
         {readMore && (
           <p className="pt-1">
             <Link
-              href={`/methodology/${readMore.slug}/` as Route}
+              href={`/metodika/${readMore.slug}/` as Route}
               className="text-xs font-medium text-slate-700 underline hover:text-slate-900"
             >
               {readMore.label ?? 'Plný popis v metodice →'}

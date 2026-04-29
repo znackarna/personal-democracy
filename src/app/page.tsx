@@ -47,12 +47,12 @@ export default async function HomePage() {
         <>
           <ScoreSummary snapshot={snapshot} baseline={baseline} prevSnapshot={prevSnapshot} />
 
-          <InfoBox title="Jak vzniká skóre 0–100" readMore={{ slug: 'weights' }}>
+          <InfoBox title="Jak vzniká skóre 0–100" readMore={{ slug: 'vahy' }}>
             <p>
               <strong>Strukturální baseline</strong> ({baseline.quarter}) vychází z ročních
               externích indexů a aktualizuje se kvartálně. <strong>Týdenní eventy</strong>{' '}
               přičítají/odečítají body podle{' '}
-              <Link href="/methodology/severity/" className="underline hover:text-slate-900">
+              <Link href="/metodika/zavaznost/" className="underline hover:text-slate-900">
                 pevné rubric závažnosti
               </Link>
               ; jednorázové události stárnou lineárně přes 12 týdnů, persistentní zůstávají
@@ -82,10 +82,10 @@ export default async function HomePage() {
                 proto nemusí být plně srovnatelná — víc zdrojů zachytí víc událostí, což může
                 vypadat jako zhoršení i bez reálné změny stavu. Detail v{' '}
                 <Link
-                  href="/methodology/issues/"
+                  href="/metodika/otevrene-otazky/"
                   className="underline hover:text-slate-700"
                 >
-                  methodology/issues
+                  metodika/otevřené otázky
                 </Link>
                 .
               </p>
@@ -155,7 +155,7 @@ export default async function HomePage() {
           <div className="mt-3">
             <InfoBox
               title="Proč náš index ukazuje jiné číslo než V-Dem nebo EIU"
-              readMore={{ slug: 'structural-mapping' }}
+              readMore={{ slug: 'strukturalni-mapovani' }}
             >
               <p>
                 Externí indexy měří různé věci různými metodikami. Náš index si je{' '}
@@ -181,11 +181,11 @@ export default async function HomePage() {
       <section>
         <div className="mb-4 flex items-baseline justify-between">
           <h2 className="text-xl font-semibold text-slate-900">Nejnovější události</h2>
-          <Link href="/events/" className="text-sm text-slate-600 underline hover:text-slate-900">
+          <Link href="/udalosti/" className="text-sm text-slate-600 underline hover:text-slate-900">
             Všechny události →
           </Link>
         </div>
-        <InfoBox title="Jak události vznikají a jak je oversightuju" readMore={{ slug: 'governance' }}>
+        <InfoBox title="Jak události vznikají a jak je oversightuju" readMore={{ slug: 'model-dohledu' }}>
           <p>
             <strong>Pondělí 06:00 UTC</strong> spustí GitHub Actions cron pipeline pro
             uplynulý týden:
@@ -201,7 +201,7 @@ export default async function HomePage() {
             <li>
               <strong>Klasifikace</strong> (Claude Sonnet 4.6) — přiřadí pillar, severity
               1–5, direction ±1, podle{' '}
-              <Link href="/methodology/severity/" className="underline hover:text-slate-900">
+              <Link href="/metodika/zavaznost/" className="underline hover:text-slate-900">
                 rubric
               </Link>
               .

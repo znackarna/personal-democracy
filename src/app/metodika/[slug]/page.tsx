@@ -24,15 +24,15 @@ export const dynamicParams = false;
 export default async function MethodologyDocPage({ params }: { params: Promise<Params> }) {
   const { slug } = await params;
 
-  // Validation reports use slug pattern "validation-2026-q2"
-  const validationMatch = /^validation-(\d{4}-q[1-4])$/.exec(slug);
+  // Validační reporty používají slug pattern "validace-2026-q2"
+  const validationMatch = /^validace-(\d{4}-q[1-4])$/.exec(slug);
   if (validationMatch) {
     const quarter = validationMatch[1]!;
     const html = await renderValidationReport(quarter);
     if (!html) notFound();
     return (
       <article className="space-y-6">
-        <Link href="/methodology/" className="text-sm text-slate-500 hover:text-slate-900">
+        <Link href="/metodika/" className="text-sm text-slate-500 hover:text-slate-900">
           ← Metodika
         </Link>
         <div
@@ -48,7 +48,7 @@ export default async function MethodologyDocPage({ params }: { params: Promise<P
 
   return (
     <article className="space-y-6">
-      <Link href="/methodology/" className="text-sm text-slate-500 hover:text-slate-900">
+      <Link href="/metodika/" className="text-sm text-slate-500 hover:text-slate-900">
         ← Metodika
       </Link>
       <header>
