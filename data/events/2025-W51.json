@@ -1,0 +1,25 @@
+[
+  {
+    "id": "2025-W51-001",
+    "date": "2025-12-15",
+    "headline": "Soud projednává kauzu střetu zájmů Babiše a dotací Agrofertu",
+    "summary": "Soud znovu projednává otázku střetu zájmů Andreje Babiše ve vztahu k možné účasti Agrofertu na veřejných zakázkách v době jeho premiérství. Watchdog organizace Kverulant pokračuje v právním tlaku na vyřešení věci.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Soud projednává Babišův střet zájmů a dotace Agrofertu",
+        "url": "https://www.kverulant.org/article/soud-babisuv-stret-zajmu-agrofert-2025m/",
+        "outlet": "Kverulant.org",
+        "fetched_at": "2026-04-29T07:18:07.804Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o pokračující soudní řízení v již známé kauze střetu zájmů (subkomponenta K1), nikoli o nový strukturální průlom. Událost zaslouží zaznamenání jako pokračující proces, avšak nepředstavuje nový precedent ani eskalaci. Sekundárně relevantní pro pilíř judicial (J4 — rovnost před zákonem u politicky exponovaných osob). Zdrojem je jen jediný watchdog web bez potvrzení dalším zdrojem, proto se zdržuji vyšší severity.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2025-12-15T00:00:00.000Z"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "2025-W48-001",
+    "date": "2025-11-25",
+    "headline": "MŽP zrušilo výběrové řízení na šéfa ČIŽP po podezření z politické intervence",
+    "summary": "Ministerstvo životního prostředí zrušilo výběrové řízení na ředitele České inspekce životního prostředí poté, co se v médiích objevily pochybnosti o postupu kandidáta napojené na hnutí Motoristé. Ministerstvo vypíše nové výběrové řízení. Případ naznačuje možnou politicky motivovanou intervenci do personálního obsazení státní správy.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Ministerstvo ŽP zastavilo výběrové řízení na šéfa ČIŽP po podezření z politické intervence",
+        "url": "https://denikn.cz/2047706/opet-se-hleda-sef-inspekce-zivotniho-prostredi-posledni-vyberove-rizeni-vyvolalo-pochybnosti/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-04-29T07:18:07.804Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — politicky motivovaný personální zásah na střední úrovni státní správy (subkomponenta G1) bez kaskádového efektu. Pozitivní je, že MŽP řízení zrušilo po upozornění médií, což odpovídá de-eskalačnímu pravidlu (-1 úroveň při rychlé korekci institucionálním mechanismem); bez korekce by šlo spíše o severity 3. Sekundárně se událost dotýká pilíře corruption (K1 — možné zneužití postavení pro stranický prospěch), ale kořenová příčina je v oblasti řádnosti vládnutí a obsazování pozic ve státní správě.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2025-11-24T00:00:00.000Z",
+    "expires_at": "2026-02-17T00:00:00.000Z"
+  }
+]

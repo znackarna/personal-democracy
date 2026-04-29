@@ -121,9 +121,20 @@ describe('agedImpact', () => {
     expect(agedImpact(e13, '2026-W17')).toBe(0);
   });
 
-  it('clamps future-dated events to full impact (no negative aging)', () => {
-    const e = makeEvent({ date: '2026-05-25', score_impact: 2 }); // future
-    expect(agedImpact(e, '2026-W17')).toBe(2);
+  it('returns 0 for future-dated events (haven\'t happened yet at snapshot time)', () => {
+    // Critical for historical backfill: snapshot for week N must ignore events
+    // dated > N. For live pipeline future dates are typos → should be 0 too.
+    const e = makeEvent({ date: '2026-05-25', score_impact: 2 }); // > 2026-W17
+    expect(agedImpact(e, '2026-W17')).toBe(0);
+  });
+
+  it('returns 0 for persistent events that are still in the future', () => {
+    const e = makeEvent({
+      date: '2026-12-01',
+      duration: 'persistent',
+      score_impact: -3,
+    });
+    expect(agedImpact(e, '2026-W17')).toBe(0);
   });
 });
 

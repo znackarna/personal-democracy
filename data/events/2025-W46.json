@@ -1,0 +1,26 @@
+[
+  {
+    "id": "2025-W46-001",
+    "date": "2025-11-15",
+    "headline": "Turek označil úředníky za parazity hodné deratizace, následně se omluvil",
+    "summary": "Vládní zmocněnec Filip Turek (Motoristé) veřejně označil úředníky za parazity a hovořil o nutnosti jejich deratizace. Premiér Babiš výroky odsoudil, politologové je označili za totalitní rétoriku. Turek se posléze omluvil s upřesněním, že mínil aktivisty na ministerstvech, nikoli úředníky obecně.",
+    "pillar": "civil",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Filip Turek označil úředníky za parazity, mluvil o nutnosti deratizace",
+        "url": "https://www.blesk.cz/clanek/zpravy-politika/838087/turek-dostava-sodu-za-parazity-slovy-o-deratizaci-nastval-babise-macinka-zmocnence-haji-plaga-nemlcel.html",
+        "outlet": "Blesk.cz",
+        "fetched_at": "2026-04-29T07:18:07.804Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o verbální incident s omezeným bezprostředním institucionálním dopadem, nicméně použití dehumanizující rétoriky (deratizace) ústavním zmocněncem vůči skupině veřejných zaměstnanců překračuje rámec pouhé kritiky a dotýká se subkomponenty C1 (svoboda projevu a důstojnost ve veřejném diskurzu). Rychlá omluva a odmítnutí ze strany premiéra brání eskalaci na 3. Anti-bias check: stejné hodnocení by platilo pro zmocněnce jakékoliv vlády. Sekundárně se event dotýká governance (G1), neboť jde o výrok aktivního vládního zmocněnce.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2025-11-10T00:00:00.000Z",
+    "expires_at": "2026-02-07T00:00:00.000Z"
+  }
+]

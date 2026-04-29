@@ -1,0 +1,25 @@
+[
+  {
+    "id": "2025-W27-001",
+    "date": "2025-07-01",
+    "headline": "Novela zákona o soudech a soudcích nabývá účinnosti – nová pravidla pro soudce",
+    "summary": "Novela zákona o soudech a soudcích vstoupila v platnost. Zavádí explicitní zákaz členství soudců v politických stranách, rozšiřuje povinnost soudců hlásit vedlejší aktivity a omezuje roli přísedících v trestním řízení. Změny jsou hodnoceny jako posilující nezávislost justice.",
+    "pillar": "judicial",
+    "severity": 2,
+    "direction": 1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Účinnost novely zákona o soudech a soudcích",
+        "url": "https://msp.gov.cz/en/web/msp/-/snemovnou-prosla-novela-zakona-o-soudech-a-soudcich",
+        "outlet": "Ministerstvo spravedlnosti",
+        "fetched_at": "2026-04-29T07:18:07.804Z"
+      }
+    ],
+    "score_impact": 0.5,
+    "rationale": "Severity 3 per rubric §3 — novela nabývá účinnosti (formální dokument, eskalační pravidlo z rubric: +1 za schválenou a účinnou podobu oproti pouhému návrhu), čímž strukturálně posiluje subkomponentu J2 (nezávislost obecných soudů) a J1 (nezávislost ÚS/NS/NSS). Zákaz politického členství soudců je systémová změna s přímým dopadem na institucionální oddělení justice od stranické politiky, srovnatelná s výchozím nastavením pro ÚS. Direction +1, protože změna jednoznačně posiluje záruky soudcovské nezávislosti. Duration persistent, protože jde o zákon, který je nyní v účinnosti.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2025-06-30T00:00:00.000Z"
+  }
+]

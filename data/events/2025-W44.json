@@ -1,0 +1,26 @@
+[
+  {
+    "id": "2025-W44-001",
+    "date": "2025-10-30",
+    "headline": "Motoristé navrhují do dozorčí rady ČEZ kandidáta prosazujícího ruský plyn",
+    "summary": "Strana Motoristé plánuje nominovat Pavla Janečka, bývalého šéfa Pražské plynárenské spojeného s kauzami, do dozorčí rady státního podniku ČEZ. Janeček veřejně obhajuje dovoz energetických surovin z Ruska, což vyvolává otázky střetu zájmů a politického vlivu na strategickou státní společnost.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Motoristé navrhují do dozorčí rady ČEZ kandidáta obhajujícího ruský plyn",
+        "url": "https://denikn.cz/2047341/motoriste-chteji-do-dozorci-rady-cez-zastance-ruskeho-plynu-ve-hre-je-i-turek/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-04-29T07:18:07.804Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o konkrétní personální nominaci do dozorčí rady strategického státního podniku osobou s potenciálním střetem zájmů (subkomponenta K1), ale nominace zatím nebyla schválena a jedná se o záměr, nikoli hotovou věc. Eskalace na 3 by přišla v úvahu po formálním jmenování nebo pokud by se prokázal přímý politický nátlak. Sekundárně se dotýká pilíře governance (G4 — transparentnost vládnutí ve státních podnicích). Anti-bias check: stejnou závažnost bych přiřadil nominaci kompromitované osoby do ČEZ jakoukoli stranou.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2025-10-27T00:00:00.000Z",
+    "expires_at": "2026-01-22T00:00:00.000Z"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "2025-W45-001",
+    "date": "2025-11-05",
+    "headline": "Ústavní soud odmítl zrušit nařízení vlády o CHKO Soutok",
+    "summary": "Ústavní soud zamítl návrh skupiny poslanců, kteří se domáhali zrušení nařízení vlády o vyhlášení CHKO Soutok. Soud konstatoval, že schvalovací proces byl bez prvků libovůle a sleduje legitimní cíl ochrany přírody.",
+    "pillar": "judicial",
+    "severity": 1,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "ÚS zamítl návrh poslanců na zrušení CHKO Soutok",
+        "url": "https://www.usoud.cz/aktualne/navrh-na-zruseni-chranene-krajinne-oblasti-soutok-zamitl-ustavni-soud",
+        "outlet": "Ústavní soud ČR",
+        "fetched_at": "2026-04-29T07:18:07.804Z"
+      }
+    ],
+    "score_impact": 0.2,
+    "rationale": "Severity 1 per rubric §1 — ÚS vydal nález v souladu se svou standardní funkcí ústavního přezkumu (subkomponenta J1). Zamítnutí poslaneckého návrhu potvrzuje funkčnost institucionálního systému ochrany zákonnosti. Jde o rutinní výkon pravomoci bez precedentního přesahu pro demokratické instituce jako takové; pozitivní směr, neboť soud nezávisle přezkoumal věc a potvrdil legitimitu vládního procesu.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2025-11-03T00:00:00.000Z",
+    "expires_at": "2026-01-28T00:00:00.000Z"
+  },
+  {
+    "id": "2025-W45-002",
+    "date": "2025-11-03",
+    "headline": "NCOZ zadržela 19 osob při razii ve VZP kvůli miliardovým IT zakázkám",
+    "summary": "Detektivové Národní centrály proti organizovanému zločinu provedli razii v sídle Všeobecné zdravotní pojišťovny v Praze a zadrželi 19 osob. Případ se týká podezření z nezákonností v IT zakázkách v hodnotě miliard korun, přičemž mezi zadrženými jsou manažeři dodavatelů i zaměstnanci pojišťovny.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "NCOZ zasahovala ve VZP, zadržela 19 osob kvůli IT zakázkám v hodnotě miliard",
+        "url": "https://czechia.news-pravda.com/world/2025/11/03/268607.html",
+        "outlet": "Pravda Česko",
+        "fetched_at": "2026-04-29T07:18:07.804Z"
+      }
+    ],
+    "score_impact": 0.5,
+    "rationale": "Severity 3 per rubric §3 — rozsah zakázek v řádu miliard korun a počet zadržených (19 osob) indikuje potenciálně strukturální schéma korupce ve veřejné instituci (subkomponenta K2 — transparentnost veřejných zakázek, K1 — zneužití pravomocí). Směr +1, neboť jde o aktivní protikorupční zásah protikorupčních institucí (subkomponenta K4), nikoli o odhalení korupce samotné jako selhání systému. Zdroj je jeden a event je v rané procesní fázi (zadržení, nikoli obžaloba), proto nevýše severity 3. Sekundárně relevantní pilíř: governance (veřejná instituce — pojišťovna se státní účastí).\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2025-11-03T00:00:00.000Z",
+    "expires_at": "2026-01-26T00:00:00.000Z"
+  }
+]

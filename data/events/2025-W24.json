@@ -1,0 +1,26 @@
+[
+  {
+    "id": "2025-W24-001",
+    "date": "2025-06-11",
+    "headline": "NCOZ zadržela 8 osob za daňové úniky přes 34 milionů Kč na severozápadě Čech",
+    "summary": "Národní centrála proti organizovanému zločinu provedla razii na desítkách míst v Plzeňském, Karlovarském a Ústeckém kraji. Osm podnikatelů z Mostecka a Teplicka bylo zadrženo pro podezření z krácení DPH ve výši 34 milionů Kč, přičemž jim hrozí až desetiletý trest odnětí svobody.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "NCOZ zasáhla v Litvínově: 8 zadržených, daňové úniky za 34 milionů",
+        "url": "https://www.denik.cz/krimi/litvinov-razie-policie-ncoz-skoda-miliony-dane-20250611.html",
+        "outlet": "Deník.cz",
+        "fetched_at": "2026-04-29T07:18:07.804Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o konkrétní policejní akci s lokálním dopadem, bez indikací propojení na politické aktéry nebo systémové selhání protikorupčních institucí (subkomponenta K1/K2). Daňový únik 34 mil. Kč je sice nenezanedbatelný, ale postrádá prvky, které by ho povyšovaly na severity 3 (politická návaznost, strukturální vzorec, mezinárodní reakce). Aktivní zásah NCOZ je spíše pozitivním signálem funkčnosti institucí, avšak direction zůstává -1, protože samotná událost dokumentuje korupční jednání. Sekundárně se dotýká subkomponenty K4 (fungování protikorupčních institucí), přičemž efektivní zásah NCOZ je průvodním prvkem, nikoli hlavní zprávou.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2025-06-09T00:00:00.000Z",
+    "expires_at": "2025-09-03T00:00:00.000Z"
+  }
+]

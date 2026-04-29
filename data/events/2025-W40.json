@@ -1,0 +1,26 @@
+[
+  {
+    "id": "2025-W40-001",
+    "date": "2025-10-04",
+    "headline": "Výsledky voleb do PSP 2025: ANO vyhrálo s 34,51 %, SPOLU druhé s 23,36 %",
+    "summary": "Ve volbách do Poslanecké sněmovny zvítězilo hnutí ANO se ziskem 34,51 % hlasů a 80 mandátů. Koalice SPOLU skončila druhá s 23,36 % a 52 mandáty. Do sněmovny se dostaly také STAN, Piráti, SPD a Motoristé; hnutí Stačilo! nepřekročilo 5% klauzuli.",
+    "pillar": "electoral",
+    "severity": 2,
+    "direction": 0,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Volby do PSP vyhrálo ANO s 34,51 %, koalice SPOLU druhá s 23,36 %",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/skoncily-volby-do-poslanecke-snemovny-komise-scitaji-hlasy-365702",
+        "outlet": "ČT24",
+        "fetched_at": "2026-04-29T07:18:07.804Z"
+      }
+    ],
+    "score_impact": 0,
+    "rationale": "Severity 2 per rubric §2 — jde o standardní vyhlášení výsledků demokratických voleb (subkomponenta E1), nikoli o narušení volebního procesu. Výsledek sám o sobě je legitimním výstupem soutěže. Direction 0: výsledky reflektují vůli voličů, bez indicií o narušení férovosti procesu. Nejde o negativní ani pozitivní institucionální posun — pouze konstatování výsledku. Pokud by navazující zprávy odhalily nesrovnalosti ve sčítání nebo jiné procedurální pochybení, bylo by třeba vytvořit samostatnou událost s příslušnou závažností. Datum publikace 2025-10-04 je mírně mimo referenční týden W40, ale spadá do přípustného okna ±14 dní.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2025-09-29T00:00:00.000Z",
+    "expires_at": "2025-12-27T00:00:00.000Z"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "2025-W20-001",
+    "date": "2025-05-15",
+    "headline": "ČR v RSF indexu svobody tisku 2025 na historickém maximu – 10. místo",
+    "summary": "Reportéři bez hranic zveřejnili Press Freedom Index 2025, v němž Česká republika obsadila 10. místo se skóre 83,96 bodů – nejlepší umístění v historii. Jako jeden z pozitivních faktorů je uveden nárůst koncesionářských poplatků posilující finanční nezávislost veřejnoprávních médií.",
+    "pillar": "media",
+    "severity": 2,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "RSF Press Freedom Index 2025: ČR poskočila do TOP 10",
+        "url": "https://rsf.org/en/index",
+        "outlet": "RSF",
+        "fetched_at": "2026-04-29T07:18:07.804Z"
+      }
+    ],
+    "score_impact": 0.5,
+    "rationale": "Severity 3 per rubric §3 — výsledek mezinárodního indexu RSF je konkrétní, datovaná publikace s dopadem na hodnocení stavu mediálního prostředí (subkomponenta M2: nezávislost veřejnoprávních médií, M1: mediální pluralita). Posun na historické maximum a pozitivní hodnocení financování ČT/ČRo představuje prokazatelně pozitivní institucionální signál potvrzený nezávislým mezinárodním orgánem (eskalační pravidlo +1 úroveň při potvrzení mezinárodním orgánem, zde ve směru +1). Mapuje se přímo na RSF Press Freedom Index uvedený v metodologii pilíře Media.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2025-05-12T00:00:00.000Z",
+    "expires_at": "2025-08-07T00:00:00.000Z"
+  }
+]

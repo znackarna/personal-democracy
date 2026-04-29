@@ -305,6 +305,19 @@ npm run pipeline:weekly -- --week=2026-W17 --baseline=2026-Q2 \
 # Pipeline bez LLM (plumbing test, žádné Claude volání)
 npm run pipeline:weekly -- --week=2026-W17 --baseline=2026-Q2 --skip-llm
 
+# Backfill historie z curated seedu (JSON s {date, url, headline, outlet})
+npm run pipeline:backfill -- --seed=data/seeds/2025-curated.json --baseline=2026-Q2 --skip-audit
+
+# Backfill z Wayback Machine archivovaných RSS snapshotů (pomalé, dražší)
+npm run pipeline:backfill -- --wayback --from=2025-01-01 --to=2025-12-31 \
+  --sources=denik-n,irozhlas --baseline=2026-Q2
+
+# Recompute scores přes všechny existující events files (po edit baseline / events)
+npm run pipeline:recompute -- --baseline=2026-Q2
+
+# Validation report
+npm run pipeline:validate -- --quarter=2026-Q2
+
 # (Plánováno iter 6+)
 # npm run dev          # Next.js dev server
 # npm run build        # static export do out/

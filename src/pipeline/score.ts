@@ -57,10 +57,15 @@ export function weeksBetween(fromIsoDate: string, toIsoWeek: IsoWeek): number {
 
 export function agedImpact(event: Event, currentWeek: IsoWeek): number {
   if (event.status !== 'active') return 0;
-  if (event.duration === 'persistent') return event.score_impact;
   const elapsed = weeksBetween(event.date, currentWeek);
-  // Future-dated events (negative elapsed) get full impact — same as elapsed === 0.
-  if (elapsed <= 0) return event.score_impact;
+  // Future-dated events (negative elapsed) get 0 impact — they haven't
+  // happened yet from the snapshot's perspective. Critical for historical
+  // backfill: a snapshot for 2025-W20 must not count events that happened
+  // in 2025-W43. For live pipeline (currentWeek == today), future-dated
+  // events are typically typos and should be reviewer-corrected anyway.
+  if (elapsed < 0) return 0;
+  if (event.duration === 'persistent') return event.score_impact;
+  if (elapsed === 0) return event.score_impact;
   if (elapsed >= ONE_OFF_DECAY_WEEKS) return 0;
   const remaining = (ONE_OFF_DECAY_WEEKS - elapsed) / ONE_OFF_DECAY_WEEKS;
   return event.score_impact * remaining;

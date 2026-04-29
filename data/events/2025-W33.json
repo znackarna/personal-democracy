@@ -1,0 +1,26 @@
+[
+  {
+    "id": "2025-W33-001",
+    "date": "2025-08-15",
+    "headline": "Poslanec Klempíř navrhuje zrušit koncesionářský poplatek a přejít na financování ČT a ČRo ze státního rozpočtu",
+    "summary": "Poslanec Klempíř (Motoristé) představil návrh na nahrazení koncesionářských poplatků přímým financováním ČT a ČRo ze státního rozpočtu. Kritici upozorňují, že by takový model mohl zvýšit politický vliv na veřejnoprávní média, protože rozpočtové příspěvky procházejí každoroční parlamentní schválením.",
+    "pillar": "media",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Klempíř (Motoristé) chce zrušit „mediální daň\", financování ČT a ČRo z rozpočtu",
+        "url": "https://m.echo24.cz/a/HBdU5/zpravy-domaci-klempir-chceme-zrusit-medialni-dan-ct-cro",
+        "outlet": "Echo24",
+        "fetched_at": "2026-04-29T07:18:07.804Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o legislativní záměr v počáteční fázi (poslanecký návrh, dosud nepředložen jako sněmovní tisk), bez přímého institucionálního dopadu. Subkomponenta M2 (nezávislost ČT a ČRo): přechod na přímé státní financování je standardně považován za faktor zvyšující politickou závislost veřejnoprávních médií, protože výše prostředků by závisela na každoroční vůli parlamentní většiny. Není doložen formální zákon ani schválení → eskalace na 3 není opodstatněna. Dle pravidla de-eskalace: čistě verbální záměr bez praktického dopadu → severity 2. Anti-bias: shodně bych hodnotil návrh z opačného politického spektra.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2025-08-11T00:00:00.000Z",
+    "expires_at": "2025-11-07T00:00:00.000Z"
+  }
+]

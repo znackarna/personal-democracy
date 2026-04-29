@@ -1,0 +1,25 @@
+[
+  {
+    "id": "2025-W42-001",
+    "date": "2025-10-15",
+    "headline": "Ministerstvo zemědělství zastavilo vymáhání dotací od Agrofertu po návratu akcií Babišovi",
+    "summary": "Přibližně 10 % akcií Agrofertu se vrátilo Andreji Babišovi po ukončení správy fondu AB private trust II. Na základě posudků konstatujících vyřešení střetu zájmů přes RSVP Trust ministerstvo zemědělství zastavilo vymáhání dotací z let 2017–2021 v hodnotě až 7 miliard korun.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Babiš se vrátil k 100% vlastnictví Agrofertu, dotace mají znovu téct",
+        "url": "https://byznys.hn.cz/c1-67868410-je-rozhodnuto-babis-podle-posudku-stret-zajmu-vyresil-agrofert-ma-znovu-dostavat-dotace-stare-miliardy-se-vymahat-nebudou",
+        "outlet": "Hospodářské noviny",
+        "fetched_at": "2026-04-29T07:18:07.804Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 4 per rubric §4 — zastavení vymáhání miliardových dotací u politicky exponované osoby, která je zároveň (potenciálně znovu) vlastníkem firmy-příjemce, se přímo dotýká subkomponenty K1 (střet zájmů ústavních činitelů) a K2 (transparentnost veřejných zakázek a dotací). Rozhodnutí má přímý finanční dopad (až 7 mld. Kč) a vytváří precedent pro interpretaci střetu zájmů prostřednictvím soukromých posudků místo nezávislého institucionálního přezkumu. Sekundárně relevantní pro pilíř governance (G4 — transparentnost vládnutí). Persistent, protože jde o strukturální nastavení dotačního režimu a vlastnické struktury do budoucna.\n\n[severity capped from 4 to 2 due to source-count rule: 1 unique outlet, 3 required for severity 4]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2025-10-13T00:00:00.000Z"
+  }
+]
