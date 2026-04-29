@@ -48,10 +48,53 @@ describe('detectAnomalies', () => {
     expect(result).toEqual([]);
   });
 
-  it('flags too_many_events when count > 5', () => {
+  it('flags too_many_events with legacy threshold (>5) when activeSourceCount is missing', () => {
     const events = Array.from({ length: 7 }, (_, i) => makeEvent({ id: `e${i}` }));
     const result = detectAnomalies({ events, newSnapshot: baseSnapshot });
-    expect(result.find((a) => a.trigger === 'too_many_events')).toBeDefined();
+    expect(result.find((a) => a.trigger === 'too_many_events')?.details).toContain('legacy');
+  });
+
+  it('uses per-source threshold when activeSourceCount is provided (3.5×N, min 15)', () => {
+    // 19 active sources → threshold ceil(19 × 3.5) = 67. 47 events should NOT fire.
+    const eventsBelow = Array.from({ length: 47 }, (_, i) => makeEvent({ id: `e${i}` }));
+    const below = detectAnomalies({
+      events: eventsBelow,
+      newSnapshot: baseSnapshot,
+      activeSourceCount: 19,
+    });
+    expect(below.find((a) => a.trigger === 'too_many_events')).toBeUndefined();
+
+    // 68 events on 19 sources → above 67 → fires.
+    const eventsAbove = Array.from({ length: 68 }, (_, i) => makeEvent({ id: `e${i}` }));
+    const above = detectAnomalies({
+      events: eventsAbove,
+      newSnapshot: baseSnapshot,
+      activeSourceCount: 19,
+    });
+    const anomaly = above.find((a) => a.trigger === 'too_many_events');
+    expect(anomaly).toBeDefined();
+    expect(anomaly?.details).toContain('19 aktivních zdrojů');
+    expect(anomaly?.details).toContain('Práh > 67');
+  });
+
+  it('respects floor of 15 events on small source lists', () => {
+    // 3 sources × 3.5 = 10.5 → ceil = 11, but floor = 15. So 12 events should not fire.
+    const events = Array.from({ length: 12 }, (_, i) => makeEvent({ id: `e${i}` }));
+    const result = detectAnomalies({
+      events,
+      newSnapshot: baseSnapshot,
+      activeSourceCount: 3,
+    });
+    expect(result.find((a) => a.trigger === 'too_many_events')).toBeUndefined();
+
+    // 16 events on 3 sources → above floor → fires.
+    const heavy = Array.from({ length: 16 }, (_, i) => makeEvent({ id: `f${i}` }));
+    const heavyResult = detectAnomalies({
+      events: heavy,
+      newSnapshot: baseSnapshot,
+      activeSourceCount: 3,
+    });
+    expect(heavyResult.find((a) => a.trigger === 'too_many_events')?.details).toContain('Práh > 15');
   });
 
   it('flags severity_5 if any event has severity 5', () => {

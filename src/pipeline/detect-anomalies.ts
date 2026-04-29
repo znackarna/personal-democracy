@@ -29,22 +29,55 @@ export interface DetectInput {
   /** Previous week's snapshot for pillar-shift detection. Optional (first run). */
   prevSnapshot?: ScoreSnapshot;
   audit?: AuditResult;
+  /**
+   * Počet zdrojů, ze kterých se v daném týdnu reálně přečetla data
+   * (`perSource.count > 0`). Použije se pro normalizaci "too_many_events"
+   * thresholdu — bez něj má smysl jen statický odhad. Optional (test compat).
+   */
+  activeSourceCount?: number;
 }
 
-const TOO_MANY_EVENTS_THRESHOLD = 5;
+/**
+ * Per-source kvóta: kolik events za týden je horní hranice "normálu" na jeden
+ * aktivní zdroj. 3.5 odráží empirické pozorování dosavadních běhů
+ * (19 zdrojů → 47 events → ~2.5/zdroj jako typický týden, headroom k 3.5).
+ *
+ * Zvyš toto číslo, pokud zařazení nového zdroje opakovaně triggeruje false
+ * positive. Sniž, pokud chceš citlivější detekci špiček.
+ */
+const TOO_MANY_EVENTS_PER_SOURCE = 3.5;
+
+/**
+ * Spodní podlaha, aby se na malém source listu (např. dev nebo backfill
+ * testy se 2-3 zdroji) nehlásilo "too_many" už při běžných 6 events.
+ */
+const TOO_MANY_EVENTS_FLOOR = 15;
+
+/**
+ * Fallback threshold použitý, když caller nedodal activeSourceCount.
+ * Drží zpětnou kompatibilitu s existujícími testy a externími callery.
+ */
+const TOO_MANY_EVENTS_LEGACY_THRESHOLD = 5;
+
 const PILLAR_SHIFT_THRESHOLD = 5.0;
 const AUDITOR_FLAG_RATE_THRESHOLD = 0.5;
 const SINGLE_OUTLET_DOMINANCE_THRESHOLD = 0.5;
 
 export function detectAnomalies(input: DetectInput): Anomaly[] {
-  const { events, newSnapshot, prevSnapshot, audit } = input;
+  const { events, newSnapshot, prevSnapshot, audit, activeSourceCount } = input;
   const anomalies: Anomaly[] = [];
 
-  // 1. Too many events for the week
-  if (events.length > TOO_MANY_EVENTS_THRESHOLD) {
+  // 1. Too many events for the week — threshold škáluje s počtem aktivních
+  //    zdrojů, aby se source list mohl rozšiřovat bez triggerování warningů.
+  const tooManyThreshold = computeTooManyEventsThreshold(activeSourceCount);
+  if (events.length > tooManyThreshold) {
+    const sourcesNote =
+      activeSourceCount !== undefined
+        ? `Práh > ${tooManyThreshold} (= ${TOO_MANY_EVENTS_PER_SOURCE} events × ${activeSourceCount} aktivních zdrojů, min ${TOO_MANY_EVENTS_FLOOR}).`
+        : `Práh > ${tooManyThreshold} (legacy, bez normalizace na zdroje).`;
     anomalies.push({
       trigger: 'too_many_events',
-      details: `Týden má ${events.length} events (práh > ${TOO_MANY_EVENTS_THRESHOLD}). Typická týdenní kadence je 3–5.`,
+      details: `Týden má ${events.length} events. ${sourcesNote}`,
       level: 'warn',
     });
   }
@@ -125,4 +158,12 @@ export function detectAnomalies(input: DetectInput): Anomaly[] {
   }
 
   return anomalies;
+}
+
+function computeTooManyEventsThreshold(activeSourceCount: number | undefined): number {
+  if (activeSourceCount === undefined) return TOO_MANY_EVENTS_LEGACY_THRESHOLD;
+  return Math.max(
+    TOO_MANY_EVENTS_FLOOR,
+    Math.ceil(activeSourceCount * TOO_MANY_EVENTS_PER_SOURCE),
+  );
 }

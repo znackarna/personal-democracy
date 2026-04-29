@@ -118,9 +118,11 @@ export async function runWeekly(options: RunWeeklyOptions): Promise<RunWeeklyRes
   await writeFile(scoresPath, JSON.stringify(filtered, null, 2) + '\n', 'utf-8');
 
   // 10. Detect anomalies (deterministic, ne-blokující — index už zapsán).
+  const activeSourceCount = fetchResult.perSource.filter((s) => s.count > 0).length;
   const anomalies = detectAnomalies({
     events: finalEvents,
     newSnapshot: snapshot,
+    activeSourceCount,
     ...(prevSnapshot ? { prevSnapshot } : {}),
     ...(audit ? { audit } : {}),
   });
