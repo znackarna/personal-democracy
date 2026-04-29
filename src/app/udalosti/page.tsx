@@ -1,4 +1,4 @@
-import { EventCard } from '../components/EventCard';
+import { EventsList } from '../components/EventsList';
 import { InfoBox } from '../components/InfoBox';
 import { readAllEvents } from '../lib/data';
 import { PILLARS, type Pillar } from '@/lib/types';
@@ -15,17 +15,6 @@ const PILLAR_LABEL: Record<Pillar, string> = {
 export default async function EventsPage() {
   const events = await readAllEvents();
 
-  // Group by week so the page reads as a chronological log.
-  const byWeek = new Map<string, typeof events>();
-  for (const e of events) {
-    const week = weekFromId(e.id);
-    if (!week) continue;
-    const arr = byWeek.get(week) ?? [];
-    arr.push(e);
-    byWeek.set(week, arr);
-  }
-  const weeks = [...byWeek.keys()].sort((a, b) => b.localeCompare(a));
-
   // Per-pillar summary across all events.
   const counts: Record<Pillar, number> = {
     electoral: 0,
@@ -35,7 +24,12 @@ export default async function EventsPage() {
     civil: 0,
     corruption: 0,
   };
-  for (const e of events) counts[e.pillar] += 1;
+  const weeks = new Set<string>();
+  for (const e of events) {
+    counts[e.pillar] += 1;
+    const m = /^(\d{4}-W\d{2})-/.exec(e.id);
+    if (m) weeks.add(m[1]!);
+  }
 
   return (
     <div className="space-y-8">
@@ -43,11 +37,12 @@ export default async function EventsPage() {
         <h1 className="mb-2 text-3xl font-bold tracking-tight text-slate-900">Všechny události</h1>
         <p className="max-w-3xl text-slate-600">
           Auditovatelný seznam všech klasifikovaných událostí. Každá má odkaz na zdroje a
-          tlačítko „Napadnout klasifikaci" — disputy se řeší jako GitHub issues.
+          tlačítko „Napadnout klasifikaci" — disputy se řeší jako GitHub issues. Filtruj
+          podle pilíře, závažnosti nebo roku.
         </p>
       </section>
 
-      <InfoBox title="Co znamená severity 1–5" readMore={{ slug: 'severity' }}>
+      <InfoBox title="Co znamená severity 1–5" readMore={{ slug: 'zavaznost' }}>
         <ul className="space-y-1">
           <li>
             <strong>1</strong> — zanedbatelný incident, výroky bez institucionálního dopadu
@@ -84,7 +79,7 @@ export default async function EventsPage() {
           <div className="text-slate-500">
             <span className="font-semibold text-slate-900 tabular-nums">{events.length}</span>{' '}
             celkem ·{' '}
-            <span className="font-semibold text-slate-900 tabular-nums">{weeks.length}</span>{' '}
+            <span className="font-semibold text-slate-900 tabular-nums">{weeks.size}</span>{' '}
             týdnů
           </div>
           <div className="flex flex-wrap gap-3">
@@ -98,25 +93,7 @@ export default async function EventsPage() {
         </div>
       </section>
 
-      {weeks.length === 0 ? (
-        <div className="rounded-xl border border-dashed border-slate-300 bg-white p-12 text-center text-sm text-slate-500">
-          Zatím žádné události.
-        </div>
-      ) : (
-        weeks.map((week) => (
-          <section key={week}>
-            <h2 className="mb-4 text-lg font-semibold text-slate-900">Týden {week}</h2>
-            <div className="space-y-4">
-              {byWeek.get(week)?.map((e) => <EventCard key={e.id} event={e} />)}
-            </div>
-          </section>
-        ))
-      )}
+      <EventsList events={events} />
     </div>
   );
-}
-
-function weekFromId(id: string): string | null {
-  const m = /^(\d{4}-W\d{2})-/.exec(id);
-  return m ? m[1]! : null;
 }
