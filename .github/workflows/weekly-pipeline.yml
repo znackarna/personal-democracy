@@ -88,8 +88,23 @@ jobs:
             --sources="$SOURCES" \
             --emit-anomalies-json=tmp/anomalies.json
 
+      - name: Ensure anomaly label exists
+        if: ${{ hashFiles('tmp/anomalies.json') != '' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # --force makes this idempotent: creates if missing, updates color/desc
+        # if exists. So we don't need a one-time bootstrap workflow.
+        run: |
+          gh label create anomaly \
+            --color FBCA04 \
+            --description "Auto-opened by weekly-pipeline; oversight ping, non-blocking." \
+            --force
+
       - name: Open anomaly issues
         if: ${{ hashFiles('tmp/anomalies.json') != '' }}
+        # Per methodology/governance.md vrstva 4: anomálie je non-blocking.
+        # Pokud GH API selže, pipeline data se musí pořád commitnout.
+        continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WEEK: ${{ steps.week.outputs.value }}

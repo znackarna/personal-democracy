@@ -20,6 +20,21 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
+      - name: Ensure dispute and triage labels exist
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create dispute \
+            --color D93F0B \
+            --description "Public dispute against an event classification." \
+            --repo "${{ github.repository }}" \
+            --force
+          gh label create triage \
+            --color FEF2C0 \
+            --description "Awaiting human triage." \
+            --repo "${{ github.repository }}" \
+            --force
+
       - name: Add triage label
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

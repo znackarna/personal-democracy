@@ -54,6 +54,15 @@ jobs:
           head -30 tmp/spotcheck.md
           echo "::endgroup::"
 
+      - name: Ensure spotcheck label exists
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create spotcheck \
+            --color 5319E7 \
+            --description "Monthly oversight: random sample of events for human verification." \
+            --force
+
       - name: Open spot-check issue
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
