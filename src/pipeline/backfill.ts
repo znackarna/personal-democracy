@@ -119,40 +119,50 @@ export async function runBackfill(options: BackfillOptions): Promise<BackfillRes
     const weekArticles = articlesByWeek.get(week)!;
     log(`\n▶ ${week} — ${weekArticles.length} articles`);
 
-    const preFiltered = skipPreFilter
-      ? weekArticles.map((a) => ({
-          ...a,
-          candidate_pillar: null,
-          reason_kept: 'curated seed',
-        }))
-      : await preFilter(weekArticles);
-    log(`  pre-filtered: ${preFiltered.length} kept`);
+    // Per-week try/catch — jeden zlomený týden nesmí zabít celý backfill běh.
+    // Typický důvod selhání: Sonnet vrátí malformed JSON na konkrétní batch
+    // článků (i přes messages.parse + jsonSchemaOutputFormat se to občas
+    // stane, hlavně u větších batchů). Ten týden se přeskočí, ostatní pokračují.
+    try {
+      const preFiltered = skipPreFilter
+        ? weekArticles.map((a) => ({
+            ...a,
+            candidate_pillar: null,
+            reason_kept: 'curated seed',
+          }))
+        : await preFilter(weekArticles);
+      log(`  pre-filtered: ${preFiltered.length} kept`);
 
-    if (preFiltered.length === 0) {
+      if (preFiltered.length === 0) {
+        perWeek.push({ week, articles: weekArticles.length, events: 0 });
+        continue;
+      }
+
+      // Classify with the week label that matches event.date's week (already
+      // grouped). The week serves to build IDs (e.g. 2025-W17-001).
+      const weekDate = mondayOfWeek(week);
+      const candidates = await extractEvents(preFiltered, { week, now: weekDate });
+
+      const { valid: validEvents } = await validateMany<Event>('event', candidates);
+      const { events: capped, capped: capAdjustments } = capSeverityBySourceCount(validEvents);
+      log(`  classified: ${validEvents.length} valid, ${capAdjustments.length} severity capped`);
+
+      let finalEvents = capped;
+      if (!options.skipAudit && capped.length > 0) {
+        const audit = await auditEvents(capped);
+        finalEvents = applyAuditVerdicts(capped, audit);
+        const flagged = audit.per_event.filter((v) => v.verdict !== 'pass').length;
+        log(`  audit: ${flagged} flagged/downgraded of ${audit.per_event.length}`);
+      }
+
+      await writeEventsFile(root, week, finalEvents);
+      perWeek.push({ week, articles: weekArticles.length, events: finalEvents.length });
+      totalEvents += finalEvents.length;
+    } catch (err) {
+      log(`  ✗ FAILED: ${(err as Error).message.slice(0, 200)}`);
       perWeek.push({ week, articles: weekArticles.length, events: 0 });
-      continue;
+      // Continue to next week — caller can re-run for failed weeks separately.
     }
-
-    // Classify with the week label that matches event.date's week (already
-    // grouped). The week serves to build IDs (e.g. 2025-W17-001).
-    const weekDate = mondayOfWeek(week);
-    const candidates = await extractEvents(preFiltered, { week, now: weekDate });
-
-    const { valid: validEvents } = await validateMany<Event>('event', candidates);
-    const { events: capped, capped: capAdjustments } = capSeverityBySourceCount(validEvents);
-    log(`  classified: ${validEvents.length} valid, ${capAdjustments.length} severity capped`);
-
-    let finalEvents = capped;
-    if (!options.skipAudit && capped.length > 0) {
-      const audit = await auditEvents(capped);
-      finalEvents = applyAuditVerdicts(capped, audit);
-      const flagged = audit.per_event.filter((v) => v.verdict !== 'pass').length;
-      log(`  audit: ${flagged} flagged/downgraded of ${audit.per_event.length}`);
-    }
-
-    await writeEventsFile(root, week, finalEvents);
-    perWeek.push({ week, articles: weekArticles.length, events: finalEvents.length });
-    totalEvents += finalEvents.length;
   }
 
   // 4. Recompute timeline across all events
@@ -207,14 +217,21 @@ async function fetchFromWaybackForSources(
   const all: RawArticle[] = [];
   for (const source of selected) {
     log(`\n▶ Wayback: ${source.id} (${source.url})`);
-    const items = await fetchArchivedRssRange({
-      feedUrl: source.url,
-      outletName: source.name,
-      from: wayback.from,
-      to: wayback.to,
-      onProgress: log,
-    });
-    all.push(...items);
+    // Per-source try/catch — Wayback CDX API občas vrací HTTP 503 (transient
+    // archive.org infra). Jeden takový výpadek nesmí zabít celý backfill —
+    // ostatní zdroje pokračují, ten chybějící lze doplnit re-runem.
+    try {
+      const items = await fetchArchivedRssRange({
+        feedUrl: source.url,
+        outletName: source.name,
+        from: wayback.from,
+        to: wayback.to,
+        onProgress: log,
+      });
+      all.push(...items);
+    } catch (err) {
+      log(`  ✗ ${source.id} FAILED: ${(err as Error).message.slice(0, 200)}`);
+    }
   }
   return dedupeArticles(all);
 }
