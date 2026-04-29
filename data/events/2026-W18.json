@@ -2,8 +2,8 @@
   {
     "id": "2026-W18-001",
     "date": "2026-04-28",
-    "headline": "Schillerová: Česko letos nesplní závazek NATO o výdajích na obranu ve výši 2 % HDP",
-    "summary": "Ministryně financí Alena Schillerová potvrdila, že v letošním rozpočtu nejspíš nenajde dodatečné prostředky na obranu. Česko tak nesplní svůj závazek vůči NATO vydávat alespoň dvě procenta HDP na obranu, který je součástí alianční politiky i předchozích vládních přislíbení.",
+    "headline": "Schillerová potvrdila: Česko letos nesplní závazek NATO o výdajích na obranu 2 % HDP",
+    "summary": "Ministryně financí Alena Schillerová potvrdila, že v letošním rozpočtu nejspíš nenajde dodatečné prostředky na obranu. Česko tak nesplní závazek vůči NATO vydávat minimálně dvě procenta HDP na obranu, přičemž do konce roku se situace patrně nezmění.",
     "pillar": "governance",
     "severity": 2,
     "direction": -1,
@@ -13,21 +13,27 @@
         "title": "Schillerová letos peníze na obranu nejspíš nepřidá. Česko tak závazek vůči NATO nesplní",
         "url": "https://denikn.cz/2048940/schillerova-letos-penize-na-obranu-nejspis-neprida-cesko-tak-zavazek-vuci-nato-nesplni/",
         "outlet": "Deník N",
-        "fetched_at": "2026-04-29T06:52:57.904Z"
+        "fetched_at": "2026-04-29T07:59:15.542Z"
+      },
+      {
+        "title": "Závazky neplníme. Deklarace NATO o výdajích na obranu je nula a politický papír, říká Zůna",
+        "url": "https://denikn.cz/2048020/zavazky-neplnime-deklarace-nato-o-vydajich-na-obranu-je-nula-a-politicky-papir-rika-zuna/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-04-29T07:59:15.542Z"
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 3 per rubric §3 — nesplnění mezinárodně závazného slibu vůči NATO (subkomponenta G3 – stabilita závazků, G1 – respekt k institucionálnímu rámci) má precedentní charakter a přímý dopad na strategické postavení státu. Jde o potvrzené prohlášení zodpovědné ministryně, nikoli pouhý záměr. Duration persistent: stav trvá po celý rozpočtový rok 2026. Sekundárně se dotýká pilíře governance v rovině parlamentní kontroly rozpočtových závazků.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]\n\n[auditor: flag] Nesplnění závazku NATO je primárně zahraniční/bezpečnostní politika, nikoli governance v demokratickém smyslu. Subkomponenty G1/G3 jsou přetažené — rubric §3 zmiňuje ústavní krize a nálezy ÚS, ne mezinárodní výdajové závazky. Zařazení je sporné; možná vhodněji needs_review nebo vyloučení z indexu.",
+    "rationale": "Severity 3 per rubric §3 — nesplnění závazku alianční obrany představuje selhání klíčové vládní povinnosti s mezinárodním dopadem a vytváří precedent zpochybňování platnosti mezinárodních závazků. Subkomponenta G1 (dělba moci a odpovědnost exekutivy za plnění závazků) a G3 (stabilita norem). Výrok ministryně financí je verifikovaný přímou citací. Duration persistent, protože jde o strukturální deficit přetrvávající celý rok, ne jedinou událost. Sekundárně relevantní pro governance v kontextu koalični koordinace. Anti-bias check: stejně bych klasifikoval jakékoliv vlády.\n\n[merged with 2026-W18-005 — direction/severity conflict, set status=disputed for reviewer]\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]\n\n[auditor: flag] Nesplnění výdajového závazku NATO je primárně zahraniční politika/bezpečnostní politika, nikoli selhání demokratické instituce. G1/G3 se vztahují k dělbě moci a ústavním normám — nesplnění alianční kvóty tyto subkomponenty nenaplňuje přesvědčivě. Severity 2 je po capu OK, ale pilíř governance je diskutabilní; událost je blíže 'executive policy failure' bez demokratického backsliding rozměru.",
     "reviewer": "auto",
-    "status": "active",
-    "created_at": "2026-04-29T06:52:57.895Z"
+    "status": "disputed",
+    "created_at": "2026-04-29T07:59:15.527Z"
   },
   {
     "id": "2026-W18-002",
     "date": "2026-04-28",
-    "headline": "Motoristé navrhují do dozorčí rady ČEZ zastánce ruského plynu Janečka, zvažován i Turek",
-    "summary": "Koaliční strana Motoristé sobě plánuje do dozorčí rady státního energetického podniku ČEZ nominovat Pavla Janečka, bývalého šéfa Pražské plynárenské spojeného s kauzami a veřejně obhajujícího dovoz ruských surovin. Jako další kandidát je zvažován poslanec Turek. Jde o politicky motivované obsazování klíčové pozice ve státní firmě.",
-    "pillar": "governance",
+    "headline": "Motoristé navrhují do dozorčí rady ČEZ kontroverzního zastánce ruského plynu",
+    "summary": "Strana Motoristé sobě plánuje nominovat do dozorčí rady ČEZ Pavla Janečka, bývalého šéfa Pražské plynárenské, jehož působení bylo spojováno s kauzami a který obhajuje dovoz energetických surovin z Ruska. Ve hře je podle informací Deníku N i jméno Filipa Turka.",
+    "pillar": "corruption",
     "severity": 2,
     "direction": -1,
     "duration": "one_off",
@@ -36,21 +42,21 @@
         "title": "Motoristé chtějí do dozorčí rady ČEZ zastánce ruského plynu. Ve hře je i Turek",
         "url": "https://denikn.cz/2047341/motoriste-chteji-do-dozorci-rady-cez-zastance-ruskeho-plynu-ve-hre-je-i-turek/",
         "outlet": "Deník N",
-        "fetched_at": "2026-04-29T06:52:57.904Z"
+        "fetched_at": "2026-04-29T07:59:15.542Z"
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 2 per rubric §2 — politicky motivovaný personální zásah do státní firmy (subkomponenta G1 – dělba moci a transparentnost vládnutí, G4). Nominace zatím nebyla schválena, jde o záměr zveřejněný médii. Bez kaskádového institucionálního efektu v tuto chvíli. Pokud by nominace prošla a šlo by o část vzorce systematického obsazování státních firem stranickými nominanty, eskalace na 3 by byla odůvodněná. Sekundárně se dotýká pilíře corruption (K1 – střet zájmů) vzhledem ke kauzám spojeným s Janečkem.",
+    "rationale": "Severity 2 per rubric §2 — jde o personální záměr vládní strany obsadit klíčovou dozorčí radu státní firmy kontroverzní osobou s vazbami na spory a proruské postoje, což naplňuje subkomponentu K1 (politická korupce, potenciální střet zájmů) a K2 (transparentnost veřejného sektoru). Událost zatím zůstává na úrovni záměru, nikoli finálního rozhodnutí — dle pravidla de-eskalace je to jeden stupeň nižší než realizovaná nominace. Single source, bez potvrzení finální nominace. Sekundárně relevantní pro governance (G1 — politické obsazování státních pozic).",
     "reviewer": "auto",
     "status": "active",
-    "created_at": "2026-04-29T06:52:57.895Z",
+    "created_at": "2026-04-29T07:59:15.527Z",
     "expires_at": "2026-07-21T00:00:00.000Z"
   },
   {
     "id": "2026-W18-003",
     "date": "2026-04-28",
-    "headline": "NCOZ zadržela třináct lidí včetně ředitele příbramské nemocnice a pracovníků krajského úřadu",
-    "summary": "Národní centrála proti organizovanému zločinu provedla rozsáhlý zásah v příbramské nemocnici a na Krajském úřadu Středočeského kraje, při němž zadržela třináct osob včetně ředitele nemocnice. Akce naznačuje podezření z korupce nebo zneužití veřejných prostředků ve veřejné správě.",
+    "headline": "NCOZ zadržela třináct lidí včetně ředitele příbramské nemocnice při razii na korupci",
+    "summary": "Národní centrála proti organizovanému zločinu provedla rozsáhlý zásah v příbramské nemocnici a na Krajském úřadu Středočeského kraje, při němž bylo zadrženo třináct osob včetně ředitele nemocnice. Akce se týká podezření z korupce ve veřejné instituci.",
     "pillar": "corruption",
     "severity": 2,
     "direction": 1,
@@ -60,21 +66,21 @@
         "title": "Policie zasahovala v příbramské nemocnici, zadržela třináct lidí včetně ředitele",
         "url": "https://denikn.cz/2048760/policie-zasahovala-v-pribramske-nemocnici-zadrzela-trinact-lidi-vcetne-reditele/",
         "outlet": "Deník N",
-        "fetched_at": "2026-04-29T06:52:57.904Z"
+        "fetched_at": "2026-04-29T07:59:15.542Z"
       }
     ],
     "score_impact": 0.5,
-    "rationale": "Severity 3 per rubric §3 — rozsáhlá protikorupční akce s třinácti zadrženými osobami ve veřejné správě a státem spravované instituci (subkomponenta K1 – politická korupce/zneužití pravomoci, K2 – veřejné zakázky). Direction +1: aktivní výkon funkce protikorupčních institucí (K4 – NCOZ) posiluje důvěryhodnost protikorupčního rámce. Single source, konkrétní fakta jsou však dostatečně jasná (datum, místo, počet zadržených) pro klasifikaci bez eskalace na needs_review.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]\n\n[auditor: flag] Direction +1 je správný, ale rationale pro K1 je slabý — konkrétní skutková podstata (korupce vs. zneužití pravomoci vs. zakázky) není potvrzena, jen naznačena. Rubric anchor chybí pro direction +1; stačilo by upřesnit 'aktivní výkon K4' jako primární anchor.",
+    "rationale": "Severity 3 per rubric §3 — rozsáhlá policejní akce NCOZ s třinácti zadrženými ve veřejné instituci (nemocnice, krajský úřad) představuje významný případ odhalování korupce ve veřejné správě, relevantní pro subkomponentu K1 (politická/institucionální korupce) a K4 (funkčnost protikorupčních institucí). Direction +1, protože jde o aktivní vymáhání práva a funkčnost protikorupčních mechanismů — NCOZ plní svou roli. Jednorázová událost (one_off), byť vyšetřování bude pokračovat. Anti-bias check: zásah NCOZ hodnotím pozitivně bez ohledu na politickou příslušnost zadržených.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]\n\n[auditor: flag] Rationale uvádí severity 3, ale event má severity 2 po source-count capu — inkonzistence v rationale vs. výsledné hodnotě je zmatečná pro reviewera, ale cap byl aplikován správně. Direction +1 pro zásah NCOZ je správně odůvodněn. Formálně OK.",
     "reviewer": "auto",
     "status": "active",
-    "created_at": "2026-04-29T06:52:57.895Z",
+    "created_at": "2026-04-29T07:59:15.527Z",
     "expires_at": "2026-07-21T00:00:00.000Z"
   },
   {
     "id": "2026-W18-004",
     "date": "2026-04-28",
-    "headline": "Ministr obrany Zůna označil závazky NATO za 'nula a politický papír', odborníci kritizují postoj vlády",
-    "summary": "Ministr obrany Jaromír Zůna prohlásil, že závazky o výdajích na obranu vůči NATO jsou z jeho pohledu bezcenné a politické. Bývalý náčelník generálního štábu Jiří Šedivý označil výrok za překvapivý a podotkl, že odpovědnost za neplnění závazků leží na premiéru Babišovi, nikoli na ministrovi samotném.",
+    "headline": "Ministr obrany Zůna označil závazky NATO za 'nula a politický papír'",
+    "summary": "Ministr obrany Jaromír Zůna v rozhovoru prohlásil, že závazky NATO ohledně výdajů na obranu jsou politicky nevymahatelné. Bývalý náčelník generálního štábu Jiří Šedivý označil výrok za překvapivý a problém přičítá premiéru Babišovi, nikoli ministru samotnému.",
     "pillar": "governance",
     "severity": 2,
     "direction": -1,
@@ -84,28 +90,22 @@
         "title": "Že závazek vůči NATO platil jen pro Fialu, jak tvrdí Babiš? „Úplně mimo,“ říká bývalý náčelník štábu",
         "url": "https://denikn.cz/2048512/ze-zavazek-vuci-nato-platil-jen-pro-fialu-jak-tvrdi-babis-uplne-mimo-rika-byvaly-nacelnik-stabu/",
         "outlet": "Deník N",
-        "fetched_at": "2026-04-29T06:52:57.904Z"
-      },
-      {
-        "title": "Závazky neplníme. Deklarace NATO o výdajích na obranu je nula a politický papír, říká Zůna",
-        "url": "https://denikn.cz/2048020/zavazky-neplnime-deklarace-nato-o-vydajich-na-obranu-je-nula-a-politicky-papir-rika-zuna/",
-        "outlet": "Deník N",
-        "fetched_at": "2026-04-29T06:52:57.904Z"
+        "fetched_at": "2026-04-29T07:59:15.542Z"
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 2 per rubric §2 — veřejné zpochybňování mezinárodních závazků státu ministrem obrany je závažný výrok, ale zatím jde o verbální prohlášení bez přímého institucionálního rozhodnutí (subkomponenta G3 – stabilita ústavních a mezinárodních norem). De-eskalační pravidlo: čistě verbální incident bez praktického dopadu po > 30 dnech by mohl snížit na 1, ale výrok ministra v aktivní funkci s přímým politickým signálem odůvodňuje 2. Událost je tematicky úzce provázána s indexem [1] (Schillerová/NATO), kde strukturální dopad je silnější. Sekundárně se dotýká governance G1 v rovině parlamentní odpovědnosti vlády.\n\n[merged with 2026-W18-005 — direction/severity conflict, set status=disputed for reviewer]\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]\n\n[auditor: flag] Dva zdroje jsou oba Deník N — source-count rule vyžaduje unikátní outlet, nikoli duplicitní. Formálně by tedy severity cap stále platil. Status disputed je správný, ale zdůvodnění source-count je zavádějící.",
+    "rationale": "Severity 2 per rubric §2 — výrok ministra obrany zpochybňující závaznost mezinárodních závazků je konkrétní verifikované prohlášení ústavního činitele s potenciálním dopadem na důvěryhodnost ČR v alianci, subkomponenta G3 (stabilita norem a respekt k závazkům). Oproti článku [0] jde specificky o verbální výrok bez přímého institucionálního dopadu — dle rubric §2 'verbální incident s omezeným dopadem'. Pokud by výrok byl následován formálním odmítnutím závazku, eskalovalo by na 3+. Sekundárně navazuje na článek [0] o faktickém nesplnění závazku. Anti-bias check: stejně bych klasifikoval výrok ministra jakékoli vlády.\n\n[auditor: flag] Výrok ministra, který zpochybňuje vymahatelnost NATO závazků, je severity 2 adekvátní. Problém: subkomponenta G3 ('stabilita norem') se vztahuje k ústavním normám ČR, nikoli mezinárodním aliančním závazkům. Lepší by byl odkaz na G1 nebo obecnou odpovědnost exekutivy.",
     "reviewer": "auto",
-    "status": "disputed",
-    "created_at": "2026-04-29T06:52:57.895Z",
+    "status": "active",
+    "created_at": "2026-04-29T07:59:15.527Z",
     "expires_at": "2026-07-21T00:00:00.000Z"
   },
   {
     "id": "2026-W18-006",
     "date": "2026-04-27",
-    "headline": "Státní analytik propuštěn po kritice vládního zmocněnce pro klima Turka",
-    "summary": "Analytik Martin Abel přišel o práci ve státní službě krátce poté, co veřejně zpochybnil argumenty vládního zmocněnce pro klima Filipa Turka. Abel popisuje, že jeho odchod byl přímým důsledkem ideologického konfliktu uvnitř vládní agendy.",
-    "pillar": "civil",
+    "headline": "Státní analytik odvolán po kritice vládního zmocněnce pro klima Turka",
+    "summary": "Analytik Martin Abel byl propuštěn ze státní služby krátce poté, co veřejně odmítl argumenty vládního zmocněnce Filipa Turka v oblasti klimatické politiky. Abel sám propojuje svůj odchod s tímto konfliktem a popisuje atmosféru, v níž jsou ideologické neshody řešeny personálními čistkami. Případ naznačuje možné politicky motivované personální zásahy ve státní správě.",
+    "pillar": "governance",
     "severity": 2,
     "direction": -1,
     "duration": "one_off",
@@ -114,44 +114,21 @@
         "title": "Turek vše zničí buldozerem, Motoristé si vyřizují ideologické konflikty propouštěním, říká vyhozený analytik",
         "url": "https://denikn.cz/2045505/turek-vse-znici-buldozerem-motoriste-si-vyrizuji-ideologicke-konflikty-propoustenim-rika-vyhozeny-analytik/",
         "outlet": "Deník N",
-        "fetched_at": "2026-04-29T06:52:57.904Z"
+        "fetched_at": "2026-04-29T07:59:15.542Z"
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 2 per rubric §2 — jde o politicky motivovaný personální zásah na střední úrovni státní správy (odvolání analytika) bez zřejmého kaskádového efektu na fungování instituce jako celku. Subkomponenta C1 (svoboda projevu) je dotčena, pokud byl pracovněprávní postih přímou reakcí na odborný názor, a C3 (svoboda sdružování/práce v neutrální státní službě). Zdrojem je jediný rozhovor s propuštěným zaměstnancem bez nezávislého potvrzení kauzality; proto severity 2, nikoli 3. Pokud by byl doložen systémový vzorec obdobných propouštění, eskalace na 3 per rubric §3 eskalační pravidlo (+1 za prokázaný vzorec). Anti-bias check: stejnou závažnost bych přiřadil analogickému případu pod jinou vládou.\n\n[auditor: flag] Pilíř civil (C1/C3) je obhajitelný, ale primární kořenová příčina — politicky motivované propouštění ve státní správě — sedí lépe na governance G4 (transparentnost a neutralita státní služby). Zvážit přesun nebo needs_review.",
+    "rationale": "Severity 2 per rubric §2 — politicky motivovaný personální zásah na střední úrovni státní správy (analytik odboru) bez doloženého kaskádového efektu. Subkomponenta G1 (ochrana státní správy před politickým tlakem exekutivy). Případ je zatím doložen pouze výpovědí samotného Abela bez nezávislého potvrzení, proto nelze aplikovat eskalační pravidlo vzorce. Při dalších podobných případech spojenitelných s Motoristy → eskalace. Severity null zvažována, ale základní fakt (propuštění po konfliktu s nadřízeným zmocněncem) je dostatečně konkrétní pro záznam.\n\n[auditor: flag] Rationale výslovně přiznává, že klíčový fakt (politická motivace odvolání) je doložen pouze výpovědí samotného Abela. Dle rubric pravidla 'jeden zdroj + severity 2+' by měl být status needs_review, ne active. Doporučuji downgrade na needs_review dokud není k dispozici nezávislé potvrzení.",
     "reviewer": "auto",
     "status": "active",
-    "created_at": "2026-04-29T06:52:57.895Z",
+    "created_at": "2026-04-29T07:59:15.527Z",
     "expires_at": "2026-07-20T00:00:00.000Z"
   },
   {
     "id": "2026-W18-007",
     "date": "2026-04-29",
-    "headline": "Vládní plán na změnu fungování ČT a ČRo – opozice avizuje masivní obstrukce",
-    "summary": "Vláda Andreje Babiše připravuje zásadní zásahy do fungování veřejnoprávních médií. Pirátská poslankyně označila chystané změny za útok na nezávislost ČT a ČRo a oznámila, že opozice hodlá legislativní postup blokovat masivními obstrukcemi.",
-    "pillar": "media",
-    "severity": null,
-    "direction": -1,
-    "duration": "persistent",
-    "sources": [
-      {
-        "title": "„S tím SPD do vlády šla.“ Pirátka o vládním plánu i o šanci na „záchranu“ ČT",
-        "url": "https://video.aktualne.cz/spotlight-video/masivni-obstrukce-podporime-rika-piratka-k-chystanym-zmenam-fungovani-verejnopravnich-medii/r~aaa29360e216dd46fed6bf7126b62b3c/",
-        "outlet": "Aktuálně.cz",
-        "fetched_at": "2026-04-29T06:52:59.386Z"
-      }
-    ],
-    "score_impact": 0,
-    "rationale": "Článek popisuje plánované vládní kroky vůči veřejnoprávním médiím (subkomponenta M2 – nezávislost ČT a ČRo) a reakci opozice. Závažnost nelze spolehlivě určit z dostupného textu: záleží na konkrétní podobě plánované legislativy. Pokud by šlo o přímou politickou kontrolu nad volbou vedení ČT/ČRo, odpovídalo by to rubric §4–5; pokud jde o méně invazivní změny, pak §3. Zdroj uvádí záměr bez konkrétního obsahu návrhu, proto severity: null – needs_review. Křížový dopad na pilíř governance (G2 – kvalita legislativního procesu) při hrozbě obstrukcí. Anti-bias check: stejný postup by byl aplikován, pokud by vládní plán přicházel od jiné strany.",
-    "reviewer": "auto",
-    "status": "needs_review",
-    "created_at": "2026-04-29T06:52:57.895Z"
-  },
-  {
-    "id": "2026-W18-008",
-    "date": "2026-04-29",
-    "headline": "Mediální výbor vyzval vládu ke stažení zákona o médiích a nařídil prověření nahrávky radních ČT",
-    "summary": "Mediální výbor Poslanecké sněmovny odhlasoval výzvu vládě ke stažení zákona o médiích veřejné služby a zřídil expertní skupinu k jeho posouzení. Opozice situaci využila poté, co se tři zástupci koaličních stran na jednání nedostavili. Výbor rovněž pověřil odborníky prověřením nahrávky dvou členů Rady ČT, která může naznačovat korupční jednání.",
+    "headline": "Mediální výbor vyzval vládu ke stažení zákona o médiích veřejné služby a nařídil prověření údajné korupce v Radě ČT",
+    "summary": "Mediální výbor sněmovny využil nepřítomnosti tří koaličních poslanců a přijal usnesení vyzývající vládu ke stažení kontroverzního zákona o médiích veřejné služby. Zároveň odhlasoval vznik expertní skupiny, která zákon posoudí, a nařídil prošetření nahrávky dvou radních ČT podezřelé z korupčního jednání.",
     "pillar": "media",
     "severity": 2,
     "direction": 1,
@@ -161,14 +138,14 @@
         "title": "Opozice využila koaliční chyby a prosadila třeskutá usnesení. Odnést to mohou i radní ČT z videa „za půl mega“",
         "url": "https://zpravy.aktualne.cz/domaci/opozice-vyuzila-koalicni-chyby-a-prosadila-treskuta-usneseni-odnest-to-mohou-i-radni-ct-z-videa-za-pul-mega/r~aaa29a73104c8cc4474628a27a7ec9c7/",
         "outlet": "Aktuálně.cz",
-        "fetched_at": "2026-04-29T06:52:59.386Z"
+        "fetched_at": "2026-04-29T07:59:16.854Z"
       }
     ],
     "score_impact": 0.5,
-    "rationale": "Severity 2 per rubric §2 — jde o konkrétní procedurální rozhodnutí výboru s lokálním dopadem, nikoli schválení samotného zákona ani strukturální změna. Usnesení výboru má charakter doporučení a kontrolního impulsu, nikoli závazného legislativního aktu. Subkomponenta M2 (nezávislost ČT, politický tlak na editoriální a institucionální strukturu) je dotčena sekundárně — výbor naopak spíše brání nezávislost ČT výzvou ke stažení sporného zákona, proto direction +1. Část o prověření nahrávky radních ČT se dotýká i pilíře corruption (K1, K4), zmíněno jako sekundární dimenze. Anti-bias check: stejný postup bych přiřadil, kdyby šlo o opačný politický tábor.\n\n[auditor: flag] Direction +1 je diskutabilní: výbor jednal v nepřítomnosti koaličních členů, jde o menšinové usnesení bez závazné síly. Institucionální posílení M2 je slabé — spíše ambivalentní (direction 0) nebo needs_review než jasné +1.",
+    "rationale": "Severity 3 per rubric §3 — usnesení výboru vytváří precedent politického tlaku na stažení zákona, který dle opozice ohrožuje nezávislost ČT/ČRo (subkomponenta M2). Směr +1, protože výbor koná ve prospěch ochrany nezávislosti veřejnoprávních médií a iniciuje prověření možné korupce v Radě ČT. Sekundárně se dotýká pilíře corruption (K1 — možné korupční jednání radních). Single source, žádná eskalace na základě rubric pro vzorec.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]\n\n[auditor: flag] Direction +1 je problematický: usnesení přijato v nepřítomnosti koaličních poslanců — jde o procedurálně kontroverzní akt, jehož demokratická hodnota je sporná. Nelze jednoznačně označit za posílení instituce. Rubric anchor v rationale chybí pro direction +1. Doporučuji needs_review pro direction.",
     "reviewer": "auto",
     "status": "active",
-    "created_at": "2026-04-29T06:52:57.895Z",
+    "created_at": "2026-04-29T07:59:15.527Z",
     "expires_at": "2026-07-22T00:00:00.000Z"
   }
 ]
