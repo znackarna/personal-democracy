@@ -3,18 +3,31 @@ import { type ScoreSnapshot, type StructuralBaseline, PILLARS, PILLAR_WEIGHTS } 
 interface Props {
   snapshot: ScoreSnapshot;
   baseline: StructuralBaseline;
+  /**
+   * Předchozí týden, pokud existuje. Slouží k zobrazení week-over-week
+   * delty (intuitivnější než delta od kvartálního baseline).
+   */
+  prevSnapshot?: ScoreSnapshot;
 }
 
-export function ScoreSummary({ snapshot, baseline }: Props) {
-  // Baseline weighted overall — what the score would be with zero events.
+export function ScoreSummary({ snapshot, baseline, prevSnapshot }: Props) {
+  // Baseline weighted overall — co by skóre bylo s nulou aktivních eventů.
   const baselineOverall =
     PILLARS.reduce((s, p) => s + baseline.pillars[p] * PILLAR_WEIGHTS[p], 0);
-  const delta = snapshot.overall_score - baselineOverall;
-  const deltaSign = delta >= 0 ? '+' : '';
-  const deltaColor =
-    Math.abs(delta) < 0.5
+  const baselineDelta = snapshot.overall_score - baselineOverall;
+
+  // Hlavní delta zobrazená vedle čísla = WoW (week-over-week). Když máme
+  // předchozí snapshot, je tohle to, co uživatel intuitivně očekává jako
+  // „směr pohybu". Bez předchozího snapshotu fallbackuje na baseline-delta.
+  const primaryDelta = prevSnapshot
+    ? snapshot.overall_score - prevSnapshot.overall_score
+    : baselineDelta;
+  const primaryLabel = prevSnapshot ? `vs. minulý týden` : `vs. baseline`;
+  const primarySign = primaryDelta >= 0 ? '+' : '';
+  const primaryColor =
+    Math.abs(primaryDelta) < 0.1
       ? 'text-slate-500'
-      : delta > 0
+      : primaryDelta > 0
         ? 'text-score-good'
         : 'text-score-bad';
 
@@ -29,13 +42,20 @@ export function ScoreSummary({ snapshot, baseline }: Props) {
             <div className="text-6xl font-bold tabular-nums text-slate-900">
               {snapshot.overall_score.toFixed(1)}
             </div>
-            <div className={`text-2xl font-semibold tabular-nums ${deltaColor}`}>
-              {deltaSign}
-              {delta.toFixed(1)}
+            <div className="flex flex-col">
+              <span className={`text-2xl font-semibold tabular-nums ${primaryColor}`}>
+                {primarySign}
+                {primaryDelta.toFixed(1)}
+              </span>
+              <span className="text-xs uppercase tracking-wide text-slate-400">
+                {primaryLabel}
+              </span>
             </div>
           </div>
-          <p className="mt-1 text-sm text-slate-500">
-            Vážený index 0–100. Baseline {baselineOverall.toFixed(1)} ({baseline.quarter}) plus {snapshot.active_events_count} aktivních událostí.
+          <p className="mt-2 text-sm text-slate-500">
+            Vážený index 0–100. Baseline {baselineOverall.toFixed(1)} ({baseline.quarter}){' '}
+            {baselineDelta >= 0 ? '+' : ''}
+            {baselineDelta.toFixed(1)} z {snapshot.active_events_count} aktivních událostí.
           </p>
         </div>
         <dl className="grid grid-cols-3 gap-4 text-sm">

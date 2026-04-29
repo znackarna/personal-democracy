@@ -23,6 +23,11 @@ export default async function HomePage() {
 
   const recentEvents = allEvents.slice(0, 5);
 
+  // Předchozí snapshot pro week-over-week deltu — předposlední v timeline,
+  // pokud je. Když je timeline ≤ 1 záznam, ScoreSummary fallbackuje na delta
+  // od baseline.
+  const prevSnapshot = timeline.length >= 2 ? timeline[timeline.length - 2] : undefined;
+
   return (
     <div className="space-y-10">
       <section>
@@ -40,7 +45,7 @@ export default async function HomePage() {
 
       {snapshot && baseline ? (
         <>
-          <ScoreSummary snapshot={snapshot} baseline={baseline} />
+          <ScoreSummary snapshot={snapshot} baseline={baseline} prevSnapshot={prevSnapshot} />
 
           <InfoBox title="Jak vzniká skóre 0–100" readMore={{ slug: 'weights' }}>
             <p>
