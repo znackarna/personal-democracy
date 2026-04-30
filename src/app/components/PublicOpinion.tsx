@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import {
   CartesianGrid,
@@ -34,15 +34,15 @@ const INSTITUTION_COLORS: Record<string, string> = {
 const FALLBACK_COLORS = ['#475569', '#0369a1', '#15803d', '#a16207', '#9333ea'];
 
 /**
- * Read-only sekce pro veĹ™ejnĂ© mĂ­nÄ›nĂ­. NEVSTUPUJE do skĂłre â€” slouĹľĂ­ jen jako
- * doplĹkovĂ˝ kontext (proÄŤ: methodology/public_opinion.md).
+ * Read-only sekce pro veřejné mínění. NEVSTUPUJE do skóre — slouží jen jako
+ * doplňkový kontext (proč: methodology/public_opinion.md).
  *
  * Renderuje:
- * 1. Per-source time series chart (typicky CVVM "DĹŻvÄ›ra ĂşstavnĂ­m institucĂ­m")
- * 2. Topical findings cards (ad-hoc nĂˇlezy STEM, Median bez time series)
+ * 1. Per-source time series chart (typicky CVVM "Důvěra ústavním institucím")
+ * 2. Topical findings cards (ad-hoc nálezy STEM, Median bez time series)
  *
- * Pokud ĹľĂˇdnĂˇ data nejsou k dispozici (ÄŤerstvĂ˝ repo), vracĂ­ nic â€” homepage
- * ten case oĹˇetĹ™Ă­ podmĂ­nkou.
+ * Pokud žádná data nejsou k dispozici (čerstvý repo), vrací nic — homepage
+ * ten case ošetří podmínkou.
  */
 export function PublicOpinion({ series, topical, topicalDescription }: Props) {
   return (
@@ -74,7 +74,7 @@ function PollSeriesChart({ series }: { series: PollSeries }) {
   }
   const institutions = [...presentInstitutions];
 
-  // Detect methodology break â€” if any datapoint is flagged, find its index for
+  // Detect methodology break — if any datapoint is flagged, find its index for
   // a vertical reference line.
   const breakIndex = series.data.findIndex((d) => d.methodology_break);
   const breakPeriod = breakIndex >= 0 ? series.data[breakIndex]?.period : null;
@@ -94,7 +94,7 @@ function PollSeriesChart({ series }: { series: PollSeries }) {
           rel="noopener noreferrer"
           className="text-xs text-slate-500 underline hover:text-slate-900"
         >
-          Zdroj â†’
+          Zdroj →
         </a>
       </header>
 
@@ -108,7 +108,7 @@ function PollSeriesChart({ series }: { series: PollSeries }) {
               stroke="#64748b"
               fontSize={11}
               ticks={[0, 25, 50, 75, 100]}
-              tickFormatter={(v: number) => `${v}Â %`}
+              tickFormatter={(v: number) => `${v} %`}
             />
             <Tooltip
               contentStyle={{
@@ -123,7 +123,7 @@ function PollSeriesChart({ series }: { series: PollSeries }) {
               ]}
               labelFormatter={(label: string) => {
                 const dp = series.data.find((d) => d.period === label);
-                return dp ? `${label} â€” ${dp.fieldwork}` : label;
+                return dp ? `${label} — ${dp.fieldwork}` : label;
               }}
             />
             <Legend
@@ -136,7 +136,7 @@ function PollSeriesChart({ series }: { series: PollSeries }) {
                 stroke="#dc2626"
                 strokeDasharray="4 4"
                 label={{
-                  value: 'ZmÄ›na metodiky',
+                  value: 'Změna metodiky',
                   position: 'top',
                   fontSize: 10,
                   fill: '#dc2626',
@@ -169,7 +169,7 @@ function PollSeriesChart({ series }: { series: PollSeries }) {
           {breakNote && (
             <>
               {' '}
-              <strong className="text-amber-700">ZmÄ›na metodiky ({breakPeriod}):</strong>{' '}
+              <strong className="text-amber-700">Změna metodiky ({breakPeriod}):</strong>{' '}
               {breakNote}
             </>
           )}
@@ -190,7 +190,7 @@ function TopicalFindings({
     <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
       <header className="mb-4">
         <h3 className="text-base font-semibold text-slate-900">
-          AktuĂˇlnĂ­ nĂˇlezy z dalĹˇĂ­ch ĹˇetĹ™enĂ­
+          Aktuální nálezy z dalších šetření
         </h3>
         {description && <p className="mt-1 text-xs text-slate-500">{description}</p>}
       </header>
@@ -212,7 +212,7 @@ function TopicalFindings({
               rel="noopener noreferrer"
               className="text-xs text-slate-600 underline hover:text-slate-900"
             >
-              CelĂ˝ report â†’
+              Celý report →
             </a>
           </article>
         ))}
