@@ -935,10 +935,16 @@
         "url": "https://www.seznamzpravy.cz/clanek/zahranicni-svoboda-medii-ve-svete-je-nejnizsi-za-25-let-uvedli-reporteri-bez-hranic-305178",
         "outlet": "Seznam Zprávy",
         "fetched_at": "2026-04-30T07:20:50.827Z"
+      },
+      {
+        "title": "Czech Republic Drops One Spot To 11th In RSF’s World Press Freedom Index",
+        "url": "https://brnodaily.com/2026/04/30/news/czech-republic-drops-one-spot-to-11th-in-rsfs-world-press-freedom-index/",
+        "outlet": "Brno Daily",
+        "fetched_at": "2026-05-01T07:09:42.188Z"
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 2 per rubric §2 — zveřejnění renomovaného externího indexu (RSF, mapující subkomponentu M1 a M3) dokládá mírný pokles pozice ČR o jednu příčku, bez zásadní systémové změny. Rubric eskalace: mezinárodní orgán potvrzuje negativní trend, ale pokles o jednu příčku při zachování top-15 pozice nepředstavuje strukturální posun (ten by byl severity 4–5). Událost je persistent, neboť RSF skóre reflektuje strukturální stav mediálního prostředí, nikoli jednorázový incident. Sekundárně relevantní pro subkomponentu M4 (přístup k informacím). Anti-bias: stejné hodnocení by platilo pro jakýkoli jiný stát obdobné velikosti.\n\n[merged with 2026-W18-041 — same incident, sources combined]\n\n[merged with 2026-W18-044 — same incident, sources combined]",
+    "rationale": "Severity 2 per rubric §2 — zveřejnění renomovaného externího indexu (RSF, mapující subkomponentu M1 a M3) dokládá mírný pokles pozice ČR o jednu příčku, bez zásadní systémové změny. Rubric eskalace: mezinárodní orgán potvrzuje negativní trend, ale pokles o jednu příčku při zachování top-15 pozice nepředstavuje strukturální posun (ten by byl severity 4–5). Událost je persistent, neboť RSF skóre reflektuje strukturální stav mediálního prostředí, nikoli jednorázový incident. Sekundárně relevantní pro subkomponentu M4 (přístup k informacím). Anti-bias: stejné hodnocení by platilo pro jakýkoli jiný stát obdobné velikosti.\n\n[merged with 2026-W18-041 — same incident, sources combined]\n\n[merged with 2026-W18-044 — same incident, sources combined]\n\n[merged with 2026-W18-060 — same incident, sources combined]",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-04-30T07:20:46.380Z"
@@ -1061,5 +1067,291 @@
     "status": "active",
     "created_at": "2026-04-30T07:20:46.380Z",
     "expires_at": "2026-07-22T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W18-048",
+    "date": "2026-05-01",
+    "headline": "ČT a ČRo: vláda ignorovala nabídku aktuálních dat při přípravě nového financování",
+    "summary": "Při přípravě návrhu nového financování veřejnoprávních médií vládní politici tvrdili, že nemají novější data než z roku 2024. Česká televize a Český rozhlas však Deníku N potvrdily, že aktuálnější čísla nabízely, ale nikdo je nekontaktoval. Ministr zodpovědný za návrh přiznal, že šlo o politické rozhodnutí.",
+    "pillar": "media",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Argument „nemáme nová data“ je zavádějící, kritizují ČT i ČRo. Vládě je nabízely, nikdo se neozval",
+        "url": "https://denikn.cz/2051037/argument-nemame-nova-data-je-zavadejici-kritizuji-ct-i-cro-vlade-je-nabizely-nikdo-se-neozval/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-01T07:09:24.442Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — záměrné ignorování dat od ČT a ČRo při přípravě klíčového financování veřejnoprávních médií naplňuje subkomponentu M2 (nezávislost ČT a ČRo, ochrana před politickým tlakem na financování). Přiznání ministra, že šlo o politické rozhodnutí, zakládá precedent pro netransparentní postup vůči veřejnoprávním médiím. Dopad je persistent, protože návrh financování je stále v legislativním procesu a vytváří trvalé riziko pro M2. Sekundárně se dotýká G2 (kvalita legislativy — vynechání připomínek relevantního subjektu).\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-01T07:09:24.427Z"
+  },
+  {
+    "id": "2026-W18-049",
+    "date": "2026-04-30",
+    "headline": "Hospodářský výbor schválil novelu stavebního zákona, opozice požadovala rezignaci ministryně Mrázové",
+    "summary": "Hospodářský výbor Poslanecké sněmovny podpořil koaliční novelu stavebního zákona po dvouhodinové debatě, která se částečně nesla ve znamení reputačních kauz ministryně Mrázové (ANO) z doby jejího starostování v Bílině. Poslanec Hřib (Piráti) ministryni vyzval k rezignaci, Mrázová odmítla pochybení.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Rád bych vás vyzval, abyste si sbalila. Do projednávání stavebního zákona se promítly kauzy ministryně Mrázové",
+        "url": "https://denikn.cz/2051207/rad-bych-vas-vyzval-abyste-si-sbalila-do-projednavani-stavebniho-zakona-se-promitly-kauzy-ministryne-mrazove/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-01T07:09:24.442Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — kauzy ministryně jsou dosud na úrovni reputačních problémů z místní samosprávy bez prokázaného trestního nebo disciplinárního závěru, což odpovídá subkomponentě K1 (střet zájmů ústavních činitelů) v rané fázi. Výzva k rezignaci ze strany opozice v parlamentním výboru je zaznamenatelný institucionální akt, nikoli pouhý verbální útok na sociálních sítích. Dopad je zatím omezený — jde o jeden výbor, jedna výzva bez hlasování. Sekundárně se dotýká G2 (legislativní proces byl narušen mimoprogramovou debatou). Anti-bias check: stejnou severity bych přidělil i jinému ministrovi jiné strany čelícímu srovnatelným kauzám bez prokázaného úmyslu.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-01T07:09:24.427Z",
+    "expires_at": "2026-07-23T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W18-050",
+    "date": "2026-04-30",
+    "headline": "Správa jeskyní nepravdivě informovala o práci syna úředníka, nezletilý zaměstnanec skončil",
+    "summary": "Ředitel Správy jeskyní uváděl syna vysokého úředníka do vedoucí pozice a nezletilý vykonával kvalifikovanou práci kontrolora. Po zveřejnění nových dokumentů Deníkem N syn z organizace odešel. Vedení organizace přitom o jeho angažmá klamalo.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Vedení jeskyňářů klamalo o práci pro syna vysokého úředníka. Ten náhle skončil",
+        "url": "https://denikn.cz/2049183/vedeni-jeskynaru-klamalo-o-praci-pro-syna-vysokeho-urednika-ten-nahle-skoncil/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-01T07:09:24.442Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o nepotismus na střední úrovni státní správy (subkomponenta K1 — zneužití postavení pro osobní prospěch) s lokálním dopadem v příspěvkové organizaci. Situace byla rychle řešena odchodem zaměstnance, což odpovídá de-eskalačnímu pravidlu (institucionální korekce). Rozsah je omezený — netýká se ústavních činitelů ani systémového schématu. Jediný zdroj (Deník N), proto bez eskalace na 3.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-01T07:09:24.427Z",
+    "expires_at": "2026-07-23T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W18-051",
+    "date": "2026-04-30",
+    "headline": "Státní zástupce obžaloval čtyři osoby z investičního podvodu s kryptoměnou za půl miliardy korun",
+    "summary": "Pražská státní zastupitelství podala obžalobu na čtyři osoby v souvislosti s projektem PlatonCoin/Platon Life, v němž mělo být poškozeno přes 2 700 klientů se škodou přesahující 540 milionů korun. Obžalovaným hrozí až desetileté vězení.",
+    "pillar": "judicial",
+    "severity": 2,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Případ údajného obřího podvodu míří k soudu, škoda přesahuje půl miliardy",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/pripad-udajneho-obriho-podvodu-miri-k-soudu-skoda-presahuje-pul-miliardy-372992",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-01T07:09:25.758Z"
+      }
+    ],
+    "score_impact": 0.5,
+    "rationale": "Severity 2 per rubric §2 — podání obžaloby v rozsáhlé trestní věci je standardní procesní krok soudní soustavy bez strukturálního dopadu na demokratické instituce. Událost pozitivně dokládá funkčnost trestního řízení (subkomponenta J4 — rovnost před zákonem, vymahatelnost práva), ale nejde o systémovou změnu ani precedent v oblasti demokratického řízení. Direction +1: justice funguje a případ postupuje soudem.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-01T07:09:24.427Z",
+    "expires_at": "2026-07-23T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W18-052",
+    "date": "2026-04-30",
+    "headline": "NCOZ odložila případ textových zpráv ministra Macinky poradci prezidenta Pavla",
+    "summary": "Národní centrála proti organizovanému zločinu odložila prověřování textových zpráv, které ministr zahraničí Petr Macinka zaslal poradci prezidenta Petra Pavla Petru Kolářovi. Usnesení zatím není pravomocné a podrobnosti nebyly zveřejněny.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": 0,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "NCOZ odložila případ Macinkových zpráv prezidentovu poradci",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/ncoz-odlozilo-pripad-macinkovych-zprav-prezidentovu-poradci-372975",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-01T07:09:25.758Z"
+      }
+    ],
+    "score_impact": 0,
+    "rationale": "Severity 2 per rubric §2 — odložení policejní prověrky týkající se ministra a prezidentova poradce je konkrétní institucionální rozhodnutí se zaznamenatelným dopadem na veřejnou odpovědnost (subkomponenta K1 — politická korupce, odpovědnost ústavních činitelů). Nicméně v článku chybí podrobnosti o obsahu zpráv ani povaze podezření, takže institucionální dopad je nejasný. Direction 0: odložení samo o sobě je procesně neutrální — může jít o správné i nesprávné rozhodnutí; bez dalšího kontextu nelze jednoznačně určit směr. Single source a nepravomocné rozhodnutí neumožňují vyšší závažnost.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-01T07:09:24.427Z",
+    "expires_at": "2026-07-23T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W18-053",
+    "date": "2026-04-30",
+    "headline": "NCOZ zahájila stíhání šesti osob a tří firem za dotační podvod a manipulaci zakázek v příbramské nemocnici",
+    "summary": "Po razii v příbramské nemocnici zahájila NCOZ trestní stíhání šesti fyzických a tří právnických osob pro dotační podvod a zjednání výhody při zadání veřejné zakázky. Hodnota ovlivněných zakázek dosahuje podle EPPO 280 milionů korun, všechny osoby jsou stíhány na svobodě.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Po zásahu v příbramské nemocnici policie stíhá šest lidí a tři firmy",
+        "url": "https://ct24.ceskatelevize.cz/clanek/regiony/stredocesky-kraj/po-zasahu-v-pribramske-nemocnici-policie-stiha-sest-lidi-a-tri-firmy-372970",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-01T07:09:25.758Z"
+      }
+    ],
+    "score_impact": 0.5,
+    "rationale": "Severity 3 per rubric §3 — rozsáhlé trestní stíhání v kauze veřejných zakázek s hodnotou 280 mil. Kč a zapojením EPPO má širší institucionální dosah a nastavuje precedent pro vymáhání pravidel ZZVZ (subkomponenta K2 — veřejné zakázky). Zapojení jak NCOZ, tak EPPO zvyšuje věrohodnost a institucionální závažnost případu. Direction +1: protikorupční mechanismy fungují a případ aktivně postupuje. Sekundárně relevantní pro pilíř judicial (J4 — vymahatelnost práva), zmíněno v rationale.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-01T07:09:24.427Z",
+    "expires_at": "2026-07-23T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W18-054",
+    "date": "2026-04-30",
+    "headline": "Ministryně Mrázová odmítla výzvy k rezignaci kvůli majetkovým kauzám",
+    "summary": "Ministryně pro místní rozvoj Zuzana Mrázová (ANO) odmítla opoziční požadavky na rezignaci po zveřejnění informací o obecním bytě a stavbách na jejím pozemku v rozporu s územním plánem. Obvinění označila za vytržená z kontextu a popřela jakékoli porušení zákona. Rezignaci požadují Piráti, STAN a TOP 09, kteří jí vytýkají i manažerská selhání při přípravě stavebního zákona.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Ministryně Mrázová odmítla výzvy k rezignaci, předpisy prý neporušila",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/ministryne-mrazova-ma-na-svem-pozemku-cerne-stavby-pisi-seznam-zpravy-372968",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-01T07:09:25.758Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o zjištění potenciálního střetu zájmů a majetkových nesrovnalostí u ústavní činitelky (subkomponenta K1), ale bez prokázaného porušení zákona a bez doloženého přímého zneužití funkce. Ministryně obvinění odmítá, opoziční výzvy k rezignaci jsou dosud bez institucionálního výsledku. Záležitost zatím nepřekračuje hranici 'drobný incident s omezeným dopadem' — pokud by byly prokázány konkrétní protiprávní kroky nebo by případ vedl k institucionální reakci (odvolání, trestní oznámení), eskalace na 3–4. Sekundárně se dotýká pilíře governance (G4 — transparentnost vládnutí).",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-01T07:09:24.427Z",
+    "expires_at": "2026-07-23T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W18-055",
+    "date": "2026-04-30",
+    "headline": "SPD zakázala ministrovi obrany Zůnovi cestu na Ukrajinu a omezila jeho veřejná vyjádření",
+    "summary": "Ministr obrany Jaromír Zůna (nominant SPD) narazil na odpor své vlastní strany poté, co na tiskové konferenci označil Rusko za agresora a přijal pozvání do Kyjeva. SPD cestu promptně zakázala. Česko přitom čelí podle Zůny nejkritičtějšímu hodnocení NATO od vstupu do aliance v roce 1999.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Od vstupu do NATO v roce 1999 má Česko od aliance nejkritičtější hodnocení, říká ministr Zůna",
+        "url": "https://domaci.hn.cz/c1-67872460-od-vstupu-do-nato-v-roce-1999-ma-cesko-od-aliance-nejkritictejsi-hodnoceni-rika-ministr-zuna",
+        "outlet": "Hospodářské noviny",
+        "fetched_at": "2026-05-01T07:09:27.848Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — stranické zasahování do výkonu ministerského mandátu (subkomponenta G1 — dělba moci, reálná autonomie exekutivy) je zaznamenáníhodné, ale jednorázový incident bez precedentu strukturálního přebírání kontroly nad ministerstvem. Pokud by SPD soustavně diktovala ministrovi zahraniční politiku nebo bránila plnění závazků NATO, eskalace na 3. Anti-bias check: stejné hodnocení by bylo aplikováno i na koaliční partnera jiné politické orientace.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-01T07:09:24.427Z",
+    "expires_at": "2026-07-23T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W18-056",
+    "date": "2026-04-29",
+    "headline": "Okruh Andreje Babiše připravuje zákon o 'zahraničních agentech' přísnější než ruský vzor",
+    "summary": "Podle investigativního článku HN připravují spolupracovníci Andreje Babiše legislativu, která by označovala nevládní organizace financované ze zahraničí za 'zahraniční agenty' — a to v přísnější podobě, než je ruský zákon, jenž byl mezinárodně kritizován za likvidaci občanské společnosti. Experti z Ruska a dalších zemí popisují mechanismus, jak takový zákon postupně eliminuje nezávislé organizace.",
+    "pillar": "civil",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Přísnější než Putin: v Česku se chystá tvrdší zákon, než měli léta v Rusku. Má z nepohodlných udělat &bdquo;zahraniční agenty&ldquo;",
+        "url": "https://vikend.hn.cz/c1-67871740-prisnejsi-nez-putin-v-cesku-se-chysta-tvrdsi-zakon-nez-meli-leta-v-rusku-ma-z-nepohodlnych-udelat-bdquo-zahranicni-agenty-ldquo",
+        "outlet": "Hospodářské noviny",
+        "fetched_at": "2026-05-01T07:09:27.848Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — příprava zákona o zahraničních agentech je přímou hrozbou pro subkomponentu C3 (svoboda sdružování, ochrana NGO před administrativní šikanou). Rubric §5 uvádí schválený zákon tohoto typu jako severity 5; samotná příprava a veřejné projednávání bez schválení odpovídají severity 3 per eskalační pravidlo 'formální dokument vs. pouhý záměr' — zde je zatím záměr/příprava, nikoli předložený návrh. Duration: persistent, protože legislativní příprava trvá. Sekundárně se dotýká pilíře governance (G2) a media (M3 — SLAPP potenciál). Anti-bias check: stejné hodnocení by bylo aplikováno na přípravu srovnatelného omezujícího zákona jakoukoliv stranou.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-01T07:09:24.427Z"
+  },
+  {
+    "id": "2026-W18-057",
+    "date": "2026-04-29",
+    "headline": "Ministr školství Plaga se střetl s poslanci na výboru ohledně reformy přijímacích zkoušek",
+    "summary": "Na zasedání školského výboru Poslanecké sněmovny došlo ke konfliktu mezi ministrem školství Plagou a zákonodárci ohledně podoby přijímacích zkoušek na střední školy a maturit. Výbor jedná o snížení váhy centralizovaných testů Cermatu a posílení pravomoci škol k vlastním přijímacím zkouškám.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Rozčilený Plaga překvapil poslance. Váha testů od Cermatu se má snížit, školy dostanou prostor pro vlastní přijímačky",
+        "url": "https://archiv.hn.cz/c1-67872210-rozcileny-plaga-prekvapil-poslance-vaha-testu-od-cermatu-se-ma-snizit-skoly-dostanou-prostor-pro-vlastni-prijimacky",
+        "outlet": "Hospodářské noviny",
+        "fetched_at": "2026-05-01T07:09:27.848Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — konkrétní incident v legislativním procesu, kdy ministr konfliktně reagoval na standardní parlamentní práci výboru pozvat experty k debatě (subkomponenta G1: kontrola exekutivy parlamentem). Nejde o systémové ohrožení, ale o narušení standardního vztahu exekutivy a legislativy. Věcná debata o reformě přijímacích zkoušek je legitimní politická diskuse, avšak způsob, jakým ministr přistoupil k výboru, mírně oslabuje normu kooperace. Bez eskalace — jde o ojedinělý incident bez precedentu.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-01T07:09:24.427Z",
+    "expires_at": "2026-07-22T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W18-058",
+    "date": "2026-05-01",
+    "headline": "Státní fond protiprávně tají posudky k miliardovým dotacím pro Agrofert",
+    "summary": "Státní fond zemědělské intervence nezákonně odmítá zpřístupnit polovinu znaleckých posudků, na jejichž základě Agrofert získal miliardové dotace. Fond v rozporu se zákonem odkazoval žadatele na webové stránky, kde dokumenty fakticky dostupné nejsou. Zveřejnění slíbil až po dotazech redakce.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Stát tají část posudků, které pomohly Agrofertu k miliardám",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-kauzy-nezakonne-stat-dale-taji-cast-posudku-ktere-agrofertu-pomohly-k-miliardam-305217",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-01T07:09:29.984Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — subkomponenta K2 (transparentnost veřejných zakázek a dotačních řízení) a K1 (politická korupce, střet zájmů ve vztahu k Agrofertu s politickou historií). Státní fond porušuje zákon tím, že aktivně znepřístupňuje veřejné dokumenty, čímž brání kontrole nakládání s veřejnými prostředky; jde o precedentní případ protiprávního utajování dotačních podkladů vztahujících se ke konkrétní politicky exponované firmě. Sekundárně se dotýká pilíře governance (G4 — transparentnost vládnutí, zákon 106/1999). Jeden investigativní zdroj, proto severity zůstává na 3 bez eskalace; pokud by se potvrdilo z dalšího zdroje, vhodné zvážit upgrade na 4.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-01T07:09:24.427Z",
+    "expires_at": "2026-07-24T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W18-059",
+    "date": "2026-04-30",
+    "headline": "Odborníci z literárních komisí obvinili ministerstvo kultury z cenzury zápisu o dotacích",
+    "summary": "Členové odborných literárních komisí veřejně obvinili Ministerstvo kultury pod vedením ministra Klempíře z toho, že zcenzurovalo zápis z jednání o rozdělení kulturních dotací. Kritizují také snížení finanční podpory kultuře a tvrdí, že vláda neplní programové prohlášení. Ministerstvo obvinění odmítá.",
+    "pillar": "civil",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Odborníci obviňují Klempíře z cenzury. Ministerstvo tvrzení odmítá",
+        "url": "https://www.seznamzpravy.cz/clanek/kultura-klempir-ministerstvo-kultury-literatura-komise-305260",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-01T07:09:29.984Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — subkomponenta C1 (svoboda projevu a přístup k informacím ve veřejném zájmu) a sekundárně K2/G4 (transparentnost rozhodování o veřejných prostředcích). Obvinění z cenzury zápisu odborné komise je konkrétní tvrzení o zásahu do dokumentace veřejného rozhodovacího procesu, ale zatím pouze na úrovni tvrzení odborníků bez doloženého formálního dokumentu nebo nezávislého potvrzení. Ministerstvo odmítá; fakta jsou sporná, proto severity zůstává na 2 (lokální dopad, chybí potvrzení druhým zdrojem). Pokud by cenzura zápisu byla doložena, vhodné zvážit upgrade na 3 (precedent v omezování transparentnosti dotačního procesu).",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-01T07:09:24.427Z",
+    "expires_at": "2026-07-23T00:00:00.000Z"
   }
 ]
