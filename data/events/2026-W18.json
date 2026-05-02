@@ -1353,5 +1353,171 @@
     "status": "active",
     "created_at": "2026-05-01T07:09:24.427Z",
     "expires_at": "2026-07-23T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W18-060",
+    "date": "2026-04-30",
+    "headline": "Ministryně Mrázová čelí třem kauzám zneužití veřejné funkce z doby starostování",
+    "summary": "Ministryně pro místní rozvoj Zuzana Mrázová čelí třem samostatným kauzám spojeným s jejím působením ve funkci starostky Bíliny. Každý případ by mohl být považován za ojedinělý, avšak jejich souběh naznačuje systematický vzorec zneužívání postavení. Mrázová jakékoliv osobní obohacení odmítá.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Pointa N: Papalášství ministryně se „silným sociálním cítěním“",
+        "url": "https://denikn.cz/2051243/pointa-n-papalasstvi-ministryne-se-silnym-socialnim-citenim/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-02T06:53:23.339Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — souběh tří kauz naznačuje potenciálně systematické zneužívání veřejné funkce (subkomponenta K1, střet zájmů ústavního činitele), což vytváří precedentní tlak na vládní integritu. Článek je komentářového charakteru shrnující průběžné kauzy; konkrétní doložené skutky zatím nepřesahují úroveň 3, protože nejde o prokázané a formálně uzavřené případy. Sekundárně relevantní pro pilíř governance (G1 — kontrola exekutivy). Zdroj je jeden (Deník N), proto nevyšší hodnota zůstává u 3.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-02T06:53:23.323Z"
+  },
+  {
+    "id": "2026-W18-061",
+    "date": "2026-04-30",
+    "headline": "Babiš je nespokojen s výkonem ministryně Mrázové, kauzy zatím komentovat odmítá",
+    "summary": "Premiér Andrej Babiš je podle informací Deníku N dlouhodobě nespokojený s výkonem ministryně Mrázové, přičemž ta nyní čelí několika kauzám ze svého předchozího působení v komunální politice. Babiš se k věci veřejně nevyjadřuje. Situace naznačuje napětí uvnitř koalice.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Babiš kauzy ministryně Mrázové zatím přechází mlčením, spokojen s ní ale není",
+        "url": "https://denikn.cz/2051264/babis-kauzy-ministryne-mrazove-zatim-prechazi-mlcenim-spokojen-s-ni-ale-neni/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-02T06:53:23.339Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o signál interní koaliční nespokojenosti s ministrem bez okamžitého institucionálního dopadu, zatím bez veřejného vystoupení ani personální změny. Subkomponenta G1 (kontrola exekutivy) je dotčena jen nepřímo. Jeden zdroj, žádné formální rozhodnutí. Koreluje s kauzami ministryně (viz index 2, pilíř corruption); primárně governance kvůli vnitřní kohezi vlády.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-02T06:53:23.323Z",
+    "expires_at": "2026-07-23T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W18-062",
+    "date": "2026-04-29",
+    "headline": "SPD v jednom týdnu protestovala proti sudetským Němcům a přivítala jejich rakousské spojence",
+    "summary": "Strana SPD nejprve demonstrovala proti sjezdu sudetských Němců v Brně s varováním před zrušením Benešových dekretů, a den poté Tomio Okamura ve Sněmovně přijal zástupce rakouské strany, která má zrušení dekretů přímo v programu. Výsledné mediální porovnání obou kroků vykresluje vnitřní rozpor v rétorice strany.",
+    "pillar": "governance",
+    "severity": 1,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Dvojí tvář SPD: Nejdřív brojila proti „sudeťákům“, pak vítala odpůrce dekretů",
+        "url": "https://denikn.cz/2051205/dvoji-tvar-spd-nejdriv-brojila-proti-sudetakum-pak-vitala-odpurce-dekretu/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-02T06:53:23.339Z"
+      }
+    ],
+    "score_impact": -0.2,
+    "rationale": "Severity 1 per rubric §1 — jde o verbální a symbolický incident bez přímého institucionálního dopadu. Odkaz na subkomponentu G1 (sněmovní prostředí) je marginální; žádné rozhodnutí, zákon ani procedura nebyly narušeny. Politická inkonzistence sama o sobě nepředstavuje strukturální ohrožení demokratického procesu. Pokud by SPD iniciovala legislativní kroky v otázce dekretů, eskalace by byla na 3+.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-02T06:53:23.323Z",
+    "expires_at": "2026-07-22T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W18-063",
+    "date": "2026-05-02",
+    "headline": "Rezignace dozorového státního zástupce komplikuje vyšetřování dotace pro Agrofert",
+    "summary": "Státní zástupce dozorující více než rok a půl trvající vyšetřování podezřelého přidělení stomilionové dotace pekárně z holdingu Agrofert rezignoval. Případ přebírá nový státní zástupce, což podle dostupných informací vyšetřování dále prodlouží.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Konec žalobce komplikuje vyšetřování stomilionové dotace pro pekárnu Agrofertu",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-kauzy-vysetrovani-stomilionove-dotace-pro-pekarnu-agrofertu-se-protahne-304969",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-02T06:53:28.679Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o konkrétní personální změnu s omezeným, ale reálným dopadem na průběh korupční kauzy (subkomponenta K4 — funkčnost protikorupčních institucí). Rezignace dozorového žalobce uprostřed aktivního vyšetřování není systémové selhání, ale zdržení s praktickými důsledky. Sekundárně se dotýká J3 (nezávislost státního zastupitelství), avšak z článku nevyplývá politická motivace rezignace — pouze organizační komplikace. Jediný zdroj, proto se neeskaluje výše.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-02T06:53:23.323Z",
+    "expires_at": "2026-07-25T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W18-064",
+    "date": "2026-05-01",
+    "headline": "Novela stavebního zákona zcela odebírá obcím vliv na stavební řízení",
+    "summary": "Vládní poslanci podepsali novelu stavebního zákona, která zbavuje obce veškerého vlivu na stavební řízení na jejich území. Kritici hodnotí omezení samosprávy jako nejrozsáhlejší od roku 1989.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Obce ztratí vliv na to, co se bude stavět. Vláda vrací poměry před listopad 1989",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-destrukce-systemu-obce-ztrati-vliv-na-to-co-a-kde-se-v-nich-bude-stavet-304714",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-02T06:53:28.679Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — novela vytváří precedent pro zásadní oslabení územní samosprávy (subkomponenta G1 — dělba moci, tentokrát ve vertikální rovině mezi centrální vládou a samosprávami). Přestože jde o zákon primárně stavební, jeho dopad na demokratickou samosprávu obcí je přímý a rozsáhlý — odpovídá kritériu 'broad consequences / precedent setting'. Duration persistent, protože zákon bude v platnosti a vytváří trvalý strukturální stav. Článek je z mediálního zdroje s jasnou datací podpisu poslanců; bez mezinárodní reakce ani opakovaného vzorce, proto zůstává na 3.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-02T06:53:23.323Z"
+  },
+  {
+    "id": "2026-W18-065",
+    "date": "2026-05-01",
+    "headline": "Bývalí sociální demokraté zahajují sběr podpisů pro registraci Nové sociální demokracie",
+    "summary": "Skupina kolem bývalého premiéra Špidly spustila sběr podpisů nezbytných pro registraci nové politické strany Nová sociální demokracie; polovina z požadovaného tisíce podpisů je již zajištěna.",
+    "pillar": "electoral",
+    "severity": 1,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Špidla a spol. začali sbírat podpisy pro vznik Nové sociální demokracie",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-spidla-a-spol-zacali-sbirat-podpisy-pro-novou-socialni-demokracii-305286",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-02T06:53:28.679Z"
+      }
+    ],
+    "score_impact": 0.2,
+    "rationale": "Severity 1 per rubric §1 — vznik nového politického subjektu je pozitivní pro pluralismus (subkomponenta E2 — reálná soutěž, žádné bariéry pro nové subjekty), ale v této fázi jde o rutinní procedurální krok bez výjimečného institucionálního dopadu. Direction +1, protože rozšíření politické nabídky posiluje volební pluralismus. One_off, protože se jedná o jednorázový moment v procesu zakládání strany.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-02T06:53:23.323Z",
+    "expires_at": "2026-07-24T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W18-066",
+    "date": "2026-05-01",
+    "headline": "Prvomájový průvod anarchistů prošel Prahou, u Vltavy se sešli i odpůrci",
+    "summary": "Na Střeleckém ostrově se 1. května konala setkání u příležitosti Svátku práce, odkud se vydal pochod ulicemi Prahy. Akce proběhla za přítomnosti odpůrců shromáždění. Fotogalerie dokumentuje průběh demonstrace bez zásahu státní moci.",
+    "pillar": "civil",
+    "severity": 1,
+    "direction": 0,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Foto: Prahou prošel průvod anarchistů, u Vltavy čekali odpůrci",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-foto-prahou-jde-pruvod-anarchistu-305287",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-02T06:53:28.679Z"
+      }
+    ],
+    "score_impact": 0,
+    "rationale": "Severity 1 per rubric §1 — rutinní využití práva na shromáždění (subkomponenta C2) bez jakéhokoli zásahu policie nebo státní moci. Průvod proběhl standardně, není zaznamenán žádný institucionální dopad. Zaznamenáno jako doklad fungujícího práva na shromáždění, direction 0 — neutrální dokumentace stavu, nikoli posílení ani oslabení.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-02T06:53:23.323Z",
+    "expires_at": "2026-07-24T00:00:00.000Z"
   }
 ]

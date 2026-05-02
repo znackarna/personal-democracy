@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": "2026-W10-001",
+    "date": "2026-02-10",
+    "headline": "Česko získalo 59 bodů v CPI 2025, stále pod průměrem EU",
+    "summary": "Transparency International zveřejnila výsledky Indexu vnímání korupce za rok 2025. Česko dosáhlo 59 bodů ze 100, což je o 3 body více než v předchozím roce, avšak stále pod průměrem zemí EU (62 bodů). Podcast TI ČR hodnotí protikorupční politiku Fialovy vlády a spekuluje o budoucích rizicích za Babišova kabinetu.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Stošestka: Fialova vláda dosáhla na 59 bodů v Indexu vnímání korupce. Kam zamíří Babišův kabinet?",
+        "url": "https://www.transparency.cz/stosestka-fialova-vlada-dosahla-na-59-bodu-v-indexu-vnimani-korupce-kam-zamiri-babisuv-kabinet/",
+        "outlet": "Transparency International ČR",
+        "fetched_at": "2026-05-02T06:53:48.610Z"
+      }
+    ],
+    "score_impact": 0.5,
+    "rationale": "Severity 2 per rubric §2 — zveřejnění CPI je konkrétní datová událost s institucionálním významem (subkomponenta K1, K4), nikoli strukturální změna. Mírné zlepšení o 3 body je pozitivní signál, ale přetrvávající zaostávání za průměrem EU naznačuje pouze dílčí, nikoli systémový posun. Direction +1 za měřitelné zlepšení skóre, i když omezené. Poznámka: datum události je den zveřejnění dat TI International (10. února 2026), nikoli datum podcastu (4. března 2026).",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-02T06:53:23.323Z",
+    "expires_at": "2026-05-05T00:00:00.000Z"
+  }
+]
