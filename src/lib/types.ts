@@ -193,3 +193,43 @@ export const TopicalFindingsFileSchema = z.object({
   items: z.array(TopicalFindingSchema),
 });
 export type TopicalFindingsFile = z.infer<typeof TopicalFindingsFileSchema>;
+
+// ============================================================
+// Cross-country comparison data — read-only, NEVSTUPUJE do skóre.
+// ============================================================
+
+export const CrossCountrySchema = z.object({
+  code: z.string().regex(/^[A-Z]{2}$/),
+  name: z.string().min(1),
+  highlight: z.boolean(),
+});
+export type CrossCountry = z.infer<typeof CrossCountrySchema>;
+
+export const CrossSubPillarSchema = z.object({
+  id: z.string().min(1),
+  label: z.string().min(1),
+  values: z.record(z.string(), z.number()),
+});
+export type CrossSubPillar = z.infer<typeof CrossSubPillarSchema>;
+
+export const CrossIndexSchema = z.object({
+  id: z.string().min(1),
+  label: z.string().min(1),
+  year: z.number().int().min(2000).max(2100),
+  scale_max: z.number().positive(),
+  type: z.enum(['multi_dimension', 'single_dimension']),
+  pillar_match: PillarSchema.optional(),
+  url: z.string().url(),
+  source_note: z.string().min(1),
+  values: z.record(z.string(), z.number()),
+  sub_pillars: z.array(CrossSubPillarSchema).optional(),
+});
+export type CrossIndex = z.infer<typeof CrossIndexSchema>;
+
+export const CrossCountryDataSchema = z.object({
+  computed_at: z.string().datetime(),
+  notes: z.string().optional(),
+  countries: z.array(CrossCountrySchema).min(2),
+  indexes: z.array(CrossIndexSchema).min(1),
+});
+export type CrossCountryData = z.infer<typeof CrossCountryDataSchema>;

@@ -80,6 +80,13 @@ export const METHODOLOGY_DOCS: readonly MethodologyDoc[] = [
       'Doplňkový read-only kontext z průzkumů (CVVM, STEM, Median). Nevstupuje do skóre — proč ne, jak ho užívat, co plánujeme přidat. Zdroje a jejich profil.',
   },
   {
+    slug: 'srovnani-zemi',
+    file: 'cross_country',
+    title: 'Srovnání zemí',
+    description:
+      'Jak je vybráno 8 zemí (V4 + DE/AT + USA/UK), jakých 6 indexů, proč CZ + SK highlight a jaké ročníky publikace. Read-only externí benchmark, nevstupuje do našeho indexu.',
+  },
+  {
     slug: 'zmeny',
     file: 'CHANGELOG',
     title: 'Changelog',

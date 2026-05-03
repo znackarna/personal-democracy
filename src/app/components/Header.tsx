@@ -17,6 +17,9 @@ export function Header() {
           <Link href="/udalosti/" className="text-slate-700 hover:text-slate-900">
             Události
           </Link>
+          <Link href="/srovnani/" className="text-slate-700 hover:text-slate-900">
+            Srovnání
+          </Link>
           <Link href="/metodika/" className="text-slate-700 hover:text-slate-900">
             Metodika
           </Link>

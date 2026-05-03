@@ -6,8 +6,10 @@ import {
   type IndexComparison,
 } from '@/lib/external-comparison';
 import {
+  CrossCountryDataSchema,
   PollSeriesSchema,
   TopicalFindingsFileSchema,
+  type CrossCountryData,
   type Event,
   type PollSeries,
   type ScoreSnapshot,
@@ -151,6 +153,23 @@ export async function readTopicalFindings(): Promise<TopicalFindingsFile | null>
       ...parsed.data,
       items: [...parsed.data.items].sort((a, b) => b.date.localeCompare(a.date)),
     };
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === 'ENOENT') return null;
+    throw err;
+  }
+}
+
+/**
+ * Read cross-country comparison data (8 countries × 6 indexes). Read-only —
+ * NEVSTUPUJE do skóre. Slouží pro stránku /srovnani/.
+ */
+export async function readCrossCountry(): Promise<CrossCountryData | null> {
+  const file = path.join(DATA_ROOT, 'cross_country', 'indexes.json');
+  try {
+    const raw = await readFile(file, 'utf-8');
+    const parsed = CrossCountryDataSchema.safeParse(JSON.parse(raw));
+    if (!parsed.success) return null;
+    return parsed.data;
   } catch (err) {
     if ((err as NodeJS.ErrnoException).code === 'ENOENT') return null;
     throw err;
