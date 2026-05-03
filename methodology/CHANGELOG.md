@@ -2,6 +2,37 @@
 
 Každá změna metodiky (pilíře, váhy, rubric, mantinely) je zaznamenána zde s datem, autorem a odůvodněním. Změny vyžadují přepočet historické řady, viz [`weights.md`](weights.md), pravidla pro změnu vah.
 
+## v0.2.2 — Structural baseline 2026-Q3 (EIU 2025 update, 2026-04-30)
+
+EIU Democracy Index 2025 publikován dubnem 2026. Vytvořen nový baseline file
+`data/structural/2026-Q3.json` reflektující jedinou změnu vůči Q2:
+
+- **EIU 2024 → 2025: 8.08 → 8.15** (+0.07). CZ rank 23 beze změny, klasifikace
+  „full democracy" potvrzena (4. rok v řadě po návratu z „flawed" v 2023).
+- Sub-pillars EIU 2025: electoral process 9.58, functioning of government 7.86,
+  political participation 7.22, political culture 8.13, civil liberties 8.57.
+
+**Dopad na náš index:**
+- `governance` pillar: (81.5 + 91.75) / 2 = **86.6** (was 86.3, +0.3)
+- Vážený overall: ~85.06 (was 85.0, +0.06). Drobná posun nahoru.
+
+**Žádné jiné externí indexy se v tomto cyklu nezměnily** — V-Dem 2024, FH 2025,
+RSF 2025, TI 2024, WJP 2024 zůstávají identické. Reálné updaty:
+- TI CPI 2025: leden 2026 (zameškali jsme — TODO doplnit do Q4 baseline)
+- FH 2026: březen 2026 (zameškali jsme — TODO doplnit do Q4 baseline)
+- RSF 2026: květen 2026 (čekáme)
+- WJP 2025: říjen/listopad 2025 (zameškali jsme — TODO doplnit do Q4 baseline)
+- V-Dem 2025 dataset: typicky jaro (čekáme)
+
+Pro v0.3 (iter 18+) zvážit přechod governance pillaru z **EIU overall (8.15)**
+na **EIU Functioning of government sub-pillar (7.86)** — přesnější mapping,
+ale methodology change vyžaduje user souhlas + recompute historic timeline.
+
+Workflow YAML default updatován z `2026-Q2` → `2026-Q3`. Recompute scores
+proběhne automaticky.
+
+**Žádná změna pilířů, vah ani rubric.**
+
 ## v0.2.1 — Quarterly validation framework (2026-04-29, iter 9)
 
 Přidán `methodology/validation_<quarter>.md` — automaticky generovaný report

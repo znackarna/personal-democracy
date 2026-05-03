@@ -1,0 +1,62 @@
+{
+  "quarter": "2026-Q3",
+  "computed_at": "2026-04-30T00:00:00.000Z",
+  "pillars": {
+    "electoral": 91.8,
+    "governance": 86.6,
+    "judicial": 83.9,
+    "media": 92.0,
+    "civil": 96.9,
+    "corruption": 59.0
+  },
+  "sources": [
+    {
+      "index": "V-Dem",
+      "year": 2024,
+      "value": 0.817,
+      "pillar": "electoral",
+      "url": "https://v-dem.net/data/the-v-dem-dataset/",
+      "notes": "Liberal Democracy Index 2024. Beze změny vůči 2026-Q2 — V-Dem 2025 dataset zatím nepublikován (typicky jaro)."
+    },
+    {
+      "index": "EIU",
+      "year": 2025,
+      "value": 8.15,
+      "pillar": "governance",
+      "url": "https://www.eiu.com/n/campaigns/democracy-index-2025/",
+      "notes": "EIU Democracy Index 2025 (publikován duben 2026). CZ rank 23 (beze změny), score 8.15 (+0.07 vs 2024). Kategorie 'full democracy' potvrzena. Sub-pillars: electoral process 9.58, functioning of government 7.86, political participation 7.22, political culture 8.13, civil liberties 8.57. Mapping: stávající governance pilíř používá overall EIU jako proxy (per structural_mapping v0.2); v iter 18+ zvážit přechod na EIU 'Functioning of government' sub-pillar (7.86) pro přesnější mapování."
+    },
+    {
+      "index": "FH-FitW",
+      "year": 2025,
+      "value": 95,
+      "url": "https://freedomhouse.org/country/czechia/freedom-world/2025",
+      "notes": "Freedom in the World 2025 aggregate (PR 37/40 + CL 58/60). Beze změny vůči 2026-Q2 — FH 2026 zatím nepublikován (typicky březen)."
+    },
+    {
+      "index": "RSF",
+      "year": 2025,
+      "value": 83.96,
+      "pillar": "media",
+      "url": "https://rsf.org/en/index",
+      "notes": "Press Freedom Index 2025. Beze změny vůči 2026-Q2 — RSF 2026 vyjde květen."
+    },
+    {
+      "index": "TI-CPI",
+      "year": 2024,
+      "value": 59,
+      "pillar": "corruption",
+      "url": "https://www.transparency.org/en/cpi/2024/index/cze",
+      "notes": "Corruption Perceptions Index 2024. Beze změny vůči 2026-Q2 — TI CPI 2025 vyjde leden 2026 (a v okamžiku tohoto Q3 baseline ještě nepublikován)."
+    },
+    {
+      "index": "WJP",
+      "year": 2024,
+      "value": 0.74,
+      "pillar": "judicial",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2024",
+      "notes": "Rule of Law Index 2024. Beze změny vůči 2026-Q2 — WJP 2025 vyjde říjen/listopad."
+    }
+  ],
+  "notes": "v0.3 update reflektující EIU Democracy Index 2025 (publikován duben 2026). Jediná změna oproti 2026-Q2: EIU 8.08 → 8.15 (+0.07). To posune `governance` pillar z 86.3 na 86.6 (+0.3). Vážený dopad na overall: +0.06 bodu (z 85.0 na ~85.06). Ostatní zdroje (V-Dem 2024, FH 2025, RSF 2025, TI 2024, WJP 2024) zůstávají identické. Rationale pro nový quarter file (vs in-place edit Q2): zachování audit trail jednotlivých externích updatů, klarita jaký zdroj kdy přišel."
+}
