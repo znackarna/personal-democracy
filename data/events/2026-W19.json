@@ -1,0 +1,49 @@
+[
+  {
+    "id": "2026-W19-001",
+    "date": "2026-05-04",
+    "headline": "Referent stavebního úřadu si sám povolil černé stavby a nyní usiluje o jejich legalizaci přes změnu územního plánu",
+    "summary": "Bývalý referent stavebního úřadu v Jičíně si v minulosti sám sobě vydal povolení pro nelegální stavby, za což dostal pokutu a zákaz činnosti. Nyní iniciuje změnu územního plánu, která by stavby zpětně legalizovala. Zastupitelé mají případ projednat, přičemž v lokalitě bez kolaudace již zřejmě lidé bydlí.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Úředník sám sobě povolil černé stavby. Teď je chce legalizovat",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/urednik-si-sam-schvalil-cerne-stavby-ted-je-chce-legalizovat-373052",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-04T07:20:11.220Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o konkrétní případ zneužití úřední pravomoci (subkomponenta K1) na lokální úrovni s omezeným dopadem. Úředník využil svého postavení k osobnímu prospěchu, byl za to sankcionován, avšak nyní se snaží o legalizaci prostřednictvím politického procesu (územní plán). Incident má lokální charakter bez kaskádového efektu na státní instituce, proto nepřesahuje úroveň 2. Duration je persistent, protože snaha o legalizaci přes zastupitele stále probíhá.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-04T07:20:09.774Z"
+  },
+  {
+    "id": "2026-W19-002",
+    "date": "2026-05-04",
+    "headline": "Exředitel Správy železnic uzavíral netransparentní smlouvy na šrot s firmou napojenou na jeho adresu",
+    "summary": "Investigace odhalila, že bývalý ředitel Správy železnic Jiří Svoboda uzavíral dlouhodobé smlouvy na prodej kovového odpadu za ceny skryté pod obchodním tajemstvím. Firma, jíž byl šrot prodáván za stamiliony korun, sídlí na stejné prestižní adrese jako Svoboda. Případ naznačuje možný střet zájmů při nakládání s veřejným majetkem státní organizace.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Exředitel železnic prodával šrot za stamiliony – firmě ze sousedního bytu",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-kauzy-exreditel-zeleznic-prodaval-srot-za-stamiliony-firme-ze-sousedniho-bytu-304926",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-04T07:20:14.915Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — případ se týká subkomponenty K2 (veřejné zakázky a transparentnost prodeje státního majetku) a K1 (možný střet zájmů vedoucího státní organizace). Netransparentní ceny skryté za obchodní tajemství a personální propojení s kupující firmou naznačují systematické obcházení pravidel při nakládání s veřejným majetkem, nikoli jen drobnou chybu (rubric §2). Jde o investigativní odhalení z jednoho zdroje, proto severity zůstává na 3 a nikoli výše — chybí zatím potvrzení z nezávislých zdrojů nebo reakce orgánů činných v trestním řízení. Sekundárně relevantní pro pilíř governance (G4 — transparentnost státní správy).\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-04T07:20:09.774Z",
+    "expires_at": "2026-07-27T00:00:00.000Z"
+  }
+]
