@@ -1,1 +1,50 @@
-[]
+[
+  {
+    "id": "2026-W14-001",
+    "date": "2026-04-02",
+    "headline": "ÚS vrátil věc sraženého chodce obecným soudům pro procesní pochybení",
+    "summary": "Ústavní soud rozhodl ve věci chodce sraženého tramvají v roce 2016 a domáhajícího se náhrady škody. ÚS shledal pochybení obecných soudů a věc vrátil k novému projednání, čímž deklaroval požadavek na správné procesní zacházení v civilním řízení.",
+    "pillar": "judicial",
+    "severity": 1,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Žaloba sraženého chodce proti dopravnímu podniku se vrací před obecné soudy",
+        "url": "https://www.usoud.cz/aktualne/zaloba-srazeneho-chodce-proti-dopravnimu-podniku-se-vraci-pred-obecne-soudy",
+        "outlet": "Ústavní soud ČR",
+        "fetched_at": "2026-05-07T07:17:20.565Z"
+      }
+    ],
+    "score_impact": 0.2,
+    "rationale": "Severity 1 per rubric §1 — jde o standardní nález ÚS v individuální věci civilního práva, který kasuje rozhodnutí obecného soudu pro procesní vadu. Subkomponenta J4 (rovnost před zákonem a přístup k soudu) je mírně posílena, protože nález potvrzuje, že procesní pravidla musí být respektována i ve sporech s veřejnými subjekty. Žádný systémový ani precedentní přesah nad rámec běžné judikatury ÚS nebyl v článku identifikován; dopad je individuální a jednorázový.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-07T07:17:07.431Z",
+    "expires_at": "2026-06-25T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W14-002",
+    "date": "2026-03-31",
+    "headline": "ÚS: Ne každé jednání naplňující znaky trestného činu musí být trestně stíháno — princip subsidiarity trestní represe",
+    "summary": "Ústavní soud vydal nález zdůrazňující subsidiaritu trestní represe: státní zastupitelství a soudy nesmějí automaticky kriminalizovat jednání jen proto, že formálně naplňuje znaky trestného činu, pokud okolnosti nevyžadují trestní reakci. Případ se týkal sporu v obchodě s konopnými produkty v Praze v srpnu 2024.",
+    "pillar": "judicial",
+    "severity": 1,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Ne každé jednání naplňující znaky trestného činu vyžaduje trestní reakci aneb k subsidiaritě trestní represe",
+        "url": "https://www.usoud.cz/aktualne/ne-kazde-jednani-naplnujici-znaky-trestneho-cinu-vyzaduje-trestni-reakci-aneb-k-subsidiarite-trestni-represe",
+        "outlet": "Ústavní soud ČR",
+        "fetched_at": "2026-05-07T07:17:20.565Z"
+      }
+    ],
+    "score_impact": 0.2,
+    "rationale": "Severity 1 per rubric §1 — nález potvrzuje ustálenou doktrínu subsidiarity trestní represe (subkomponenta J3 — nezávislost a správné uplatňování státního zastupitelství, J4 — rovnost před zákonem). Jde o výkladové upřesnění bez systémového průlomu; ÚS obdobné nálezy vydává opakovaně. Institucionální dopad je pozitivní (direction +1), ale minimální rozsahem — nález se dotýká jednotlivce, nikoli struktury instituce.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-07T07:17:07.431Z",
+    "expires_at": "2026-06-23T00:00:00.000Z"
+  }
+]

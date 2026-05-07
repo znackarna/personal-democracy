@@ -215,10 +215,16 @@
         "url": "https://ct24.ceskatelevize.cz/clanek/regiony/ustecky-kraj/policie-obvinila-v-kauze-chomutovskeho-exprimatora-hrabace-dalsich-sest-lidi-373081",
         "outlet": "ČT24",
         "fetched_at": "2026-05-05T07:02:48.540Z"
+      },
+      {
+        "title": "Chomutovská kauza má další obviněné. V případu bývalého primátora Marka Hrabáče figuruje už 20 lidí",
+        "url": "https://www.irozhlas.cz/zpravy-domov/chomutovska-kauza-ma-dalsi-obvinene-v-pripadu-byvaleho-primatora-marka-hrabace_2605070836_rec",
+        "outlet": "iROZHLAS",
+        "fetched_at": "2026-05-07T07:17:08.401Z"
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 3 per rubric §3 — rozšíření obvinění na celkem dvacet osob a osm právnických osob v korupčním schématu zahrnujícím systematické ovlivňování veřejných zakázek (subkomponenta K2: transparentnost zadávacích řízení) potvrzuje rozsáhlý a organizovaný charakter případu. Nejde o izolovaný incident, ale o odhalení strukturálního korupčního schématu na krajské úrovni. Dohoda o vině a trestu u dvou obviněných naznačuje postupující procesní fázi. Duration persistent, případ stále probíhá. Anti-bias: stejné hodnocení by se aplikovalo na primátora jakékoli jiné politické příslušnosti.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "rationale": "Severity 3 per rubric §3 — rozšíření obvinění na celkem dvacet osob a osm právnických osob v korupčním schématu zahrnujícím systematické ovlivňování veřejných zakázek (subkomponenta K2: transparentnost zadávacích řízení) potvrzuje rozsáhlý a organizovaný charakter případu. Nejde o izolovaný incident, ale o odhalení strukturálního korupčního schématu na krajské úrovni. Dohoda o vině a trestu u dvou obviněných naznačuje postupující procesní fázi. Duration persistent, případ stále probíhá. Anti-bias: stejné hodnocení by se aplikovalo na primátora jakékoli jiné politické příslušnosti.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]\n\n[merged with 2026-W19-044 — same incident, sources combined]",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-05T07:02:47.189Z"
@@ -433,10 +439,16 @@
         "url": "https://denikn.cz/2054945/muze-zmena-pravidel-pro-odvolaci-soudy-pomoci-babisovi-nejde-o-capi-hnizdo-tvrdi-sefka-advokatni-komory/",
         "outlet": "Deník N",
         "fetched_at": "2026-05-06T07:11:30.755Z"
+      },
+      {
+        "title": "Vláda chce zakázat odvolacím soudům zavázat nižší soud k rozsudku",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/vlada-chce-zakazat-odvolacim-soudum-zavazat-k-rozsudku-373180",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-07T07:17:08.544Z"
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 3 per rubric §3 — návrh změny procesních pravidel odvolacích soudů vytváří potenciální precedent pro omezení funkce přezkumu (subkomponenta J1 a J2), přičemž kontext premiérovy probíhající kauzy vyvolává oprávněné pochybnosti o motivaci. Zatím jde jen o návrh, nikoli schválený zákon, a předsedkyně advokátní komory věrohodně vysvětluje jiný původ návrhu — proto severity 3 (ne 4). Křížově relevantní pro corruption (K1), kde je primární článek index 1. Persistent, protože legislativní proces pokračuje.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "rationale": "Severity 3 per rubric §3 — návrh změny procesních pravidel odvolacích soudů vytváří potenciální precedent pro omezení funkce přezkumu (subkomponenta J1 a J2), přičemž kontext premiérovy probíhající kauzy vyvolává oprávněné pochybnosti o motivaci. Zatím jde jen o návrh, nikoli schválený zákon, a předsedkyně advokátní komory věrohodně vysvětluje jiný původ návrhu — proto severity 3 (ne 4). Křížově relevantní pro corruption (K1), kde je primární článek index 1. Persistent, protože legislativní proces pokračuje.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]\n\n[merged with 2026-W19-046 — same incident, sources combined]",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-06T07:11:30.742Z"
@@ -623,10 +635,16 @@
         "url": "https://archiv.hn.cz/c1-67874040-snem-landsmansaftu-v-brne-hruza-vlada-nas-uz-zase-strasi-sudetaky-ovsem-demony-nacionalismu-a-fasismu-vyvolava-hlavne-sama",
         "outlet": "Hospodářské noviny",
         "fetched_at": "2026-05-06T07:11:33.699Z"
+      },
+      {
+        "title": "Proti sněmu sudetských Němců je nově i Babiš. „Není to dobrý nápad, spousta lidí to má za provokaci,“ říká",
+        "url": "https://denikn.cz/2056104/proti-snemu-sudetskych-nemcu-je-nove-i-babis-neni-to-dobry-napad-spousta-lidi-to-ma-za-provokaci-rika/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-07T07:17:07.445Z"
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 2 per rubric §2 — sněmovní usnesení samo o sobě není zákonem ani správním rozhodnutím a nemá přímý právní účinek, jde však o konkrétní politický akt s potenciálním chilling efektem na svobodu shromažďování (subkomponenta C2). Komentář HN naznačuje, že jde o použití parlamentní platformy k nátlaku na konání zákonného shromáždění soukromé organizace. Bez eskalace na 3, protože dosud nejde o zákon ani správní opatření a účinek je dosud pouze symbolický. Anti-bias check: stejně by bylo hodnoceno usnesení sněmovny namířené proti shromáždění levicové nebo islamistické organizace.",
+    "rationale": "Severity 2 per rubric §2 — sněmovní usnesení samo o sobě není zákonem ani správním rozhodnutím a nemá přímý právní účinek, jde však o konkrétní politický akt s potenciálním chilling efektem na svobodu shromažďování (subkomponenta C2). Komentář HN naznačuje, že jde o použití parlamentní platformy k nátlaku na konání zákonného shromáždění soukromé organizace. Bez eskalace na 3, protože dosud nejde o zákon ani správní opatření a účinek je dosud pouze symbolický. Anti-bias check: stejně by bylo hodnoceno usnesení sněmovny namířené proti shromáždění levicové nebo islamistické organizace.\n\n[merged with 2026-W19-043 — same incident, sources combined]",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-06T07:11:30.742Z",
@@ -865,5 +883,171 @@
     "status": "active",
     "created_at": "2026-05-06T07:11:30.742Z",
     "expires_at": "2026-07-27T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W19-042",
+    "date": "2026-05-06",
+    "headline": "Odbory ČT a ČRo popírají shodu s ministrem Klempířem ohledně nové mediální legislativy",
+    "summary": "Odborové organizace České televize a Českého rozhlasu se veřejně ohradily proti tvrzení ministerstva kultury, že při jednání s ministrem Klempířem nalezly shodu v klíčových otázkách připravované mediální legislativy. Ministerstvo reakci odborů označilo za unáhlenou, avšak jejich výhrady respektuje. Incident odhaluje napětí v procesu přípravy legislativy dotýkající se nezávislosti veřejnoprávních médií.",
+    "pillar": "media",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "„Neměli to vydávat.“ Odbory ČT a ČRo odmítly shodu s Klempířem, ministerstvo mluví o unáhlené reakci",
+        "url": "https://denikn.cz/2055843/nemeli-to-vydavat-odbory-odmitly-shodu-s-klempirem-ministerstvo-mluvi-o-unahlene-reakci/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-07T07:17:07.445Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o konkrétní incident v rámci legislativního procesu ovlivňujícího nezávislost veřejnoprávních médií (subkomponenta M2), který sám o sobě instituci nekompromituje, ale dokumentuje konflikt mezi odbory a ministerstvem ohledně obsahu nové mediální regulace. Nejde zatím o schválenou normu ani o přímý politický tlak na editoriální obsah, proto severity nepřesahuje 2. Sekundárně se dotýká pilíře governance (G2 — kvalita legislativního procesu a konzultace s dotčenými stranami).",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-07T07:17:07.431Z",
+    "expires_at": "2026-07-29T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W19-045",
+    "date": "2026-05-07",
+    "headline": "Exnáměstek obžalovaný v dotační kauze souběžně pobíral 40 tisíc měsíčně od státního ČEPS",
+    "summary": "Bývalý náměstek ministerstva průmyslu Marian Piecha, jeden z obviněných v brněnské dotační kauze, uzavřel v době kolem zahájení trestního stíhání poradenskou smlouvu se státním podnikem ČEPS za 40 tisíc Kč měsíčně. Smlouva se týkala poradenství v oblasti dotací, tedy agendy blízké jeho dřívějšímu působení na ministerstvu. Okolnosti vyvolávají otázku střetu zájmů a propojení mezi veřejnou funkcí a komerčním poradenstvím.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Exnáměstek stíhaný v brněnské dotační kauze měl státnímu ČEPS radit s dotacemi za 40 tisíc měsíčně",
+        "url": "https://www.irozhlas.cz/zpravy-domov/marian-piecha-dotacni-kauza-brno-smartpark-exnamesek-poradenstvi-ceps-smlouva_2605070730_tec",
+        "outlet": "iROZHLAS",
+        "fetched_at": "2026-05-07T07:17:08.401Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — případ naznačuje střet zájmů (K1) a potenciální zneužití kontaktů získaných ve veřejné funkci (K2). Exnáměstek je zároveň obviněný v trestní kauze a přesto uzavírá lukrativní smlouvu se státním podnikem v oblasti, kde měl dřívější kompetence. Jeden zdroj (redakce má kopii smlouvy), ale dokument je konkrétní a verifikovatelný. Severity 3 je konzervativní volba — bez dalšího prokázání záměru nebo politického nadřazeného se nedosahuje na 4. Anti-bias: stejné hodnocení by platilo bez ohledu na stranickou příslušnost obviněného.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-07T07:17:07.431Z",
+    "expires_at": "2026-07-30T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W19-047",
+    "date": "2026-05-06",
+    "headline": "Prezidentská kancelář se vzdává stížnosti v kauze Macinkových zpráv, policie případ odložila",
+    "summary": "Kancelář prezidenta republiky oznámila, že nepodá stížnost proti policejnímu odložení prověřování zpráv ministra Macinky, v nichž prezident dříve spatřoval znaky politického vydírání. Policie případ uzavřela koncem dubna bez dalšího stíhání. Kancelář tak fakticky akceptuje konec trestního prověřování.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": 0,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Hrad nepodá stížnost proti odložení prověřování Macinkových zpráv",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/hrad-nepoda-stiznost-proti-odlozeni-proverovani-macinkovych-zprav-373175",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-07T07:17:08.544Z"
+      }
+    ],
+    "score_impact": 0,
+    "rationale": "Severity 2 per rubric §2 — jde o procesní rozhodnutí kanceláře prezidenta bez přímého institucionálního dopadu na fungování demokratických institucí. Případ byl politicky citlivý (G1 — vztah exekutivy a prezidenta), ale odložení policie a nepodat stížnost je standardní procesní postup. Směr hodnocen jako 0, protože není jednoznačné, zda odložení věci demokracii oslabuje nebo zda šlo o věcně odůvodněné rozhodnutí policie; při skutečné pochybnosti by eskaloval na needs_review, ale absence dalšího kontextu svědčí pro zachování 0.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-07T07:17:07.431Z",
+    "expires_at": "2026-07-29T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W19-048",
+    "date": "2026-05-07",
+    "headline": "Senát zamítl snížení odvodů živnostníků navrhované vládní koalicí",
+    "summary": "Senát ve středu odmítl vládní koaliční návrh na snížení odvodů živnostníků na sociální pojistné zpětně na loňskou úroveň. Senátoři se obávali výpadku příjmů důchodového systému a negativního dopadu na budoucí důchody živnostníků. Zákon se vrací do Poslanecké sněmovny.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": 0,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Senát odmítl snížení odvodů pro živnostníky. Opozice se bojí výpadku v důchodovém systému",
+        "url": "https://archiv.hn.cz/c1-67874410-senat-odmitl-snizeni-odvodu-pro-zivnostniky-opozice-se-boji-vypadku-v-duchodovem-systemu",
+        "outlet": "Hospodářské noviny",
+        "fetched_at": "2026-05-07T07:17:10.088Z"
+      }
+    ],
+    "score_impact": 0,
+    "rationale": "Severity 2 per rubric §2 — jde o standardní legislativní kontrolu ze strany Senátu (subkomponenta G1: reálná kontrola exekutivy parlamentem), nikoliv o porušení normy. Senát využil svou ústavní pravomoc zamítnout zákon, což je běžný mechanismus dělby moci bez precedentního charakteru. Direction 0: zamítnutí Senátem je ambivalentní — jde o institucionálně korektní postup, přičemž věcný dopad zákona sám o sobě není jednoznačně demokraticky negativní ani pozitivní.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-07T07:17:07.431Z",
+    "expires_at": "2026-07-30T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W19-049",
+    "date": "2026-04-28",
+    "headline": "Ministerstvo spravedlnosti navrhlo omezit pravomoci odvolacích soudů v trestních věcech",
+    "summary": "Ministerstvo spravedlnosti vedené Jeronýmem Tejcem předložilo nečekanou novelu trestního řádu, která by výrazně omezila pravomoci odvolacích soudů rušit zproštění viny a věc vracet k novému projednání. Kritici a právní experti upozorňují na riziko procesního ping-pongu a spojitost s kauzou Čapí hnízdo, v níž byl Andrej Babiš zproštěn viny.",
+    "pillar": "judicial",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Efekt Čapí hnízdo? Tejc chce omezit pravomoci odvolacích soudů, experti se ale obávají nekonečného &bdquo;ping-pongu&ldquo;",
+        "url": "https://archiv.hn.cz/c1-67874240-efekt-capi-hnizdo-tejc-chce-omezit-pravomoci-odvolacich-soudu-experti-se-ale-obavaji-nekonecneho-bdquo-ping-pongu-ldquo",
+        "outlet": "Hospodářské noviny",
+        "fetched_at": "2026-05-07T07:17:10.088Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — návrh konkrétní legislativní změny trestního řádu zasahující do procesních pravomocí odvolacích soudů (subkomponenta J1/J2: nezávislost soudů a jejich schopnost přezkoumávat rozhodnutí nižších instancí). Návrh je předložen (ne ještě schválen), ale vytváří precedent a má potenciálně systémový dopad na soudní přezkum. Rubric: 'Zákon o ČT/ČRo… je v rané fázi (předložen, neschválen)' → odpovídá severity 3. Sekundárně relevantní pilíř: corruption (kontext kauzy Čapí hnízdo naznačuje možnou motivaci změnit pravidla pro konkrétní typ kauz). Duration: persistent, protože jde o legislativní návrh s trvalým dopadem, pokud bude přijat. Anti-bias check: stejnou závažnost bych přiřadil návrhu omezujícímu odvolací pravomoci soudů bez ohledu na politické spektrum předkladatele.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-07T07:17:07.431Z"
+  },
+  {
+    "id": "2026-W19-050",
+    "date": "2026-05-07",
+    "headline": "Česko ujistilo EU o zmrazení dotací Agrofertu, pak miliardy bez souhlasu Komise odblokovalo",
+    "summary": "Česká vláda v minulosti ujistila Evropskou komisi, že dotace pro Agrofert jsou zmrazeny z důvodu střetu zájmů premiéra Babiše. Přesto následně tyto prostředky odblokovala bez předchozího stanoviska EK. Případ opětovně otevírá otázku věrohodnosti závazků ČR vůči EU v oblasti střetu zájmů.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Ujistili EU, že dotace pro Agrofert jsou zmrazeny. Vzápětí miliardy uvolnili",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-kauzy-ujistili-eu-ze-dotace-pro-agrofert-jsou-zmrazeny-vzapeti-miliardy-uvolnili-305430",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-07T07:17:12.052Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 4 per rubric §4 — jde o přímý dopad na klíčovou institucionální normu (střet zájmů ústavního činitele, subkomponenta K1), přičemž stát vědomě uvedl EU v omyl a poté bez souhlasu nadřízené instituce odblokoval miliardové dotace. Akce překračuje ústavní i evropsko-právní hranice a vytváří závažný precedent. Sekundárně se dotýká pilíře governance (G4 — transparentnost vládnutí). Severity 5 by vyžadovala reakci mezinárodního orgánu přímo na tuto akci; zatím není z článku zřejmá formální reakce EK na odblokování.\n\n[severity capped from 4 to 2 due to source-count rule: 1 unique outlet, 3 required for severity 4]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-07T07:17:07.431Z"
+  },
+  {
+    "id": "2026-W19-051",
+    "date": "2026-05-06",
+    "headline": "Policie prověřuje IT zakázky ministerstev práce a místního rozvoje, úředníci měli navyšovat zakázky bez podkladů",
+    "summary": "Policie zahájila prověřování IT veřejných zakázek na dvou ministerstvech, kde měli úředníci bezdůvodně navyšovat hodnoty zakázek o stovky milionů korun. Trestní oznámení podala Transparency International, dosud nebyl nikdo obviněn.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Policie prověřuje IT zakázky na Ministerstvech práce a místního rozvoje",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-policie-proveruje-it-zakazky-na-ministerstvech-prace-a-mistniho-rozvoje-305643",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-07T07:17:12.052Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — zahájení policejního prověřování zakázek na dvou ministerstvech je konkrétní datovaná událost s institucionálním dopadem (subkomponenta K2 — transparentnost veřejných zakázek, ZZVZ). Vytváří precedent pro prošetřování potenciálně systémového pochybení. Severity 4 by vyžadovala konkrétnější důkazy politické provázanosti nebo obvinění; zatím jde o fázi prověřování bez obviněných. Single source a absence obvinění vedou k zachování severity 3.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-07T07:17:07.431Z",
+    "expires_at": "2026-07-29T00:00:00.000Z"
   }
 ]
