@@ -146,6 +146,10 @@ export function formatHeroEyebrow(week: string, locale: Locale): string {
  * Format the footer "last updated" line:
  *   "Aktualizováno v pondělí 18. května v 6:00." (CS)
  *   "Updated on Monday, 18 May at 06:00." (EN)
+ *
+ * @deprecated Prefer `formatUpdateLabel` which uses the real `computed_at`
+ *   timestamp from the latest snapshot rather than the Monday-of-ISO-week.
+ *   Kept temporarily for any caller still on the old format.
  */
 export function formatLastUpdated(week: string, locale: Locale): string {
   const parsed = parseIsoWeek(week);
@@ -159,4 +163,31 @@ export function formatLastUpdated(week: string, locale: Locale): string {
   const day = EN_DAYS[monday.getUTCDay()] ?? '';
   const month = EN_MONTHS[monday.getUTCMonth()] ?? '';
   return `Updated on ${day}, ${monday.getUTCDate()} ${month} at 06:00.`;
+}
+
+/**
+ * Format the real last-update label rendered in both header (right side)
+ * and footer brand block:
+ *
+ *   "Pondělí · 27. dubna 2026 · Týden 18"  (CS)
+ *   "Monday · 27 April 2026 · Week 18"     (EN)
+ *
+ * The day + date come from the snapshot's actual `computed_at` timestamp
+ * (when the pipeline last produced this score). The week number is taken
+ * from the snapshot's `week` field. This is more honest than rendering
+ * Monday-of-ISO-week since the cron may have run at a different moment
+ * (e.g. iter 16 daily classify).
+ */
+export function formatUpdateLabel(
+  computedAtIso: string | null,
+  week: string,
+  locale: Locale,
+): string {
+  const parsed = parseIsoWeek(week);
+  if (!parsed || !computedAtIso) return '';
+  const date = new Date(computedAtIso);
+  if (Number.isNaN(date.getTime())) return '';
+  const longDate = formatLongDate(date, locale);
+  const weekWord = locale === 'cs' ? 'Týden' : 'Week';
+  return `${longDate} · ${weekWord} ${parsed.week}`;
 }

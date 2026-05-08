@@ -4,9 +4,26 @@
 > co je potřeba ručně zkontrolovat, a co jsem **nepushnul do produkce** —
 > aby ses na to mohl podívat na preview a teprve pak rozhodnout o merge.
 
+## Přírůstek po prvním pohledu (mobile + datum)
+
+Reagoval jsem na noc v 23:5x na zpětnou vazbu o mobilu a datu:
+
+- **Mobilní hamburger menu** — brand "Index demokracie ČR" vlevo,
+  toggle vpravo. Po tapnutí dropdown s navigací (Domů, Pilíře, Události,
+  Srovnání, Metodika, Podpořit) + locale switch + update label dole.
+  Zavírá se na ESC, kliknutí mimo, výběr odkazu, změnu trasy. Body scroll
+  lock když otevřené.
+- **"Přehled" → "Domů"** (CS) / **"Overview" → "Home"** (EN). Globálně,
+  desktop i mobil.
+- **"Podpořit" / "Support"** přidaný do mobile menu (na desktopu už byl).
+- **Real datum poslední aktualizace** v hlavičce i patičce — používá
+  `snapshot.computed_at` (skutečný timestamp pipeline runu) místo
+  Pondělí-z-ISO-týdne. Formát: "Pondělí · 4. května 2026 · Týden 18"
+  v obou místech (header pravá strana + footer brand block).
+
 ## TL;DR
 
-- **Branch:** [`redesign-v2`](https://github.com/znackarna/democracy-index-cz/tree/redesign-v2) (1 commit nad `main`)
+- **Branch:** [`redesign-v2`](https://github.com/znackarna/democracy-index-cz/tree/redesign-v2) (3 commity nad `main`)
 - **Preview URL:** https://democracy-index-2w6hkh3vh-znackarna.vercel.app
   - **Pozor:** preview je chráněný Vercel Deployment Protection (401 pro
     veřejnost). Otevři ho v prohlížeči, kde jsi přihlášený do Vercelu jako
@@ -71,6 +88,12 @@ V preview prohlédni hlavní stránku (CS i EN) a podívej se:
       cílové stránky neexistují. Pokud chceš, abych je úplně skryl,
       řekni a smažu je z `messages-{cs,en}.ts → footer.columns`.
 - [ ] Přepínač CS/EN v headeru funguje na všech stránkách.
+- [ ] **Mobile**: hamburger menu otevírá/zavírá, brand vlevo viditelný,
+      Domů jako první položka tučně, všech 6 navlinků + locale switch
+      pod nimi. ESC + kliknutí mimo zavře.
+- [ ] **Header pravá strana**: dlouhý label "Pondělí · X. května 2026 ·
+      Týden NN" (skutečné datum z `computed_at`, ne Monday-of-week).
+- [ ] **Footer**: identický update label v brand bloku.
 
 ### 2. Ediční rozhodnutí (potřebuju tvůj vstup)
 

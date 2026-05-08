@@ -6,7 +6,7 @@ import '../globals.css';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { readTimeline } from '../lib/data';
-import { formatLastUpdated, formatWeekLabel } from '@/i18n/dates';
+import { formatUpdateLabel } from '@/i18n/dates';
 import { getMessages } from '@/i18n';
 
 const t = getMessages('cs');
@@ -23,13 +23,15 @@ export const metadata: Metadata = {
 };
 
 export default async function CzechRootLayout({ children }: { children: React.ReactNode }) {
-  // Latest snapshot drives the week label in the masthead and the
-  // "Aktualizováno v pondělí …" line in the footer. Single source of truth
-  // is data/scores/timeline.json — read at build time (static export).
+  // Real last-update label is built from the latest snapshot's
+  // `computed_at` timestamp (pipeline run time) — not Monday of the ISO
+  // week. Used identically in the masthead and the footer so a reader
+  // sees one consistent "freshness" signal.
   const timeline = await readTimeline();
-  const latestWeek = timeline.at(-1)?.week ?? '';
-  const weekLabel = latestWeek ? formatWeekLabel(latestWeek, 'cs') : '';
-  const lastUpdated = latestWeek ? formatLastUpdated(latestWeek, 'cs') : '';
+  const latest = timeline.at(-1);
+  const updateLabel = latest
+    ? formatUpdateLabel(latest.computed_at, latest.week, 'cs')
+    : '';
 
   return (
     <html lang="cs" className={`${GeistSans.variable} ${GeistMono.variable}`}>
@@ -37,6 +39,7 @@ export default async function CzechRootLayout({ children }: { children: React.Re
         <Header
           locale="cs"
           labels={{
+            brand: t.meta.siteTitle,
             overview: t.nav.overview,
             pillars: t.nav.pillars,
             events: t.nav.events,
@@ -44,11 +47,13 @@ export default async function CzechRootLayout({ children }: { children: React.Re
             methodology: t.nav.methodology,
             support: t.nav.support,
             languageSwitchAria: t.nav.languageSwitchAria,
-            weekLabel,
+            openMenuAria: t.nav.openMenuAria,
+            closeMenuAria: t.nav.closeMenuAria,
+            updateLabel,
           }}
         />
         <main>{children}</main>
-        <Footer locale="cs" lastUpdated={lastUpdated} />
+        <Footer locale="cs" updateLabel={updateLabel} />
         <Analytics />
       </body>
     </html>

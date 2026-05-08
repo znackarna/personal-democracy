@@ -3,9 +3,10 @@ import { getMessages, supportPath, type Locale } from '@/i18n';
 
 interface Props {
   locale: Locale;
-  /** Mono "Aktualizováno v pondělí ..." line, computed in layout from the
-   *  latest snapshot. Empty string if no snapshot yet. */
-  lastUpdated: string;
+  /** "Pondělí · 27. dubna 2026 · Týden 18" string built from the latest
+   *  snapshot's computed_at + week. Empty string if no snapshot yet.
+   *  Same string the masthead shows on the right. */
+  updateLabel: string;
 }
 
 /**
@@ -20,7 +21,7 @@ interface Props {
  *   - /podpora/ (Financování)
  *   - mailto: contact email
  */
-export function Footer({ locale, lastUpdated }: Props) {
+export function Footer({ locale, updateLabel }: Props) {
   const t = getMessages(locale);
   const f = t.footer;
   const year = new Date().getUTCFullYear();
@@ -34,8 +35,8 @@ export function Footer({ locale, lastUpdated }: Props) {
         <div className="col-span-12 md:col-span-4">
           <div className="text-[14px] font-medium text-black">{f.brandName}</div>
           <div className="mt-2 max-w-[36ch]">{f.brandTagline}</div>
-          {lastUpdated && (
-            <div className="mt-2 font-mono num text-black/55">{lastUpdated}</div>
+          {updateLabel && (
+            <div className="mt-2 font-mono num text-black/55">{updateLabel}</div>
           )}
         </div>
 

@@ -19,7 +19,7 @@ export const messagesEn: Messages = {
   },
 
   nav: {
-    overview: 'Overview',
+    overview: 'Home',
     pillars: 'Pillars',
     events: 'Events',
     comparison: 'Comparison',
@@ -27,6 +27,8 @@ export const messagesEn: Messages = {
     support: 'Support',
     languageSwitchAria: 'Switch language',
     weekLabelTemplate: '{year} · week {week}',
+    openMenuAria: 'Open menu',
+    closeMenuAria: 'Close menu',
   },
 
   footer: {

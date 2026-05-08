@@ -21,15 +21,20 @@ export const messagesCs = {
   },
 
   nav: {
-    overview: 'Přehled',
+    overview: 'Domů',
     pillars: 'Pilíře',
     events: 'Události',
     comparison: 'Srovnání',
     methodology: 'Metodika',
     support: 'Podpořit',
     languageSwitchAria: 'Přepnout jazyk',
-    /** Used inside formatWeekLabel(): "2026 · týden 19". */
+    /** Used inside formatWeekLabel(): "2026 · týden 19". Legacy short
+     *  form, kept for back-compat — production uses `formatUpdateLabel`
+     *  for the real-update date string. */
     weekLabelTemplate: '{year} · týden {week}',
+    /** Mobile hamburger toggle aria labels. */
+    openMenuAria: 'Otevřít menu',
+    closeMenuAria: 'Zavřít menu',
   },
 
   footer: {

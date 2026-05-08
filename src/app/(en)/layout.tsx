@@ -6,7 +6,7 @@ import '../globals.css';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { readTimeline } from '../lib/data';
-import { formatLastUpdated, formatWeekLabel } from '@/i18n/dates';
+import { formatUpdateLabel } from '@/i18n/dates';
 import { getMessages } from '@/i18n';
 
 const t = getMessages('en');
@@ -24,9 +24,10 @@ export const metadata: Metadata = {
 
 export default async function EnglishRootLayout({ children }: { children: React.ReactNode }) {
   const timeline = await readTimeline();
-  const latestWeek = timeline.at(-1)?.week ?? '';
-  const weekLabel = latestWeek ? formatWeekLabel(latestWeek, 'en') : '';
-  const lastUpdated = latestWeek ? formatLastUpdated(latestWeek, 'en') : '';
+  const latest = timeline.at(-1);
+  const updateLabel = latest
+    ? formatUpdateLabel(latest.computed_at, latest.week, 'en')
+    : '';
 
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
@@ -34,6 +35,7 @@ export default async function EnglishRootLayout({ children }: { children: React.
         <Header
           locale="en"
           labels={{
+            brand: t.meta.siteTitle,
             overview: t.nav.overview,
             pillars: t.nav.pillars,
             events: t.nav.events,
@@ -41,11 +43,13 @@ export default async function EnglishRootLayout({ children }: { children: React.
             methodology: t.nav.methodology,
             support: t.nav.support,
             languageSwitchAria: t.nav.languageSwitchAria,
-            weekLabel,
+            openMenuAria: t.nav.openMenuAria,
+            closeMenuAria: t.nav.closeMenuAria,
+            updateLabel,
           }}
         />
         <main>{children}</main>
-        <Footer locale="en" lastUpdated={lastUpdated} />
+        <Footer locale="en" updateLabel={updateLabel} />
         <Analytics />
       </body>
     </html>
