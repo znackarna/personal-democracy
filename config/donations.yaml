@@ -1,0 +1,61 @@
+# Donations configuration.
+#
+# Values are read at build time by src/app/lib/donations.ts and rendered on
+# /podpora/ (CS) and /en/support/ (EN). All URLs are public Stripe Payment
+# Links — no API keys, no webhooks. See docs/stripe-setup.md for the
+# Dashboard setup checklist.
+#
+# Until each `url` is filled in (currently `PLACEHOLDER`), the corresponding
+# button on the support page is disabled and shows a "not yet active" notice.
+# This means the page is safe to ship before payments are configured.
+
+version: 1
+
+# Display + payment settings.
+links:
+  czk:
+    one_time:
+      - amount: 100
+        url: https://buy.stripe.com/4gM9AMgkKa87arT6oQ6sw00
+      - amount: 500
+        url: https://buy.stripe.com/5kQ3co0lM6VVgQhfZq6sw01
+      - amount: 1000
+        url: https://buy.stripe.com/14AfZa6KaeonarT9B26sw02
+    custom_url: https://buy.stripe.com/dRm9AM7Oe1BBarTaF66sw03
+    monthly:
+      - amount: 100
+        url: https://buy.stripe.com/fZucMY8Si0xx6bD8wY6sw04
+
+  eur:
+    one_time:
+      - amount: 5
+        url: https://buy.stripe.com/5kQ7sEd8y6VV57z28A6sw05
+      - amount: 20
+        url: https://buy.stripe.com/9B614g3xY6VV9nP14w6sw06
+      - amount: 50
+        url: https://buy.stripe.com/fZu8wI0lM5RRarT5kM6sw07
+    custom_url: https://buy.stripe.com/6oU3cod8y0xxdE500s6sw08
+    monthly:
+      - amount: 5
+        url: https://buy.stripe.com/7sY9AMfgG6VV7fH6oQ6sw09
+
+# Cost transparency block. Numbers are recorded in CZK (single source of truth)
+# and rendered as-is. Update quarterly. EUR equivalents are computed on the fly
+# from a fixed approximate rate to avoid live FX dependency.
+costs:
+  # Display rate for showing CZK ↔ EUR conversion. Approximate, refresh
+  # quarterly. Used purely for hint text "(≈ X EUR)" — has no payment effect.
+  display_rate_czk_per_eur: 25
+
+  monthly:
+    # IDs map to message keys in messages-{cs,en}.ts under `costs.<id>.label`.
+    - id: api
+      czk: 1000           # ~$15/mo per CLAUDE.md (Haiku pre-filter + Sonnet classification + audit)
+    - id: hosting
+      czk: 500             # Vercel Hobby tier
+    - id: domain
+      czk: 20            # ~200 Kč/year amortised across 12 months
+
+# Total monthly is computed from the items above; we expose it explicitly here
+# so the page can show it without re-summing in JSX (single source of truth).
+total_monthly_czk: 1520
