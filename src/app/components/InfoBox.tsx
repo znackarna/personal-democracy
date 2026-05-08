@@ -1,10 +1,18 @@
 import Link from 'next/link';
-import type { Route } from 'next';
+import {
+  getMessages,
+  methodologyDocPath,
+  type Locale,
+  type MethodologyDocKey,
+} from '@/i18n';
 
 interface Props {
+  locale: Locale;
   title: string;
-  /** Slug of related methodology doc — adds "Číst víc →" link. */
-  readMore?: { slug: string; label?: string };
+  /** Stable doc key of related methodology — produces a localized "read more" link. */
+  readMore?: { doc: MethodologyDocKey; label?: string };
+  /** Or pass a pre-built href (e.g. for /metodika/zmeny/ which is a doc with no callout pattern). */
+  readMoreHref?: { href: string; label: string };
   children: React.ReactNode;
   /** Visual variant. Default 'info'. */
   variant?: 'info' | 'warn';
@@ -32,13 +40,19 @@ const VARIANT_STYLES = {
  * without client-side JS (matters for static export). Closed by default to
  * keep the dashboard scannable; reader can expand for context.
  */
-export function InfoBox({ title, readMore, children, variant = 'info' }: Props) {
+export function InfoBox({ locale, title, readMore, readMoreHref, children, variant = 'info' }: Props) {
+  const t = getMessages(locale);
   const v = VARIANT_STYLES[variant];
+
+  const link =
+    readMore !== undefined
+      ? { href: methodologyDocPath(readMore.doc, locale), label: readMore.label ?? t.infoBox.readMoreDefault }
+      : readMoreHref;
+
   return (
     <details className={`group rounded-xl border ${v.border} ${v.bg} text-sm`}>
       <summary
         className="flex cursor-pointer list-none items-center gap-3 px-4 py-3 text-slate-700 transition hover:text-slate-900"
-        // suppress default disclosure triangle in WebKit
       >
         <span
           className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${v.iconBg} text-xs font-bold ${v.iconColor}`}
@@ -46,18 +60,18 @@ export function InfoBox({ title, readMore, children, variant = 'info' }: Props) 
           {v.icon}
         </span>
         <span className="font-medium">{title}</span>
-        <span className="ml-auto text-xs text-slate-500 group-open:hidden">rozbalit</span>
-        <span className="ml-auto hidden text-xs text-slate-500 group-open:inline">sbalit</span>
+        <span className="ml-auto text-xs text-slate-500 group-open:hidden">{t.infoBox.expand}</span>
+        <span className="ml-auto hidden text-xs text-slate-500 group-open:inline">{t.infoBox.collapse}</span>
       </summary>
       <div className="space-y-3 border-t border-slate-200/70 px-4 py-3 text-slate-700">
         {children}
-        {readMore && (
+        {link && (
           <p className="pt-1">
             <Link
-              href={`/metodika/${readMore.slug}/` as Route}
+              href={link.href}
               className="text-xs font-medium text-slate-700 underline hover:text-slate-900"
             >
-              {readMore.label ?? 'Plný popis v metodice →'}
+              {link.label}
             </Link>
           </p>
         )}

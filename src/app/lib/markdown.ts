@@ -8,152 +8,162 @@ import remarkGfm from 'remark-gfm';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
+import {
+  METHODOLOGY_DOC_KEYS,
+  METHODOLOGY_SLUGS,
+  getMessages,
+  methodologyDocPath,
+  validationReportPath,
+  type Locale,
+  type MethodologyDocKey,
+} from '@/i18n';
 
 const METHODOLOGY_ROOT = path.resolve(process.cwd(), 'methodology');
 const SOURCES_YAML = path.resolve(process.cwd(), 'config', 'sources.yaml');
 
-/** Static metadata for each methodology document we expose on the site. */
-export interface MethodologyDoc {
+/** File-on-disk basename for each methodology doc key (without .md). */
+const DOC_FILE: Record<MethodologyDocKey, string> = {
+  pillars: 'pillars',
+  severity: 'severity_rubric',
+  weights: 'weights',
+  governance: 'governance',
+  structuralMapping: 'structural_mapping',
+  sources: 'sources',
+  publicOpinion: 'public_opinion',
+  crossCountry: 'cross_country',
+  changelog: 'CHANGELOG',
+  openIssues: 'issues',
+};
+
+export interface MethodologyDocMeta {
+  /** Stable doc key, locale-independent. */
+  key: MethodologyDocKey;
+  /** Localized URL slug. */
   slug: string;
-  /** File name without .md extension (used to find on disk). */
-  file: string;
+  /** Localized title shown in TOC. */
   title: string;
-  /** Short Czech description shown in the TOC. */
+  /** Localized description shown in TOC. */
   description: string;
 }
 
 /**
- * Curated registry. Order = order shown in TOC. The slug becomes the URL
- * (`/metodika/<slug>/`); the file is read from `methodology/<file>.md`.
- *
- * Files in `methodology/` not in this list (e.g. validation_2026-Q2.md) are
- * served from the catch-all route below.
+ * Build the per-locale methodology TOC. Order matches METHODOLOGY_DOC_KEYS
+ * (which itself reflects the curated registry order).
  */
-export const METHODOLOGY_DOCS: readonly MethodologyDoc[] = [
-  {
-    slug: 'pilire',
-    file: 'pillars',
-    title: 'Šest pilířů',
-    description:
-      'Co každý ze 6 pilířů (volby, vládnutí, justice, média, svobody, korupce) měří, jak se mapuje na zdroje a co do něj nepatří.',
-  },
-  {
-    slug: 'zavaznost',
-    file: 'severity_rubric',
-    title: 'Rubric závažnosti',
-    description:
-      'Pětistupňová škála závažnosti událostí 1–5 s konkrétními ČR příklady, pravidly eskalace/de-eskalace a kritérii „needs_review".',
-  },
-  {
-    slug: 'vahy',
-    file: 'weights',
-    title: 'Váhy pilířů',
-    description:
-      'Zdůvodnění aktuálních vah 15/20/20/15/15/15, diskuze alternativ a pravidla pro budoucí změny vah.',
-  },
-  {
-    slug: 'model-dohledu',
-    file: 'governance',
-    title: 'Model dohledu',
-    description:
-      'Šest vrstev oversight (self-audit, source-count cap, daily reports, anomaly detection, monthly spot-check, public dispute) místo mandatory pre-merge review.',
-  },
-  {
-    slug: 'strukturalni-mapovani',
-    file: 'structural_mapping',
-    title: 'Strukturální mapování',
-    description:
-      'Jak konkrétně se z V-Dem 2024 / EIU 2024 / FH 2025 / RSF / TI / WJP počítá strukturální baseline pro každý pilíř.',
-  },
-  {
-    slug: 'zdroje',
-    file: 'sources',
-    title: 'Zdroje dat',
-    description:
-      'Odkud index čerpá — 8 českých redakčních médií, otevřená data PSP a soudů, watchdog organizace, mezinárodní zpravodajství. Aktuální tabulka generovaná z config/sources.yaml.',
-  },
-  {
-    slug: 'verejne-mineni',
-    file: 'public_opinion',
-    title: 'Veřejné mínění',
-    description:
-      'Doplňkový read-only kontext z průzkumů (CVVM, STEM, Median). Nevstupuje do skóre — proč ne, jak ho užívat, co plánujeme přidat. Zdroje a jejich profil.',
-  },
-  {
-    slug: 'srovnani-zemi',
-    file: 'cross_country',
-    title: 'Srovnání zemí',
-    description:
-      'Jak je vybráno 8 zemí (V4 + DE/AT + USA/UK), jakých 6 indexů, proč CZ + SK highlight a jaké ročníky publikace. Read-only externí benchmark, nevstupuje do našeho indexu.',
-  },
-  {
-    slug: 'zmeny',
-    file: 'CHANGELOG',
-    title: 'Changelog',
-    description:
-      'Historie verzí metodiky. Každá změna pilířů, vah, rubric nebo governance modelu je zaznamenaná zde.',
-  },
-  {
-    slug: 'otevrene-otazky',
-    file: 'issues',
-    title: 'Otevřené otázky',
-    description:
-      'Známé otevřené otázky a omezení současné metodiky, které čekají na řešení v dalších iteracích.',
-  },
-];
+export function getMethodologyDocs(locale: Locale): readonly MethodologyDocMeta[] {
+  const t = getMessages(locale);
+  return METHODOLOGY_DOC_KEYS.map((key) => ({
+    key,
+    slug: METHODOLOGY_SLUGS[key][locale],
+    title: t.methodologyDocs[key].title,
+    description: t.methodologyDocs[key].description,
+  }));
+}
 
-/** Read an MD file from methodology/ and process it to HTML at build time. */
-export async function renderMethodologyDoc(slug: string): Promise<{
-  doc: MethodologyDoc;
-  html: string;
-} | null> {
-  const doc = METHODOLOGY_DOCS.find((d) => d.slug === slug);
-  if (!doc) return null;
-  const html = await renderMarkdownFile(path.join(METHODOLOGY_ROOT, `${doc.file}.md`));
-  return { doc, html };
+/**
+ * Read a methodology MD file (locale-aware). Tries `<file>.<locale>.md` first
+ * for non-CS locales; falls back to `<file>.md` if a translation is missing.
+ * Returns the rendered HTML and a flag indicating whether the requested locale
+ * was actually found (so the page can show a "translation pending" notice).
+ */
+export async function renderMethodologyDoc(
+  locale: Locale,
+  slug: string,
+): Promise<{ doc: MethodologyDocMeta; html: string; translationMissing: boolean } | null> {
+  const key = METHODOLOGY_DOC_KEYS.find((k) => METHODOLOGY_SLUGS[k][locale] === slug);
+  if (!key) return null;
+  const file = DOC_FILE[key];
+  const result = await readLocalizedMarkdown(METHODOLOGY_ROOT, file, locale);
+  if (!result) return null;
+  const meta: MethodologyDocMeta = {
+    key,
+    slug,
+    title: getMessages(locale).methodologyDocs[key].title,
+    description: getMessages(locale).methodologyDocs[key].description,
+  };
+  return { doc: meta, html: result.html, translationMissing: result.translationMissing };
 }
 
 /**
  * Validation reports live alongside the curated docs but use a YYYY-Qx slug
  * pattern. Listed dynamically so new quarterly reports show up automatically.
+ *
+ * Same dynamic listing for both locales — file names are
+ * `validation_2026-Q2.md` for CS, `validation_2026-Q2.en.md` for EN.
  */
-export async function listValidationReports(): Promise<Array<{ slug: string; quarter: string }>> {
+export async function listValidationReports(
+  locale: Locale,
+): Promise<Array<{ slug: string; quarter: string }>> {
   let entries: string[];
   try {
     entries = await readdir(METHODOLOGY_ROOT);
   } catch {
     return [];
   }
-  return entries
-    .filter((f) => /^validation_\d{4}-Q[1-4]\.md$/.test(f))
-    .map((f) => {
-      const quarter = f.replace(/^validation_/, '').replace(/\.md$/, '');
-      return { slug: `validace-${quarter.toLowerCase()}`, quarter };
-    })
-    .sort((a, b) => b.quarter.localeCompare(a.quarter));
+  const seen = new Set<string>();
+  for (const f of entries) {
+    const m = /^validation_(\d{4}-Q[1-4])(?:\.en)?\.md$/.exec(f);
+    if (m) seen.add(m[1]!);
+  }
+  return [...seen]
+    .sort((a, b) => b.localeCompare(a))
+    .map((quarter) => ({
+      slug: locale === 'cs' ? `validace-${quarter.toLowerCase()}` : `validation-${quarter.toLowerCase()}`,
+      quarter,
+    }));
 }
 
-/** Render a validation report MD by quarter. */
-export async function renderValidationReport(quarter: string): Promise<string | null> {
-  const file = path.join(METHODOLOGY_ROOT, `validation_${quarter.toUpperCase()}.md`);
+export async function renderValidationReport(
+  locale: Locale,
+  quarter: string,
+): Promise<{ html: string; translationMissing: boolean } | null> {
+  const file = `validation_${quarter.toUpperCase()}`;
+  return readLocalizedMarkdown(METHODOLOGY_ROOT, file, locale);
+}
+
+/**
+ * Reads <root>/<file>.<locale>.md if it exists (for non-CS), else falls back
+ * to <root>/<file>.md. Returns null if neither file exists.
+ */
+async function readLocalizedMarkdown(
+  root: string,
+  file: string,
+  locale: Locale,
+): Promise<{ html: string; translationMissing: boolean } | null> {
+  const localized = path.join(root, `${file}.${locale}.md`);
+  const fallback = path.join(root, `${file}.md`);
+
+  if (locale !== 'cs') {
+    try {
+      const html = await renderMarkdownFile(localized, locale);
+      return { html, translationMissing: false };
+    } catch (err) {
+      if ((err as NodeJS.ErrnoException).code !== 'ENOENT') throw err;
+      // Translation missing — fall through to CS fallback.
+    }
+  }
+
   try {
-    return await renderMarkdownFile(file);
-  } catch {
-    return null;
+    const html = await renderMarkdownFile(fallback, locale);
+    return { html, translationMissing: locale !== 'cs' };
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === 'ENOENT') return null;
+    throw err;
   }
 }
 
 /**
  * Convert a Markdown file to HTML. Pre-processes `.md` links to point at our
  * web routes (so cross-references inside methodology files resolve to
- * `/metodika/<slug>/` instead of dead `.md` paths). Also expands the
- * `<!-- SOURCES_TABLE -->` marker into a live table generated from
- * config/sources.yaml — used by methodology/sources.md to stay in sync.
+ * `/metodika/<slug>/` for CS or `/en/methodology/<slug>/` for EN).
+ *
+ * Also expands the `<!-- SOURCES_TABLE -->` marker into a live table generated
+ * from config/sources.yaml — used by methodology/sources.md (and sources.en.md).
  */
-async function renderMarkdownFile(file: string): Promise<string> {
+async function renderMarkdownFile(file: string, locale: Locale): Promise<string> {
   const raw = await readFile(file, 'utf-8');
-  const withTable = await injectSourcesTable(raw);
-  const rewritten = rewriteInternalLinks(withTable);
+  const withTable = await injectSourcesTable(raw, locale);
+  const rewritten = rewriteInternalLinks(withTable, locale);
   const result = await unified()
     .use(remarkParse)
     .use(remarkGfm)
@@ -169,14 +179,6 @@ async function renderMarkdownFile(file: string): Promise<string> {
 // Auto-rendered sources table (used by methodology/sources.md)
 // ============================================================
 
-/**
- * Adaptery, které jsou skutečně implementované pro non-RSS zdroje. Všechny
- * RSS zdroje jsou aktivní z principu (čte je rss-parser). Cokoli mimo tento
- * set + non-RSS = "nezapojený" placeholder.
- *
- * Pokud přidáš adapter pro nový zdroj v src/pipeline/fetch-sources.ts,
- * doplň ho i sem, jinak se bude na webu hlásit jako neaktivní.
- */
 const IMPLEMENTED_NON_RSS_ADAPTERS = new Set<string>([
   'psp-cz',
   'hlidac-statu',
@@ -184,17 +186,42 @@ const IMPLEMENTED_NON_RSS_ADAPTERS = new Set<string>([
   'hlidac-dotace',
 ]);
 
-const CATEGORY_LABELS: Record<string, string> = {
-  czech_media: 'Česká média',
-  open_data: 'Otevřená data',
-  watchdog: 'Watchdog',
-  international: 'Mezinárodní',
+const CATEGORY_LABELS: Record<Locale, Record<string, string>> = {
+  cs: {
+    czech_media: 'Česká média',
+    open_data: 'Otevřená data',
+    watchdog: 'Watchdog',
+    international: 'Mezinárodní',
+  },
+  en: {
+    czech_media: 'Czech media',
+    open_data: 'Open data',
+    watchdog: 'Watchdog',
+    international: 'International',
+  },
 };
 
-const TYPE_LABELS: Record<string, string> = {
-  rss: 'RSS feed',
-  api: 'API',
-  html: 'HTML scraper',
+const TYPE_LABELS: Record<Locale, Record<string, string>> = {
+  cs: {
+    rss: 'RSS feed',
+    api: 'API',
+    html: 'HTML scraper',
+  },
+  en: {
+    rss: 'RSS feed',
+    api: 'API',
+    html: 'HTML scraper',
+  },
+};
+
+const SOURCES_TABLE_HEADERS: Record<Locale, { state: string; source: string; type: string; note: string }> = {
+  cs: { state: 'Stav', source: 'Zdroj', type: 'Typ', note: 'Poznámka' },
+  en: { state: 'Status', source: 'Source', type: 'Type', note: 'Note' },
+};
+
+const SOURCES_TABLE_STATUS: Record<Locale, { active: string; inactive: string; activeShort: string }> = {
+  cs: { active: '✓ aktivní', inactive: '⏸ nezapojený', activeShort: 'aktivních' },
+  en: { active: '✓ active', inactive: '⏸ not wired up', activeShort: 'active' },
 };
 
 interface YamlSource {
@@ -205,6 +232,7 @@ interface YamlSource {
   url: string;
   homepage?: string;
   notes?: string;
+  notes_en?: string;
 }
 
 interface YamlSourcesFile {
@@ -212,10 +240,10 @@ interface YamlSourcesFile {
   sources: YamlSource[];
 }
 
-async function injectSourcesTable(md: string): Promise<string> {
+async function injectSourcesTable(md: string, locale: Locale): Promise<string> {
   if (!md.includes('<!-- SOURCES_TABLE -->')) return md;
   const sources = await loadYamlSources();
-  return md.replace('<!-- SOURCES_TABLE -->', renderSourcesMarkdown(sources));
+  return md.replace('<!-- SOURCES_TABLE -->', renderSourcesMarkdown(sources, locale));
 }
 
 async function loadYamlSources(): Promise<YamlSource[]> {
@@ -229,13 +257,7 @@ function isActive(s: YamlSource): boolean {
   return IMPLEMENTED_NON_RSS_ADAPTERS.has(s.id);
 }
 
-/**
- * Skupinkuje zdroje podle kategorie (zachová pořadí z yamlu uvnitř skupiny)
- * a pro každou kategorii vyrenderuje vlastní tabulku se sloupci:
- * Stav | Zdroj | Typ | Poznámka. Linky vedou na homepage (čitelnější
- * než API endpointy).
- */
-function renderSourcesMarkdown(sources: YamlSource[]): string {
+function renderSourcesMarkdown(sources: YamlSource[], locale: Locale): string {
   const order: ReadonlyArray<string> = ['czech_media', 'open_data', 'watchdog', 'international'];
   const grouped = new Map<string, YamlSource[]>();
   for (const s of sources) {
@@ -244,32 +266,36 @@ function renderSourcesMarkdown(sources: YamlSource[]): string {
     grouped.set(s.category, list);
   }
   const sections: string[] = [];
+  const headers = SOURCES_TABLE_HEADERS[locale];
+  const status = SOURCES_TABLE_STATUS[locale];
   for (const cat of order) {
     const list = grouped.get(cat);
     if (!list || list.length === 0) continue;
     const active = list.filter(isActive).length;
-    sections.push(`### ${CATEGORY_LABELS[cat] ?? cat} (${active}/${list.length} aktivních)`);
+    const label = CATEGORY_LABELS[locale][cat] ?? cat;
+    sections.push(`### ${label} (${active}/${list.length} ${status.activeShort})`);
     sections.push('');
-    sections.push('| Stav | Zdroj | Typ | Poznámka |');
+    sections.push(`| ${headers.state} | ${headers.source} | ${headers.type} | ${headers.note} |`);
     sections.push('|------|-------|-----|----------|');
     for (const s of list) {
-      sections.push(renderRow(s));
+      sections.push(renderRow(s, locale));
     }
     sections.push('');
   }
   return sections.join('\n');
 }
 
-function renderRow(s: YamlSource): string {
-  const stav = isActive(s) ? '✓ aktivní' : '⏸ nezapojený';
+function renderRow(s: YamlSource, locale: Locale): string {
+  const status = SOURCES_TABLE_STATUS[locale];
+  const stav = isActive(s) ? status.active : status.inactive;
   const link = s.homepage ?? s.url;
   const name = `[${escapeCell(s.name)}](${link})`;
-  const typ = TYPE_LABELS[s.type] ?? s.type;
-  const note = firstNoteSentence(s.notes);
+  const typ = TYPE_LABELS[locale][s.type] ?? s.type;
+  const localizedNotes = locale === 'en' ? (s.notes_en ?? s.notes) : s.notes;
+  const note = firstNoteSentence(localizedNotes);
   return `| ${stav} | ${name} | ${typ} | ${note} |`;
 }
 
-/** Vezme první větu z `notes` a očistí ji pro tabulkovou buňku. */
 function firstNoteSentence(notes: string | undefined): string {
   if (!notes) return '–';
   const flattened = notes.replace(/\s+/g, ' ').trim();
@@ -279,37 +305,41 @@ function firstNoteSentence(notes: string | undefined): string {
   return escapeCell(trimmed);
 }
 
-/** Markdown-table cells nesmějí obsahovat `|` ani neuzavřené znaky. */
 function escapeCell(text: string): string {
   return text.replace(/\|/g, '\\|').replace(/\n/g, ' ');
 }
 
-const FILE_TO_SLUG: Record<string, string> = Object.fromEntries(
-  METHODOLOGY_DOCS.map((d) => [`${d.file}.md`, d.slug]),
+/**
+ * Map of disk-file basenames (`pillars.md`, `governance.md`, ...) to the
+ * canonical doc key. Used by rewriteInternalLinks to translate cross-doc
+ * references in methodology Markdown files into web URLs in the active locale.
+ */
+const FILE_TO_DOC_KEY: Record<string, MethodologyDocKey> = Object.fromEntries(
+  (Object.entries(DOC_FILE) as Array<[MethodologyDocKey, string]>).map(([k, v]) => [`${v}.md`, k]),
 );
 
 /**
  * Rewrites links in Markdown source so methodology cross-references resolve
  * on the web rather than as broken .md paths.
  *
- * - `pillars.md` → `/metodika/pilire/`
- * - `governance.md` → `/metodika/model-dohledu/`
- * - `validation_2026-Q2.md` → `/metodika/validace-2026-q2/`
- * - GitHub-style relative paths (`../blob/main/methodology/x.md`) → web route
- *
- * Any `.md` link we don't recognize is left alone (renders as-is, broken
- * link visible during review).
+ * - Cross-references between methodology files (e.g. `pillars.md` → /metodika/pilire/
+ *   in CS, /en/methodology/pillars/ in EN).
+ * - Validation reports (validation_YYYY-Qx.md → corresponding web route).
+ * - Strips `.en` infix from links inside English files (so `pillars.en.md` and
+ *   `pillars.md` both resolve to the right destination URL).
  */
-function rewriteInternalLinks(md: string): string {
-  // Plain inline-style links: [text](file.md) or [text](file.md#anchor)
+function rewriteInternalLinks(md: string, locale: Locale): string {
   return md.replace(/\]\(([^)\s]+\.md)(#[^)]*)?\)/g, (match, target: string, anchor?: string) => {
-    const filename = path.basename(target);
-    if (FILE_TO_SLUG[filename]) {
-      return `](/metodika/${FILE_TO_SLUG[filename]}/${anchor ?? ''})`;
+    let filename = path.basename(target);
+    // Strip .en suffix so pillars.en.md resolves the same as pillars.md
+    filename = filename.replace(/\.en\.md$/, '.md');
+    const docKey = FILE_TO_DOC_KEY[filename];
+    if (docKey) {
+      return `](${methodologyDocPath(docKey, locale)}${anchor ?? ''})`;
     }
     const validation = /^validation_(\d{4}-Q[1-4])\.md$/.exec(filename);
     if (validation) {
-      return `](/metodika/validace-${validation[1]!.toLowerCase()}/${anchor ?? ''})`;
+      return `](${validationReportPath(validation[1]!, locale)}${anchor ?? ''})`;
     }
     return match;
   });

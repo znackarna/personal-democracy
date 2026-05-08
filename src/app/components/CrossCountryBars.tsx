@@ -15,30 +15,42 @@ import { type CrossCountry, type CrossIndex, type CrossSubPillar } from '@/lib/t
 interface Props {
   countries: readonly CrossCountry[];
   indexes: readonly CrossIndex[];
+  /** Pre-resolved labels — keeps i18n imports out of this client component. */
+  labels: {
+    multiDimension: string;
+    singleDimension: string;
+    scaleLabel: string;
+    sourceLink: string;
+    subPillarsHeading: string;
+    scoreTooltip: string;
+  };
 }
 
 const HIGHLIGHT_COLORS: Record<string, string> = {
   CZ: '#1d4ed8',
   SK: '#0891b2',
 };
-const NEUTRAL_COLOR = '#94a3b8'; // slate-400
+const NEUTRAL_COLOR = '#94a3b8';
 
-/**
- * Grafy pro každý index (overall + případně sub-pillars). CZ a SK barevně
- * highlightnuté, ostatní země šedé. Stupnice osy Y se přizpůsobuje scale_max
- * indexu, aby raw hodnoty zůstaly čitelné (ne arbitrární 0-100 normalizace).
- */
-export function CrossCountryBars({ countries, indexes }: Props) {
+export function CrossCountryBars({ countries, indexes, labels }: Props) {
   return (
     <div className="space-y-12">
       {indexes.map((idx) => (
-        <IndexSection key={idx.id} index={idx} countries={countries} />
+        <IndexSection key={idx.id} index={idx} countries={countries} labels={labels} />
       ))}
     </div>
   );
 }
 
-function IndexSection({ index, countries }: { index: CrossIndex; countries: readonly CrossCountry[] }) {
+function IndexSection({
+  index,
+  countries,
+  labels,
+}: {
+  index: CrossIndex;
+  countries: readonly CrossCountry[];
+  labels: Props['labels'];
+}) {
   return (
     <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
       <header className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
@@ -47,8 +59,9 @@ function IndexSection({ index, countries }: { index: CrossIndex; countries: read
             {index.label} <span className="text-sm font-normal text-slate-500">({index.year})</span>
           </h3>
           <p className="mt-1 text-xs text-slate-500">
-            {index.type === 'multi_dimension' ? 'Multi-dimension composite' : 'Single-dimension'} ·
-            stupnice 0–{index.scale_max}
+            {index.type === 'multi_dimension' ? labels.multiDimension : labels.singleDimension} ·{' '}
+            {labels.scaleLabel}
+            {index.scale_max}
           </p>
         </div>
         <a
@@ -57,7 +70,7 @@ function IndexSection({ index, countries }: { index: CrossIndex; countries: read
           rel="noopener noreferrer"
           className="text-xs text-slate-500 underline hover:text-slate-900"
         >
-          Zdroj →
+          {labels.sourceLink}
         </a>
       </header>
 
@@ -65,12 +78,13 @@ function IndexSection({ index, countries }: { index: CrossIndex; countries: read
         countries={countries}
         values={index.values}
         scaleMax={index.scale_max}
-        ariaLabel={`${index.label} ${index.year} podle země`}
+        ariaLabel={`${index.label} ${index.year}`}
+        scoreTooltip={labels.scoreTooltip}
       />
 
       {index.sub_pillars && index.sub_pillars.length > 0 && (
         <div className="mt-6">
-          <h4 className="mb-3 text-sm font-semibold text-slate-700">Subpilíře</h4>
+          <h4 className="mb-3 text-sm font-semibold text-slate-700">{labels.subPillarsHeading}</h4>
           <div className="grid gap-6 md:grid-cols-2">
             {index.sub_pillars.map((sp) => (
               <SubPillarChart
@@ -78,6 +92,7 @@ function IndexSection({ index, countries }: { index: CrossIndex; countries: read
                 subPillar={sp}
                 countries={countries}
                 scaleMax={index.scale_max}
+                scoreTooltip={labels.scoreTooltip}
               />
             ))}
           </div>
@@ -93,10 +108,12 @@ function SubPillarChart({
   subPillar,
   countries,
   scaleMax,
+  scoreTooltip,
 }: {
   subPillar: CrossSubPillar;
   countries: readonly CrossCountry[];
   scaleMax: number;
+  scoreTooltip: string;
 }) {
   return (
     <div>
@@ -107,6 +124,7 @@ function SubPillarChart({
         scaleMax={scaleMax}
         height={180}
         ariaLabel={subPillar.label}
+        scoreTooltip={scoreTooltip}
       />
     </div>
   );
@@ -118,16 +136,15 @@ function CountryBarChart({
   scaleMax,
   height = 240,
   ariaLabel,
+  scoreTooltip,
 }: {
   countries: readonly CrossCountry[];
   values: Record<string, number>;
   scaleMax: number;
   height?: number;
   ariaLabel: string;
+  scoreTooltip: string;
 }) {
-  // Sort: highest first, ale highlight země zachovají order (kvůli muscle
-  // memory uživatele — CZ a SK skáčou kvůli sortu, což je matoucí).
-  // Místo toho jen sort by value desc, prostě.
   const sorted = [...countries]
     .map((c) => ({ country: c, value: values[c.code] ?? 0 }))
     .sort((a, b) => b.value - a.value);
@@ -169,7 +186,7 @@ function CountryBarChart({
             }}
             formatter={(value: number) => [
               scaleMax === 1 ? value.toFixed(2) : scaleMax === 10 ? value.toFixed(2) : value.toFixed(0),
-              'skóre',
+              scoreTooltip,
             ]}
             labelFormatter={(code: string) => {
               const c = countries.find((x) => x.code === code);

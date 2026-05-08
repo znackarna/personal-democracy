@@ -4,14 +4,17 @@ import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YA
 import { type ScoreSnapshot } from '@/lib/types';
 
 interface Props {
+  /** Pre-resolved labels so this client component doesn't import the i18n module. */
+  emptyLabel: string;
+  tooltipLabel: string;
   snapshots: readonly ScoreSnapshot[];
 }
 
-export function ScoreTimeline({ snapshots }: Props) {
+export function ScoreTimeline({ snapshots, emptyLabel, tooltipLabel }: Props) {
   if (snapshots.length === 0) {
     return (
       <div className="rounded-xl border border-dashed border-slate-300 p-8 text-center text-sm text-slate-500">
-        Zatím žádná historie skóre. První snapshot vznikne po prvním proběhu pipeline.
+        {emptyLabel}
       </div>
     );
   }
@@ -21,8 +24,6 @@ export function ScoreTimeline({ snapshots }: Props) {
     overall: s.overall_score,
   }));
 
-  // Even with one data point Recharts renders a meaningful plot — show the
-  // marker and a horizontal axis labeled with the week.
   return (
     <div className="h-72 w-full">
       <ResponsiveContainer width="100%" height="100%">
@@ -42,7 +43,7 @@ export function ScoreTimeline({ snapshots }: Props) {
               borderRadius: '0.5rem',
               fontSize: '12px',
             }}
-            formatter={(value: number) => [value.toFixed(1), 'Skóre']}
+            formatter={(value: number) => [value.toFixed(1), tooltipLabel]}
           />
           <Line
             type="monotone"

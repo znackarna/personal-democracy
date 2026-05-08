@@ -11,21 +11,15 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
-import { type ScoreSnapshot, type StructuralBaseline, PILLARS } from '@/lib/types';
+import { type ScoreSnapshot, type StructuralBaseline, PILLARS, type Pillar } from '@/lib/types';
 
 interface Props {
   snapshot: ScoreSnapshot;
   baseline: StructuralBaseline;
+  /** Pre-resolved labels passed from the server. Keeps i18n imports out of this client component. */
+  pillarLabels: Record<Pillar, string>;
+  tooltipCurrentLabel: string;
 }
-
-const PILLAR_LABEL: Record<(typeof PILLARS)[number], string> = {
-  electoral: 'Volby',
-  governance: 'Vládnutí',
-  judicial: 'Justice',
-  media: 'Média',
-  civil: 'Svobody',
-  corruption: 'Korupce',
-};
 
 const PILLAR_COLOR: Record<(typeof PILLARS)[number], string> = {
   electoral: '#2563eb',
@@ -36,9 +30,9 @@ const PILLAR_COLOR: Record<(typeof PILLARS)[number], string> = {
   corruption: '#dc2626',
 };
 
-export function PillarBreakdown({ snapshot, baseline }: Props) {
+export function PillarBreakdown({ snapshot, baseline, pillarLabels, tooltipCurrentLabel }: Props) {
   const data = PILLARS.map((p) => ({
-    pillar: PILLAR_LABEL[p],
+    pillar: pillarLabels[p],
     pillarKey: p,
     current: snapshot.pillars[p],
     baseline: baseline.pillars[p],
@@ -71,7 +65,7 @@ export function PillarBreakdown({ snapshot, baseline }: Props) {
                 const sign = delta >= 0 ? '+' : '';
                 return [
                   `${value.toFixed(1)} (${sign}${delta.toFixed(1)} vs baseline ${baselineValue.toFixed(1)})`,
-                  'Aktuálně',
+                  tooltipCurrentLabel,
                 ];
               }
               return [value.toFixed(1), _name];
@@ -82,7 +76,6 @@ export function PillarBreakdown({ snapshot, baseline }: Props) {
               <Cell key={d.pillarKey} fill={PILLAR_COLOR[d.pillarKey]} />
             ))}
           </Bar>
-          {/* Baseline markers — small dots to show "where we started this quarter" */}
           {data.map((d) => (
             <ReferenceDot
               key={`baseline-${d.pillarKey}`}

@@ -47,6 +47,14 @@ export const EventSchema = z
     date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
     headline: z.string().min(5).max(200),
     summary: z.string().min(20).max(600),
+    /**
+     * Optional English translations. Pipeline writes Czech only by default;
+     * a separate translate-events script (or future pipeline extension) fills
+     * these in. UI falls back to Czech with a "[CS]" badge when absent.
+     */
+    headline_en: z.string().min(5).max(200).optional(),
+    summary_en: z.string().min(20).max(600).optional(),
+    rationale_en: z.string().min(20).optional(),
     pillar: PillarSchema,
     severity: SeveritySchema.nullable(),
     direction: DirectionSchema,

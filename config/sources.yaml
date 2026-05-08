@@ -29,6 +29,7 @@ sources:
     url: https://denikn.cz/feed/
     homepage: https://denikn.cz/
     notes: Předplatné u některých článků; pipeline pracuje s titulkem a perexem.
+    notes_en: Some articles are paywalled; the pipeline works with the headline and lede.
 
   - id: irozhlas
     name: iROZHLAS
@@ -44,6 +45,7 @@ sources:
     url: https://ct24.ceskatelevize.cz/rss
     homepage: https://ct24.ceskatelevize.cz/
     notes: URL ověřit, ČT občas přesouvá feed.
+    notes_en: Verify the URL — Czech Television occasionally moves the feed.
 
   - id: hn
     name: Hospodářské noviny
@@ -66,6 +68,7 @@ sources:
     url: https://www.investigace.cz/feed/
     homepage: https://www.investigace.cz/
     notes: Investigativní novinařina, často pomalejší kadence ale velmi vysoká relevance.
+    notes_en: Investigative journalism, slower cadence but very high per-item relevance.
 
   - id: a2larm
     name: A2larm
@@ -96,6 +99,13 @@ sources:
       CZ stran (POLITICAL_PARTIES), threshold 100 000 Kč, posledních 30 dní
       (configurable přes windowDays).
       TODO: ověřit IČO pro SPD (22875327) a Motoristé (22878660) — vrací prázdno.
+    notes_en: |
+      Adapter in src/lib/hlidac.ts (fetchPartyDonationsAsArticles). Requires
+      HLIDAC_API_KEY env var (free after registration). Fan-out across the 9
+      main Czech parties (POLITICAL_PARTIES), threshold CZK 100,000, last
+      30 days (configurable via windowDays).
+      TODO: verify the registration IDs for SPD (22875327) and Motoristé
+      (22878660) — currently returning empty.
 
   - id: hlidac-smlouvy
     name: Hlídač státu — smlouvy s issues
@@ -109,6 +119,12 @@ sources:
       WATCHLIST_ENTITIES) figuruje jako strana A KDE Hlídač označil anomálii
       (issues.length > 0). Issue typy: nečitelnost, nulová hodnota, pozdní
       zveřejnění, stejné strany apod.
+    notes_en: |
+      Adapter in src/lib/hlidac.ts (fetchWatchlistSmlouvyAsArticles). Returns
+      contracts from the public Contracts Register where a watchlist entity
+      (AGROFERT, MAFRA — see WATCHLIST_ENTITIES) is a party AND Hlídač flagged
+      an anomaly (issues.length > 0). Issue types: illegibility, zero value,
+      late publication, same parties on both sides, etc.
 
   - id: hlidac-dotace
     name: Hlídač státu — dotace pro watchlist
@@ -122,6 +138,12 @@ sources:
       v okně. Threshold ≥ 100 000 Kč. Pozn.: Hlídač refresheuje dotace
       v dávkách (typicky měsíčně), takže výstup je nepravidelný — některé
       týdny 0, jiné spousta najednou. Klasifikátor s tím počítá.
+    notes_en: |
+      Adapter in src/lib/hlidac.ts (fetchWatchlistDotaceAsArticles). Returns
+      subsidies received by watchlist entities, filtered by Hlídač modifiedDate
+      within the window. Threshold ≥ CZK 100,000. Note: Hlídač refreshes
+      subsidies in batches (typically monthly), so output is irregular — some
+      weeks 0, others a flood at once. The classifier accounts for this.
 
   - id: psp-cz
     name: Poslanecká sněmovna PČR
@@ -134,6 +156,12 @@ sources:
       přehled schůzí (table na ischuze.sqw?o=10) — vrací jednu RawArticle za
       schůzi končící v okně. Status "Přerušeno" (přerušená schůze) je hlavní
       governance signál. Drill-down do per-schůze tisků je iter 2.
+    notes_en: |
+      The Chamber of Deputies has no RSS feed (probed 2026-04-28). Adapter in
+      src/lib/psp.ts parses the session overview table (ischuze.sqw?o=10) —
+      returns one RawArticle per session ending within the window. The
+      "Přerušeno" (interrupted session) status is the main governance signal.
+      Drill-down into per-session bills is iter 2.
 
   - id: senat-cz
     name: Senát PČR
@@ -153,6 +181,11 @@ sources:
       položek: nálezy, přehledy jednání pléna i senátů, tiskové zprávy.
       Klíčové pro pillar judicial — ÚS rozhodnutí často mají strukturální
       dopad na ústavní pořádek.
+    notes_en: |
+      Official RSS feed (undocumented but stable — returns the 30 most recent
+      items: rulings, plenum and senate session overviews, press releases).
+      Critical for the judicial pillar — Constitutional Court decisions often
+      have a structural impact on the constitutional order.
 
   - id: nejvyssi-soud
     name: Nejvyšší soud
@@ -213,6 +246,10 @@ sources:
       Joint venture US Politico + Axel Springer (DE). Pan-European focus s
       strong CEE coverage. Profesionální political desk, často exkluzivní
       reporting o EU institucionálních hrách týkajících se ČR.
+    notes_en: |
+      Joint venture of US Politico and Axel Springer (DE). Pan-European focus
+      with strong CEE coverage. Professional political desk, often with
+      exclusive reporting on EU institutional manoeuvres affecting Czechia.
 
   - id: bbc-europe
     name: BBC News Europe
@@ -224,6 +261,10 @@ sources:
       Public broadcaster (UK). Široce uznávaný neutral standard, BBC editorial
       guidelines vyžadují due impartiality. CZ pokrývá hlavně při významných
       událostech (volby, ústavní krize, big scandals).
+    notes_en: |
+      Public broadcaster (UK). Widely recognised neutral standard; BBC
+      editorial guidelines require due impartiality. Covers Czechia mainly
+      during major events (elections, constitutional crises, big scandals).
 
   - id: euronews
     name: Euronews
@@ -235,6 +276,10 @@ sources:
       Pan-European TV/web outlet (vlastnictví NBC + Naguib Sawiris a Mediaset).
       Multijazyčný, široké pokrytí EU událostí. Užitečný pro events, kde CZ
       hraje roli v evropském kontextu (NATO, EU policy, sankce).
+    notes_en: |
+      Pan-European TV/web outlet (owned by NBC + Naguib Sawiris and Mediaset).
+      Multilingual, broad coverage of EU events. Useful for events where CZ
+      plays a role in the European context (NATO, EU policy, sanctions).
 
   - id: visegrad-insight
     name: Visegrad Insight
@@ -246,6 +291,10 @@ sources:
       Niche policy outlet zaměřený výhradně na V4 (CZ + SK + PL + HU).
       Vydává Res Publica Foundation (PL). Nejvyšší CZ-relevance per item ze
       všech zahraničních zdrojů — analytic depth o CEE politice.
+    notes_en: |
+      Niche policy outlet focused exclusively on V4 (CZ + SK + PL + HU),
+      published by the Res Publica Foundation (PL). Highest per-item CZ
+      relevance among all foreign sources — analytic depth on CEE politics.
 
   - id: brno-daily
     name: Brno Daily
@@ -257,6 +306,10 @@ sources:
       English-language news o ČR (založen v Brně, postupně rozšiřuje na
       celou ČR). Vzácná „outside-in" perspektiva v angličtině pro čtenáře,
       co nečtou česky. Menší kapacita, ale on-topic.
+    notes_en: |
+      English-language news about Czechia (founded in Brno, gradually
+      expanding to the whole country). A rare "outside-in" perspective in
+      English for readers who don’t read Czech. Smaller capacity but on-topic.
 
   # ============================================================
   # Mezinárodní instituce (oficiální stránky, prozatím skip)

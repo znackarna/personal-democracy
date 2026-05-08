@@ -6,9 +6,15 @@ import {
   type ScoreSnapshot,
   type StructuralBaseline,
 } from '@/lib/types';
-import { PILLAR_INFO } from '../lib/pillar-info';
+import {
+  getMessages,
+  methodologyDocPath,
+  type Locale,
+} from '@/i18n';
+import { getPillarInfo, pillarAnchorId } from '@/i18n/pillar-info';
 
 interface Props {
+  locale: Locale;
   snapshot: ScoreSnapshot;
   baseline: StructuralBaseline;
 }
@@ -22,26 +28,29 @@ const PILLAR_COLOR: Record<Pillar, { stripe: string; tag: string; tagText: strin
   corruption: { stripe: 'bg-pillar-corruption', tag: 'bg-red-100', tagText: 'text-red-900' },
 };
 
-export function PillarDetailGrid({ snapshot, baseline }: Props) {
+export function PillarDetailGrid({ locale, snapshot, baseline }: Props) {
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {PILLARS.map((p) => (
-        <PillarDetailCard key={p} pillar={p} snapshot={snapshot} baseline={baseline} />
+        <PillarDetailCard key={p} locale={locale} pillar={p} snapshot={snapshot} baseline={baseline} />
       ))}
     </div>
   );
 }
 
 function PillarDetailCard({
+  locale,
   pillar,
   snapshot,
   baseline,
 }: {
+  locale: Locale;
   pillar: Pillar;
   snapshot: ScoreSnapshot;
   baseline: StructuralBaseline;
 }) {
-  const info = PILLAR_INFO[pillar];
+  const t = getMessages(locale);
+  const info = getPillarInfo(locale)[pillar];
   const color = PILLAR_COLOR[pillar];
   const current = snapshot.pillars[pillar];
   const baselineValue = baseline.pillars[pillar];
@@ -50,6 +59,8 @@ function PillarDetailCard({
   const deltaColor =
     Math.abs(delta) < 0.5 ? 'text-slate-500' : delta > 0 ? 'text-score-good' : 'text-score-bad';
   const weight = (PILLAR_WEIGHTS[pillar] * 100).toFixed(0);
+
+  const fullDescriptionHref = `${methodologyDocPath('pillars', locale)}#${pillarAnchorId(pillar, locale)}`;
 
   return (
     <article className="flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
@@ -63,9 +74,9 @@ function PillarDetailCard({
             </div>
             <span
               className={`rounded-md px-1.5 py-0.5 text-xs font-medium ${color.tag} ${color.tagText}`}
-              title="Váha pilíře v celkovém skóre"
+              title={t.pillarDetail.weightTitle}
             >
-              Váha {weight} %
+              {t.pillarDetail.weightLabel} {weight} %
             </span>
           </div>
           <div className="mt-3 flex items-baseline gap-2">
@@ -76,18 +87,17 @@ function PillarDetailCard({
               {deltaSign}
               {delta.toFixed(1)}
             </span>
-            <span className="text-xs text-slate-500">vs baseline {baselineValue.toFixed(1)}</span>
+            <span className="text-xs text-slate-500">
+              {t.pillarDetail.vsBaseline} {baselineValue.toFixed(1)}
+            </span>
           </div>
         </header>
 
-        <p className="text-sm text-slate-700">
-          {/* Description allows **bold** markdown via simple split */}
-          {renderInlineBold(info.description)}
-        </p>
+        <p className="text-sm text-slate-700">{renderInlineBold(info.description)}</p>
 
         <details className="text-xs text-slate-700">
           <summary className="cursor-pointer text-slate-500 hover:text-slate-900">
-            Co konkrétně pilíř obsahuje
+            {t.pillarDetail.subcomponentsSummary}
           </summary>
           <ul className="mt-2 space-y-1 pl-4 [list-style:disc]">
             {info.subcomponents.map((s) => (
@@ -98,7 +108,7 @@ function PillarDetailCard({
 
         <div>
           <h4 className="text-xs font-semibold uppercase tracking-wide text-score-bad">
-            Co skóre snižuje
+            {t.pillarDetail.lowersHeading}
           </h4>
           <ul className="mt-1 space-y-1 text-xs text-slate-700">
             {info.lowerExamples.map((ex) => (
@@ -114,7 +124,7 @@ function PillarDetailCard({
 
         <div>
           <h4 className="text-xs font-semibold uppercase tracking-wide text-score-good">
-            Co skóre zvyšuje
+            {t.pillarDetail.raisesHeading}
           </h4>
           <ul className="mt-1 space-y-1 text-xs text-slate-700">
             {info.raiseExamples.map((ex) => (
@@ -129,10 +139,10 @@ function PillarDetailCard({
         </div>
 
         <Link
-          href={`/metodika/pilire/#${pillarAnchorId(pillar)}`}
+          href={fullDescriptionHref}
           className="mt-auto pt-2 text-xs font-medium text-slate-600 underline hover:text-slate-900"
         >
-          Plný popis pilíře v metodice →
+          {t.pillarDetail.fullDescriptionLink}
         </Link>
       </div>
     </article>
@@ -152,20 +162,4 @@ function renderInlineBold(text: string): React.ReactNode {
     }
     return <span key={i}>{part}</span>;
   });
-}
-
-/**
- * pillars.md uses headings like "## 3. Judicial — Soudní nezávislost...".
- * rehype-slug turns these into anchor IDs; for simplicity we link to the
- * pillar's section heading using a known suffix pattern.
- */
-function pillarAnchorId(pillar: Pillar): string {
-  return {
-    electoral: '1-electoral--volební-proces-a-pluralismus-váha-15-',
-    governance: '2-governance--fungování-vlády-a-parlamentu-váha-20-',
-    judicial: '3-judicial--soudní-nezávislost-a-právní-stát-váha-20-',
-    media: '4-media--mediální-svoboda-váha-15-',
-    civil: '5-civil--občanské-svobody-váha-15-',
-    corruption: '6-corruption--korupce-a-transparentnost-váha-15-',
-  }[pillar];
 }

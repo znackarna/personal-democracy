@@ -17,10 +17,16 @@ interface Props {
   series: readonly PollSeries[];
   topical: readonly TopicalFinding[] | null;
   topicalDescription?: string;
+  /** Pre-resolved labels — keeps i18n imports out of this client component. */
+  labels: {
+    sourceLink: string;
+    methodologyChangeLabel: string;
+    methodologyChangeNotePrefix: string;
+    topicalHeading: string;
+    topicalReportLink: string;
+  };
 }
 
-// Distinct, accessible colors per institution. Order matches the most common
-// CVVM key set; unknown institutions cycle through later colors.
 const INSTITUTION_COLORS: Record<string, string> = {
   prezident: '#0f172a',
   vlada: '#dc2626',
@@ -33,32 +39,26 @@ const INSTITUTION_COLORS: Record<string, string> = {
 };
 const FALLBACK_COLORS = ['#475569', '#0369a1', '#15803d', '#a16207', '#9333ea'];
 
-/**
- * Read-only sekce pro veřejné mínění. NEVSTUPUJE do skóre — slouží jen jako
- * doplňkový kontext (proč: methodology/public_opinion.md).
- *
- * Renderuje:
- * 1. Per-source time series chart (typicky CVVM "Důvěra ústavním institucím")
- * 2. Topical findings cards (ad-hoc nálezy STEM, Median bez time series)
- *
- * Pokud žádná data nejsou k dispozici (čerstvý repo), vrací nic — homepage
- * ten case ošetří podmínkou.
- */
-export function PublicOpinion({ series, topical, topicalDescription }: Props) {
+export function PublicOpinion({ series, topical, topicalDescription, labels }: Props) {
   return (
     <div className="space-y-8">
       {series.map((s) => (
-        <PollSeriesChart key={s.source} series={s} />
+        <PollSeriesChart key={s.source} series={s} labels={labels} />
       ))}
       {topical && topical.length > 0 && (
-        <TopicalFindings findings={topical} description={topicalDescription} />
+        <TopicalFindings findings={topical} description={topicalDescription} labels={labels} />
       )}
     </div>
   );
 }
 
-function PollSeriesChart({ series }: { series: PollSeries }) {
-  // Recharts wants flat rows: one row per period, one column per institution.
+function PollSeriesChart({
+  series,
+  labels,
+}: {
+  series: PollSeries;
+  labels: Props['labels'];
+}) {
   const chartData = series.data.map((d) => {
     const row: Record<string, string | number> = { period: d.period };
     for (const [key, val] of Object.entries(d.values)) {
@@ -67,15 +67,12 @@ function PollSeriesChart({ series }: { series: PollSeries }) {
     return row;
   });
 
-  // Which institutions appear at all in this series? Render lines only for those.
   const presentInstitutions = new Set<string>();
   for (const d of series.data) {
     for (const k of Object.keys(d.values)) presentInstitutions.add(k);
   }
   const institutions = [...presentInstitutions];
 
-  // Detect methodology break — if any datapoint is flagged, find its index for
-  // a vertical reference line.
   const breakIndex = series.data.findIndex((d) => d.methodology_break);
   const breakPeriod = breakIndex >= 0 ? series.data[breakIndex]?.period : null;
   const breakNote =
@@ -94,7 +91,7 @@ function PollSeriesChart({ series }: { series: PollSeries }) {
           rel="noopener noreferrer"
           className="text-xs text-slate-500 underline hover:text-slate-900"
         >
-          Zdroj →
+          {labels.sourceLink}
         </a>
       </header>
 
@@ -136,7 +133,7 @@ function PollSeriesChart({ series }: { series: PollSeries }) {
                 stroke="#dc2626"
                 strokeDasharray="4 4"
                 label={{
-                  value: 'Změna metodiky',
+                  value: labels.methodologyChangeLabel,
                   position: 'top',
                   fontSize: 10,
                   fill: '#dc2626',
@@ -169,7 +166,9 @@ function PollSeriesChart({ series }: { series: PollSeries }) {
           {breakNote && (
             <>
               {' '}
-              <strong className="text-amber-700">Změna metodiky ({breakPeriod}):</strong>{' '}
+              <strong className="text-amber-700">
+                {labels.methodologyChangeNotePrefix} ({breakPeriod}):
+              </strong>{' '}
               {breakNote}
             </>
           )}
@@ -182,16 +181,16 @@ function PollSeriesChart({ series }: { series: PollSeries }) {
 function TopicalFindings({
   findings,
   description,
+  labels,
 }: {
   findings: readonly TopicalFinding[];
   description?: string;
+  labels: Props['labels'];
 }) {
   return (
     <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
       <header className="mb-4">
-        <h3 className="text-base font-semibold text-slate-900">
-          Aktuální nálezy z dalších šetření
-        </h3>
+        <h3 className="text-base font-semibold text-slate-900">{labels.topicalHeading}</h3>
         {description && <p className="mt-1 text-xs text-slate-500">{description}</p>}
       </header>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -212,7 +211,7 @@ function TopicalFindings({
               rel="noopener noreferrer"
               className="text-xs text-slate-600 underline hover:text-slate-900"
             >
-              Celý report →
+              {labels.topicalReportLink}
             </a>
           </article>
         ))}

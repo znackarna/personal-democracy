@@ -4,31 +4,43 @@ import { useMemo, useState } from 'react';
 import { EventCard } from './EventCard';
 import type { Event, Pillar, Severity } from '@/lib/types';
 import { PILLARS } from '@/lib/types';
-
-const PILLAR_LABEL: Record<Pillar, string> = {
-  electoral: 'Volby',
-  governance: 'Vládnutí',
-  judicial: 'Justice',
-  media: 'Média',
-  civil: 'Svobody',
-  corruption: 'Korupce',
-};
+import type { Locale } from '@/i18n';
 
 const SEVERITIES: readonly Severity[] = [1, 2, 3, 4, 5];
 
 const PAGE_SIZE = 15;
 
 interface Props {
+  locale: Locale;
   events: readonly Event[];
+  /** Pre-resolved labels passed from server. Avoids importing the i18n module client-side. */
+  labels: {
+    pillars: Record<Pillar, string>;
+    filterPillar: string;
+    filterSeverity: string;
+    filterYear: string;
+    filterAllYears: string;
+    filterClear: string;
+    countSummaryTotal: string;
+    countSummaryFiltered: string;
+    countSummaryOf: string;
+    pageLabel: string;
+    pageOf: string;
+    weekHeading: string;
+    emptyFiltered: string;
+    emptyAll: string;
+    paginationPrev: string;
+    paginationNext: string;
+  };
 }
 
 /**
  * Klientský filtr + paginace nad seznamem všech klasifikovaných událostí.
  * Stav je lokální (useState) — sdílení filtru přes URL můžeme přidat až
- * bude potřeba. Server component {@link import('../udalosti/page').default}
- * předá kompletní pole eventů; filtrace probíhá in-memory.
+ * bude potřeba. Server component předá kompletní pole eventů; filtrace
+ * probíhá in-memory.
  */
-export function EventsList({ events }: Props) {
+export function EventsList({ locale, events, labels }: Props) {
   const [pillarFilter, setPillarFilter] = useState<ReadonlySet<Pillar>>(new Set());
   const [severityFilter, setSeverityFilter] = useState<ReadonlySet<Severity>>(new Set());
   const [yearFilter, setYearFilter] = useState<string>('all');
@@ -57,7 +69,6 @@ export function EventsList({ events }: Props) {
   const start = (safePage - 1) * PAGE_SIZE;
   const pageEvents = filtered.slice(start, start + PAGE_SIZE);
 
-  // Per-page grouping podle týdne pro vizuální skenovatelnost.
   const byWeek = useMemo(() => {
     const m = new Map<string, Event[]>();
     for (const e of pageEvents) {
@@ -104,19 +115,19 @@ export function EventsList({ events }: Props) {
     <div className="space-y-6">
       <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
         <div className="flex flex-col gap-4">
-          <FilterRow label="Pilíř">
+          <FilterRow label={labels.filterPillar}>
             {PILLARS.map((p) => (
               <Chip
                 key={p}
                 active={pillarFilter.has(p)}
                 onClick={() => togglePillar(p)}
               >
-                {PILLAR_LABEL[p]}
+                {labels.pillars[p]}
               </Chip>
             ))}
           </FilterRow>
 
-          <FilterRow label="Závažnost">
+          <FilterRow label={labels.filterSeverity}>
             {SEVERITIES.map((s) => (
               <Chip
                 key={s}
@@ -128,13 +139,13 @@ export function EventsList({ events }: Props) {
             ))}
           </FilterRow>
 
-          <FilterRow label="Rok">
+          <FilterRow label={labels.filterYear}>
             <select
               value={yearFilter}
               onChange={(e) => changeYear(e.target.value)}
               className="rounded-lg border border-slate-300 bg-white px-3 py-1 text-sm text-slate-700 focus:border-slate-500 focus:outline-none"
             >
-              <option value="all">Všechny roky</option>
+              <option value="all">{labels.filterAllYears}</option>
               {years.map((y) => (
                 <option key={y} value={y}>
                   {y}
@@ -148,7 +159,7 @@ export function EventsList({ events }: Props) {
                 onClick={resetAll}
                 className="ml-auto text-xs text-slate-500 underline hover:text-slate-900"
               >
-                Vyčistit filtry
+                {labels.filterClear}
               </button>
             )}
           </FilterRow>
@@ -159,32 +170,33 @@ export function EventsList({ events }: Props) {
         <div>
           <span className="font-semibold text-slate-900 tabular-nums">{filtered.length}</span>{' '}
           {filtered.length === events.length ? (
-            <>událostí celkem</>
+            <>{labels.countSummaryTotal}</>
           ) : (
             <>
-              z <span className="tabular-nums">{events.length}</span> po filtraci
+              {labels.countSummaryOf}{' '}
+              <span className="tabular-nums">{events.length}</span> {labels.countSummaryFiltered}
             </>
           )}
         </div>
         <div>
-          Strana <span className="tabular-nums">{safePage}</span> z{' '}
+          {labels.pageLabel} <span className="tabular-nums">{safePage}</span> {labels.pageOf}{' '}
           <span className="tabular-nums">{totalPages}</span>
         </div>
       </div>
 
       {byWeek.length === 0 ? (
         <div className="rounded-xl border border-dashed border-slate-300 bg-white p-12 text-center text-sm text-slate-500">
-          {hasActiveFilter
-            ? 'Filtrům neodpovídá žádná událost. Zkus uvolnit kritéria.'
-            : 'Zatím žádné události.'}
+          {hasActiveFilter ? labels.emptyFiltered : labels.emptyAll}
         </div>
       ) : (
         byWeek.map(([week, evs]) => (
           <section key={week}>
-            <h2 className="mb-4 text-lg font-semibold text-slate-900">Týden {week}</h2>
+            <h2 className="mb-4 text-lg font-semibold text-slate-900">
+              {labels.weekHeading} {week}
+            </h2>
             <div className="space-y-4">
               {evs.map((e) => (
-                <EventCard key={e.id} event={e} />
+                <EventCard key={e.id} locale={locale} event={e} />
               ))}
             </div>
           </section>
@@ -195,9 +207,10 @@ export function EventsList({ events }: Props) {
         <Pagination
           page={safePage}
           totalPages={totalPages}
+          prevLabel={labels.paginationPrev}
+          nextLabel={labels.paginationNext}
           onChange={(p) => {
             setPage(p);
-            // Scroll na vrch filter baru, ať uživatel nemusí dolovat.
             if (typeof window !== 'undefined') {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }
@@ -246,14 +259,16 @@ function Chip({
 function Pagination({
   page,
   totalPages,
+  prevLabel,
+  nextLabel,
   onChange,
 }: {
   page: number;
   totalPages: number;
+  prevLabel: string;
+  nextLabel: string;
   onChange: (page: number) => void;
 }) {
-  // Krátká stránka — vyrenderujeme všechna čísla. Pokud bychom kdy měli
-  // > 20 stránek, sem doplnit ellipsis logic.
   const pageNumbers: number[] = [];
   for (let i = 1; i <= totalPages; i += 1) pageNumbers.push(i);
 
@@ -265,7 +280,7 @@ function Pagination({
         disabled={page === 1}
         className="rounded-lg border border-slate-300 bg-white px-3 py-1 text-sm text-slate-700 transition hover:border-slate-400 hover:text-slate-900 disabled:cursor-not-allowed disabled:opacity-40"
       >
-        ← Předchozí
+        {prevLabel}
       </button>
       {pageNumbers.map((n) => (
         <button
@@ -287,7 +302,7 @@ function Pagination({
         disabled={page === totalPages}
         className="rounded-lg border border-slate-300 bg-white px-3 py-1 text-sm text-slate-700 transition hover:border-slate-400 hover:text-slate-900 disabled:cursor-not-allowed disabled:opacity-40"
       >
-        Další →
+        {nextLabel}
       </button>
     </nav>
   );
