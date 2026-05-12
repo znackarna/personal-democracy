@@ -46,5 +46,266 @@
     "status": "active",
     "created_at": "2026-05-11T07:24:54.292Z",
     "expires_at": "2026-08-03T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-003",
+    "date": "2026-05-11",
+    "headline": "Prezident Pavel pohrozil ústavní žalobou kvůli sporu o pravomoci s vládou Babiše",
+    "summary": "Prezident Petr Pavel veřejně pohrozil podáním ústavní žaloby v reakci na kroky vlády, které podle něj omezují pravomoci hlavy státu. Článek analyzuje páky, které má prezident k dispozici v případě eskalace ústavního konfliktu s kabinetem. Jde o vyhrocení institucionálního sporu o dělbu moci mezi Hradem a vládou.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "„Nelze čekat, že druhá strana bude jen přihlížet.“ Jaké má prezident páky na vládu",
+        "url": "https://denikn.cz/2059787/nelze-cekat-ze-druha-strana-bude-jen-prihlizet-jake-ma-prezident-paky-na-vladu/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-12T07:15:39.541Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — prezidentova hrozba ústavní žalobou vůči vládě kvůli omezování pravomocí hlavy státu je konkrétní, datovaná eskalace sporu o dělbu moci (subkomponenta G1 — reálná kontrola a respekt k roli prezidenta). Vytváří precedent pro otevřenou ústavní krizi. Zatím jde o verbální eskalaci bez podání žaloby, proto ne severity 4. Sekundárně relevantní pro G3 (stabilita ústavních norem). Single source — bez upgradu za potvrzený vzorec k dnešnímu dni.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-12T07:15:39.525Z"
+  },
+  {
+    "id": "2026-W20-004",
+    "date": "2026-05-11",
+    "headline": "Babiš odmítá přijít na Hrad a veřejně zpochybňuje nadřízenost prezidenta — eskalace konfliktu",
+    "summary": "Premiér Andrej Babiš odmítl dostavit se na schůzku s prezidentem Petrem Pavlem a veřejně deklaroval, že není prezidentovým podřízeným. Prezident reagoval kritikou premiérovy nezdvořilosti. Konflikt naznačuje systémové napětí v ústavních vztazích mezi exekutivou a hlavou státu.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Vrtěti psem: Babiš jde do války s Pavlem",
+        "url": "https://denikn.cz/2059783/vrteti-psem-babis-jde-do-valky-s-pavlem/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-12T07:15:39.541Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o konkrétní incident (odmítnutí schůzky, veřejné výroky) s omezeným přímým institucionálním dopadem, avšak s potenciálem eskalace. Subkomponenta G1 (dělba moci, respekt k roli prezidenta). Samotné odmítnutí schůzky a verbální spor zatím nepřekračují do ústavní krize — je to eskalace napětí, nikoliv formální institucionální porušení. Navazuje na index 2 (Pavlova hrozba ústavní žalobou), oba incidenty dohromady tvoří trvalý vzorec napětí, proto duration persistent. Podcast jako primární zdroj je méně ověřitelný než psaný artikel — bez upgradu severity.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-12T07:15:39.525Z"
+  },
+  {
+    "id": "2026-W20-005",
+    "date": "2026-05-11",
+    "headline": "Policie prošetřuje desítky milionů z darknetového tržiště, zájem o advokáta Titze",
+    "summary": "Policie vyšetřuje pohyb desítek bitcoinů z peněženek spojených s darknetovým tržištěm Nucleus Market. Kriminalisté se zabývají pěti adresami, na nichž přistály desítky milionů korun, a zkoumají případnou roli advokáta Titze.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Na neznámé účty odešly desítky milionů. Policii zajímá role advokáta Titze",
+        "url": "https://denikn.cz/2057250/na-nezname-ucty-odesly-desitky-milionu-policii-zajima-role-advokata-titze/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-12T07:15:39.541Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o probíhající policejní šetření finančních toků s korupcí a praním peněz (subkomponenta K1/K4), nikoliv o prokázané schéma zahrnující ústavní činitele. Případ má potenciál eskalace na severity 3–4 při prokázání napojení na politické struktury, ale v tuto chvíli jde o reportáž z vyšetřování bez rozsudku nebo formálního obvinění. Pouze jeden zdroj (Deník N), což brání vyšší závažnosti.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-12T07:15:39.525Z"
+  },
+  {
+    "id": "2026-W20-006",
+    "date": "2026-05-11",
+    "headline": "Soud zamítl žaloby odvolaného ředitele ČT Součka proti Radě ČT",
+    "summary": "Obvodní soud zamítl obě žaloby bývalého generálního ředitele ČT Jana Součka, který napadl okolnosti svého loňského odvolání jako neoprávněné a poškozující. Souček avizoval odvolání proti rozhodnutí.",
+    "pillar": "media",
+    "severity": 2,
+    "direction": 0,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Mé odvolání bylo bezdůvodné, poškodilo mě to, tvrdí bývalý šéf ČT Souček. U soudu neuspěl",
+        "url": "https://denikn.cz/2059737/odvolani-me-poskodilo-branil-se-byvaly-sef-ct-soucek-u-soudu-se-zalobami-neuspel/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-12T07:15:39.541Z"
+      }
+    ],
+    "score_impact": 0,
+    "rationale": "Severity 2 per rubric §2 — soudní rozhodnutí uzavírá jeden díl sporu o nezávislost vedení ČT (subkomponenta M2), ale samo o sobě nepřináší nové institucionální narušení ani precedent; soud se pouze nevyjádřil ve prospěch žalobce. Direction 0: výsledek je z hlediska demokratického indexu ambivalentní — soud fungoval, ale otázka politické motivace původního odvolání zůstává otevřená. Primární pilíř media, sekundárně judicial (funkčnost soudního přezkumu).",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-12T07:15:39.525Z",
+    "expires_at": "2026-08-03T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-007",
+    "date": "2026-05-12",
+    "headline": "Bývalý ministr spravedlnosti Blažek obviněn v bitcoinové kauze",
+    "summary": "Reportéři ČT přiblížili detaily obvinění bývalého ministra spravedlnosti Pavla Blažka v takzvané bitcoinové kauze. Záběr se zaměřuje na konkrétní podezření ze strany policie a státního zastupitelství a naznačuje, že dalším osobám hrozí přidání k obžalobě.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Reportéři ČT ukazují, co vedlo k obvinění Blažka v bitcoinové kauze",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/reporteri-ct-ukazuji-co-vedlo-k-obvineni-blazka-v-bitcoinove-kauze-373303",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-12T07:15:40.686Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — obvinění bývalého ministra spravedlnosti (ústavní činitel) v korupční kauze má přímý dopad na vnímání integrity exekutivy a justice (subkomponenta K1 — politická korupce). Samotné obvinění je konkrétní procesní událost. Nejedná se o prokázanou vinu, proto nelze eskalovat na 4; single source (ČT), žádná mezinárodní reakce zatím zaznamenána. Sekundárně se dotýká pilíře judicial (J3 — nezávislost státního zastupitelství v kauze zahrnující bývalého ministra spravedlnosti), zmíněno v rationale.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-12T07:15:39.525Z",
+    "expires_at": "2026-08-04T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-008",
+    "date": "2026-05-11",
+    "headline": "Tripartita nedosáhla shody na zastropování penzijního věku na 65 letech",
+    "summary": "Zástupci vlády, odborů a zaměstnavatelů se v pondělí nedohodli na zastropování věku odchodu do důchodu na 65 letech. Vláda a odbory s omezením počítají, zatímco zaměstnavatelé ho odmítají; jednání budou pokračovat.",
+    "pillar": "governance",
+    "severity": 1,
+    "direction": 0,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Tripartita se neshodla na zastropování věku odchodu do důchodu",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/tripartita-se-neshodla-na-zastropovani-veku-odchodu-do-duchodu-373298",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-12T07:15:40.686Z"
+      }
+    ],
+    "score_impact": 0,
+    "rationale": "Severity 1 per rubric §1 — nedohoda v tripartitě je standardní součástí legislativního procesu bez precedentního ani institucionálního dopadu na demokratické instituce (subkomponenta G2 — kvalita legislativy). Jednání pokračují, žádný ústavní proces není narušen. Direction 0 — výsledek je neutrální z hlediska demokratického skóre, jde o běžný politický spor o sociální politiku, nikoli o oslabení či posílení demokratických institucí.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-12T07:15:39.525Z",
+    "expires_at": "2026-08-03T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-009",
+    "date": "2026-05-11",
+    "headline": "Poslanec ODS navrhuje umožnit fotbalovým klubům uchovávat biometrické údaje výtržníků",
+    "summary": "Místopředseda poslaneckého klubu ODS Jiří Havránek v Interview ČT24 navrhl, aby fotbalové kluby mohly instalovat biometrické kamery a uchovávat biometrická data problémových fanoušků jako preventivní bezpečnostní opatření. Návrh zazněl v reakci na nedohraný pražský derby kvůli výtržnostem.",
+    "pillar": "civil",
+    "severity": 1,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Kluby by měly mít možnost uchovávat biometrické údaje výtržníků, říká Havránek",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/kluby-by-mely-mit-moznost-uchovavat-biometricke-udaje-vytrzniku-rika-havranek-373308",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-12T07:15:40.686Z"
+      }
+    ],
+    "score_impact": -0.2,
+    "rationale": "Severity 1 per rubric §1 — jde o verbální návrh jednotlivého poslance bez institucionálního dopadu; žádný legislativní návrh nebyl formálně předložen. Subkomponenta C5 (práva v digitálním prostoru — soukromí a ochrana před sledováním) je potenciálně dotčena, ale na úrovni diskuse, nikoli konkrétní akce. Rubric §1: výrok bez institucionálního dopadu, jednorázový. Pokud by byl návrh formálně předložen jako zákon, eskalace na severity 3 (C5, zásah do práva na soukromí).",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-12T07:15:39.525Z",
+    "expires_at": "2026-08-03T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-010",
+    "date": "2026-05-11",
+    "headline": "Vláda jmenovala Landovského vládním zmocněncem pro závazky vůči NATO",
+    "summary": "Vláda na pondělním zasedání schválila vytvoření nové pozice vládního zmocněnce pro plnění závazků vůči NATO a do funkce jmenovala bývalého velvyslance Jakuba Landovského. Cílem je zajistit naplnění výdajového závazku minimálně 2 % HDP na obranu.",
+    "pillar": "governance",
+    "severity": 1,
+    "direction": 0,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Landovský se stal zmocněncem pro plnění závazků vůči NATO",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/landovsky-se-stal-zmocnencem-pro-plneni-zavazku-vuci-nato-373296",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-12T07:15:40.686Z"
+      }
+    ],
+    "score_impact": 0,
+    "rationale": "Jde o standardní personální a organizační rozhodnutí vlády (subkomponenta G1 — dělba moci a vládní uspořádání). Vytvoření koordinační pozice v rámci exekutivy je běžná praxe a neindikuje žádné oslabení ani posílení demokratických institucí. Severity 1 per rubric §1 — výroky a rozhodnutí bez institucionálního dopadu na demokratické pilíře; spíše administrativní úkon než politicky relevantní změna.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-12T07:15:39.525Z",
+    "expires_at": "2026-08-03T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-011",
+    "date": "2026-05-11",
+    "headline": "Ministerstvo financí navrhuje rozšíření povinností pro advokáty a notáře v boji proti praní peněz",
+    "summary": "Ministerstvo financí předložilo návrh zákona o ekonomické ochraně státu, který by od poloviny příštího roku uložil profesním komorám z právní a daňové oblasti nové povinnosti v oblasti boje proti praní špinavých peněz. Dotčené komory se návrhu brání.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Stát chce víc odpovědnosti pro advokáty nebo notáře za boj proti praní peněz. Komory se bouří",
+        "url": "https://archiv.hn.cz/c1-67875720-stat-chce-vic-odpovednosti-pro-advokaty-nebo-notare-za-boj-proti-prani-penez-komory-se-bouri",
+        "outlet": "Hospodářské noviny",
+        "fetched_at": "2026-05-12T07:15:41.839Z"
+      }
+    ],
+    "score_impact": 0.5,
+    "rationale": "Návrh se týká posílení protikorupčního a AML rámce (subkomponenta K4 — protikorupční instituce a regulatorní nástroje). Jde o legislativní návrh, nikoli schválený zákon, a jeho dopad je omezený na konkrétní profesní skupiny. Odpor komor je legitimní součástí připomínkového řízení. Severity 2 per rubric §2 — konkrétní institucionální krok s omezeným dopadem, který je v rané fázi legislativního procesu; pozitivní směr (+1) jako posilující prvek protikorupčního rámce, ale nejistý výsledek snižuje závažnost.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-12T07:15:39.525Z",
+    "expires_at": "2026-08-03T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-012",
+    "date": "2026-05-11",
+    "headline": "Ministr sportu jedná o povolení biometrických kamer na stadionech po pražském derby",
+    "summary": "Ministr pro sport Boris Šťastný zahájil jednání o změnách bezpečnostních pravidel na stadionech, včetně zavedení dosud zakázaných sledovacích technologií po vzoru západoevropských zemí. Diskuse se rozeběhla v reakci na výtržnosti při pražském derby.",
+    "pillar": "civil",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Velký bratr míří na stadiony. Po výtržnostech během derby roste tlak na povolení kamer, ale i posílení pořadatelů",
+        "url": "https://archiv.hn.cz/c1-67875640-velky-bratr-miri-na-stadiony-po-vytrznostech-behem-derby-roste-tlak-na-povoleni-kamer-ale-i-posileni-poradatelu",
+        "outlet": "Hospodářské noviny",
+        "fetched_at": "2026-05-12T07:15:41.839Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Návrh na povolení biometrických nebo identifikačních kamer na stadionech se dotýká subkomponenty C5 (práva v digitálním prostoru — soukromí, ochrana před masovým sledováním státem) a C2 (svoboda shromažďování, přiměřené podmínky vstupu na veřejné akce). Jde však zatím o počáteční jednání bez konkrétního legislativního návrhu. Severity 2 per rubric §2 — kontroverzní politický záměr s potenciálním dopadem na občanské svobody, ale omezený na ranou fázi diskuse bez formálního institucionálního kroku; proto nikoliv severity 3. Záporný směr (-1) kvůli potenciálnímu omezení soukromí, avšak výsledek jednání je nejistý.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-12T07:15:39.525Z",
+    "expires_at": "2026-08-03T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-013",
+    "date": "2026-05-12",
+    "headline": "Městský soud v Praze byl dán do exekuce za nezaplacenou odměnu advokátovi",
+    "summary": "Městský soud v Praze nesplnil povinnost uhradit advokátovi odměnu ve výši 342 tisíc korun a v důsledku toho byl vůči soudu zahájen exekuční postup. Soud případ označil za ojedinělé pochybení v komplexní trestní kauze. Případ upozorňuje na dysfunkci základní finanční správy justice.",
+    "pillar": "judicial",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Justiční ostuda: Advokát poslal Městský soud do exekuce. Dlužil mu 342 tisíc",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-kauzy-justicni-ostuda-advokat-poslal-mestsky-soud-do-exekuce-dluzil-mu-342-tisic-305735",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-12T07:15:43.823Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — konkrétní selhání soudu jako instituce (nezaplacení zákonné odměny, exekuce) s omezeným, lokálním dopadem. Jde o administrativní pochybení nikoli o politický zásah do nezávislosti justice (subkomponenta J2 není primárně dotčena). Nenaplňuje práh severity 3, protože soud sám incident označil za ojedinělý exces a neexistují indicie systémového vzorce. Anti-bias: stejnou severity bych přiřadil i jinému soudu bez ohledu na jurisdikci.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-12T07:15:39.525Z",
+    "expires_at": "2026-08-04T00:00:00.000Z"
   }
 ]

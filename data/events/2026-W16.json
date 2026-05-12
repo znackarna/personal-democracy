@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "id": "2026-W16-001",
+    "date": "2026-04-17",
+    "headline": "Špionážní systém Webloc sleduje přes mobilní reklamy 500 milionů lidí, využívá ho i Maďarsko",
+    "summary": "Investigativní článek odhaluje systém Webloc, který prostřednictvím dat z mobilních reklam a aplikací sleduje chování stovek milionů uživatelů. Systém využívají i státní aktéři včetně Maďarska, což vyvolává otázky o masovém sledování a ochraně soukromí.",
+    "pillar": "civil",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Špionážní systém Webloc sleduje 500 milionů lidí přes mobilní reklamy. Používá ho i Maďarsko",
+        "url": "https://www.investigace.cz/spionazni-system-webloc-sleduje-500-milionu-lidi-pres-mobilni-reklamy-pouziva-ho-i-madarsko/",
+        "outlet": "Investigace.cz",
+        "fetched_at": "2026-05-12T07:15:42.950Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — investigace odhaluje konkrétní nástroj masového sledování využívaný státními aktéry, což se dotýká subkomponenty C5 (práva v digitálním prostoru, ochrana před masovým sledováním). Dopad na ČR je nepřímý — článek dokumentuje využití systému Maďarskem, nikoli přímo českou státní institucí. Chybí přímý důkaz o použití systému českou vládou nebo BIS, proto nelze přiřadit vyšší závažnost. Persistent, neboť systém je nadále v provozu. Sekundárně relevantní pro pilíř governance (K4 — nezávislost zpravodajských služeb).",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-12T07:15:39.525Z"
+  }
+]
