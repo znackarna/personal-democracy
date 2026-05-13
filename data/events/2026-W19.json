@@ -1939,5 +1939,28 @@
     "status": "active",
     "created_at": "2026-05-12T07:15:39.525Z",
     "expires_at": "2026-07-30T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W19-093",
+    "date": "2026-05-06",
+    "headline": "Vláda chystá změkčení rozpočtových pravidel pomocí účetních výjimek",
+    "summary": "Babišova koaliční vláda plánuje využít tzv. únikové položky k uvolnění rozpočtových pravidel, což by formálně snížilo viditelný schodek, ale reálný státní dluh by rostl rychleji. Jde o pokus obejít fiskální disciplínu bez formálního porušení pravidel.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Jak zvýšit dluh a nevypadat neodpovědně. Babišova vláda sází na trik použitý v době &bdquo;budování státu&ldquo;",
+        "url": "https://archiv.hn.cz/c1-67874520-jak-zvysit-dluh-a-nevypadat-neodpovedne-babisova-vlada-sazi-na-trik-pouzity-v-dobe-bdquo-budovani-statu-ldquo",
+        "outlet": "Hospodářské noviny",
+        "fetched_at": "2026-05-13T07:21:32.439Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o kontroverzní záměr vlády oslabit transparentnost fiskálního rámce (subkomponenta G4 — transparentnost vládnutí), avšak zatím bez schváleného legislativního aktu; pouze analýza záměru. Nejde o strukturální posun (§5), ale o záměr s omezeným institucionálním dopadem v tuto chvíli. Duration: persistent, protože změna rozpočtových pravidel by měla trvalý charakter. Sekundárně se dotýká G2 (kvalita legislativy — obcházení standardního rámce).",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-13T07:21:30.081Z"
   }
 ]

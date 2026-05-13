@@ -307,5 +307,364 @@
     "status": "active",
     "created_at": "2026-05-12T07:15:39.525Z",
     "expires_at": "2026-08-04T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-014",
+    "date": "2026-05-12",
+    "headline": "Bílina změnila územní plán ve prospěch pozemku ministryně Mrázové",
+    "summary": "Město Bílina upravilo územní plán tak, že pozemek ministryně pro místní rozvoj Zuzany Mrázové (ANO) přestal být vedený jako lesní plocha. Tato změna ministryni otevírá cestu k legalizaci dosud nepovolených staveb. Časová souslednost změny územního plánu a osobního prospěchu ústavní činitelky vyvolává otázky ohledně střetu zájmů.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Mrázové se otevírá cesta k legalizaci staveb. Její pozemek v Bílině už není lesem",
+        "url": "https://denikn.cz/2061386/mrazove-se-otevira-cesta-k-legalizaci-staveb-jeji-pozemek-v-biline-uz-neni-lesem/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-13T07:21:30.099Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — změna územního plánu konkrétní obce, která přímo prospívá ústavní činitelce (ministryni) v řešení jejích nepovolených staveb, naplňuje subkomponentu K1 (politická korupce, střet zájmů ústavních činitelů). Nejde o prokázanou korupci v právním smyslu, ale o situaci vyvolávající vážné pochybnosti o střetu zájmů — single source bez prokázaného propojení mezi ministryní a rozhodnutím zastupitelstva, proto nevykazuji severity 4. Sekundárně se dotýká G4 (transparentnost vládnutí). Anti-bias: stejný případ by byl hodnocen identicky bez ohledu na stranickou příslušnost ministryně.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-13T07:21:30.081Z",
+    "expires_at": "2026-08-04T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-015",
+    "date": "2026-05-12",
+    "headline": "Mandátový výbor projednal stížnost na výroky poslance Turka o parazitech, nepřijal usnesení",
+    "summary": "Mandátový a imunitní výbor Poslanecké sněmovny se zabýval občanskou stížností na výroky poslance Filipa Turka o parazitech. Výboru byl doručen i dopis k poslanecké imunitě a agresivní rétorice, avšak poslanci se neshodli na žádném usnesení.",
+    "pillar": "governance",
+    "severity": 1,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "„Utajené“ dopisy ve Sněmovně: Poslanci řešili stížnost na Turkova slova o parazitech",
+        "url": "https://denikn.cz/2061115/utajene-dopisy-ve-snemovne-poslanci-resili-stiznost-na-turkova-slova-o-parazitech/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-13T07:21:30.099Z"
+      }
+    ],
+    "score_impact": -0.2,
+    "rationale": "Severity 1 per rubric §1 — výbor projednal stížnost na verbální výroky poslance, avšak nepřijal žádné usnesení a věc nemá institucionální dopad (subkomponenta G1: parlamentní kontrola a odpovědnost). Jde o rutinní procedurální prošetření bez precedentu či sankce. Anti-bias check: stejnou závažnost bych přiřadil pro výroky poslance jakékoli strany při absenci institucionálního dopadu.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-13T07:21:30.081Z",
+    "expires_at": "2026-08-04T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-016",
+    "date": "2026-05-12",
+    "headline": "Policie zadržela lékaře z Ústřední vojenské nemocnice podezřelé z falšování zdravotních posudků za úplatu",
+    "summary": "Policisté zasáhli v pražské Ústřední vojenské nemocnici a zadrželi jedenáct osob včetně tří lékařů. Ti jsou podezřelí z toho, že za finanční odměnu upravovali zdravotní posudky vojáků a zaměstnanců armády.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Policie zasahuje v pražské ÚVN. Lékaře podezírá z falšování posudků",
+        "url": "https://denikn.cz/2061035/policie-zasahuje-v-prazske-uvn-lekare-podezira-z-falsovani-posudku/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-13T07:21:30.099Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — organizované korupční jednání na úrovni vojenské zdravotní instituce s přímým dopadem na integritu armádních posudků (subkomponenta K1: zneužívání pravomoci pro osobní prospěch, K2: korupce ve veřejné sféře). Počet zadržených (11 osob) a institucionální kontext armádní nemocnice dávají události širší dopad než izolovaný incident. Jediný zdroj, potenciál eskalace závisí na dalším vývoji vyšetřování.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-13T07:21:30.081Z",
+    "expires_at": "2026-08-04T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-017",
+    "date": "2026-05-12",
+    "headline": "Ministerstvo vnitra vyloučilo neziskové organizace z právní pomoci žadatelům o azyl a nahradilo je advokáty",
+    "summary": "Ministerstvo vnitra od dubna změnilo systém povinného právního poradenství pro cizince v azylových a detenčních zařízeních — zajišťují ho nově pouze advokáti místo neziskových organizací. Zástupce ombudsmana upozorňuje, že změna je pro stát nákladnější a pro žadatele o azyl méně efektivní.",
+    "pillar": "civil",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Uprchlíky v Česku nově zastupují jen advokáti. „Pro stát je to pětkrát dražší,“ říká zástupce ombudsmana",
+        "url": "https://denikn.cz/2047483/uprchliky-v-cesku-nove-zastupuji-jen-advokati-pro-stat-je-to-petkrat-drazsi-rika-zastupce-ombudsmana/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-13T07:21:30.099Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — administrativní změna systému právní pomoci znevýhodňuje zranitelnou skupinu (žadatelé o azyl) tím, že omezuje přístup k efektivnímu poradenství, což se dotýká subkomponenty C4 (ochrana menšin a zranitelných skupin) a C3 (svoboda sdružování/role NGO). Dopad je reálný, ale omezený na konkrétní skupinu a mechanismus; ombudsman situaci monitoruje. Označeno jako persistent, protože změna je již účinná a probíhající.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-13T07:21:30.081Z"
+  },
+  {
+    "id": "2026-W20-018",
+    "date": "2026-05-12",
+    "headline": "Poslanec SPD Nerušil avizuje legislativní kroky proti LGBTQ lidem",
+    "summary": "Nově zvolený poslanec za SPD Josef Nerušil oznámil plány předkládat zákony namířené proti právům LGBTQ lidí. Článek zároveň upozorňuje na rozpor mezi jeho veřejným postojem a jeho soukromým životem.",
+    "pillar": "civil",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Poslanec SPD útočí na LGBTQ lidi, sám roky žil s knězem",
+        "url": "https://denikn.cz/2054733/poslanec-spd-utoci-na-lgbtq-lidi-sam-roky-zil-s-knezem/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-13T07:21:30.099Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — poslanec veřejně avizuje legislativní záměr namířený proti konkrétní menšině (subkomponenta C4: ochrana menšin před diskriminací), jde však zatím o deklaraci záměru bez předloženého návrhu zákona, tedy bez přímého institucionálního dopadu. Eskalace na 3 by nastala při předložení konkrétního návrhu. Anti-bias check: stejnou závažnost bych přiřadil pro legislativní záměry namířené proti jiným skupinám bez ohledu na politický tábor.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-13T07:21:30.081Z",
+    "expires_at": "2026-08-04T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-019",
+    "date": "2026-05-13",
+    "headline": "Sněmovna projednává novelu rozpočtových zákonů, opozice varuje před nekontrolovatelným utrácením",
+    "summary": "Poslanecká sněmovna přistoupila k závěrečnému kolu projednávání vládní novely zákonů o veřejných rozpočtech. Opozice kritizuje změny s tím, že by mohly umožnit vládě nekontrolované zvyšování státního dluhu bez dostatečné parlamentní kontroly.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Poslance čeká jednání o novele rozpočtových zákonů",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/poslance-ceka-projednavani-sporne-novely-rozpoctovych-zakonu-373364",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-13T07:21:31.439Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — projednání sporné novely je konkrétní legislativní událost dotýkající se subkomponenty G2 (kvalita legislativy) a G1 (kontrola exekutivy parlamentem). Opozice poukazuje na oslabení parlamentního dohledu nad výdaji, nicméně samotné projednání bez informací o schválení a bez doložení procedurálních pochybení nedosahuje na úroveň 3. Informace pochází z jediného zdroje, což dle source-count rule drží hodnocení na 2.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-13T07:21:30.081Z",
+    "expires_at": "2026-08-05T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-020",
+    "date": "2026-05-12",
+    "headline": "Viceprezident Hospodářské komory Štefl propuštěn z vazby v kauze dotačních podvodů",
+    "summary": "Michal Štefl, viceprezident Hospodářské komory stíhaný pro podezření ze zneužívání dotací na inovace, byl propuštěn z vazby poté, co evropský pověřený žalobce potvrdil, že důvody vazby pominuly. Případ se týká podezření z neoprávněného čerpání evropských fondů.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": 0,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Viceprezident Hospodářské komory Štefl byl propuštěn z vazby, píší Seznam Zprávy",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/viceprezident-hospodarske-komory-stefl-byl-propusten-z-vazby-pisi-seznam-zpravy-373359",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-13T07:21:31.439Z"
+      }
+    ],
+    "score_impact": 0,
+    "rationale": "Severity 2 per rubric §2 — propuštění z vazby je konkrétní datovaná procesní událost v probíhající kauze zneužívání dotací (subkomponenta K2 — veřejné zakázky/dotace). Nejde o rozhodnutí ve věci samé, ale o procesní krok s omezeným institucionálním dopadem. Direction 0, protože propuštění z vazby je neutrální procesní úkon — důvody vazby pominuly, nikoli že by byl obviněný zproštěn viny. Jeden zdroj (Seznam Zprávy přes ČT24), proto severity nelze navýšit.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-13T07:21:30.081Z",
+    "expires_at": "2026-08-04T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-021",
+    "date": "2026-05-12",
+    "headline": "Ministr Šťastný navrhuje zákaz zahalování obličeje na sportovních akcích a využití biometrického sledování",
+    "summary": "Ministr pro sport Boris Šťastný hodlá v reakci na výtržnosti při fotbalovém derby prosadit zákaz zahalování obličeje v přestupkovém zákoně a zpřísnit sankce za vtrhnutí na hrací plochu. Zároveň chce jednat s ÚOOÚ o možném nasazení kamerových systémů s rozpoznáváním obličejů, což vyvolává otázky z hlediska ochrany soukromí a subkomponenty C5.",
+    "pillar": "civil",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Šťastný chce prosadit zákaz zahalování obličeje na sportovních akcích",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/stastny-chce-prosadit-zakaz-zahalovani-obliceje-na-sportovnich-akcich-373354",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-13T07:21:31.439Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o záměr (nikoli schválený zákon), s omezeným dopadem na dvě subkomponenty: C1/C2 (omezení anonymity na veřejných akcích) a C5 (digitální sledování a biometrika). Návrh je v rané fázi bez konkrétního legislativního textu, takže dopad je zatím potenciální. Pre-filter pillar guess 'governance' je méně přesný — kořenová příčina se dotýká občanských svobod a práva na soukromí (C5), nikoli primárně legislativního procesu. Sekundárně relevantní je G2 (kvalita legislativy při případném rychlém prosazení).",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-13T07:21:30.081Z",
+    "expires_at": "2026-08-04T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-022",
+    "date": "2026-05-12",
+    "headline": "Investigace odhaluje nejasnosti kolem udělení dotace 17 mld. Kč neznámé firmě Opuncie v energetické soutěži",
+    "summary": "Hospodářské noviny zkoumají okolnosti loňské soutěže o dvoumiliardové investiční dotace na výstavbu baterií, v níž neuspěla žádná etablovaná firma a podporu získala málo známá společnost Opuncie. Investigace upozorňuje na netransparentnost zadávacího procesu a nečekaný výsledek soutěže s politickými konotacemi.",
+    "pillar": "corruption",
+    "severity": null,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Od IT přes rychlé motorky a víno až k baterkám. Kdo je záhadná Opuncie, která překvapila tuzemskou energetiku?",
+        "url": "https://archiv.hn.cz/c1-67875710-od-it-pres-rychle-motorky-a-vino-az-k-baterkam-kdo-je-zahadna-opuncie-ktera-prekvapila-tuzemskou-energetiku",
+        "outlet": "Hospodářské noviny",
+        "fetched_at": "2026-05-13T07:21:32.439Z"
+      }
+    ],
+    "score_impact": 0,
+    "rationale": "Severity null (needs_review) — článek naznačuje možné pochybení v procesu zadávání dotací (subkomponenta K2 — veřejné zakázky a transparentnost), ale dostupný výtah neposkytuje dostatek ověřitelných faktů (výše dotace je v souhrnu zmíněna jako 'dvoumiliardový balík', ale konkrétní rozhodnutí, dotčený orgán ani data nejsou jednoznačně uvedena). Jeden zdroj za potenciálně závažnou událost — per rubric pravidlo 'single source + severity 3+ → null'. Pokud investigace prokáže konkrétní pochybení v zadávacím řízení, odpovídá to rubric §3–§4 (K2). Sekundárně relevantní G4 (transparentnost vládnutí).",
+    "reviewer": "auto",
+    "status": "needs_review",
+    "created_at": "2026-05-13T07:21:30.081Z",
+    "expires_at": "2026-08-04T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-023",
+    "date": "2026-05-12",
+    "headline": "Francie ukončila vyšetřování Babišova nákupu vily, verdikt dosud nezveřejněn",
+    "summary": "Francouzská Národní finanční prokuratura ukončila vyšetřování českého premiéra Andreje Babiše v souvislosti s nákupem nemovitosti na jihu Francie. Kriminalisté prověřovali možné praní špinavých peněz a daňový únik, výsledek vyšetřování zatím nebyl zveřejněn.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Ve Francii skončilo vyšetřování Babišova nákupu vily. Kriminalisté zkoumali možné praní špinavých peněz a daňový únik, verdikt zatím nezveřejnili",
+        "url": "https://zahranicni.hn.cz/c1-67876160-ve-francii-skoncilo-vysetrovani-babisova-nakupu-vily-kriminaliste-zkoumali-mozne-prani-spinavych-penez-a-danovy-unik-verdikt-zatim-nezverejnili",
+        "outlet": "Hospodářské noviny",
+        "fetched_at": "2026-05-13T07:21:32.439Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — ukončení zahraničního trestního vyšetřování ústavního činitele (premiéra) v kauze s prvky praní špinavých peněz a daňového úniku naplňuje subkomponentu K1 (politická korupce, střet zájmů ústavních činitelů). Verdikt není znám, takže nelze hodnotit výsledek; samotné ukončení vyšetřování bez vyřešení je institucionálně relevantní událost. Single source (seznam Zprávy přes HN) — nejistota o výsledku brání eskalaci na 4. Sekundárně se dotýká pilíře governance (J4/K1 překryv), ale primárním kořenem je korupční dimenze.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-13T07:21:30.081Z",
+    "expires_at": "2026-08-04T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-024",
+    "date": "2026-05-12",
+    "headline": "NCOZ zadržela 11 osob při razii v Ústřední vojenské nemocnici pro podezření z korupce a maření spravedlnosti",
+    "summary": "Národní centrála proti organizovanému zločinu provedla razii v Ústřední vojenské nemocnici a na dalších místech, při které zadržela 11 osob. Podezřelí čelí obvinění ze zvlášť závažného zločinu maření spravedlnosti, podvodu a padělání lékařských zpráv.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Policie zasahovala v Ústřední vojenské nemocnici. Zadržela několik lidí kvůli podezření z korupce, podvodu či maření spravedlnosti",
+        "url": "https://archiv.hn.cz/c1-67875940-policie-zasahovala-v-ustredni-vojenske-nemocnici-zadrzela-nekolik-lidi-kvuli-podezreni-z-korupce-podvodu-ci-mareni-spravedlnosti",
+        "outlet": "Hospodářské noviny",
+        "fetched_at": "2026-05-13T07:21:32.439Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — organizovaná korupce ve státní instituci (vojenská nemocnice) zahrnující padělání dokumentů a maření spravedlnosti je konkrétní datovaná událost s institucionálním dopadem; naplňuje subkomponentu K1/K2 (zneužití veřejné instituce). Zadržení 11 osob při koordinované razii NCOZ indikuje rozsáhlejší schéma, nikoli izolovaný incident, ale bez dalších zdrojů potvrzujících politickou návaznost nelze eskalovat na 4. Direction -1: korupce ve státní nemocnici oslabuje důvěru v instituce.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-13T07:21:30.081Z",
+    "expires_at": "2026-08-04T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-025",
+    "date": "2026-05-13",
+    "headline": "Soud rozhodl, že násilné odebrání dítěte sociální pracovnicí bylo nezákonné",
+    "summary": "Soud shledal postup sociální pracovnice při dramatickém odebrání bránícího se dítěte nezákonným. Případ vzbudil pozornost veřejnosti po zveřejnění videa na sociálních sítích koncem roku 2025. Žalovaný úřad trvá na tom, že pracovnice jednala v zájmu dítěte.",
+    "pillar": "judicial",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Radši zemřu, křičelo dítě. Násilné odebrání bylo nezákonné, rozhodl soud",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-radsi-zemru-kricelo-dite-nasilne-odebrani-bylo-nezakonne-rozhodl-soud-291910",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-13T07:21:34.297Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o konkrétní soudní rozhodnutí o nezákonném postupu státního orgánu (subkomponenta J4 — rovnost před zákonem a zákonnost výkonu státní moci). Případ má lokální dopad na práva jednotlivce, nikoli systémový charakter. Není součástí identifikovatelného vzorce nezákonných odběrů, nejde o strukturální selhání justice. Sekundárně se dotýká pilíře civil (C4 — ochrana zranitelných osob), ale primárním pilířem je judicial, neboť klíčová událost je soudní rozhodnutí o zákonnosti postupu správního orgánu.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-13T07:21:30.081Z",
+    "expires_at": "2026-08-05T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-026",
+    "date": "2026-05-13",
+    "headline": "Policie prověří postup Nestlé a Danone kvůli kontaminovanému mléku v Česku",
+    "summary": "Český zástupce organizace IBFAN podal trestní oznámení na společnosti Nestlé, Danone a další subjekty pro podezření z ohrožování zdraví závadnými potravinami. Policie se případem bude zabývat. Jde o reakci na zjištění o kontaminaci kojeneckého mléka.",
+    "pillar": "judicial",
+    "severity": 1,
+    "direction": 0,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Kontaminované mléko v Česku: Policie prověří postup Nestlé a Danone",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-kontaminovane-mleko-v-cesku-policie-proveri-postup-nestle-a-danone-305985",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-13T07:21:34.297Z"
+      }
+    ],
+    "score_impact": 0,
+    "rationale": "Severity 1 per rubric §1 — podání trestního oznámení je procesní krok bez prokázaného institucionálního dopadu; policie případ teprve prověřuje a výsledek je nejistý. Subkomponenta J4 (rovnost před zákonem, vymahatelnost práva) je relevantní jen okrajově — jde primárně o spotřebitelské právo a korporátní odpovědnost, nikoli o demokratické instituce. Direction 0, protože zahájení prověřování je neutrální institucionální akt — ani oslabení, ani posílení demokratického systému. Pokud by policie věc odložila bez zřejmého důvodu, nebo naopak prokázala systematické selhání státního dozoru, severity by vzrostla.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-13T07:21:30.081Z",
+    "expires_at": "2026-08-05T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-027",
+    "date": "2026-05-13",
+    "headline": "TikTok smazal pro-ruskou propagandistickou síť po reportáži Seznam Zpráv",
+    "summary": "Po reportáži Seznam Zpráv zakročil TikTok a odstranil síť účtů šířících propagandu skupiny Vagner, které cílily na české uživatele. Odborníci upozorňují, že tato síť sloužila i k náboru potenciálních sabotérů.",
+    "pillar": "civil",
+    "severity": 2,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Po ignoraci zásah. TikTok smazal putinovskou síť, která manipulovala Čechy",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-kauzy-po-ignoraci-zasah-tiktok-smazal-putinovskou-sit-ktera-manipulovala-cechy-305977",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-13T07:21:34.297Z"
+      }
+    ],
+    "score_impact": 0.5,
+    "rationale": "Severity 2 per rubric §2 — odstranění zahraniční dezinformační sítě cílené na české občany je konkrétní pozitivní opatření ovlivňující subkomponentu C5 (práva v digitálním prostoru, ochrana před manipulací). Směr +1, protože platforma reagovala a hrozbu eliminovala. Záměrně neklasifikováno jako electoral (dezinformace nesouvisela s konkrétní volební kampaní) ani media (netýká se novinářů nebo mediálního pluralismu přímo). Sekundárně se dotýká C1 (svoboda projevu vs. zahraniční manipulace). Single source, proto severity nepřesahuje 2.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-13T07:21:30.081Z",
+    "expires_at": "2026-08-05T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-028",
+    "date": "2026-05-12",
+    "headline": "Francouzské úřady uzavřely vyšetřování Babiše v kauze daňových úniků",
+    "summary": "Francouzský národní finanční prokurátor oznámil uzavření vyšetřování českého premiéra Andreje Babiše v souvislosti s nákupem nemovitosti na jihu Francie. Výsledek šetření zatím nebyl zveřejněn, rozhodnutí o dalším postupu přísluší prokurátorovi.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": 0,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "French Authorities Conclude Investigation Into Babis’s Suspected Tax Evasion",
+        "url": "https://brnodaily.com/2026/05/13/news/politics/french-authorities-conclude-investigation-into-babiss-suspected-tax-evasion/",
+        "outlet": "Brno Daily",
+        "fetched_at": "2026-05-13T07:21:47.345Z"
+      }
+    ],
+    "score_impact": 0,
+    "rationale": "Severity 2 per rubric §2 — uzavření vyšetřování je konkrétní procesní krok (subkomponenta K1 — politická korupce ústavního činitele), ale institucionální dopad je zatím omezený, protože výsledek není znám a žádné opatření zatím nepřijato. Direction 0, protože není jasné, zda vyšetřování skončí obžalobou, nebo odložením — oba výsledky mají odlišný demokratický dopad. Single source, proto severity zůstává na 2. Pokud by výsledek vedl k obžalobě úřadujícího premiéra, severity by eskalovala na 4–5 (K1, ústavní činitel).",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-13T07:21:30.081Z",
+    "expires_at": "2026-08-04T00:00:00.000Z"
   }
 ]
