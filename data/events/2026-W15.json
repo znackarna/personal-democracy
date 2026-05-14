@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": "2026-W15-001",
+    "date": "2026-04-07",
+    "headline": "ÚS: Orgány musí efektivněji vyšetřovat podezření z týrání u extrémně zranitelných osob",
+    "summary": "Ústavní soud vydal nález, v němž konstatoval porušení práva na účinné vyšetřování v případě podezření z týrání klientů zařízení pro osoby se zdravotním postižením. Trestní orgány případ uzavřely přestupkovým řízením, ačkoli veřejný ochránce práv upozornil na potenciálně trestněprávní jednání. ÚS zdůraznil zvýšené povinnosti státu při ochraně extrémně zranitelných osob.",
+    "pillar": "judicial",
+    "severity": 2,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Specifika práva na účinné vyšetřování u extrémně zranitelných osob",
+        "url": "https://www.usoud.cz/aktualne/specifika-prava-na-ucinne-vysetrovani-u-extremne-zranitelnych-osob",
+        "outlet": "Ústavní soud ČR",
+        "fetched_at": "2026-05-14T07:18:15.380Z"
+      }
+    ],
+    "score_impact": 0.5,
+    "rationale": "Severity 2 per rubric §2 — nález ÚS potvrzující procesní povinnosti orgánů v konkrétní kauze má omezený institucionální dopad, ale vytváří precedent pro podobné případy (subkomponenta J4 — rovnost před zákonem a ochrana zranitelných). Směr +1: soud korigoval selhání orgánů činných v trestním řízení a posílil ochranu práv. Křížově relevantní pro subkomponentu C4 (ochrana menšin, zranitelné skupiny). Single source, žádný prokazatelný vzorec systémového selhání — proto severity 2, nikoli 3.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-14T07:17:53.342Z",
+    "expires_at": "2026-06-30T00:00:00.000Z"
+  }
+]

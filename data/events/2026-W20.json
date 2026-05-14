@@ -666,5 +666,320 @@
     "status": "active",
     "created_at": "2026-05-13T07:21:30.081Z",
     "expires_at": "2026-08-04T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-029",
+    "date": "2026-05-14",
+    "headline": "Praha platí přes milion měsíčně za areál z podezřelé dražby, Soukup sídlí zadarmo",
+    "summary": "Hlavní město Praha hradí vysoké měsíční náklady za nevyužívaný areál v Braníku, který koupilo v dražbě majetků bývalého šéfa TV Barrandov Jaromíra Soukupa. Areál přitom neslouží původně plánovaným školním účelům a Soukup jej užívá bezplatně. Deník N zjistil podrobnosti o podmínkách dražby i hospodaření s majetkem.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Praha platí přes milion měsíčně za areál z podezřelé dražby. Soukup v něm sídlí zadarmo",
+        "url": "https://denikn.cz/2059804/praha-plati-pres-milion-mesicne-za-areal-z-podezrele-drazby-soukup-v-nem-sidli-zadarmo/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-14T07:17:53.354Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — případ zahrnuje potenciálně nevýhodné nakládání s veřejnými prostředky (přes milion Kč měsíčně) ve prospěch soukromé osoby, přičemž původ transakce je předmětem podezření (subkomponenta K2 — transparentnost veřejných zakázek a nakládání s majetkem, K1 — možný střet zájmů na úrovni samosprávy). Šíři dopadu naznačuje soustavný charakter výdajů. Single source (Deník N), bez dalšího potvrzení — zvažováno null, ale faktická konkrétnost (číselné údaje, named actors, dokumenty) opravňuje severity 3. Sekundárně governance (G4 — transparentnost nakládání s veřejnými prostředky).\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-14T07:17:53.342Z"
+  },
+  {
+    "id": "2026-W20-030",
+    "date": "2026-05-13",
+    "headline": "Zahradil vyřazen z Macinkova poradního týmu po americkém zásahu",
+    "summary": "Ministr zahraničí Petr Macinka představil svůj poradní tým, z něhož byl na poslední chvíli vyřazen Jan Zahradil. Podle Deníku N k tomu došlo po zásahu americké strany. Jde o případ zahraničního vlivu na personální složení poradního aparátu českého ministra.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Zasáhli Američané. Popisujeme, proč Zahradil na poslední chvíli zmizel z Macinkova poradního týmu",
+        "url": "https://denikn.cz/2063112/zasahli-americane-popisujeme-proc-zahradil-na-posledni-chvili-zmizel-z-macinkova-poradniho-tymu/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-14T07:17:53.354Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jedná se o politicky motivovaný personální zásah na úrovni poradního aparátu ministerstva (subkomponenta G1 — dělba moci a integrita exekutivy), nikoliv však na klíčové institucionální pozici. Vliv zahraniční vlády na sestavení poradního týmu je znepokojivý, ale dopad je omezený (poradní, nikoli výkonná funkce). Single source; není zřejmé, zda Zahradilovo vyřazení způsobuje kaskádový efekt na chod instituce. Anti-bias: stejně bych hodnotil jakýkoli podobný zahraniční tlak bez ohledu na politickou orientaci aktérů.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-14T07:17:53.342Z",
+    "expires_at": "2026-08-05T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-031",
+    "date": "2026-05-13",
+    "headline": "Vláda plánuje vznik centrálního úřadu pro ochranu ohrožených dětí",
+    "summary": "Česká vláda připravuje zřízení nového centrálního úřadu, který má sjednotit metodiku práce sociálních pracovníků při ochraně ohrožených dětí a zajistit sběr dat. Jde o reakci na roztříštěnost současného systému. Úřad by měl orgánům sociálně-právní ochrany dětí poskytovat podporu v komplikovaných případech.",
+    "pillar": "governance",
+    "severity": 1,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Ochrana ohrožených dětí není v Česku jednotná, změnit to má nový úřad",
+        "url": "https://denikn.cz/2062268/ochrana-ohrozenych-deti-neni-v-cesku-jednotna-zmenit-to-ma-novy-urad/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-14T07:17:53.354Z"
+      }
+    ],
+    "score_impact": 0.2,
+    "rationale": "Severity 1 per rubric §1 — oznámení záměru zřídit nový administrativní úřad je výrokem bez dosud realizovaného institucionálního dopadu (subkomponenta G2 — kvalita legislativy a správy). Směr +1, protože koordinace roztříštěného systému státní správy je institucionálně pozitivní krok. Událost je zatím ve fázi záměru (nikoli schváleného zákona), proto one_off a nízká závažnost; při schválení by se re-klasifikovalo.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-14T07:17:53.342Z",
+    "expires_at": "2026-08-05T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-032",
+    "date": "2026-05-13",
+    "headline": "Kandidát s auditními nesrovnalostmi postupuje do finále výběru ředitele KRNAP",
+    "summary": "Ministr životního prostředí Igor Červený (Motoristé) se chystá vybrat nového ředitele Krkonošského národního parku z trojice finalistů. Jedním z nich je kandidát, u nějž interní audit před lety upozornil na souběh zaměstnání a nesrovnalosti se služebním autem. Výběrové řízení tak probíhá přesto, že existují zdokumentované pochybnosti o integritě uchazeče.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Pochybnosti kolem docházky a služebního auta. Přesto je lesní expert ve finále výběru šéfa KRNAP",
+        "url": "https://denikn.cz/2061687/pochybnosti-kolem-dochazky-a-sluzebniho-auta-presto-je-lesni-expert-ve-finale-vyberu-na-sefa-krnap/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-14T07:17:53.354Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — personální rozhodnutí na střední úrovni státní správy (ředitel národního parku), kde existují auditní nálezy o nesrovnalostech, ale dopad je lokální a zatím jde jen o fázi výběrového řízení, nikoli o jmenování. Subkomponenta K1 (politická korupce — ignorování auditních nálezů při personálním rozhodnutí) a K4 (účinnost protikorupčních mechanismů). Bez eskalace na 3, protože jmenování dosud neproběhlo a kaskádový efekt není prokázán.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-14T07:17:53.342Z",
+    "expires_at": "2026-08-05T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-033",
+    "date": "2026-05-11",
+    "headline": "Vicepremiér Macinka znovu obhajoval výraz 'méněcenní', premiér mlčí",
+    "summary": "Vicepremiér a ministr zahraničí Petr Macinka o víkendu opětovně obhajoval použití výrazu 'méněcenní' vůči politickým oponentům, přičemž popíral jeho nacistické konotace. Deník N dokládá, že výraz byl nacisty skutečně užíván. Premiér se k slovníku svého ministra dosud nevyjádřil.",
+    "pillar": "civil",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Hodina dějepisu pro Petra Macinku: Ano, Hitler a nacisté používali výraz „méněcenní“",
+        "url": "https://denikn.cz/2060560/hodina-dejepisu-pro-petra-macinku-ano-hitler-a-naciste-pouzivali-vyraz-menecenni/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-14T07:17:53.354Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — opakované (≥ druhé) použití a veřejná obhajoba dehonestujícího výrazu s historickými nacistickými konotacemi ze strany ústavního činitele splňuje kritérium soustavné verbální eskalace. Subkomponenta C1 (svoboda projevu a důstojnost v politickém diskurzu) a C4 (rétorika potenciálně stigmatizující skupiny oponentů). Severity nepřesahuje 2, protože jde zatím výhradně o verbální rovinu bez institucionálního dopadu nebo praktických důsledků; premiérovo mlčení je politicky relevantní, ale samo o sobě nepředstavuje institucionální selhání. Anti-bias check: stejnou závažnost bych přiřadil politikovi jakékoliv strany.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-14T07:17:53.342Z",
+    "expires_at": "2026-08-03T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-034",
+    "date": "2026-05-13",
+    "headline": "Sněmovna projednává návrh výrazně uvolňující pravidla rozpočtové odpovědnosti",
+    "summary": "Poslanci na mimořádné schůzi projednávali návrh zákona, který by podstatně zmírnil pravidla rozpočtové odpovědnosti. Hlasování bylo avizováno na pátek. Zástupci vládní i opoziční strany se liší v hodnocení: příznivci uvádějí potřebu investiční flexibility, kritici varují před rizikem pro fiskální stabilitu.",
+    "pillar": "governance",
+    "severity": 3,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Odpovědné hospodaření není snadné, říká Činčila. Jsme v kleštích, míní Pařil",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/odpovedne-hospodareni-neni-snadne-rika-cincila-jsme-v-klestich-mini-paril-373410",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-14T07:17:54.640Z"
+      },
+      {
+        "title": "Vláda si otevírá dveře k vysokým schodkům, není ovšem jediná, kdo utrácí víc, než může",
+        "url": "https://archiv.hn.cz/c1-67876630-vlada-si-otevira-dvere-k-vysokym-schodkum-neni-ovsem-jedina-kdo-utraci-vic-nez-muze",
+        "outlet": "Hospodářské noviny",
+        "fetched_at": "2026-05-14T07:17:57.643Z"
+      }
+    ],
+    "score_impact": -1.5,
+    "rationale": "Severity 3 per rubric §3 — návrh výrazně mění institucionální rámec fiskálních pravidel (subkomponenta G2: kvalita legislativy a dodržování ústavních norem), přičemž je projednáván na mimořádné schůzi s velmi krátkou lhůtou (hlasování den po schůzi), což omezuje standardní připomínkové řízení. Jde o precedentní oslabení mechanismu, který byl vybudován jako pojistka zodpovědného hospodaření. Zatím se jedná o fázi projednávání, nikoli schválení, proto není eskalace na 4. Sekundárně může mít dopad na K4 (protikorupční instituce a kontrolní mechanismy), pokud by uvolnění omezilo dohledové pravomoci NKÚ.\n\n[merged with 2026-W20-038 — same incident, sources combined]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-14T07:17:53.342Z",
+    "expires_at": "2026-08-05T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-035",
+    "date": "2026-05-14",
+    "headline": "Vládní koalice chce sněmovním usnesením vyzvat ke zrušení sjezdu Sudetoněmeckého sdružení v Brně",
+    "summary": "Vláda ANO, SPD a Motoristů hodlá ve sněmovně prosadit usnesení vyzývající ke zrušení sjezdu Sudetoněmeckého krajanského sdružení, který se má poprvé konat v Česku. Koalice přitom vznáší obavy z otevření majetkových nároků a Benešových dekretů, ačkoliv sdružení se majetkových nároků v průběhu let vzdalo.",
+    "pillar": "civil",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Sudetoněmecké sdružení se během let proměnilo, usiluje o smíření",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/sudetonemecke-sdruzeni-se-behem-let-promenilo-usiluje-o-smireni-373397",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-14T07:17:54.640Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — koaliční snaha prosadit sněmovní usnesení požadující zákaz konkrétní akce spolku je politickým tlakem na svobodu sdružování a shromažďování (subkomponenta C3), ale jde zatím o parlamentní usnesení bez závazné právní síly, nikoli o zákon omezující shromažďovací právo. Dopad je lokální a konkrétní, bez jasného precedentu pro jiné spolky. Pokud by usnesení bylo přijato a posloužilo jako základ pro administrativní zásah, severity by eskalovala na 3.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-14T07:17:53.342Z",
+    "expires_at": "2026-08-06T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-036",
+    "date": "2026-05-13",
+    "headline": "ANO řeší soustavné absence Filipa Turka v parlamentních výborech",
+    "summary": "Hnutí ANO začalo aktivně adresovat problém nízkých účastí koaličního poslance Filipa Turka (Motoristé) na sněmovních výborech. Podle ANO jeho absence ohrožují fungování koaliční spolupráce a práci výborů.",
+    "pillar": "governance",
+    "severity": 1,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Nepřítomen. Absence Filipa Turka ve sněmovně už vadí i nejsilnější partaji. ANO navrhlo Motoristům řešení",
+        "url": "https://archiv.hn.cz/c1-67876750-nepritomen-absence-filipa-turka-ve-snemovne-uz-vadi-i-nejsilnejsi-partaji-ano-navrhlo-motoristum-reseni",
+        "outlet": "Hospodářské noviny",
+        "fetched_at": "2026-05-14T07:17:57.643Z"
+      }
+    ],
+    "score_impact": -0.2,
+    "rationale": "Severity 1 per rubric §1 — soustavné absence jednoho poslance ve výborech jsou procedurálním nedostatkem, ale bez přímého dopadu na fungování instituce jako celku ani bez precedentního charakteru (subkomponenta G1 — kontrola exekutivy parlamentem není přímo narušena). Jde o interní koaliční záležitost, nikoli o útok na dělbu moci. Direction -1 jako mírně negativní signál o kvalitě parlamentní práce. Duration persistent, protože absence jsou opakované a dosud nevyřešené.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-14T07:17:53.342Z"
+  },
+  {
+    "id": "2026-W20-037",
+    "date": "2026-05-13",
+    "headline": "Člen výběrové komise upozorňuje na podivnosti v řízení na šéfa KRNAP",
+    "summary": "Výběrová komise postoupila do finále výběrového řízení na ředitele Krkonošského národního parku tři kandidáty, přičemž jeden člen komise veřejně pochybuje o bodování favorita Motoristů. Komise má o vítězi rozhodnout v nejbližších dnech.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Cinknuté výběrové řízení? Nemyslím si, že je favorit Motoristů nejlepší, říká o výběru šéfa KRNAP jeden z členů komise",
+        "url": "https://archiv.hn.cz/c1-67876620-cinknute-vyberove-rizeni-nemyslim-si-ze-je-favorit-motoristu-nejlepsi-rika-o-vyberu-sefa-krnap-jeden-z-clenu-komise",
+        "outlet": "Hospodářské noviny",
+        "fetched_at": "2026-05-14T07:17:57.643Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o konkrétní pochybení v personálním řízení státního orgánu (subkomponenta G4: transparentnost vládnutí) s omezeným přímým institucionálním dopadem. Výběr ředitele KRNAP je státní záležitost, avšak jde o nižší úroveň správy bez kaskádového efektu na klíčové instituce. Pokud by se potvrdilo cílené manipulování bodování ve prospěch politicky preferovaného kandidáta, šlo by o eskalaci na severity 3 (subkomponenta K1: politická korupce, sekundárně). V tuto chvíli je k dispozici pouze výpověď jednoho člena komise bez dalšího ověření — dle source-count pravidla zachovávám severity 2.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-14T07:17:53.342Z",
+    "expires_at": "2026-08-05T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-039",
+    "date": "2026-05-13",
+    "headline": "Poslanci při volbě ombudsmana ignorují expertní komisi a preferují nejhůře hodnoceného kandidáta",
+    "summary": "Při výběru nového veřejného ochránce práv, pro nějž byla letos poprvé zřízena expertní hodnoticí komise, poslanci zřejmě upřednostní kandidáta, kterého komise ohodnotila nejhůře. Odborný výběrový mechanismus tak fakticky pozbývá smyslu a ohrožuje nezávislost instituce ombudsmana.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Ombudsman pod vlivem politiky i po Křečkovi? Poslanci nejspíš půjdou proti expertní komisi, preferují nejhůře hodnocené jméno",
+        "url": "https://archiv.hn.cz/c1-67876520-ombudsman-pod-vlivem-politiky-i-po-kreckovi-poslanci-nejspis-pujdou-proti-expertni-komisi-preferuji-nejhure-hodnocene-jmeno",
+        "outlet": "Hospodářské noviny",
+        "fetched_at": "2026-05-14T07:17:57.643Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — záměrné ignorování výsledků odborné hodnoticí komise při obsazení instituce určené k ochraně občanů před výkonem státní moci představuje precedent ohrožující subkomponentu G1 (dělba moci, reálná kontrola a nezávislost institucí) a G3 (respekt k institucionálním normám). Veřejný ochránce práv má ze své podstaty stát mimo politický vliv; volba nejhůře hodnoceného kandidáta naznačuje politickou instrumentalizaci instituce. Komise byla zavedena letos právě proto, aby zabránila politizaci — její přehlížení hned při prvním použití je závažné. Sekundárně se dotýká pilíře judicial (J4: rovnost před zákonem v praxi). Dosud jde o záměr, nikoli finální hlasování, proto severity 3, nikoli 4.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-14T07:17:53.342Z",
+    "expires_at": "2026-08-05T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-040",
+    "date": "2026-05-14",
+    "headline": "Kladenská městská policie nasadila čínské drony ke sledování veřejného prostoru, experti varují před únikem dat",
+    "summary": "Město Kladno investovalo 15 milionů korun do dronového monitorovacího centra a nakoupilo čínské drony, které kladenská městská policie využívá ke sledování veřejného prostoru včetně zahrádkářských kolonií. Bezpečnostní experti upozorňují na riziko úniku citlivých dat do zahraničí. Případ nastoluje otázky o absenci regulace a dohledu nad nasazením čínské surveilance technologie v české komunální správě.",
+    "pillar": "civil",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Městská policie v Kladně sleduje zahrádkáře čínskými drony. Experti varují před únikem dat",
+        "url": "https://www.investigace.cz/mestska-policie-v-kladne-sleduje-zahradkare-cinskymi-drony-experti-varuji-pred-unikem-dat/",
+        "outlet": "Investigace.cz",
+        "fetched_at": "2026-05-14T07:18:03.381Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o konkrétní realizované nasazení sledovací technologie s omezeným (komunálním) dopadem, nikoli systémovou celostátní změnu. Subkomponenta C5 (práva v digitálním prostoru — soukromí, ochrana před masovým sledováním státem): nasazení čínských dronů s dokumentovaným rizikem úniku dat představuje narušení soukromí občanů na úrovni lokální samosprávy. Chybí celostátní regulatorní rámec, což přidává precedentní rozměr, ale bez reakce nadřízených orgánů nebo opakování v jiných městech není důvod eskalovat na 3. Duration: persistent, neboť drony jsou v provozu a situace nebyla korigována.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-14T07:17:53.342Z"
+  },
+  {
+    "id": "2026-W20-041",
+    "date": "2026-05-14",
+    "headline": "Kriminalisté zajistili data v ústecké nemocnici v kauze zbytečných defibrilátorů",
+    "summary": "Detektivové vyšetřující podezření z neoprávněně indikovaných implantací srdečních defibrilátorů navštívili ústeckou kliniku, kde po přesunu podezřelého kardiologa počet zákroků vzrostl o více než 130 procent. Policisté si přišli pro zdravotnická data. Jde o pokračování vyšetřování s vazbou na zdravotnické zakázky a možné zneužívání zdravotního pojištění.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Nárůst operací přilákal vyšetřovatele, přišli si do ústecké nemocnice pro data",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-kauzy-policejni-navsteva-ustecke-kliniky-detektivove-opet-cili-na-podezrele-operace-306097",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-14T07:18:04.652Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o konkrétní policejní úkon (zajištění dat) v probíhajícím trestním vyšetřování; incident má institucionální dopad na úrovni jednoho zdravotnického zařízení bez prokázaného systémového rozměru v tomto článku. Subkomponenta K1 (zneužívání pravomoci/korupce ve veřejně financovaném zdravotnictví) a potenciálně K2 (veřejné zakázky/pojistné plnění). Vyšší závažnost nelze přiřadit z dostupného zdroje, který popisuje pouze policejní návštěvu bez výsledků šetření — single-source pravidlo a absence výsledků drží na 2.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-14T07:17:53.342Z",
+    "expires_at": "2026-08-06T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-042",
+    "date": "2026-05-13",
+    "headline": "NCOZ zahájila trestní stíhání exministra spravedlnosti Blažka v bitcoinové kauze",
+    "summary": "Národní centrála proti organizovanému zločinu zahájila trestní stíhání bývalého ministra spravedlnosti Pavla Blažka a dalších osob v kauze týkající se nakládání s bitcoiny zabavenými státem za vlády Petra Fialy. Případ se dotýká fungování ministerstva spravedlnosti a nakládání se státním majetkem.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Vyšetřování kauzy Bitcoin pokračuje: Exministr Blažek čelí policejnímu stíhání",
+        "url": "https://www.transparency.cz/vysetrovani-kauzy-bitcoin-pokracuje-exministr-blazek-celi-policejnimu-stihani/",
+        "outlet": "Transparency International ČR",
+        "fetched_at": "2026-05-14T07:18:17.340Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — trestní stíhání ústavního činitele (ministr vlády) v kauze zahrnující nakládání se státním majetkem je konkrétní institucionální událost s precedentním charakterem (subkomponenta K1 — politická korupce). Zahájení stíhání ze strany NCOZ (subkomponenta K4 — protikorupční instituce) funguje zároveň jako pozitivní signál institucionální odezvy, ale primární event je negace: obvinění z korupce na ministerské úrovni. Direction -1 protože primárně dokumentuje selhání normy. Sekundárně se dotýká pilíře judicial (J3 — nezávislost státního zastupitelství a jeho schopnost stíhat ústavní činitele), uvedeno v rationale.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-14T07:17:53.342Z",
+    "expires_at": "2026-08-05T00:00:00.000Z"
   }
 ]
