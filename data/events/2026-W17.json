@@ -698,7 +698,7 @@
     "headline": "ÚS: Rozhodnutí o upuštění od trestu při vyhoštění musí být odůvodněno",
     "summary": "Ústavní soud vydal nález, v němž shledal, že soudy nemohou bez odůvodnění odmítnout žádost odsouzeného cizince o upuštění od výkonu zbytku trestu, je-li podmínkou jeho vyhoštění. Nález zpřesňuje výklad § 327 trestního řádu a chrání právo na soudní přezkum v řízeních spojených s vyhoštěním.",
     "pillar": "judicial",
-    "severity": 1,
+    "severity": 2,
     "direction": 1,
     "duration": "one_off",
     "sources": [
@@ -710,9 +710,9 @@
       }
     ],
     "score_impact": 0.2,
-    "rationale": "Severity 1 per rubric §1 — nález ÚS v individuální věci zpřesňuje výklad procesního pravidla a posiluje soudní přezkum (subkomponenta J2 — nezávislost obecných soudů a ochrana procesních práv), avšak nemá systémový dopad na fungování institucí ani nevytváří precedent ohrožující demokratické pilíře. Direction +1, neboť rozhodnutí posiluje právní ochranu jednotlivce před libovůlí soudu.",
+    "rationale": "Severity 1 per rubric §1 — nález ÚS v individuální věci zpřesňuje výklad procesního pravidla a posiluje soudní přezkum (subkomponenta J2 — nezávislost obecných soudů a ochrana procesních práv), avšak nemá systémový dopad na fungování institucí ani nevytváří precedent ohrožující demokratické pilíře. Direction +1, neboť rozhodnutí posiluje právní ochranu jednotlivce před libovůlí soudu.\n\n[merged with 2026-W17-044 — direction/severity conflict, set status=disputed for reviewer]",
     "reviewer": "auto",
-    "status": "active",
+    "status": "disputed",
     "created_at": "2026-04-29T11:12:25.932Z",
     "expires_at": "2026-07-14T00:00:00.000Z"
   },

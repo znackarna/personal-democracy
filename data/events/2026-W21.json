@@ -1,0 +1,193 @@
+[
+  {
+    "id": "2026-W21-001",
+    "date": "2026-05-18",
+    "headline": "Protesty po celé ČR proti převodu financování ČT a ČRo pod státní rozpočet",
+    "summary": "Spolek Milion chvilek zorganizoval celostátní pochody pod názvem ‚Ruce pryč od médií', jejichž účastníci vyjádřili nesouhlas s návrhem ministerstva kultury na převod financování České televize a Českého rozhlasu pod státní rozpočet. Pochody proběhly mimo jiné v Ústí nad Labem a Českých Budějovicích. Jde o reakci na legislativní návrh, který by mohl ohrozit financiální nezávislost veřejnoprávních médií.",
+    "pillar": "media",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "‚Svobodu médiím.‘ Pochody na podporu ČT a ČRo proběhly i v Ústí nad Labem a Českých Budějovicích",
+        "url": "https://www.irozhlas.cz/zpravy-domov/svobodu-mediim-pochody-na-podporu-ct-a-cro-probehly-i-v-usti-nad-labem-i-ceskych_2605180938_ntu",
+        "outlet": "iROZHLAS",
+        "fetched_at": "2026-05-18T07:44:31.935Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — protesty samy o sobě jsou občanskou reakcí bez přímého institucionálního dopadu, nicméně dokumentují existenci návrhu zákona ohrožujícího nezávislost ČT/ČRo (subkomponenta M2). Samotný návrh zákona o převodu financování pod státní rozpočet by byl severity 4–5, ale tento článek popisuje pouze protesty, nikoli samotné schválení nebo předložení návrhu. Direction -1, protože protesty jsou reakcí na reálně existující hrozbu pro mediální nezávislost. Sekundárně se dotýká pilíře governance (G4 — transparentnost a způsob přijímání legislativy).",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-18T07:44:30.746Z",
+    "expires_at": "2026-08-10T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W21-002",
+    "date": "2026-05-19",
+    "headline": "Exministr Němec předvolán k výpovědi v kauze Dozimetr jako svědek v části týkající se šifrovaných telefonů",
+    "summary": "Obvodní soud předvolal bývalého ministra spravedlnosti a místního rozvoje Pavla Němce jako svědka v korupční kauze Dozimetr. Němec měl pro skupinu okolo lobbisty Michala Redla zajišťovat šifrované telefony určené k neodposlouchávané komunikaci a má vysvětlovat své vazby na obžalované. Jde o součást probíhajícího hlavního líčení v rozsáhlé korupční kauze.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Dozimetr: Vypovídat má exministr spravedlnosti, který zajišťoval pro Redlovu skupinu ‚krypťáky‘",
+        "url": "https://www.irozhlas.cz/zpravy-domov/dozimetr-vypovidat-ma-exministr-spravedlnosti-ktery-zajistoval-pro-redlovu_2605180835_pik",
+        "outlet": "iROZHLAS",
+        "fetched_at": "2026-05-18T07:44:31.935Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o dílčí procesní krok (výslech svědka) v probíhajícím soudním řízení, nikoli o nové odhalení nebo rozsudek. Subkomponenta K1 (politická korupce — střet zájmů a zneužití postavení ústavního činitele). Zapojení exministra spravedlnosti do sítě zajišťující komunikační bezpečnost korupční skupině je institucionálně závažné, ale tento článek popisuje pouze procesní předvolání, nikoli nová fakta. Sekundárně se dotýká pilíře judicial (J3 — nezávislost státního zastupitelství a průběh řízení). Direction -1 kvůli historické povaze korupčního jednání dokumentovaného v kauze.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-18T07:44:30.746Z",
+    "expires_at": "2026-08-11T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W21-003",
+    "date": "2026-05-18",
+    "headline": "Ústavní soud potvrdil odsouzení aktivistky za nenávistné příspěvky na sociálních sítích",
+    "summary": "Ústavní soud odmítl ústavní stížnost aktivistky Nely Liskové, která obdržela podmíněný trest za nenávistné příspěvky namířené proti politikům a Ukrajincům. ÚS potvrdil, že takové příspěvky nespadají pod ochranu svobody projevu. Rozhodnutí vymezuje hranice občanských svobod v digitálním prostoru.",
+    "pillar": "civil",
+    "severity": 2,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Ústavní soud odmítl stížnost Liskové, za nenávistné příspěvky dostala podmínku",
+        "url": "https://zpravy.aktualne.cz/domaci/ustavni-soud-odmitl-stiznost-liskove-za-nenavistne-prispevky-dostala-podminku/r~aaa29c1f2947753200f6820de370b8db/",
+        "outlet": "Aktuálně.cz",
+        "fetched_at": "2026-05-18T07:44:36.423Z"
+      }
+    ],
+    "score_impact": 0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o konkrétní soudní rozhodnutí s omezeným, ale reálným institucionálním dopadem (vymezení hranic svobody projevu dle subkomponenty C1). Směr +1: ÚS potvrdil, že nenávistné projevy nejsou chráněny svobodou slova, čímž posílil ochranu osob před cílenými útoky. Rubric de-eskalace: jedná se o standardní aplikaci práva bez strukturálního posunu, nikoli o rozhodnutí měnící institucionální prostředí (max. severity 2).",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-18T07:44:30.746Z",
+    "expires_at": "2026-08-10T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W21-004",
+    "date": "2026-05-18",
+    "headline": "ÚS odmítl stížnost Liskové – podmínka za nenávistné příspěvky obstála",
+    "summary": "Ústavní soud odmítl ústavní stížnost aktivistky Nely Liskové, odsouzené za nenávistné a manipulativní příspěvky o Pirátech a Ukrajincích. Soud konstatoval, že svoboda projevu se na daný případ nevztahuje, a tím potvrdil platnost podmíněného trestu.",
+    "pillar": "civil",
+    "severity": 2,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "ÚS odmítl stížnost Liskové, za příspěvky o Pirátech a Ukrajině dostala podmínku",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-us-odmitl-stiznost-liskove-za-prispevky-o-piratech-a-ukrajine-dostala-podminku-306379",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-18T07:44:38.242Z"
+      }
+    ],
+    "score_impact": 0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o uzavřené soudní rozhodnutí v individuálním případě bez precedentního systémového dopadu na svobodu projevu (subkomponenta C1). ÚS potvrdil, že trestní postih za nenávistný projev nepředstavuje nepřípustné omezení svobody slova, což je v souladu se standardní judikaturou. Směr +1: rozhodnutí potvrzuje funkčnost systémové ochrany před zneužíváním svobody projevu k nenávistným projevům. Secondárně pilíř judicial (J1 – ÚS plní roli ochránce práv).",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-18T07:44:30.746Z",
+    "expires_at": "2026-08-10T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W21-005",
+    "date": "2026-05-04",
+    "headline": "Bývalý ministr spravedlnosti Blažek obviněn v bitcoinové kauze",
+    "summary": "Policie obvinila bývalého ministra spravedlnosti Pavla Blažka (ODS) a dvě další osoby v tzv. bitcoinové kauze. Obviněný se řadí mezi politicky exponované osoby s dřívější vazbou na klíčový resort justice.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Šťastné pondělí: Kmotr, který to myslel dobře. Smutné loučení Pavla Blažka",
+        "url": "https://www.seznamzpravy.cz/clanek/porady-stastne-pondeli-jindricha-sidla-10-sezona-stastne-pondeli-krajsky-kmotr-ci-bitcoinovy-mag-zivot-a-dilo-dona-pabla-306348",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-18T07:44:38.242Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — obvinění bývalého ministra spravedlnosti je událostí s širokým rezonančním dopadem (subkomponenta K1 – politická korupce, případně K4 – instituce s protikorupční rolí). Ministr spravedlnosti patří k ústavním činitelům, kteří dohlíží na fungování systému právního státu; trestní obvinění v kauze s kryptoměnami naznačuje potenciální střet zájmů nebo zneužití postavení. Zdroj je jeden (komentářový formát), fakta o obvinění jsou ale veřejně ověřitelná. Sekundárně pilíř judicial (J4 – rovnost před zákonem / zacházení s politicky exponovanými osobami). Datum odvozeno z textu – 'před 14 dny' od publikace 2026-05-18.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-18T07:44:30.746Z",
+    "expires_at": "2026-07-27T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W21-006",
+    "date": "2026-05-18",
+    "headline": "Policie nashromáždila důkazy o manipulaci lékařských posudků v ÚVN",
+    "summary": "Investigativní reportáž popisuje, jak policie sledovala lékaře pražské Ústřední vojenské nemocnice a získala konkrétní důkazy o systematické manipulaci s lékařskými posudky. Kauza se týká státní instituce a naznačuje organizované jednání.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Policie měla lékaře na očích. Kauza „cinknutých“ posudků z ÚVN se vymyká",
+        "url": "https://www.seznamzpravy.cz/clanek/audio-podcast-5-59-policie-mela-lekare-na-ocich-kauza-cinknutych-posudku-z-uvn-se-vymyka-306246",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-18T07:44:38.242Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — kauza se týká podvodného jednání ve státní instituci (ÚVN je přímo řízena Ministerstvem obrany), ale dopady jsou zatím lokální a omezené na konkrétní skupinu osob bez prokázané politické návaznosti (subkomponenta K1/K2 nepřímo). Nejde dosud o strukturální systémové schéma, nýbrž o individuální případ; závažnost by eskalovala, pokud by vyšlo najevo propojení na politické zadání nebo rozsáhlejší systém. Pouze jeden zdroj (podcast s reportérem), proto obezřetně severity 2 místo 3.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-18T07:44:30.746Z",
+    "expires_at": "2026-08-10T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W21-007",
+    "date": "2026-05-18",
+    "headline": "Investigace: Babiš využil státní návštěvu Maroka k obchodním zájmům Agrofertu",
+    "summary": "Společná investigace Seznam Zpráv a francouzského webu Blast odhalila, že Andrej Babiš v době svého prvního premiérství využil oficiální státní cestu do Maroka i k prosazování obchodních zájmů svého holdingu Agrofert. Uvnitř struktury figuroval agent propojený s vízovým byznysem.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Premiér Babiš měl v Maroku agenta pro byznys. Nechali ho vydělat na vízech",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-kauzy-premier-babis-mel-v-maroku-agenta-pro-byznys-nechali-ho-vydelat-na-vizech-304168",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-18T07:44:38.242Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 4 per rubric §4 — premiér, tedy nejvyšší ústavní činitel exekutivy, prokazatelně spojil výkon veřejné moci (státní návštěva) s obchodními zájmy Agrofertu (subkomponenta K1 – politická korupce, střet zájmů ústavního činitele). Rubric §4 uvádí jako příklad 'Premiér nepřizná aktiva nebo zneužívá veřejnou funkci pro soukromý prospěch' a eskalaci +1 při více nezávislých zdrojích (dva redakční týmy: Seznam Zpráv + Blast). Toto je investigace s cross-border potvrzením, tedy 2+ zdroje → udržuje severity 4. Duration persistent, protože jde o strukturální vzorec chování Babiše vůči Agrofertu za jeho premiérství (opakované případy v minulosti). Sekundárně governance (G4 – transparentnost vládnutí; G1 – dělba moci).\n\n[severity capped from 4 to 2 due to source-count rule: 1 unique outlet, 3 required for severity 4]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-18T07:44:30.746Z"
+  },
+  {
+    "id": "2026-W21-008",
+    "date": "2026-05-17",
+    "headline": "Tisíce lidí pochodovaly v Brně a dalších městech na podporu ČT a ČRo",
+    "summary": "Přibližně 3 000 lidí se sešlo v Brně a podobné pochody proběhly i v dalších regionálních metropolích. Akci organizovalo hnutí Milion chvilek pod heslem ‚Ruce pryč od médií' a jejím hlavním požadavkem bylo stažení návrhu zákona, který by měl změnit financování České televize. Protesty ukazují na silné veřejné znepokojení nad možným politickým zásahem do nezávislosti veřejnoprávních médií.",
+    "pillar": "media",
+    "severity": 2,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Thousands March In Brno and Other Cities In Support of Czech TV and Radio",
+        "url": "https://brnodaily.com/2026/05/18/brno/thousands-march-in-brno-and-other-cities-in-support-of-czech-tv-and-radio/",
+        "outlet": "Brno Daily",
+        "fetched_at": "2026-05-18T07:44:55.849Z"
+      }
+    ],
+    "score_impact": 0.5,
+    "rationale": "Severity 2 per rubric §2 — masové veřejné protesty na podporu ČT/ČRo jsou konkrétní datovanou událostí s omezeným přímým institucionálním dopadem, ale dokumentují společenskou reakci na legislativní hrozbu pro subkomponentu M2 (nezávislost ČT a ČRo). Směr +1, protože protesty představují občanský odpor bránící nezávislost médií, nikoli útok na ni. Samotný návrh zákona by si zasloužil klasifikaci severity 3–4 (rubric §3–4), ale z tohoto článku neplyne, že byl přijat — pouze že existuje a vyvolal protesty. Anti-bias check: stejné hodnocení by bylo aplikováno na protesty jakékoli strany spektra bránící nezávislost veřejnoprávních médií.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-18T07:44:30.746Z",
+    "expires_at": "2026-08-09T00:00:00.000Z"
+  }
+]

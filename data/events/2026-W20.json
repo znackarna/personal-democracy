@@ -17,7 +17,7 @@
       }
     ],
     "score_impact": 0.5,
-    "rationale": "Severity 2 per rubric §2 — konkrétní institucionální korekce (ombudsman → ministerstvo → změna vyhlášky) s pozitivním dopadem na přístup ke zdravotní péči. Subkomponenta G1 (reálná kontrola exekutivy nezávislou institucí) a G4 (výkaznost ministerstev). Směr +1: jde o posílení funkce ombudsmana jako korekčního mechanismu. Scope je omezený (jedna vyhláška, specifická skupina pacientů), proto severity 2, nikoli 3.",
+    "rationale": "Severity 2 per rubric §2 — konkrétní institucionální korekce (ombudsman → ministerstvo → změna vyhlášky) s pozitivním dopadem na přístup ke zdravotní péči. Subkomponenta G1 (reálná kontrola exekutivy nezávislou institucí) a G4 (výkaznost ministerstev). Směr +1: jde o posílení funkce ombudsmana jako korekčního mechanismu. Scope je omezený (jedna vyhláška, specifická skupina pacientů), proto severity 2, nikoli 3.\n\n[auditor: flag] Pilíř governance je hraniční — ombudsman není součástí exekutivy ani parlamentu v subkomponentách G1/G4; lépe odpovídá civil (C4, ochrana zranitelné skupiny) nebo samostatná kategorie. Rationale je jinak solidní, severity 2 odpovídá.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-11T07:24:54.292Z",
@@ -134,7 +134,7 @@
       }
     ],
     "score_impact": 0,
-    "rationale": "Severity 2 per rubric §2 — soudní rozhodnutí uzavírá jeden díl sporu o nezávislost vedení ČT (subkomponenta M2), ale samo o sobě nepřináší nové institucionální narušení ani precedent; soud se pouze nevyjádřil ve prospěch žalobce. Direction 0: výsledek je z hlediska demokratického indexu ambivalentní — soud fungoval, ale otázka politické motivace původního odvolání zůstává otevřená. Primární pilíř media, sekundárně judicial (funkčnost soudního přezkumu).",
+    "rationale": "Severity 2 per rubric §2 — soudní rozhodnutí uzavírá jeden díl sporu o nezávislost vedení ČT (subkomponenta M2), ale samo o sobě nepřináší nové institucionální narušení ani precedent; soud se pouze nevyjádřil ve prospěch žalobce. Direction 0: výsledek je z hlediska demokratického indexu ambivalentní — soud fungoval, ale otázka politické motivace původního odvolání zůstává otevřená. Primární pilíř media, sekundárně judicial (funkčnost soudního přezkumu).\n\n[auditor: flag] Direction 0 je sporný — soud zamítl žalobu odvolaného ředitele ČT; pokud původní odvolání bylo politicky motivované a soud to nenapravil, direction spíše -1. Rationale tuto ambivalenci uznává, ale měla by být explicitnější.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-12T07:15:39.525Z",
@@ -182,7 +182,7 @@
       }
     ],
     "score_impact": 0,
-    "rationale": "Severity 1 per rubric §1 — nedohoda v tripartitě je standardní součástí legislativního procesu bez precedentního ani institucionálního dopadu na demokratické instituce (subkomponenta G2 — kvalita legislativy). Jednání pokračují, žádný ústavní proces není narušen. Direction 0 — výsledek je neutrální z hlediska demokratického skóre, jde o běžný politický spor o sociální politiku, nikoli o oslabení či posílení demokratických institucí.",
+    "rationale": "Severity 1 per rubric §1 — nedohoda v tripartitě je standardní součástí legislativního procesu bez precedentního ani institucionálního dopadu na demokratické instituce (subkomponenta G2 — kvalita legislativy). Jednání pokračují, žádný ústavní proces není narušen. Direction 0 — výsledek je neutrální z hlediska demokratického skóre, jde o běžný politický spor o sociální politiku, nikoli o oslabení či posílení demokratických institucí.\n\n[auditor: flag] Tripartitní nedohoda je standardní politický proces, ale direction 0 je správný. Pilíř governance (G2) je hraniční — jde spíše o sociální politiku bez dopadu na demokratické instituce. Zvážit vyřazení z indexu.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-12T07:15:39.525Z",
@@ -230,7 +230,7 @@
       }
     ],
     "score_impact": 0,
-    "rationale": "Jde o standardní personální a organizační rozhodnutí vlády (subkomponenta G1 — dělba moci a vládní uspořádání). Vytvoření koordinační pozice v rámci exekutivy je běžná praxe a neindikuje žádné oslabení ani posílení demokratických institucí. Severity 1 per rubric §1 — výroky a rozhodnutí bez institucionálního dopadu na demokratické pilíře; spíše administrativní úkon než politicky relevantní změna.",
+    "rationale": "Jde o standardní personální a organizační rozhodnutí vlády (subkomponenta G1 — dělba moci a vládní uspořádání). Vytvoření koordinační pozice v rámci exekutivy je běžná praxe a neindikuje žádné oslabení ani posílení demokratických institucí. Severity 1 per rubric §1 — výroky a rozhodnutí bez institucionálního dopadu na demokratické pilíře; spíše administrativní úkon než politicky relevantní změna.\n\n[auditor: flag] Jmenování vládního zmocněnce pro NATO je administrativní akt bez dopadu na demokratické instituce. Severity 1 / direction 0 jsou správné, ale relevance pro index je minimální — zvážit vyřazení.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-12T07:15:39.525Z",
@@ -302,7 +302,7 @@
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 2 per rubric §2 — konkrétní selhání soudu jako instituce (nezaplacení zákonné odměny, exekuce) s omezeným, lokálním dopadem. Jde o administrativní pochybení nikoli o politický zásah do nezávislosti justice (subkomponenta J2 není primárně dotčena). Nenaplňuje práh severity 3, protože soud sám incident označil za ojedinělý exces a neexistují indicie systémového vzorce. Anti-bias: stejnou severity bych přiřadil i jinému soudu bez ohledu na jurisdikci.",
+    "rationale": "Severity 2 per rubric §2 — konkrétní selhání soudu jako instituce (nezaplacení zákonné odměny, exekuce) s omezeným, lokálním dopadem. Jde o administrativní pochybení nikoli o politický zásah do nezávislosti justice (subkomponenta J2 není primárně dotčena). Nenaplňuje práh severity 3, protože soud sám incident označil za ojedinělý exces a neexistují indicie systémového vzorce. Anti-bias: stejnou severity bych přiřadil i jinému soudu bez ohledu na jurisdikci.\n\n[auditor: flag] Pilíř judicial pro administrativní finanční pochybení soudu je sporný — nejde o ohrožení nezávislosti justice ani o J1–J4 v jádru. Vhodněji governance (G4 — transparentnost/výkaznost) nebo vyřazení. Severity 2 je přijatelná.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-12T07:15:39.525Z",
@@ -475,7 +475,7 @@
       }
     ],
     "score_impact": 0,
-    "rationale": "Severity 2 per rubric §2 — propuštění z vazby je konkrétní datovaná procesní událost v probíhající kauze zneužívání dotací (subkomponenta K2 — veřejné zakázky/dotace). Nejde o rozhodnutí ve věci samé, ale o procesní krok s omezeným institucionálním dopadem. Direction 0, protože propuštění z vazby je neutrální procesní úkon — důvody vazby pominuly, nikoli že by byl obviněný zproštěn viny. Jeden zdroj (Seznam Zprávy přes ČT24), proto severity nelze navýšit.",
+    "rationale": "Severity 2 per rubric §2 — propuštění z vazby je konkrétní datovaná procesní událost v probíhající kauze zneužívání dotací (subkomponenta K2 — veřejné zakázky/dotace). Nejde o rozhodnutí ve věci samé, ale o procesní krok s omezeným institucionálním dopadem. Direction 0, protože propuštění z vazby je neutrální procesní úkon — důvody vazby pominuly, nikoli že by byl obviněný zproštěn viny. Jeden zdroj (Seznam Zprávy přes ČT24), proto severity nelze navýšit.\n\n[auditor: flag] Direction 0 je správný pro procesní krok bez věcného výsledku. Zdroj uveden jako ČT24, ale rationale zmiňuje 'Seznam Zprávy přes ČT24' — nejasnost ve zdrojích zaslouží review.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-13T07:21:30.081Z",
@@ -499,7 +499,7 @@
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 2 per rubric §2 — jde o záměr (nikoli schválený zákon), s omezeným dopadem na dvě subkomponenty: C1/C2 (omezení anonymity na veřejných akcích) a C5 (digitální sledování a biometrika). Návrh je v rané fázi bez konkrétního legislativního textu, takže dopad je zatím potenciální. Pre-filter pillar guess 'governance' je méně přesný — kořenová příčina se dotýká občanských svobod a práva na soukromí (C5), nikoli primárně legislativního procesu. Sekundárně relevantní je G2 (kvalita legislativy při případném rychlém prosazení).",
+    "rationale": "Severity 2 per rubric §2 — jde o záměr (nikoli schválený zákon), s omezeným dopadem na dvě subkomponenty: C1/C2 (omezení anonymity na veřejných akcích) a C5 (digitální sledování a biometrika). Návrh je v rané fázi bez konkrétního legislativního textu, takže dopad je zatím potenciální. Pre-filter pillar guess 'governance' je méně přesný — kořenová příčina se dotýká občanských svobod a práva na soukromí (C5), nikoli primárně legislativního procesu. Sekundárně relevantní je G2 (kvalita legislativy při případném rychlém prosazení).\n\n[auditor: flag] Překryv s 2026-W20-012 — oba popisují Šťastného návrhy ohledně biometriky na stadionech. Jde o duplicitu nebo velmi blízké incidenty; měly by být sloučeny nebo jeden vyřazen.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-13T07:21:30.081Z",
@@ -595,7 +595,7 @@
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 2 per rubric §2 — jde o konkrétní soudní rozhodnutí o nezákonném postupu státního orgánu (subkomponenta J4 — rovnost před zákonem a zákonnost výkonu státní moci). Případ má lokální dopad na práva jednotlivce, nikoli systémový charakter. Není součástí identifikovatelného vzorce nezákonných odběrů, nejde o strukturální selhání justice. Sekundárně se dotýká pilíře civil (C4 — ochrana zranitelných osob), ale primárním pilířem je judicial, neboť klíčová událost je soudní rozhodnutí o zákonnosti postupu správního orgánu.",
+    "rationale": "Severity 2 per rubric §2 — jde o konkrétní soudní rozhodnutí o nezákonném postupu státního orgánu (subkomponenta J4 — rovnost před zákonem a zákonnost výkonu státní moci). Případ má lokální dopad na práva jednotlivce, nikoli systémový charakter. Není součástí identifikovatelného vzorce nezákonných odběrů, nejde o strukturální selhání justice. Sekundárně se dotýká pilíře civil (C4 — ochrana zranitelných osob), ale primárním pilířem je judicial, neboť klíčová událost je soudní rozhodnutí o zákonnosti postupu správního orgánu.\n\n[auditor: flag] Pilíř judicial pro soudní rozhodnutí o nezákonném postupu sociální pracovnice je sporný — primárním problémem je postup OSPOD (správní orgán), nikoli justice. Civil (C4) nebo governance (G4) by bylo přesnější.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-13T07:21:30.081Z",
@@ -643,7 +643,7 @@
       }
     ],
     "score_impact": 0.5,
-    "rationale": "Severity 2 per rubric §2 — odstranění zahraniční dezinformační sítě cílené na české občany je konkrétní pozitivní opatření ovlivňující subkomponentu C5 (práva v digitálním prostoru, ochrana před manipulací). Směr +1, protože platforma reagovala a hrozbu eliminovala. Záměrně neklasifikováno jako electoral (dezinformace nesouvisela s konkrétní volební kampaní) ani media (netýká se novinářů nebo mediálního pluralismu přímo). Sekundárně se dotýká C1 (svoboda projevu vs. zahraniční manipulace). Single source, proto severity nepřesahuje 2.",
+    "rationale": "Severity 2 per rubric §2 — odstranění zahraniční dezinformační sítě cílené na české občany je konkrétní pozitivní opatření ovlivňující subkomponentu C5 (práva v digitálním prostoru, ochrana před manipulací). Směr +1, protože platforma reagovala a hrozbu eliminovala. Záměrně neklasifikováno jako electoral (dezinformace nesouvisela s konkrétní volební kampaní) ani media (netýká se novinářů nebo mediálního pluralismu přímo). Sekundárně se dotýká C1 (svoboda projevu vs. zahraniční manipulace). Single source, proto severity nepřesahuje 2.\n\n[auditor: flag] Pilíř civil (C5) pro odstranění proruské sítě na TikToku je hraniční — primární aktér je soukromá platforma, nikoli stát. Pilíř electoral (E3 — ochrana před zahraniční manipulací) by byl přesnější. Severity 2 je přijatelná.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-13T07:21:30.081Z",
@@ -667,7 +667,7 @@
       }
     ],
     "score_impact": 0,
-    "rationale": "Severity 2 per rubric §2 — uzavření vyšetřování je konkrétní procesní krok (subkomponenta K1 — politická korupce ústavního činitele), ale institucionální dopad je zatím omezený, protože výsledek není znám a žádné opatření zatím nepřijato. Direction 0, protože není jasné, zda vyšetřování skončí obžalobou, nebo odložením — oba výsledky mají odlišný demokratický dopad. Single source, proto severity zůstává na 2. Pokud by výsledek vedl k obžalobě úřadujícího premiéra, severity by eskalovala na 4–5 (K1, ústavní činitel).",
+    "rationale": "Severity 2 per rubric §2 — uzavření vyšetřování je konkrétní procesní krok (subkomponenta K1 — politická korupce ústavního činitele), ale institucionální dopad je zatím omezený, protože výsledek není znám a žádné opatření zatím nepřijato. Direction 0, protože není jasné, zda vyšetřování skončí obžalobou, nebo odložením — oba výsledky mají odlišný demokratický dopad. Single source, proto severity zůstává na 2. Pokud by výsledek vedl k obžalobě úřadujícího premiéra, severity by eskalovala na 4–5 (K1, ústavní činitel).\n\n[auditor: flag] Duplicita s 2026-W20-023 — oba popisují uzavření francouzského vyšetřování Babiše. Různé zdroje (HN vs. Brno Daily), ale totožný incident. Měly by být sloučeny. Direction 0 vs. -1 v 023 je nesoulad vyžadující review.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-13T07:21:30.081Z",
@@ -846,7 +846,7 @@
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 2 per rubric §2 — koaliční snaha prosadit sněmovní usnesení požadující zákaz konkrétní akce spolku je politickým tlakem na svobodu sdružování a shromažďování (subkomponenta C3), ale jde zatím o parlamentní usnesení bez závazné právní síly, nikoli o zákon omezující shromažďovací právo. Dopad je lokální a konkrétní, bez jasného precedentu pro jiné spolky. Pokud by usnesení bylo přijato a posloužilo jako základ pro administrativní zásah, severity by eskalovala na 3.\n\n[merged with 2026-W20-068 — same incident, sources combined]",
+    "rationale": "Severity 2 per rubric §2 — koaliční snaha prosadit sněmovní usnesení požadující zákaz konkrétní akce spolku je politickým tlakem na svobodu sdružování a shromažďování (subkomponenta C3), ale jde zatím o parlamentní usnesení bez závazné právní síly, nikoli o zákon omezující shromažďovací právo. Dopad je lokální a konkrétní, bez jasného precedentu pro jiné spolky. Pokud by usnesení bylo přijato a posloužilo jako základ pro administrativní zásah, severity by eskalovala na 3.\n\n[merged with 2026-W20-068 — same incident, sources combined]\n\n[auditor: flag] Překryv s 2026-W20-049 a 2026-W20-052 — všechny tři popisují usnesení sněmovny k sudetoněmeckému sjezdu. Event 035 je v rané fázi (záměr), 049 a 052 jsou po schválení. Severity 035 by měla být nižší nebo event sloučen s 049.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-14T07:17:53.342Z",
@@ -1131,7 +1131,7 @@
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 2 per rubric §2 — usnesení sněmovny vyzývající ke zrušení konkrétní shromažďovací akce je konkrétní porušení normy s omezeným dopadem, neboť jde o politické gesto bez právní vynutitelnosti. Subkomponenta C2 (svoboda shromažďování) — parlament formálně apeloval na zrušení zákonné shromažďovací akce, čímž vytvořil neblahý precedent pro politické tlaky na realizaci tohoto práva. Závažnost nepřesahuje úroveň 2, protože usnesení nemá přímou právní sílu a člen koalice jej veřejně zpochybnil, čímž existuje vnitřní institucionální korekce. Anti-bias check: stejnou závažnost bych přiřadil, pokud by šlo o usnesení opačně orientované koalice proti jinému sdružení.",
+    "rationale": "Severity 2 per rubric §2 — usnesení sněmovny vyzývající ke zrušení konkrétní shromažďovací akce je konkrétní porušení normy s omezeným dopadem, neboť jde o politické gesto bez právní vynutitelnosti. Subkomponenta C2 (svoboda shromažďování) — parlament formálně apeloval na zrušení zákonné shromažďovací akce, čímž vytvořil neblahý precedent pro politické tlaky na realizaci tohoto práva. Závažnost nepřesahuje úroveň 2, protože usnesení nemá přímou právní sílu a člen koalice jej veřejně zpochybnil, čímž existuje vnitřní institucionální korekce. Anti-bias check: stejnou závažnost bych přiřadil, pokud by šlo o usnesení opačně orientované koalice proti jinému sdružení.\n\n[auditor: flag] Score_impact uveden jako -0.5 (severity 2), ale rationale v textu popisuje severity 2. Tři zdroje jsou k dispozici — event by mohl být hodnocen jako severity 3 bez source-count omezení. Sloučení s 035 a 052 doporučeno.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-15T07:24:57.600Z",
@@ -1155,7 +1155,7 @@
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 2 per rubric §2 — jde o politicky motivovaný personální zásah na vyšší úrovni státní správy (náměstkyně ministra), který sám o sobě neohrožuje instituci jako celek, ale zaslouží zaznamenání per subkomponentu G1 (dělba moci, personální stabilita exekutivy). Bez dalšího kontextu o systémovém vzorci nelze eskalovat na 3. Pouze jeden zdroj — single-source rule brání eskalaci. Anti-bias check: stejný rating bych přiřadil u jakékoli vlády.",
+    "rationale": "Severity 2 per rubric §2 — jde o politicky motivovaný personální zásah na vyšší úrovni státní správy (náměstkyně ministra), který sám o sobě neohrožuje instituci jako celek, ale zaslouží zaznamenání per subkomponentu G1 (dělba moci, personální stabilita exekutivy). Bez dalšího kontextu o systémovém vzorci nelze eskalovat na 3. Pouze jeden zdroj — single-source rule brání eskalaci. Anti-bias check: stejný rating bych přiřadil u jakékoli vlády.\n\n[auditor: flag] Překryv s 2026-W20-045 — oba popisují rezignaci Jirkové a personální změny na MPSV. Různé pilíře (corruption vs. governance), ale totožný incident. Měly by být sloučeny nebo jeden vyřazen.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-15T07:24:57.600Z",
@@ -1452,7 +1452,7 @@
       }
     ],
     "score_impact": 0.2,
-    "rationale": "Severity 1 per rubric §1 — jde o potvrzení diplomatického závazku, který Česko deklarovalo již v Reykjavíku v roce 2023; nová institucionální hodnota je minimální. Subkomponenta G3 (stabilita ústavních norem a respekt k mezinárodnímu právu) je mírně posílena mezinárodním závazkem, ale dopad na domácí demokratické instituce je zanedbatelný. Směr +1, protože Česko posiluje multilaterální mechanismus právního státu. Anti-bias: stejně bych hodnotil závazek jakékoli jiné vlády.",
+    "rationale": "Severity 1 per rubric §1 — jde o potvrzení diplomatického závazku, který Česko deklarovalo již v Reykjavíku v roce 2023; nová institucionální hodnota je minimální. Subkomponenta G3 (stabilita ústavních norem a respekt k mezinárodnímu právu) je mírně posílena mezinárodním závazkem, ale dopad na domácí demokratické instituce je zanedbatelný. Směr +1, protože Česko posiluje multilaterální mechanismus právního státu. Anti-bias: stejně bych hodnotil závazek jakékoli jiné vlády.\n\n[auditor: flag] Diplomatický závazek pro tribunál pro ruskou agresi má minimální dopad na domácí demokratické instituce. Severity 1 / direction +1 jsou správné, ale relevance pro index je pochybná — zvážit vyřazení.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-16T07:00:36.274Z",
@@ -1499,7 +1499,7 @@
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 2 per rubric §2 — lokální incident s omezeným dopadem, ale dotýká se subkomponenty C5 (práva v digitálním prostoru, ochrana před sledováním státem). Nasazení čínských dronů obcí představuje konkrétní kroky, které odborníci hodnotí jako potenciální bezpečnostní a soukromí riziko, avšak jde o jedno město bez celostátního precedentu. Zdroj je podcast/investigace, nikoli formální rozhodnutí s celostátním dopadem — single source pravidlo udržuje severity na 2. Sekundárně se dotýká národní bezpečnosti (NÚKIB dimenze pilíře K4), zmíněno v rationale.",
+    "rationale": "Severity 2 per rubric §2 — lokální incident s omezeným dopadem, ale dotýká se subkomponenty C5 (práva v digitálním prostoru, ochrana před sledováním státem). Nasazení čínských dronů obcí představuje konkrétní kroky, které odborníci hodnotí jako potenciální bezpečnostní a soukromí riziko, avšak jde o jedno město bez celostátního precedentu. Zdroj je podcast/investigace, nikoli formální rozhodnutí s celostátním dopadem — single source pravidlo udržuje severity na 2. Sekundárně se dotýká národní bezpečnosti (NÚKIB dimenze pilíře K4), zmíněno v rationale.\n\n[auditor: flag] Duplicita s 2026-W20-040 — oba popisují čínské drony v Kladně, oba z Investigace.cz, oba civil/C5. Měly by být sloučeny do jednoho eventu.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-16T07:00:36.274Z"
@@ -1645,7 +1645,7 @@
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 2 per rubric §2 — jde o konkrétní legislativní změnu s institucionálním dopadem, avšak omezeného charakteru: výjimka z rozpočtových rámců pro obranné výdaje je ve světovém i evropském kontextu poměrně běžnou mimořádnou reakcí na bezpečnostní potřeby a sama o sobě neohrožuje klíčovou instituci. Subkomponenta G2 (kvalita legislativy) — norma prošla mimořádnou schůzí, přičemž je sporná; G1 (dělba moci) je dotčena jen okrajově. Pokud by se výjimky staly trvalým nástrojem rozšiřování exekutivní fiskální volnosti mimo parlamentní kontrolu, bylo by na místě přehodnotit na 3. Antibilasová kontrola: stejnou závažnost bych přiřadil bez ohledu na stranické složení koalice.",
+    "rationale": "Severity 2 per rubric §2 — jde o konkrétní legislativní změnu s institucionálním dopadem, avšak omezeného charakteru: výjimka z rozpočtových rámců pro obranné výdaje je ve světovém i evropském kontextu poměrně běžnou mimořádnou reakcí na bezpečnostní potřeby a sama o sobě neohrožuje klíčovou instituci. Subkomponenta G2 (kvalita legislativy) — norma prošla mimořádnou schůzí, přičemž je sporná; G1 (dělba moci) je dotčena jen okrajově. Pokud by se výjimky staly trvalým nástrojem rozšiřování exekutivní fiskální volnosti mimo parlamentní kontrolu, bylo by na místě přehodnotit na 3. Antibilasová kontrola: stejnou závažnost bych přiřadil bez ohledu na stranické složení koalice.\n\n[auditor: flag] Duplicita s 2026-W20-064 — oba popisují schválení novely rozpočtových pravidel pro obranné výdaje. Různé zdroje (ČT24 vs. HN), ale totožný incident. 064 má správně severity 2 (capped from 3), 072 má severity 2 s jiným odůvodněním. Sloučit.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-17T07:13:48.863Z"
@@ -1668,10 +1668,135 @@
       }
     ],
     "score_impact": 0.5,
-    "rationale": "Severity 2 per rubric §2 — rozsudek SDEU potvrzuje právo národních regulátorů vymáhat odměnu pro vydavatele od velkých platforem (subkomponenta M1 — mediální pluralita a ekonomická životaschopnost vydavatelů). Dopad na ČR je nepřímý a zprostředkovaný přes unijní precedent, nikoliv přímý zásah do českých institucí. Směr +1, protože rozhodnutí posiluje ekonomickou pozici vydavatelů médií vůči dominantním platformám. Anti-bias: stejné hodnocení by platilo pro analogický rozsudek zahrnující jakoukoliv jinou platformu či členský stát.",
+    "rationale": "Severity 2 per rubric §2 — rozsudek SDEU potvrzuje právo národních regulátorů vymáhat odměnu pro vydavatele od velkých platforem (subkomponenta M1 — mediální pluralita a ekonomická životaschopnost vydavatelů). Dopad na ČR je nepřímý a zprostředkovaný přes unijní precedent, nikoliv přímý zásah do českých institucí. Směr +1, protože rozhodnutí posiluje ekonomickou pozici vydavatelů médií vůči dominantním platformám. Anti-bias: stejné hodnocení by platilo pro analogický rozsudek zahrnující jakoukoliv jinou platformu či členský stát.\n\n[auditor: flag] Rozsudek SDEU o italském případu Meta má pouze nepřímý dopad na ČR přes unijní precedent. Severity 2 / direction +1 jsou přijatelné, ale pilíř media (M1) pro zahraniční soudní rozhodnutí je hraniční — relevance pro českou demokracii je nízká.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-17T07:13:48.863Z",
     "expires_at": "2026-08-04T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-074",
+    "date": "2026-05-15",
+    "headline": "Pořadatelé sněmu sudetských Němců čelí vyhrůžkám smrtí",
+    "summary": "Organizátoři festivalu Meeting Brno, jehož součástí bude sněm Sudetoněmeckého krajanského sdružení, dostávají nenávistné zprávy včetně výhrůžek smrtí. Deník N autory oslovil, žádný však neodpověděl.",
+    "pillar": "civil",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "„Budete viset v lese na větvi.“ Oslovili jsme lidi, kteří vyhrožují pořadatelům sněmu sudetských Němců",
+        "url": "https://denikn.cz/2063619/budete-viset-v-lese-na-vetvi-oslovili-jsme-lidi-kteri-vyhrozuji-poradatelum-snemu-sudetskych-nemcu/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-18T07:44:30.760Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o konkrétní nenávistné výroky a výhrůžky fyzickým násilím vůči organizátorům veřejné akce, což se dotýká subkomponenty C2 (svoboda shromažďování) a C1 (svoboda projevu). Nedosahuje úrovně 3, protože nejde o státní aktér ani o systematický vzorec s institucionálním dopadem, ale o individuální projevy soukromých osob bez doložené eskalace. Anti-bias check: stejnou závažnost bych přiřadil výhrůžkám vůči pořadatelům jakékoli jiné komunitní akce.\n\n[auditor: flag] Výhrůžky smrtí pořadatelům sudetoněmeckého sjezdu od soukromých osob jsou zařazeny do civil/C2, ale primary driver je politický kontext usnesení sněmovny (052). Propojení s 052 a 049 v rationale chybí. Sekundárně relevantní M3 (novinářka Černá v 057 je analogický případ).",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-18T07:44:30.746Z",
+    "expires_at": "2026-08-07T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-075",
+    "date": "2026-05-15",
+    "headline": "Poslanec SPD zaútočil na potomky Nicholase Wintona a Arnošta Lustiga",
+    "summary": "Poslanec SPD krátce po hlasování sněmovny o usnesení k sněmu sudetských Němců verbálně napadl potomky Nicholase Wintona a Arnošta Lustiga. Jde o výrok bez zjevného institucionálního dosahu, který však eskaluje napětí kolem citlivého historického tématu.",
+    "pillar": "civil",
+    "severity": 1,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Pointa N: Docente Ševčíku, omluvte se a odejděte",
+        "url": "https://denikn.cz/2065078/pointa-n-docente-sevciku-omluvte-se-a-odejdete/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-18T07:44:30.760Z"
+      }
+    ],
+    "score_impact": -0.2,
+    "rationale": "Severity 1 per rubric §1 — verbální útok poslance bez praktického institucionálního dopadu; splňuje definici 'výroky bez institucionálního dopadu'. Subkomponenta C1 (svoboda projevu a atmosféra parlamentní debaty) je mírně dotčena, ale nejde o zákon, usnesení ani o systematický vzorec. Článek je primárně komentář/opinion; konkrétní událostí je samotný výrok poslance. Anti-bias check: stejnou závažnost bych přiřadil výroku libovolného poslance jiné strany vůči jiné skupině.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-18T07:44:30.746Z",
+    "expires_at": "2026-08-07T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-076",
+    "date": "2026-05-17",
+    "headline": "Ve dvanácti městech proběhly pochody na podporu nezávislosti ČT a ČRo",
+    "summary": "Spolek Milion chvilek pro demokracii zorganizoval demonstrace ve dvanácti krajských městech proti návrhu zákona ministra kultury Klempíře, který by převedl financování ČT a ČRo pod státní rozpočet. Demonstrace proběhly pokojně a svědčí o širokém veřejném zájmu o zachování nezávislosti veřejnoprávních médií.",
+    "pillar": "media",
+    "severity": 2,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Ve dvanácti krajských městech se sešli lidé k podpoře ČT a ČRo",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/ve-dvanacti-krajskych-mestech-se-sesli-lide-k-podpore-ct-a-cro-373539",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-18T07:44:32.403Z"
+      },
+      {
+        "title": "„Ruce pryč od médií.“ Tisíce lidí podpořily Českou televizi a rozhlas",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-ruce-pryc-od-medii-tisice-cechu-podporily-ceskou-televizi-a-rozhlas-306358",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-18T07:44:38.242Z"
+      }
+    ],
+    "score_impact": 0.5,
+    "rationale": "Severity 2 per rubric §2 — demonstrace samotné jsou legitimním projevem občanské společnosti a jejich proběhnutí je pozitivní signál pro subkomponentu C2 i M2, nikoli negativní událost. Směr +1, protože mobilizace občanské společnosti na obranu mediální nezávislosti instituci posiluje. Návrh zákona Klempíře (převod financování pod státní rozpočet) je primární hrozba pro M2, ale samotný návrh zde není novou událostí tohoto týdne — je kontextem. Pokud by byl návrh zákona předmětem samostatného článku, zasloužil by severity 4 (subkomponenta M2, rubric §4). Anti-bias check: pochody na podporu veřejnoprávních médií bych hodnotil stejně bez ohledu na politické spektrum účastníků.\n\n[merged with 2026-W20-079 — same incident, sources combined]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-18T07:44:30.746Z",
+    "expires_at": "2026-08-09T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-077",
+    "date": "2026-05-17",
+    "headline": "Slavia upustila od kamerového systému na rozpoznávání obličejů po zásahu ÚOOÚ",
+    "summary": "Fotbalový klub SK Slavia Praha oznámil, že nespustí plánovaný systém rozpoznávání obličejů po diskusi s Úřadem pro ochranu osobních údajů, který klubu pohrozil pokutami ve výši stovek milionů korun za protizákonné jednání. Jde o případ, kdy regulatorní tlak státního orgánu přiměl soukromý subjekt k respektování práv na ochranu soukromí.",
+    "pillar": "civil",
+    "severity": 2,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Slavia nespustí kamerový systém na rozpoznávání obličejů, řekl Tvrdík",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/slavia-nespusti-kamerovy-system-na-rozpoznavani-obliceju-rekl-tvrdik-373533",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-18T07:44:32.403Z"
+      }
+    ],
+    "score_impact": 0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o konkrétní incident s omezeným, lokálním dopadem: soukromý subjekt pod tlakem regulátora upustil od opatření zasahujícího do digitálních práv (subkomponenta C5). Směr +1, protože výsledkem je posílení ochrany soukromí díky funkčnímu státnímu dozoru. Nejde o systémovou změnu ani precedent se širokým dopadem, proto severity 2, nikoliv 3.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-18T07:44:30.746Z",
+    "expires_at": "2026-08-09T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W20-078",
+    "date": "2026-05-17",
+    "headline": "Koaliční rada má 25. května projednat návrh zákona o financování veřejnoprávních médií",
+    "summary": "Premiér Andrej Babiš oznámil, že koaliční rada 25. května projedná návrh zákona o médiích veřejné služby, po němž by předlohu dostala k projednání vláda. Zákon se týká financování ČT a ČRo a jeho případné přijetí může ovlivnit nezávislost veřejnoprávních médií.",
+    "pillar": "media",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Změnu financování veřejnoprávních médií projedná koalice 25. května, řekl Babiš",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/zmenu-financovani-verejnopravnich-medii-projedna-koalice-25-kvetna-rekl-babis-373530",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-18T07:44:32.403Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — v tuto chvíli jde pouze o oznámení harmonogramu projednání návrhu v koaliční radě, nikoli o schválený zákon ani o konkrétní obsah úpravy (subkomponenta M2). Rubric §3 uvádí přímo jako příklad severity 3 zákon o ČT/ČRo, který je v rané fázi (předložen, neschválen) — zde je stadium ještě dřívější (ani nepředložen vládě). Směr -1 preventivně, neboť změny ve financování veřejnoprávních médií typicky ohrožují jejich nezávislost; při schválení by bylo nutné přehodnotit na severity 3–4. Duration persistent, protože legislativní proces bude probíhat.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-18T07:44:30.746Z"
   }
 ]
