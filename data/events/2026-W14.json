@@ -70,5 +70,29 @@
     "status": "disputed",
     "created_at": "2026-05-18T07:44:30.746Z",
     "expires_at": "2026-06-24T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W14-004",
+    "date": "2026-04-01",
+    "headline": "ÚS shledal části konkordátu se Svatým stolcem neústavními, smlouvu nelze ratifikovat",
+    "summary": "Ústavní soud vyslovil neústavnost vybraných článků konkordátní smlouvy mezi ČR a Svatým stolcem, zejména v rozsahu zpovědního tajemství a přístupu ke kulturnímu dědictví. Smlouva v současné podobě nemůže být ratifikována. ÚS zároveň konstatoval, že uzavření konkordátu jako takového nenarušuje státní suverenitu ani ústavní neutralitu státu.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": 0,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Konkordát se Svatým stolcem neprošel přezkumem ústavnosti v rozsahu zpovědního tajemství a zpřístupnění kulturního dědictví",
+        "url": "https://www.usoud.cz/aktualne/konkordat-se-svatym-stolcem-neprosel-prezkumem-ustavnosti-v-rozsahu-zpovedniho-tajemstvi-a-zpristupneni-kulturniho-dedictvi",
+        "outlet": "Ústavní soud ČR",
+        "fetched_at": "2026-05-23T07:10:20.510Z"
+      }
+    ],
+    "score_impact": 0,
+    "rationale": "Severity 3 per rubric §3 – nález ÚS blokující ratifikaci mezinárodní smlouvy je institucionálně významnou událostí s precedentním charakterem (subkomponenta G3: stabilita ústavních norem, vztah exekutivy a ÚS). Směr je ambivalentní (0): ÚS plní svou kontrolní funkci pozitivně (+1), ale zároveň jde o první případ, kdy konkordát tohoto typu neprošel ústavním přezkumem, což vytváří nejistotu v oblasti státo-církevních vztahů. Primární pilíř governance (G3), sekundárně civil (C4 – náboženská neutralita státu). Single source z tiskové zprávy ÚS; event date stanoven podle data vydání TZ 27/2026.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-23T07:10:01.530Z",
+    "expires_at": "2026-06-24T00:00:00.000Z"
   }
 ]

@@ -537,12 +537,24 @@
         "url": "https://denikn.cz/2067829/prazsky-prostor-svetova-1-ceka-na-dotaci-ministerstvo-mluvi-o-extremismu-spolek-o-cenzure/",
         "outlet": "Deník N",
         "fetched_at": "2026-05-20T07:31:26.249Z"
+      },
+      {
+        "title": "Světova 1 po nátlaku kulturní obce nakonec dotaci dostane",
+        "url": "https://denikalarm.cz/2026/05/svetova-1-po-natlaku-kulturni-obce-nakonec-dotaci-dostane/",
+        "outlet": "A2larm",
+        "fetched_at": "2026-05-23T07:10:08.432Z"
+      },
+      {
+        "title": "Ministerstvo kultury zadržuje dotaci pro spolek SVĚTOVA 1. Ten se bude bránit právní cestou",
+        "url": "https://denikalarm.cz/2026/05/ministerstvo-kultury-zadrzuje-dotaci-pro-spolek-svetova-1-ten-se-bude-branit-pravni-cestou/",
+        "outlet": "A2larm",
+        "fetched_at": "2026-05-23T07:10:08.432Z"
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 3 per rubric §3 — selektivní zadržování dotace konkrétnímu spolku s vágním odůvodněním (\"možné vazby na extremismus\" bez upřesnění) vytváří precedent pro administrativní šikanu občanské společnosti (subkomponenta C3 — svoboda sdružování, ochrana NGO před administrativním nátlakem). Případ je single-source a zatím jde o jeden incident bez prokázaného vzorce, proto nepřekračuje severity 3. Pokud by se potvrdilo systematické cílení na podobné subjekty, eskalace na 4 per rubric eskalační pravidlo (≥3 podobné incidenty).\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "rationale": "Severity 3 per rubric §3 — selektivní zadržování dotace konkrétnímu spolku s vágním odůvodněním (\"možné vazby na extremismus\" bez upřesnění) vytváří precedent pro administrativní šikanu občanské společnosti (subkomponenta C3 — svoboda sdružování, ochrana NGO před administrativním nátlakem). Případ je single-source a zatím jde o jeden incident bez prokázaného vzorce, proto nepřekračuje severity 3. Pokud by se potvrdilo systematické cílení na podobné subjekty, eskalace na 4 per rubric eskalační pravidlo (≥3 podobné incidenty).\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]\n\n[merged with 2026-W21-060 — direction/severity conflict, set status=disputed for reviewer]",
     "reviewer": "auto",
-    "status": "active",
+    "status": "disputed",
     "created_at": "2026-05-20T07:31:26.234Z",
     "expires_at": "2026-08-11T00:00:00.000Z"
   },
@@ -693,7 +705,7 @@
     "headline": "Vláda Andreje Babiše přesunula lidskoprávní a protidrogovou agendu z Úřadu vlády pod ministerstva",
     "summary": "Vládní kabinet Andreje Babiše schválil přesunutí lidskoprávní a protidrogové agendy ze svého úřadu pod různá ministerstva. Rozhodnutí přišlo nečekaně i pro vlastní koalici a den poté zástupci kabinetu přijetí kroku obhajovali na interní schůzce. Reorganizace oslabuje koordinační kapacitu Úřadu vlády v oblastech lidských práv a drogové politiky.",
     "pillar": "governance",
-    "severity": 2,
+    "severity": 3,
     "direction": -1,
     "duration": "persistent",
     "sources": [
@@ -708,12 +720,24 @@
         "url": "https://www.irozhlas.cz/zpravy-domov/ptejte-se-pani-tunde-vladni-spicky-zehli-nasledky-utajovanych-presunu-z-uradu_2605210640_jgr",
         "outlet": "iROZHLAS",
         "fetched_at": "2026-05-21T07:35:30.405Z"
+      },
+      {
+        "title": "„Kdybychom to konzultovali, neuděláme to nikdy.“ Bartha vysvětluje utajené přesuny na Úřadu vlády",
+        "url": "https://denikn.cz/2070596/kdybychom-to-konzultovali-neudelame-to-nikdy-bartha-vysvetluje-utajene-presuny-na-uradu-vlady/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-23T07:10:01.547Z"
+      },
+      {
+        "title": "Protidrogová politika je opět v ohrožení. Důvodem je její přesun pod ministerstvo zdravotnictví",
+        "url": "https://denikalarm.cz/2026/05/protidrogova-politika-je-opet-v-ohrozeni-duvodem-je-jeji-presun-pod-ministerstvo-zdravotnictvi/",
+        "outlet": "A2larm",
+        "fetched_at": "2026-05-23T07:10:08.432Z"
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 3 per rubric §3 — přesun klíčových agend (lidskoprávní, protidrogová) z Úřadu vlády pod jednotlivá ministerstva je institucionální reorganizace s precedentním charakterem snižující meziresortní koordinaci; subkomponenta G1 (dělba moci a funkční koordinace exekutivy) a G4 (transparentnost vládnutí). Nečekanost kroku i pro koaliční partnery naznačuje deficit standardního připomínkového řízení (G2). Zdroj pouze HN — single source, ale popis konkrétního vládního usnesení snižuje nejistotu.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]\n\n[merged with 2026-W21-043 — same incident, sources combined]",
+    "rationale": "Severity 3 per rubric §3 — přesun klíčových agend (lidskoprávní, protidrogová) z Úřadu vlády pod jednotlivá ministerstva je institucionální reorganizace s precedentním charakterem snižující meziresortní koordinaci; subkomponenta G1 (dělba moci a funkční koordinace exekutivy) a G4 (transparentnost vládnutí). Nečekanost kroku i pro koaliční partnery naznačuje deficit standardního připomínkového řízení (G2). Zdroj pouze HN — single source, ale popis konkrétního vládního usnesení snižuje nejistotu.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]\n\n[merged with 2026-W21-043 — same incident, sources combined]\n\n[merged with 2026-W21-052 — direction/severity conflict, set status=disputed for reviewer]",
     "reviewer": "auto",
-    "status": "active",
+    "status": "disputed",
     "created_at": "2026-05-20T07:31:26.234Z"
   },
   {
@@ -1040,5 +1064,194 @@
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-21T07:35:29.133Z"
+  },
+  {
+    "id": "2026-W21-051",
+    "date": "2026-05-19",
+    "headline": "Experti z poradních orgánů vlády hromadně rezignují na protest proti přesunu agendy lidských práv",
+    "summary": "Po schválení vládního rozhodnutí přesunout klíčové agendy lidských práv a protidrogové prevence z Úřadu vlády na jiná ministerstva začali odborníci působící v poradních výborech a radách hromadně podávat výpovědi. Hrozí tak rozpad mechanismů zabývajících se domácím násilím nebo rovností žen a mužů.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Babiš narazil na odpor. Experti mu na protest proti rozbití agendy lidských práv posílají výpovědi",
+        "url": "https://denikn.cz/2071690/babis-narazil-na-odpor-experti-mu-na-protest-proti-zmenam-v-oblasti-lidskych-prav-posilaji-rezignace/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-23T07:10:01.547Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — hromadné rezignace expertů z poradních orgánů vlády v reakci na institucionální změnu provedenou bez konzultace s odborníky je konkrétní událost s dopadem na fungování vládní agendy (subkomponenta G2 — kvalita legislativy a konzultační procesy, G4 — transparentnost vládnutí). Přesun agend bez odborného připomínkového řízení a utajení záměru před veřejností ('kdybychom to konzultovali, neuděláme to nikdy') naznačuje systémový problém s G2. Sekundárně se dotýká pilíře civil (C4 — ochrana zranitelných skupin, domácí násilí, rovnost pohlaví). Persistent, protože schválené přesuny jsou strukturální změna, nikoli jednorázový incident. Single source — severity ponechána na 3 s doporučením ověření.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-23T07:10:01.530Z"
+  },
+  {
+    "id": "2026-W21-053",
+    "date": "2026-05-21",
+    "headline": "Babišovo obcházení ministra obrany SPD vyvolalo koaliční roztržku",
+    "summary": "Premiér Babiš obešel ministra obrany Zůnu (SPD) při výběru šéfa armády, čímž veřejně ponížil koaličního partnera. Předseda Sněmovny a SPD Okamura se připravuje na protiúder, ačkoli odvolání ministra zatím nehrozí. Incident naznačuje napětí v koalici ANO–SPD s dopadem na vládní spolupráci.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "V koalici to vře. Babiš ponížil SPD při výběru šéfa armády, Okamura nachystal protiúder",
+        "url": "https://denikn.cz/2070359/v-koalici-to-vre-babis-ponizil-spd-pri-vyberu-sefa-armady-okamura-nachystal-protiuder/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-23T07:10:01.547Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o konkrétní politicky motivovaný zásah premiéra, který obchází standardní kompetence ministra (subkomponenta G1: dělba moci a respekt k rolím členů vlády), ale zatím bez trvalého institucionálního dopadu. Koaliční spor samotný není narušením demokratické normy, avšak premiérovo veřejné přehlížení koaličního ministra v personální věci vytváří precedent pro obcházení G1. Sekundárně se dotýká G4 (transparentnost vládnutí). Single source, žádná eskalace na 3, protože nedochází ke strukturální změně ani kaskádovému efektu.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-23T07:10:01.530Z",
+    "expires_at": "2026-08-13T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W21-054",
+    "date": "2026-05-22",
+    "headline": "Schillerová posunula termín zveřejnění návrhu státního rozpočtu na konec srpna, ačkoli dřív to kritizovala u Stanjury",
+    "summary": "Ministryně financí Alena Schillerová oznámila, že první návrh státního rozpočtu pro rok 2027 zveřejní až koncem srpna, čímž převzala přístup svého předchůdce Stanjury, který sama v opozici kritizovala. Resorty mezitím požadují přes 100 miliard Kč navíc oproti letošku, přičemž Schillerová trvá na udržení deficitu pod třemi procenty HDP.",
+    "pillar": "governance",
+    "severity": 1,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Schillerová zveřejní první návrh rozpočtu až koncem srpna. U Stanjury to kritizovala",
+        "url": "https://ct24.ceskatelevize.cz/clanek/ekonomika/schillerova-zverejni-prvni-navrh-rozpoctu-az-koncem-srpna-u-stanjury-to-kritizovala-373751",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-23T07:10:03.498Z"
+      }
+    ],
+    "score_impact": -0.2,
+    "rationale": "Severity 1 per rubric §1 — jde o drobný procedurální posun (termín zveřejnění návrhu rozpočtu), který sám o sobě nemá přímý dopad na demokratické instituce ani parlamentní kontrolu exekutivy (subkomponenta G2 — kvalita legislativy a transparentnost). Poznámka o politickém obratu (dřívější kritika stejného postupu) je zajímavá pro novinářský kontext, ale institucionální dopad je minimální. Žádný vzorec ani eskalace není dokumentována.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-23T07:10:01.530Z",
+    "expires_at": "2026-08-14T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W21-055",
+    "date": "2026-05-22",
+    "headline": "Babiš naznačil možný prodej státní Explosie, zájem prý má Francie",
+    "summary": "Premiér Babiš po návštěvě výrobce výbušnin Explosia uvedl, že stát zvažuje její prodej. Zájem podle něj projevila Francie i další evropské firmy, výnos by mohl sloužit k financování závazků vůči NATO.",
+    "pillar": "governance",
+    "severity": 1,
+    "direction": 0,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Stát zvažuje prodej výrobce výbušnin Explosia, řekl Babiš",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/stat-zvazuje-prodej-vyrobce-vybusnin-explosia-rekl-babis-373740",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-23T07:10:03.498Z"
+      }
+    ],
+    "score_impact": 0,
+    "rationale": "Severity 1 per rubric §1 — jde o verbální oznámení záměru bez konkrétního rozhodnutí, legislativního aktu ani formálního procesu (subkomponenta G4 — transparentnost vládnutí). Prodej státního majetku je standardní vládní činností, žádná demokratická instituce není ohrožena. Direction 0: ambivalentní hospodářské rozhodnutí bez jasného institucionálního dopadu na demokracii.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-23T07:10:01.530Z",
+    "expires_at": "2026-08-14T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W21-056",
+    "date": "2026-05-22",
+    "headline": "Hromadné výpovědi zaměstnanců Knihovny Václava Havla po konfliktu s ředitelem Sedláčkem",
+    "summary": "Dvanáct ze třinácti zaměstnanců Knihovny Václava Havla podalo výpovědi v důsledku sporu s ředitelem Tomášem Sedláčkem. Mluvčí instituce dostala okamžitou výpověď, přičemž programová činnost knihovny formálně pokračuje.",
+    "pillar": "civil",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Program Knihovny Václava Havla pokračuje, okamžitou výpověď dostala mluvčí",
+        "url": "https://domaci.hn.cz/c1-67880940-program-knihovny-vaclava-havla-pokracuje-okamzitou-vypoved-dostala-mluvci",
+        "outlet": "Hospodářské noviny",
+        "fetched_at": "2026-05-23T07:10:05.821Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — hromadné výpovědi v instituci klíčové pro občanskou společnost a kulturu demokratické paměti (subkomponenta C3 — svoboda sdružování a fungování neziskových institucí) představují vnitřní personální krizi s lokálním dopadem, nikoli však přímý státní zásah ani strukturální změnu. Událost zaslouží zaznamenání, ale nedosahuje na §3, protože neexistují důkazy o politické manipulaci ze strany státu — jde o vnitřní institucionální konflikt. Direction -1: oslabení fungování klíčové občanskoprávní instituce.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-23T07:10:01.530Z",
+    "expires_at": "2026-08-14T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W21-057",
+    "date": "2026-05-22",
+    "headline": "Sjezd sudetských Němců v Brně poprvé v ČR; stovky demonstrantů protestují u výstaviště",
+    "summary": "V Brně začal sjezd sudetských Němců, který se v České republice koná vůbec poprvé. Několik set odpůrců sjezdu shromáždilo před výstavištěm, kde se akce koná. Událost rozdělila českou společnost a přitáhla mezinárodní pozornost včetně příjezdu bavorského premiéra Södera.",
+    "pillar": "civil",
+    "severity": 1,
+    "direction": 0,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Sjezd sudetských Němců dělí Česko, v Brně se protestovalo. Södera čeká ožehavá mise",
+        "url": "https://zpravy.aktualne.cz/domaci/sjezd-sudetskych-nemcu-deli-cesko-v-brne-se-protestuje-sodera-ceka-ozehava-mise/r~aaa29cb6911fd05ed2273dda0e9eeb8f/",
+        "outlet": "Aktuálně.cz",
+        "fetched_at": "2026-05-23T07:10:07.008Z"
+      }
+    ],
+    "score_impact": 0,
+    "rationale": "Severity 1 per rubric §1 — pokojná demonstrace proběhla bez zjevného zásahu státu či narušení shromažďovacího práva; článek nezmiňuje žádné omezení ani ze strany organizátorů sjezdu, ani demonstrantů (subkomponenta C2). Samotná přítomnost protistů a konání sjezdu jsou standardním výkonem občanských svobod, nikoli jejich ohrožením. Direction 0 — článek neuvádí ani pozitivní posilující, ani negativní oslabující institucionální dopad; jde o kontroverzní, leč běžnou občanskou událost. Bez dalšího vývoje (zákaz, zásah policie, politické rozhodnutí o omezení) nepřesahuje úroveň 1.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-23T07:10:01.530Z",
+    "expires_at": "2026-08-14T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W21-058",
+    "date": "2026-05-22",
+    "headline": "České instituce dál nakupují čínské bezpečnostní kamery u kritické infrastruktury a armádních skladů",
+    "summary": "Investigativní reportáž odhaluje, že čínské bezpečnostní kamery jsou instalovány u kritické státní infrastruktury a armádních skladů zbraní. Odborníci na kybernetiku tyto kamery dlouhodobě považují za bezpečnostní riziko, přesto je státní instituce pořizují i v roce 2026.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Česko pod dohledem Pekingu. Čínské kamery dohlíží na kritickou infrastrukturu státu i armádní sklady zbraní",
+        "url": "https://www.investigace.cz/cesko-pod-dohledem-pekingu-cinske-kamery-dohlizi-na-kritickou-infrastrukturu-statu-i-armadni-sklady-zbrani/",
+        "outlet": "Investigace.cz",
+        "fetched_at": "2026-05-23T07:10:07.395Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — jde o reportáž dokumentující soustavné ignorování bezpečnostních doporučení ze strany státních institucí (subkomponenta G4 — transparentnost a odpovědné vládnutí). Záměrné nakupování rizikových zařízení navzdory odborným varováním u citlivých lokalit vytváří systémový bezpečnostní precedent. Událost je persistent, protože nákupy pokračují strukturálně, nikoli jednorázově. Sekundárně se dotýká pilíře civil (C5 — bezpečnost digitálního prostoru a ochrana před sledováním). Single source (investigace.cz), což by mohlo vést k downgradu na severity 2, ale rozsah (armádní sklady, kritická infrastruktura) udržuje hodnocení na 3.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-23T07:10:01.530Z"
+  },
+  {
+    "id": "2026-W21-062",
+    "date": "2026-05-23",
+    "headline": "Česko vyváží pomůcky k mučení do autoritářských zemí, ministerstvo informace tají",
+    "summary": "Česko dlouhodobě vyváží předměty jako pouta, paralyzéry nebo takzvané sérum pravdy do zemí Blízkého východu. Ministerstvo průmyslu přitom tají klíčové informace o těchto vývozech, čímž znemožňuje veřejnou kontrolu.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Česko vyváží pomůcky k mučení do autoritářských zemí",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-kauzy-serum-pravdy-nebo-paralyzery-cesko-vyvazi-mucici-nastroje-305068",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-23T07:10:08.705Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — systematické utajování informací o vývozu citlivého zboží ze strany ministerstva narušuje subkomponentu G4 (transparentnost vládnutí) a zákon 106/1999. Článek popisuje opakované odmítání poskytnout informace veřejného zájmu, což vytváří precedent pro netransparentní vládnutí. Sekundárně se dotýká K2 (veřejné zakázky, státní licence). Jeden zdroj — dle pravidel source-count downgrade zvažován, ale jde o investigativní reportáž se specifickými fakty, ponechávám severity 3 s poznámkou needs_review pro ověření.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-23T07:10:01.530Z"
   }
 ]

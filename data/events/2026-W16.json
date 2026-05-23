@@ -21,5 +21,53 @@
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-12T07:15:39.525Z"
+  },
+  {
+    "id": "2026-W16-002",
+    "date": "2026-04-15",
+    "headline": "ÚS podruhé zrušil rozhodnutí obecných soudů v restituční kauze Colloredo-Mansfeld",
+    "summary": "Ústavní soud podruhé zasáhl do sporu o lesy rodu Colloredo-Mansfeld a vrátil věc obecným soudům k novému projednání. Soudy podle ÚS nesprávně podmínily restituci podáním žádosti dle zákona z roku 1946 a přikládaly rozhodující váhu konfiskaci z roku 1945, čímž popřely smysl a účel restitučního zákona č. 243/1992 Sb.",
+    "pillar": "judicial",
+    "severity": 2,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Spor o lesy vydané rodu Colloredo-Mansfeld se již podruhé vrací na začátek zásahem Ústavního soudu",
+        "url": "https://www.usoud.cz/aktualne/spor-o-lesy-vydane-rodu-colloredo-mansfeld-se-jiz-podruhe-vraci-na-zacatek-zasahem-ustavniho-soudu",
+        "outlet": "Ústavní soud ČR",
+        "fetched_at": "2026-05-23T07:10:20.510Z"
+      }
+    ],
+    "score_impact": 0.5,
+    "rationale": "Severity 2 per rubric §2 — nález ÚS v konkrétní soukromoprávní kauze, který koriguje obecné soudy a potvrzuje funkčnost ústavní kontroly (subkomponenta J1/J2). Jde o druhý zásah ÚS ve stejné věci, což naznačuje přetrvávající potíže obecných soudů s výkladem restitučního práva, ale samo o sobě to není precedent ohledně institucionální nezávislosti nebo demokratického backsliding. Pozitivní direction: ÚS plní svou funkci ochrany práva na soudní ochranu a koriguje formalistický výklad obecných soudů.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-23T07:10:01.530Z",
+    "expires_at": "2026-07-08T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W16-003",
+    "date": "2026-04-14",
+    "headline": "ÚS rozhodl, že soudní rehabilitace se vztahuje i na osoby propuštěné z nezákonné vazby bez odsouzení",
+    "summary": "Ústavní soud nálezem konstatoval, že obecné soudy nepřípustným formalismem upřely stěžovateli právo na soudní rehabilitaci, ačkoli zákon ji připouští i v případech, kdy bylo trestní stíhání zastaveno po propuštění z nezákonné vazby za minulého režimu. ÚS tím rozšířil výkladový rámec rehabilitačního zákona a posílil ochranu obětí komunistického bezpráví.",
+    "pillar": "judicial",
+    "severity": 2,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Soudní rehabilitace je možná i v případě zastavení trestního stíhání po propuštění z nezákonné vazby",
+        "url": "https://www.usoud.cz/aktualne/soudni-rehabilitace-je-mozna-i-v-pripade-zastaveni-trestniho-stihani-po-propusteni-z-nezakonne-vazby",
+        "outlet": "Ústavní soud ČR",
+        "fetched_at": "2026-05-23T07:10:20.510Z"
+      }
+    ],
+    "score_impact": 0.5,
+    "rationale": "Severity 2 per rubric §2 — nález v individuální kauze s omezeným, leč nepominutelným precedentním dopadem pro výklad rehabilitačního zákona (subkomponenta J4 — rovnost před zákonem, ochrana před formalistickým odepřením práv). Nesplňuje threshold pro úroveň 3, protože nejde o systémové ohrožení instituce ani o precedent přesahující úzce vymezenou skupinu případů. Pozitivní direction: ÚS koriguje formalistický přístup obecných soudů a chrání práva na soudní ochranu.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-23T07:10:01.530Z",
+    "expires_at": "2026-07-07T00:00:00.000Z"
   }
 ]
