@@ -17,7 +17,7 @@
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 2 per rubric §2 — protesty samy o sobě jsou občanskou reakcí bez přímého institucionálního dopadu, nicméně dokumentují existenci návrhu zákona ohrožujícího nezávislost ČT/ČRo (subkomponenta M2). Samotný návrh zákona o převodu financování pod státní rozpočet by byl severity 4–5, ale tento článek popisuje pouze protesty, nikoli samotné schválení nebo předložení návrhu. Direction -1, protože protesty jsou reakcí na reálně existující hrozbu pro mediální nezávislost. Sekundárně se dotýká pilíře governance (G4 — transparentnost a způsob přijímání legislativy).",
+    "rationale": "Severity 2 per rubric §2 — protesty samy o sobě jsou občanskou reakcí bez přímého institucionálního dopadu, nicméně dokumentují existenci návrhu zákona ohrožujícího nezávislost ČT/ČRo (subkomponenta M2). Samotný návrh zákona o převodu financování pod státní rozpočet by byl severity 4–5, ale tento článek popisuje pouze protesty, nikoli samotné schválení nebo předložení návrhu. Direction -1, protože protesty jsou reakcí na reálně existující hrozbu pro mediální nezávislost. Sekundárně se dotýká pilíře governance (G4 — transparentnost a způsob přijímání legislativy).\n\n[auditor: flag] Direction -1 pro protesty samotné je problematické — protesty jsou pozitivní jev občanské společnosti, ne oslabení demokracie. Správně by direction reflektoval hrozbu zákona (ten ale není předmětem tohoto eventu). Zvažte direction +1 nebo samostatný event pro zákon.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-18T07:44:30.746Z",
@@ -65,7 +65,7 @@
       }
     ],
     "score_impact": 0.5,
-    "rationale": "Severity 2 per rubric §2 — jde o konkrétní soudní rozhodnutí s omezeným, ale reálným institucionálním dopadem (vymezení hranic svobody projevu dle subkomponenty C1). Směr +1: ÚS potvrdil, že nenávistné projevy nejsou chráněny svobodou slova, čímž posílil ochranu osob před cílenými útoky. Rubric de-eskalace: jedná se o standardní aplikaci práva bez strukturálního posunu, nikoli o rozhodnutí měnící institucionální prostředí (max. severity 2).",
+    "rationale": "Severity 2 per rubric §2 — jde o konkrétní soudní rozhodnutí s omezeným, ale reálným institucionálním dopadem (vymezení hranic svobody projevu dle subkomponenty C1). Směr +1: ÚS potvrdil, že nenávistné projevy nejsou chráněny svobodou slova, čímž posílil ochranu osob před cílenými útoky. Rubric de-eskalace: jedná se o standardní aplikaci práva bez strukturálního posunu, nikoli o rozhodnutí měnící institucionální prostředí (max. severity 2).\n\n[auditor: flag] Duplikát s 2026-W21-004 — identická událost (ÚS Lisková) ze dvou zdrojů. Měly být sloučeny. Jeden z eventů by měl být odstraněn nebo označen jako merged.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-18T07:44:30.746Z",
@@ -89,7 +89,7 @@
       }
     ],
     "score_impact": 0.5,
-    "rationale": "Severity 2 per rubric §2 — jde o uzavřené soudní rozhodnutí v individuálním případě bez precedentního systémového dopadu na svobodu projevu (subkomponenta C1). ÚS potvrdil, že trestní postih za nenávistný projev nepředstavuje nepřípustné omezení svobody slova, což je v souladu se standardní judikaturou. Směr +1: rozhodnutí potvrzuje funkčnost systémové ochrany před zneužíváním svobody projevu k nenávistným projevům. Secondárně pilíř judicial (J1 – ÚS plní roli ochránce práv).",
+    "rationale": "Severity 2 per rubric §2 — jde o uzavřené soudní rozhodnutí v individuálním případě bez precedentního systémového dopadu na svobodu projevu (subkomponenta C1). ÚS potvrdil, že trestní postih za nenávistný projev nepředstavuje nepřípustné omezení svobody slova, což je v souladu se standardní judikaturou. Směr +1: rozhodnutí potvrzuje funkčnost systémové ochrany před zneužíváním svobody projevu k nenávistným projevům. Secondárně pilíř judicial (J1 – ÚS plní roli ochránce práv).\n\n[auditor: flag] Duplikát s 2026-W21-003 — identická událost ze dvou zdrojů. Při sloučení by event měl 2 zdroje a severity 2 zůstává. Jeden event by měl být odstraněn.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-18T07:44:30.746Z",
@@ -161,7 +161,7 @@
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 4 per rubric §4 — premiér, tedy nejvyšší ústavní činitel exekutivy, prokazatelně spojil výkon veřejné moci (státní návštěva) s obchodními zájmy Agrofertu (subkomponenta K1 – politická korupce, střet zájmů ústavního činitele). Rubric §4 uvádí jako příklad 'Premiér nepřizná aktiva nebo zneužívá veřejnou funkci pro soukromý prospěch' a eskalaci +1 při více nezávislých zdrojích (dva redakční týmy: Seznam Zpráv + Blast). Toto je investigace s cross-border potvrzením, tedy 2+ zdroje → udržuje severity 4. Duration persistent, protože jde o strukturální vzorec chování Babiše vůči Agrofertu za jeho premiérství (opakované případy v minulosti). Sekundárně governance (G4 – transparentnost vládnutí; G1 – dělba moci).\n\n[severity capped from 4 to 2 due to source-count rule: 1 unique outlet, 3 required for severity 4]",
+    "rationale": "Severity 4 per rubric §4 — premiér, tedy nejvyšší ústavní činitel exekutivy, prokazatelně spojil výkon veřejné moci (státní návštěva) s obchodními zájmy Agrofertu (subkomponenta K1 – politická korupce, střet zájmů ústavního činitele). Rubric §4 uvádí jako příklad 'Premiér nepřizná aktiva nebo zneužívá veřejnou funkci pro soukromý prospěch' a eskalaci +1 při více nezávislých zdrojích (dva redakční týmy: Seznam Zpráv + Blast). Toto je investigace s cross-border potvrzením, tedy 2+ zdroje → udržuje severity 4. Duration persistent, protože jde o strukturální vzorec chování Babiše vůči Agrofertu za jeho premiérství (opakované případy v minulosti). Sekundárně governance (G4 – transparentnost vládnutí; G1 – dělba moci).\n\n[severity capped from 4 to 2 due to source-count rule: 1 unique outlet, 3 required for severity 4]\n\n[auditor: flag] Rationale argumentuje severity 4 a zmiňuje '2+ zdroje (Seznam Zpráv + Blast)', ale sources uvádí pouze 1 unique outlet. Blast není evidován jako samostatný zdroj v systému — cap na 2 je správný, ale rationale je v rozporu s metadata. Vyžaduje upřesnění zdrojů.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-18T07:44:30.746Z"
@@ -184,7 +184,7 @@
       }
     ],
     "score_impact": 0.5,
-    "rationale": "Severity 2 per rubric §2 — masové veřejné protesty na podporu ČT/ČRo jsou konkrétní datovanou událostí s omezeným přímým institucionálním dopadem, ale dokumentují společenskou reakci na legislativní hrozbu pro subkomponentu M2 (nezávislost ČT a ČRo). Směr +1, protože protesty představují občanský odpor bránící nezávislost médií, nikoli útok na ni. Samotný návrh zákona by si zasloužil klasifikaci severity 3–4 (rubric §3–4), ale z tohoto článku neplyne, že byl přijat — pouze že existuje a vyvolal protesty. Anti-bias check: stejné hodnocení by bylo aplikováno na protesty jakékoli strany spektra bránící nezávislost veřejnoprávních médií.",
+    "rationale": "Severity 2 per rubric §2 — masové veřejné protesty na podporu ČT/ČRo jsou konkrétní datovanou událostí s omezeným přímým institucionálním dopadem, ale dokumentují společenskou reakci na legislativní hrozbu pro subkomponentu M2 (nezávislost ČT a ČRo). Směr +1, protože protesty představují občanský odpor bránící nezávislost médií, nikoli útok na ni. Samotný návrh zákona by si zasloužil klasifikaci severity 3–4 (rubric §3–4), ale z tohoto článku neplyne, že byl přijat — pouze že existuje a vyvolal protesty. Anti-bias check: stejné hodnocení by bylo aplikováno na protesty jakékoli strany spektra bránící nezávislost veřejnoprávních médií.\n\n[auditor: flag] Direction +1 pro protesty na podporu ČT je konzistentní, ale event 2026-W21-001 (stejné protesty, jiný region) má direction -1. Asymetrie mezi identickými událostmi vyžaduje sjednocení direction.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-18T07:44:30.746Z",
@@ -214,7 +214,7 @@
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 4 per rubric §4 — zrušení celé agendy úřadu zmocněnkyně pro lidská práva je přímý a trvalý zásah do institucionální ochrany práv (subkomponenta C4, ochrana menšin a mechanismů ochrany práv). Jednání vlády je formální akt (usnesení vlády), nikoli pouhý záměr, což dle kalibračního pravidla eskalace (+1 za existenci formálního dokumentu) potvrzuje severity 4. Sekundárně se dotýká pilíře governance (G1, oslabení kontrolních mechanismů exekutivy).\n\n[severity capped from 4 to 2 due to source-count rule: 1 unique outlet, 3 required for severity 4]\n\n[merged with 2026-W21-022 — same incident, sources combined]",
+    "rationale": "Severity 4 per rubric §4 — zrušení celé agendy úřadu zmocněnkyně pro lidská práva je přímý a trvalý zásah do institucionální ochrany práv (subkomponenta C4, ochrana menšin a mechanismů ochrany práv). Jednání vlády je formální akt (usnesení vlády), nikoli pouhý záměr, což dle kalibračního pravidla eskalace (+1 za existenci formálního dokumentu) potvrzuje severity 4. Sekundárně se dotýká pilíře governance (G1, oslabení kontrolních mechanismů exekutivy).\n\n[severity capped from 4 to 2 due to source-count rule: 1 unique outlet, 3 required for severity 4]\n\n[merged with 2026-W21-022 — same incident, sources combined]\n\n[auditor: flag] Severity cap z 4 na 2 je mechanicky správný, ale rationale popisuje závažnost 4 (formální vládní usnesení, trvalé zrušení institucionální kapacity). S 2 zdroji (Deník N 2×) jde stále o 1 unique outlet — cap je správný. Reviewer by měl zvážit získání druhého zdroje pro obnovení severity 4.",
     "reviewer": "auto",
     "status": "active",
     "created_at": "2026-05-19T08:06:25.753Z"
@@ -320,7 +320,7 @@
       }
     ],
     "score_impact": 0,
-    "rationale": "Severity 2 per rubric §2 — svědecká výpověď v probíhajícím trestním řízení je konkrétní datovatelná procesní událost, avšak bez přímého dopadu na institucionální fungování. Primárně judicial (J4 — rovnost před zákonem, kauza politicky exponované osoby), sekundárně corruption (K1). Směr 0: jde o standardní průběh soudního řízení, jehož výsledek není znám — nelze hodnotit jako oslabení ani posílení.\n\n[merged with 2026-W21-041 — direction/severity conflict, set status=disputed for reviewer]",
+    "rationale": "Severity 2 per rubric §2 — svědecká výpověď v probíhajícím trestním řízení je konkrétní datovatelná procesní událost, avšak bez přímého dopadu na institucionální fungování. Primárně judicial (J4 — rovnost před zákonem, kauza politicky exponované osoby), sekundárně corruption (K1). Směr 0: jde o standardní průběh soudního řízení, jehož výsledek není znám — nelze hodnotit jako oslabení ani posílení.\n\n[merged with 2026-W21-041 — direction/severity conflict, set status=disputed for reviewer]\n\n[auditor: flag] Pilíř judicial pro svědeckou výpověď v korupční kauze je slabě zdůvodněný — primární kořenová příčina je corruption (K1), nikoli judicial. Per pillars.md pravidlo: primární pilíř = nejbližší kořenová příčina. Zvažte přeřazení do corruption.",
     "reviewer": "auto",
     "status": "disputed",
     "created_at": "2026-05-19T08:06:25.753Z",
@@ -438,7 +438,7 @@
       }
     ],
     "score_impact": 0,
-    "rationale": "Severity 1 per rubric §1 — personální rozhodnutí v rámci standardní pravomoci vlády (subkomponenta G1), bez narušení ústavního procesu. Skutečnost, že jeden ministr hlasoval proti, je projevem normálního fungování kolegiálního orgánu, nikoli signálem dysfunkce. Žádný precedent ani institucionální dopad mimo běžnou správu. Direction 0 — ambivalentní, jde o rutinní jmenování bez jasně demokratického dopadu.\n\n[merged with 2026-W21-034 — direction/severity conflict, set status=disputed for reviewer]",
+    "rationale": "Severity 1 per rubric §1 — personální rozhodnutí v rámci standardní pravomoci vlády (subkomponenta G1), bez narušení ústavního procesu. Skutečnost, že jeden ministr hlasoval proti, je projevem normálního fungování kolegiálního orgánu, nikoli signálem dysfunkce. Žádný precedent ani institucionální dopad mimo běžnou správu. Direction 0 — ambivalentní, jde o rutinní jmenování bez jasně demokratického dopadu.\n\n[merged with 2026-W21-034 — direction/severity conflict, set status=disputed for reviewer]\n\n[auditor: flag] Rationale popisuje severity 1, ale assigned severity je 3 a score_impact je 0 (direction 0). Severity v metadata neodpovídá rationale — zjevný mismatch. Status disputed je správný, ale severity 3 s direction 0 dává score_impact 0, což je mechanicky konzistentní, ale severity 3 je nezdůvodněná pro rutinní jmenování.",
     "reviewer": "auto",
     "status": "disputed",
     "created_at": "2026-05-19T08:06:25.753Z",
@@ -735,7 +735,7 @@
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 3 per rubric §3 — přesun klíčových agend (lidskoprávní, protidrogová) z Úřadu vlády pod jednotlivá ministerstva je institucionální reorganizace s precedentním charakterem snižující meziresortní koordinaci; subkomponenta G1 (dělba moci a funkční koordinace exekutivy) a G4 (transparentnost vládnutí). Nečekanost kroku i pro koaliční partnery naznačuje deficit standardního připomínkového řízení (G2). Zdroj pouze HN — single source, ale popis konkrétního vládního usnesení snižuje nejistotu.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]\n\n[merged with 2026-W21-043 — same incident, sources combined]\n\n[merged with 2026-W21-052 — direction/severity conflict, set status=disputed for reviewer]",
+    "rationale": "Severity 3 per rubric §3 — přesun klíčových agend (lidskoprávní, protidrogová) z Úřadu vlády pod jednotlivá ministerstva je institucionální reorganizace s precedentním charakterem snižující meziresortní koordinaci; subkomponenta G1 (dělba moci a funkční koordinace exekutivy) a G4 (transparentnost vládnutí). Nečekanost kroku i pro koaliční partnery naznačuje deficit standardního připomínkového řízení (G2). Zdroj pouze HN — single source, ale popis konkrétního vládního usnesení snižuje nejistotu.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]\n\n[merged with 2026-W21-043 — same incident, sources combined]\n\n[merged with 2026-W21-052 — direction/severity conflict, set status=disputed for reviewer]\n\n[auditor: flag] Metadata uvádí 4 zdroje (HN, iROZHLAS, Deník N, A2larm), ale severity je cappována na 2 s poznámkou '1 unique outlet'. Rozpor — pokud jsou 4 různé zdroje, cap by neměl být aplikován a severity 3 by měla platit. Vyžaduje ověření, zda jde skutečně o 4 různé outlety.",
     "reviewer": "auto",
     "status": "disputed",
     "created_at": "2026-05-20T07:31:26.234Z"
@@ -972,7 +972,7 @@
       }
     ],
     "score_impact": 0,
-    "rationale": "Severity 1 per rubric §1 — zdržení se v hlasování VS OSN je výkonem suverénní zahraniční politiky, nikoli porušením demokratické normy ani ústavního procesu. Dotýká se vzdáleně subkomponenty G1 (fungování exekutivy v mezinárodním kontextu), avšak bez přímého institucionálního dopadu na vnitřní demokratické mechanismy ČR. Ojedinělé stanovisko v rámci EU je politicky pozoruhodné, ale nesplňuje kritéria vyšší severity dle rubric §2+. Direction 0, protože mezinárodní hlasování o nezávazné rezoluci nemá jednoznačně demokraticky pozitivní ani negativní institucionální dopad pro ČR.\n\n[merged with 2026-W21-045 — direction/severity conflict, set status=disputed for reviewer]\n\n[merged with 2026-W21-051 — direction/severity conflict, set status=disputed for reviewer]\n\n[merged with 2026-W21-069 — direction/severity conflict, set status=disputed for reviewer]",
+    "rationale": "Severity 1 per rubric §1 — zdržení se v hlasování VS OSN je výkonem suverénní zahraniční politiky, nikoli porušením demokratické normy ani ústavního procesu. Dotýká se vzdáleně subkomponenty G1 (fungování exekutivy v mezinárodním kontextu), avšak bez přímého institucionálního dopadu na vnitřní demokratické mechanismy ČR. Ojedinělé stanovisko v rámci EU je politicky pozoruhodné, ale nesplňuje kritéria vyšší severity dle rubric §2+. Direction 0, protože mezinárodní hlasování o nezávazné rezoluci nemá jednoznačně demokraticky pozitivní ani negativní institucionální dopad pro ČR.\n\n[merged with 2026-W21-045 — direction/severity conflict, set status=disputed for reviewer]\n\n[merged with 2026-W21-051 — direction/severity conflict, set status=disputed for reviewer]\n\n[merged with 2026-W21-069 — direction/severity conflict, set status=disputed for reviewer]\n\n[auditor: flag] Rationale popisuje severity 1, ale assigned severity je 2 a score_impact je 0 (direction 0). Severity v metadata neodpovídá rationale — stejný mismatch jako u 2026-W21-018. Severity by měla být 1, nebo rationale by mělo severity 2 zdůvodnit.",
     "reviewer": "auto",
     "status": "disputed",
     "created_at": "2026-05-21T07:35:29.133Z",
@@ -1408,5 +1408,195 @@
     "status": "active",
     "created_at": "2026-05-24T07:20:41.330Z",
     "expires_at": "2026-08-15T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W21-071",
+    "date": "2026-05-24",
+    "headline": "Protesty v Praze požadují stažení zákona o médiích a demisi ministra Klempíře",
+    "summary": "V Praze proběhla demonstrace organizovaná spolkem Milion chvilek, která požadovala stažení návrhu zákona o financování veřejnoprávních médií a rezignaci ministra kultury Oty Klempíře. Spolek avizuje další protesty.",
+    "pillar": "media",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "„Oto, zabal to.“ Prahou prošel další protest za svobodná média, žádal Klempířovu demisi",
+        "url": "https://denikn.cz/2073532/oto-zabal-to-prahou-prosel-dalsi-protest-za-svobodna-media-zadal-klempirovu-demisi/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-25T07:54:44.274Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — demonstrace samotná je projevem občanské kontroly a nezasahuje přímo do instituce; nicméně existence návrhu zákona, který ji vyvolává, indikuje přetrvávající tlak na subkomponentu M2 (nezávislost ČT/ČRo). Samotný protest je one-off, ale kontext (plánované další protesty, projednávaný zákon) ospravedlňuje duration: persistent. Anti-bias check: stejné hodnocení by platilo pro protesty vůči jakémukoliv jinému ministrovi kultury. Zákon sám o sobě není v tomto článku popsán dostatečně detailně pro vyšší severity — sekundárně se dotýká pilíře civil (subkomponenta C2, svoboda shromažďování jako pozitivní jev).",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-25T07:54:44.259Z"
+  },
+  {
+    "id": "2026-W21-072",
+    "date": "2026-05-24",
+    "headline": "Protesty u sudetoněmeckého sjezdu v Brně; Zeman a Rajchl útočí na prezidenta Pavla",
+    "summary": "U příležitosti sudetoněmeckého sjezdu v Brně se konaly protesty, na nichž vystoupili exprezident Zeman, šéf PRO Rajchl a europoslankyně Konečná. Řečníci útočili na prezidenta Pavla a předsedu Senátu Vystrčila a volali po obraně Benešových dekretů.",
+    "pillar": "civil",
+    "severity": 1,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Zeman, Rajchl i Konečná proti sudetoněmeckému sjezdu. Brnem zněla ostrá slova i výzvy proti politikům",
+        "url": "https://denikn.cz/2073390/zeman-rajchl-i-konecna-proti-sudetonemeckemu-sjezdu-brnem-znela-ostra-slova-i-vyzvy-proti-politikum/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-25T07:54:44.274Z"
+      }
+    ],
+    "score_impact": -0.2,
+    "rationale": "Severity 1 per rubric §1 — jde o politické projevy na veřejné demonstraci bez přímého institucionálního dopadu; verbální útoky na prezidenta a předsedu Senátu v tomto kontextu jsou standardní politickou rétorikou bez eskalace do konkrétních kroků. Subkomponenta C2 (svoboda shromažďování) — právo na protest je zachováno, obsah projevů nepředstavuje ohrožení instituce. Anti-bias check: stejné hodnocení by platilo pro protesty jakéhokoliv jiného politického spektra.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-25T07:54:44.259Z",
+    "expires_at": "2026-08-16T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W21-073",
+    "date": "2026-05-24",
+    "headline": "Tisíce lidí v Praze protestovaly proti zákonu ohrožujícímu nezávislost ČT a ČRo",
+    "summary": "Na Staroměstském náměstí se sešly tisíce demonstrantů na podporu České televize a Českého rozhlasu. Protestovalo se proti navrhovanému zákonu převádějícímu financování veřejnoprávních médií ze systému poplatků na státní rozpočet, což by ohrozilo jejich finanční nezávislost. Demonstranti rovněž požadovali rezignaci ministra kultury Klempíře.",
+    "pillar": "media",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "V centru Prahy protestovaly tisíce lidí na podporu ČT a ČRo",
+        "url": "https://ct24.ceskatelevize.cz/clanek/media/v-centru-prahy-protestuji-tisice-lide-na-podporu-ct-a-cro-373809",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-25T07:54:45.760Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — masový protest reaguje na zákon, který mění financování ČT a ČRo převodem na státní rozpočet, což přímo ohrožuje subkomponentu M2 (nezávislost ČT a ČRo). Zákon je zatím ve fázi návrhu/projednávání, nikoli schválen a účinný — proto ne severity 5 per rubric §5. Protest sám o sobě je legitimní výraz občanské společnosti (direction: -1 reflektuje ohrožení instituce zmiňovaným zákonem, nikoli samotný protest). Duration persistent, protože legislativní hrozba trvá. Sekundárně se dotýká pilíře civil (C2 — svoboda shromažďování jako indikátor stavu občanské společnosti), ale primární příčina je mediální nezávislost.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-25T07:54:44.259Z"
+  },
+  {
+    "id": "2026-W21-074",
+    "date": "2026-05-24",
+    "headline": "Ministr obrany Zůna nehlasoval pro kandidáta, s nímž má spolupracovat — opozice žádá jeho rezignaci",
+    "summary": "Ministr obrany Jaromír Zůna hlasoval proti nominaci Miroslava Hlaváče na funkci náčelníka generálního štábu, přestože s ním bude muset jako ministr úzce spolupracovat. Opozice i někteří koaliční politici to označují za politicky neúnosnou situaci a vyzývají k jeho rezignaci. SPD tvrdí, že Zůna hlasoval proti proceduře výběru, nikoli proti osobě kandidáta.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Zůna by měl rezignovat, tvrdí Vondra. Fiala budoucí spolupráci s Hlaváčem hájí",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/zuna-by-mel-rezignovat-tvrdi-vondra-fiala-budouci-spolupraci-s-hlavacem-haji-373801",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-25T07:54:45.760Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o politicky kontroverzní personální situaci v exekutivě (ministr v otevřeném konfliktu s rozhodnutím vlády ohledně klíčového vojenského jmenování), která zatím nemá systémový institucionální dopad. Subkomponenta G1 (dělba moci a fungování vlády) je dotčena, avšak incident je prozatím jednorázový a bez precedentní hodnoty pro ústavní normy. Pokud by ministr setrvával v roli a konflikt eskaloval, dostáváme se k severity 3. Anti-bias check: stejnou závažnost bych přiřadil ministrovi jakékoli politické orientace v analogické situaci.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-25T07:54:44.259Z",
+    "expires_at": "2026-08-16T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W21-075",
+    "date": "2026-05-24",
+    "headline": "Tisíce lidí demonstrovaly v Praze proti zákonu o veřejnoprávních médiích",
+    "summary": "Několik tisíc demonstrantů prošlo centrem Prahy na pochodu organizovaném spolkem Milion chvilek pro demokracii. Protestující požadovali rezignaci ministra kultury Oty Klempíře a odmítnutí návrhu zákona o veřejnoprávních médiích. Akce proběhla pokojně.",
+    "pillar": "civil",
+    "severity": 2,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Obrazem: „Make Klempíř zpěvák again.“ Demonstranti žádali ministrův odchod",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-politika-obrazem-make-klempir-zpevak-again-demonstranti-zadali-ministruv-odchod-306913",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-25T07:54:50.913Z"
+      }
+    ],
+    "score_impact": 0.5,
+    "rationale": "Severity 2 per rubric §2 — pokojná demonstrace několika tisíc lidí je legitimním výkonem práva na shromažďování (subkomponenta C2) a svědčí o fungující občanské společnosti. Směr +1, protože aktivní občanská mobilizace posiluje demokratické mechanismy kontroly moci. Primárně jde o výkon občanských svobod; sekundárně reaguje na mediální pilíř (M2 — návrh zákona o ČT/ČRo). Žádné náznaky nepřiměřeného zásahu policie ani omezení shromáždění.\n\n[auditor: flag] Duplikát s 2026-W21-073 a 2026-W21-071 — všechny tři popisují stejnou nebo velmi podobnou pražskou demonstraci 24. 5. Měly být sloučeny do jednoho eventu se třemi zdroji, což by umožnilo severity 3 bez capu.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-25T07:54:44.259Z",
+    "expires_at": "2026-08-16T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W21-076",
+    "date": "2026-05-22",
+    "headline": "Sudetoněmecký kongres začal v Brně, parlament přijal kritické usnesení",
+    "summary": "Sudetoněmecký kongres se poprvé koná v České republice, v Brně na pozvání festivalu Meeting Brno. Vládní strany v parlamentu přijaly usnesení vyjadřující nesouhlas s konáním akce. Na místě proběhly jak dialogy, tak protesty.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Reconciliation or Provocation? First Day of Sudeten Congress Sees Both Dialogue and Protest",
+        "url": "https://brnodaily.com/2026/05/22/brno/reconciliation-or-provocation-first-day-of-sudeten-congress-sees-both-dialogue-and-protest/",
+        "outlet": "Brno Daily",
+        "fetched_at": "2026-05-25T07:55:06.008Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — parlamentní usnesení kritizující soukromou kulturní akci je kontroverzním rozhodnutím s omezeným institucionálním dopadem (subkomponenta G1: vliv parlamentu na svobodné jednání občanské společnosti). Usnesení samo o sobě nemá právní závaznost, jde o politický signál. Sekundárně se dotýká pilíře civil (C3 — svoboda sdružování), ale primárním aktérem je parlament. Přijatí a účinné usnesení, nikoli pouhý záměr, ospravedlňuje záznam, avšak dopad je lokální a jednorázový.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-25T07:54:44.259Z",
+    "expires_at": "2026-08-14T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W21-077",
+    "date": "2026-05-21",
+    "headline": "Policie nasadila silné jednotky k ochraně sudetoněmeckého kongresu v Brně",
+    "summary": "Jihomoravská policie nasadila desítky policistů včetně pořádkových jednotek k ochraně sudetoněmeckého kongresu. Policie zároveň vyšetřuje hrozby vůči organizátorům a identifikovala dva podezřelé.",
+    "pillar": "civil",
+    "severity": 1,
+    "direction": 0,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Strong Police Presence To Accompany Sudeten German Congress At Brno Exhibition Centre",
+        "url": "https://brnodaily.com/2026/05/21/brno/strong-police-presence-to-accompany-sudeten-german-congress-at-brno-exhibition-centre/",
+        "outlet": "Brno Daily",
+        "fetched_at": "2026-05-25T07:55:06.008Z"
+      }
+    ],
+    "score_impact": 0,
+    "rationale": "Severity 1 per rubric §1 — nasazení policie je standardní bezpečnostní opatření bez náznaku překročení pravomocí nebo omezení práva na shromáždění (subkomponenta C2). Vyšetřování hrozeb je naopak ochrannou funkcí státu. Žádný dopad na institucionální fungování; směr je neutrální (stát plní svou ochrannou roli). Záznam má spíše kontextuální hodnotu k jiným událostem téhož týdne.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-25T07:54:44.259Z",
+    "expires_at": "2026-08-13T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W21-078",
+    "date": "2026-05-18",
+    "headline": "Prezident Pavel převzal záštitu nad festivalem Meeting Brno hostícím sudetoněmecký kongres",
+    "summary": "Prezident Petr Pavel udělil záštitu festivalu Meeting Brno, jehož organizátoři pozvali Sudetoněmecké krajanské sdružení do Brna. Jde o třetí záštitu prezidenta nad tímto festivalem od jeho nástupu do úřadu v roce 2023.",
+    "pillar": "governance",
+    "severity": 1,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "President Pavel Becomes Patron of Controversial Meeting Brno Festival",
+        "url": "https://brnodaily.com/2026/05/19/brno/president-pavel-becomes-patron-of-controversial-meeting-brno-festival/",
+        "outlet": "Brno Daily",
+        "fetched_at": "2026-05-25T07:55:06.008Z"
+      }
+    ],
+    "score_impact": 0.2,
+    "rationale": "Severity 1 per rubric §1 — prezidentská záštita je symbolický institucionální akt bez přímého dopadu na fungování demokratických institucí (subkomponenta G3: respekt k ústavním normám a roli prezidenta). Záštita má pozitivní směr v kontextu podpory česko-německého dialogu a občanské společnosti (sekundárně C3). Dopad je omezený a jednorázový; celostátní institucionální dosah je minimální.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-25T07:54:44.259Z",
+    "expires_at": "2026-08-10T00:00:00.000Z"
   }
 ]

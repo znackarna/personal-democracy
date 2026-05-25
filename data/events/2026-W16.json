@@ -69,5 +69,29 @@
     "status": "active",
     "created_at": "2026-05-23T07:10:01.530Z",
     "expires_at": "2026-07-07T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W16-004",
+    "date": "2026-04-07",
+    "headline": "DPP podepsal smlouvu na metro D za 30 miliard: TI ČR tendr označila za neférový",
+    "summary": "Dopravní podnik Prahy uzavřel smlouvu na stavbu dalšího úseku metra D za téměř 30 miliard korun bez DPH. Transparency International ČR upozornila, že zadávací řízení bylo neférové — předseda ÚOHS ve druhém stupni přesto rozhodl ve prospěch pokračování zakázky. Případ nastoluje otázky ohledně transparentnosti a integrity zadávacích procesů u velkých veřejných zakázek.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "DPP podepsal smlouvu na další úsek metra D za 29,99 miliardy korun. Tendr byl neférový",
+        "url": "https://www.transparency.cz/dpp-podepsal-smlouvu-na-dalsi-usek-metra-d-za-2999-miliardy-korun-tendr-byl-neferovy/",
+        "outlet": "Transparency International ČR",
+        "fetched_at": "2026-05-25T07:55:03.359Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — zakázka v hodnotě téměř 30 mld. Kč s procesními pochybnostmi označenými nezávislou protikorupční organizací (TI ČR) a potvrzeným druhoinstančním rozhodnutím ÚOHS tvoří precedentní případ pro subkomponentu K2 (transparentnost veřejných zakázek). Samotný podpis smlouvy přes procesní námitky je konkrétní datovaná událost. Závažnost nedosahuje 4, protože nebylo prokázáno přímé propojení s politickými aktéry — spíše jde o systémové selhání zadávacího procesu. Sekundárně relevantní pro G4 (transparentnost vládnutí na úrovni města). Zdroj je jeden (TI ČR), což indikuje potřebu ověření, ale vzhledem k tomu, že organizace přímo cituje rozhodnutí ÚOHS, je základ fakticky podložen.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-25T07:54:44.259Z",
+    "expires_at": "2026-06-30T00:00:00.000Z"
   }
 ]

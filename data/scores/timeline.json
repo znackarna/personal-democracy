@@ -868,5 +868,20 @@
     },
     "active_events_count": 295,
     "structural_baseline": "2026-Q3"
+  },
+  {
+    "week": "2026-W21",
+    "computed_at": "2026-05-25T08:03:17.412Z",
+    "overall_score": 66.8,
+    "pillars": {
+      "electoral": 89.7,
+      "governance": 48.6,
+      "judicial": 80.6,
+      "media": 78.5,
+      "civil": 88.9,
+      "corruption": 16
+    },
+    "active_events_count": 349,
+    "structural_baseline": "2026-Q3"
   }
 ]

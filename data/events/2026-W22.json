@@ -1,0 +1,179 @@
+[
+  {
+    "id": "2026-W22-001",
+    "date": "2026-05-25",
+    "headline": "U teplického soudu pokračuje řízení o vině a trestu v korupční kauze Hrabáč — na řadě je Tačner",
+    "summary": "Okresní soud v Teplicích pokračuje v projednávání korupční kauzy bývalého chomutovského primátora Marka Hrabáče. V pondělí se uskuteční jednání o dohodě o vině a trestu s bývalým ředitelem krajských silničářů Liborem Tačnerem; celkem čelí trestnímu stíhání 20 osob a osm firem za přijetí úplatků či podplácení.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "U teplického soudu pokračuje kauza Marka Hrabáče. Na řadě je bývalý šéf krajských silničářů Tačner",
+        "url": "https://www.irozhlas.cz/zpravy-domov/u-teplickeho-soudu-pokracuje-kauza-marka-hrabace-na-rade-je-byvaly-sef-krajskych_2605250903_ntu",
+        "outlet": "iROZHLAS",
+        "fetched_at": "2026-05-25T07:54:45.421Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o konkrétní soudní jednání v probíhající korupční kauze s lokálním/regionálním dopadem (subkomponenta K1 — politická korupce na úrovni samosprávy, K2 — veřejné zakázky). Kauza má 20 fyzických obviněných a 8 firem, což naznačuje rozsah, ale událost sama o sobě je procesním krokem v již existujícím řízení bez nového institucionálního průlomu. Direction -1, neboť případ dokumentuje existující korupci ve veřejné správě; samotný průběh soudního procesu je neutrální, ale odráží negativní stav. Duration persistent — kauza stále probíhá.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-25T07:54:44.259Z"
+  },
+  {
+    "id": "2026-W22-002",
+    "date": "2026-05-25",
+    "headline": "NKÚ: Nemocnice neefektivně využily covidové peníze na posílení odolnosti zdravotnictví",
+    "summary": "Nejvyšší kontrolní úřad zjistil, že prostředky určené na posílení odolnosti klíčových nemocnic byly z části vynaloženy neúčelně — příjemci pořizovali přístroje, které nepotřebovali nebo neuměli používat. Peníze tak přispěly k deklarovanému cíli jen omezeně.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Pořídily přístroje, které neuměly používat. Peníze po covidu využily nemocnice neefektivně, píší kontroloři",
+        "url": "https://www.irozhlas.cz/zpravy-domov/poridily-pristroje-ktere-neumely-pouzivat-penize-po-covidu-vyuzily-nemocnice_2605250837_mst",
+        "outlet": "iROZHLAS",
+        "fetched_at": "2026-05-25T07:54:45.421Z"
+      },
+      {
+        "title": "NKÚ: Peníze na covidové zotavení nemocnice využily z části neúčelně",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/nku-penize-na-covidove-zotaveni-nemocnice-vyuzily-z-casti-neucelne-373823",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-25T07:54:45.760Z"
+      },
+      {
+        "title": "Peníze na covidové zotavení nemocnice využily zčásti neúčelně, zjistila kontrola",
+        "url": "https://zpravy.aktualne.cz/ekonomika/penize-na-covidove-zotaveni-nemocnice-vyuzily-z-casti-neucelne-zjistila-kontrola/r~aaa294251fea73d209451a6c70623145/",
+        "outlet": "Aktuálně.cz",
+        "fetched_at": "2026-05-25T07:54:49.359Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — kontrolní nález NKÚ o neefektivním a neúčelném čerpání veřejných prostředků (subkomponenta K2 — transparentnost a efektivita veřejných výdajů). Nejde o prokázanou záměrnou korupci, spíše o systémové selhání při administraci dotací, proto severity 2 (lokální dopad, kontrolní nález bez politické eskalace). Primární pilíř corruption (K2), sekundárně governance (G4 — transparentnost vládnutí a výkaznost). Direction -1. Duration one_off — nález NKÚ je konkrétní uzavřená kontrolní akce.\n\n[merged with 2026-W22-003 — same incident, sources combined]\n\n[merged with 2026-W22-006 — same incident, sources combined]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-25T07:54:44.259Z",
+    "expires_at": "2026-08-17T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W22-004",
+    "date": "2026-05-25",
+    "headline": "Koaliční rada projednala návrh zákona o médiích veřejné služby",
+    "summary": "Koaliční rada se zabývala návrhem zákona o médiích veřejné služby, k němuž přišlo přes tři sta připomínek od ČT, ČRo i dalších institucí. Po koaliční dohodě má předlohu projednat vláda a má vzniknout pracovní skupina za účasti generálních ředitelů veřejnoprávních médií.",
+    "pillar": "media",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Koaliční rada projedná návrh zákona o veřejnoprávních médiích",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/koalicni-rada-projedna-navrh-zakona-o-verejnopravnich-mediich-373822",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-25T07:54:45.760Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — návrh zákona o médiích veřejné služby je v rané fázi projednávání (předložen, dosud neschválen), ale jeho projednávání koaliční radou představuje relevantní procesní krok s potenciálně zásadním dopadem na subkomponentu M2 (nezávislost ČT a ČRo). Rubric §3 explicitně zmiňuje: 'Zákon o ČT/ČRo s návrhy, které mění politickou kontrolu nad volbou rad, ale je v rané fázi (předložen, neschválen).' Počet připomínek (300+) od samotných institucí signalizuje, že návrh může zasáhnout do nezávislosti veřejnoprávních médií. Duration: persistent, protože legislativní proces bude pokračovat. Bez znalosti konkrétního obsahu návrhu nelze eskalovat výše.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-25T07:54:44.259Z"
+  },
+  {
+    "id": "2026-W22-005",
+    "date": "2026-05-25",
+    "headline": "Senát pravděpodobně zamítne zákon rozvolňující pravidla rozpočtové odpovědnosti",
+    "summary": "Předsedové nejsilnějších senátorských klubů (ODS, STAN, KDU-ČSL) avizují, že vládní zákon uvolňující pravidla fiskální odpovědnosti v Senátu neprojde. Ministryně financí Schillerová zákon obhajuje s odkazem na nereálné požadavky stávajících pravidel na výši schodku.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Vláda v Senátu narazí se zákonem rozvolňujícím pravidla rozpočtové odpovědnosti, tvrdí šéfové některých klubů",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/vlada-v-senatu-narazi-se-zakonem-rozvolnujicim-pravidla-rozpoctove-odpovednosti-tvrdi-sefove-373813",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-25T07:54:45.760Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o konkrétní legislativní návrh s dopadem na G2 (kvalita legislativního procesu) a G3 (stabilita ústavních/fiskálních norem). Návrh rozvolňuje rozpočtová pravidla a naráží na odpor Senátu, což je standardní ústavní protiváha, nikoli krize. Событost sama o sobě ještě nemá výsledek (zákon nebyl přijat ani zamítnut) — jde o avizovaný politický střet, nikoli strukturální posun. Anti-bias check: stejnou závažnost bych přiřadil bez ohledu na to, která strana zákon předkládá.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-25T07:54:44.259Z",
+    "expires_at": "2026-08-17T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W22-007",
+    "date": "2026-05-25",
+    "headline": "NKÚ: Nemocnice neefektivně naložily s 19 miliardami Kč z EU fondů",
+    "summary": "Nejvyšší kontrolní úřad zjistil, že nemocnice nakupovaly z evropských peněz poskytnutých přes Ministerstvo zdravotnictví a Ministerstvo pro místní rozvoj nepotřebné přístroje. Celková kontrolovaná částka činí téměř 19 miliard korun. Zpráva poukazuje na systémové selhání při dohledu nad efektivním využíváním veřejných prostředků.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Nemocnice kupovaly z evropských peněz nepotřebné přístroje, ukázala kontrola",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-nemocnice-kupovaly-z-evropskych-penez-nepotrebne-pristroje-ukazala-kontrola-306924",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-25T07:54:50.913Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — kontrola NKÚ odhaluje systémové selhání při nakládání s veřejnými (evropskými) prostředky v řádu miliard Kč, což odpovídá subkomponentě K2 (transparentnost veřejných zakázek a nakládání s veřejnými zdroji). NKÚ jako protikorupční instituce (K4) plní svoji roli, avšak nález ukazuje na opakující se vzorec neefektivního zadávání zakázek. Sekundárně se dotýká pilíře governance (G4 — transparentnost vládnutí). Severity ponechána na 3, nikoli 4, protože se jedná o neefektivitu bez prokázaného úmyslného zneužití.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-25T07:54:44.259Z",
+    "expires_at": "2026-08-17T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W22-008",
+    "date": "2026-05-25",
+    "headline": "Ministerstvo školství navrhuje radikální reformu správy vysokých škol, akademici se obávají oslabení samosprávy",
+    "summary": "Ministerstvo školství připravuje novelu zákona o vysokých školách, která by na čele každé univerzity zřídila nový orgán — univerzitní radu — a oslabila akademické senáty, přičemž fakultní senáty by mohly být zcela zrušeny. Část akademické obce varuje před rizikem vnějších zásahů do autonomie univerzit. Návrh je zatím ve fázi přípravy.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Začíná revoluce vysokého školství. Ministerstvo chce univerzity kompletně překopat",
+        "url": "https://www.seznamzpravy.cz/clanek/kampus-vysoke-skolstvi-zacina-revoluce-vysokeho-skolstvi-ministerstvo-chce-univerzity-kompletne-prekopat-306823",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-25T07:54:50.913Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o kontroverzní legislativní záměr ve fázi přípravy, který zatím nemá podobu schváleného návrhu (eskalace na §3–4 by nastala při formálním předložení nebo schválení). Subkomponenta G1 (dělba moci a autonomie institucí) a G2 (kvalita legislativního procesu). Oslabení akademických senátů může ohrozit autonomii veřejných vysokých škol, nicméně bez schváleného znění nelze posuzovat konkrétní dopad. Anti-bias check: stejnou závažnost bych přiřadil bez ohledu na politickou příslušnost ministerstva.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-25T07:54:44.259Z",
+    "expires_at": "2026-08-17T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W22-009",
+    "date": "2026-05-25",
+    "headline": "Mediální novela rušící poplatky ČT a ČRo čelí ostré kritice úřadů, ministr ji bude obhajovat před premiérem",
+    "summary": "Návrh mediální novely ministra kultury Oty Klempíře, která by zrušila koncesionářské poplatky České televizi a Českému rozhlasu, získal v připomínkovém řízení silně negativní hodnocení. Premiér Andrej Babiš připustil, že návrh není v dobré kondici, a ministr ho musí v pondělí obhajovat před koaličními partnery. Novela je stále ve fázi vládního projednávání.",
+    "pillar": "media",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Úřady Klempířův návrh strhaly. Ministr se teď bude hájit před Babišem",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-politika-klempire-ceka-horka-chvile-pred-babisem-obhajuje-tvrde-kritizovanou-novelu-306827",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-25T07:54:50.913Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — návrh zákona, který by zrušil financování ČT a ČRo z koncesionářských poplatků, ohrožuje finanční nezávislost veřejnoprávních médií (subkomponenta M2). I přesto, že novela dosud nebyla schválena, její samotná přítomnost v legislativním procesu a silná kritika úřadů v připomínkovém řízení zakládá precedent a institucionální tlak. Duration: persistent, protože legislativní proces stále probíhá. Pokud by byla novela schválena, eskalace na severity 5 (rubric §5 — přímé politické zasahování do financování veřejnoprávních médií). Anti-bias check: stejnou závažnost bych přiřadil bez ohledu na to, která vláda návrh předkládá.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-25T07:54:44.259Z"
+  }
+]

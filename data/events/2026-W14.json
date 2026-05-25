@@ -118,5 +118,29 @@
     "status": "active",
     "created_at": "2026-05-24T07:20:41.330Z",
     "expires_at": "2026-06-24T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W14-006",
+    "date": "2026-04-01",
+    "headline": "Ústavní soud shledal části konkordátu se Svatým stolcem protiústavními, ratifikace zablokována",
+    "summary": "Ústavní soud ČR prohlásil vybrané články konkordátní smlouvy mezi ČR a Svatým stolcem za protiústavní — konkrétně v rozsahu zvýhodňování katolické církve v otázce zpovědního tajemství a přístupu ke kulturnímu dědictví. Smlouvu proto v současné podobě nelze ratifikovat. Soud zároveň uvedl, že samotné uzavření konkordátu neporušuje ústavní neutralitu státu ani svrchovanost ČR.",
+    "pillar": "judicial",
+    "severity": 2,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Konkordát se Svatým stolcem neprošel přezkumem ústavnosti v rozsahu zpovědního tajemství a zpřístupnění kulturního dědictví",
+        "url": "https://www.usoud.cz/aktualne/konkordat-se-svatym-stolcem-neprosel-prezkumem-ustavnosti-v-rozsahu-zpovedniho-tajemstvi-a-zpristupneni-kulturniho-dedictvi",
+        "outlet": "Ústavní soud ČR",
+        "fetched_at": "2026-05-25T07:55:01.006Z"
+      }
+    ],
+    "score_impact": 0.5,
+    "rationale": "Severity 2 per rubric §2 — ÚS plní svou standardní úlohu přezkumu mezinárodní smlouvy před ratifikací (preventivní kontrola ústavnosti), čímž posiluje dělbu moci a ochranu ústavních principů (neutralita státu, rovnost náboženských skupin — subkomponenta J1 a sekundárně C4). Jde o jednorázový nález bez strukturálního dopadu na demokratické instituce; věc má spíše doktrinální než systémový charakter. Direction +1, protože ÚS korigoval potenciálně problematický závazek dříve, než vstoupil v platnost. Anti-bias check: stejný nález vůči smlouvě zvýhodňující jinou skupinu by byl hodnocen identicky.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-25T07:54:44.259Z",
+    "expires_at": "2026-06-24T00:00:00.000Z"
   }
 ]
