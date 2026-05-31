@@ -2300,5 +2300,240 @@
     "status": "active",
     "created_at": "2026-05-30T07:17:10.550Z",
     "expires_at": "2026-08-21T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W22-111",
+    "date": "2026-05-30",
+    "headline": "Vláda upustila od Klempířova návrhu mediálního zákona, poplatky chce nahradit rozpočtovým financováním",
+    "summary": "Premiér Babiš potvrdil, že vládní návrh nové mediální legislativy ministra Klempíře byl stažen ze stolu. Místo rušení koncesionářských poplatků komplexní reformou chce vláda zachovat stávající systém veřejnoprávních médií a přejít na přímé rozpočtové financování. Ministr kultury závěr podpořil s tím, že celková systémová změna není potřebná.",
+    "pillar": "media",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Vláda s Klempířovým zákonem nepočítá. Mediální poplatky chce zrušit jiným způsobem, potvrdil Babiš",
+        "url": "https://denikn.cz/2079930/vlada-s-klempirovym-zakonem-nepocita-medialni-poplatky-chce-zrusit-jinym-zpusobem-potvrdil-babis/",
+        "outlet": "Deník N",
+        "fetched_at": "2026-05-31T07:33:41.548Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — přechod z nezávislého koncesionářského financování na přímé rozpočtové financování ČT a ČRo je institucionálně významná změna, která oslabuje finanční nezávislost veřejnoprávních médií na politickém rozhodování vlády (subkomponenta M2). Rozpočtové financování vytváří každoroční závislost na vládní vůli a vládní majoritu, což je přímý tlak na editoriální autonomii. Jde o záměr/oznámený politický směr, nikoliv ještě schválený zákon, proto se neuplatní eskalační pravidlo +1 za formální dokument — ale precedentní hodnota samotného záměru jako politického signálu odůvodňuje severity 3. Sekundárně se dotýká pilíře governance (G4 — transparentnost vládnutí a financování institucí).\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-31T07:33:41.535Z",
+    "expires_at": "2026-08-22T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W22-112",
+    "date": "2026-05-31",
+    "headline": "Ministerstvo spravedlnosti hájí odložení případů z kauzy Feri před ESLP",
+    "summary": "České ministerstvo spravedlnosti ve svém stanovisku před Evropským soudem pro lidská práva obhajuje rozhodnutí vnitrostátních orgánů odložit čtyři případy z kauzy Dominika Feriho. Zmocněnkyně obětí naopak tvrdí, že odložením byla porušena Úmluva o lidských právech. Soud nyní čeká na vydání rozsudku, jehož výsledek může otevřít cestu k odškodnění obětí a znovuotevření případů.",
+    "pillar": "judicial",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "‚Hájíme postup vnitrostátních orgánů.‘ Ve Feriho kauze se čeká na verdikt před lidskoprávním soudem",
+        "url": "https://www.irozhlas.cz/zpravy-domov/hajime-postup-vnitrostatnich-organu-ve-feriho-kauze-se-ceka-na-verdikt-pred_2605310500_pik",
+        "outlet": "iROZHLAS",
+        "fetched_at": "2026-05-31T07:33:42.494Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o probíhající procesní krok (stanovisko ministerstva před ESLP) s omezeným přímým dopadem na fungování institucí v daném týdnu, avšak s potenciálně závažnými důsledky (subkomponenta J3 — nezávislost státního zastupitelství a J4 — rovnost před zákonem pro politicky exponované osoby). Případný rozsudek ESLP potvrzující porušení úmluvy by eskaloval na severity 4 per eskalační pravidlo „+1 za potvrzení mezinárodním orgánem",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-31T07:33:41.535Z"
+  },
+  {
+    "id": "2026-W22-113",
+    "date": "2026-05-30",
+    "headline": "Vláda Babiše plánuje přesunout lidskoprávní rady z Úřadu vlády na ministerstva",
+    "summary": "Vládní koalice ANO chce převést poradní rady pro lidská práva, práva menšin a závislosti z Úřadu vlády na jednotlivá ministerstva. Odborníci a neziskové organizace plánují v reakci rezignace a kritizují postup jako ukvapený a netransparentní. Změna by podle kritiků oslabila koordinaci a nezávislost lidskoprávní agendy.",
+    "pillar": "civil",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Destruktivní změna. Lidskoprávní agenda musí zůstat na Úřadu vlády, zdůrazňuje Třešňák z Dětí úplňku",
+        "url": "https://www.irozhlas.cz/zpravy-domov/destruktivni-zmena-lidskopravni-agenda-musi-zustat-na-uradu-vlady-zduraznuje_2605310010_kvr",
+        "outlet": "iROZHLAS",
+        "fetched_at": "2026-05-31T07:33:42.494Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — přesun lidskoprávní agendy institucionálně oslabuje koordinaci ochrany znevýhodněných skupin a vytváří precedent pro fragmentaci lidsko-právního dohledu (subkomponenta C4 — ochrana menšin, C3 — svoboda sdružování a vliv na NGO). Postup bez konzultace s odborníky naplňuje kritérium „soustavné ignorování normy\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-31T07:33:41.535Z"
+  },
+  {
+    "id": "2026-W22-114",
+    "date": "2026-05-31",
+    "headline": "Skupina senátorů chce napadnout systém přerozdělování daní obcím u Ústavního soudu",
+    "summary": "Část senátorů hodlá podat návrh k Ústavnímu soudu kvůli způsobu přerozdělování daňových výnosů mezi obcemi, přičemž tvrdí, že systém neúměrně zvýhodňuje čtyři největší sídla. Dotčená města jako Liberec a Olomouc vyčíslují roční ztráty v řádu stovek milionů korun. Ministryně financí Schillerová se možným změnám nebrání, avšak odmítá dopad na státní rozpočet.",
+    "pillar": "judicial",
+    "severity": 1,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Obce žádají spravedlivější podíl z daní. Senátoři se chtějí obrátit na Ústavní soud",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/obce-zadaji-spravedlivejsi-podil-z-dani-senatori-se-chteji-obratit-na-ustavni-soud-374054",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-31T07:33:42.607Z"
+      }
+    ],
+    "score_impact": 0.2,
+    "rationale": "Severity 1 per rubric §1 — oznámení záměru skupiny senátorů obrátit se na ÚS je standardní ústavní mechanismus kontroly zákonnosti (subkomponenta J1 — role ÚS jako arbitra), nikoli útok na instituce. Jde o výrok bez formálně podaného návrhu; dopad na demokratické skóre je marginálně pozitivní (+1), protože využití ÚS jako pojistky právního státu posiluje institucionální důvěru per rubric §1 příklady.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-31T07:33:41.535Z",
+    "expires_at": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W22-115",
+    "date": "2026-05-29",
+    "headline": "Opozice blokuje sněmovnu obstrukcemi, žádný bod programu nebyl dokončen",
+    "summary": "Sněmovna v pátek nedokončila žádný z plánovaných bodů, opozice záměrně protahovala jednání dlouhými projevy. Blokáda probíhá jako reakce na nesplněné dohody ze strany koalice, přičemž ANO nechalo odložit i novelu stavebního zákona. Zástupci koalice i opozice se shodují, že situace je neudržitelná, ale zatím nenašli řešení.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Hosté Událostí, komentářů debatovali o zablokování sněmovny",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/hoste-udalosti-komentaru-debatovali-o-zablokovani-snemovny-374040",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-31T07:33:42.607Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — obstrukce parlamentu je sice legitimní demokratický nástroj (subkomponenta G1, kontrola exekutivy legislativou), avšak soustavné blokování programu sněmovny bez dokončení jakéhokoli bodu má dopad na kvalitu legislativního procesu (G2). Jednorázová obstrukce v kontextu sporu o dohodu mezi koalicí a opozicí nepředstavuje závažný útok na instituci samotnou — jde o politický tlak v rámci standardního parlamentního konfliktu. Pokud by se blokáda opakovala a prohloubila, eskalace na 3 by byla opodstatněná. Direction -1, protože ochromení parlamentní práce dočasně oslabuje funkčnost zákonodárného sboru. Duration persistent, protože dle zdrojů jde o probíhající stav, nikoli jednorázový incident.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-31T07:33:41.535Z"
+  },
+  {
+    "id": "2026-W22-116",
+    "date": "2026-05-30",
+    "headline": "Babiš: Vláda přesune financování veřejnoprávních médií pod státní rozpočet novelou stávajícího zákona",
+    "summary": "Premiér Babiš oznámil, že vláda opustí návrh mediálního zákona ministra Klempíře a místo toho přesune financování veřejnoprávních médií pod státní rozpočet změnou stávajícího zákona. Plán mění způsob financování ČT a ČRo, což může zásadně ovlivnit jejich redakční nezávislost. Konkrétní kroky vláda prozatím neupřesnila.",
+    "pillar": "media",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Mediálním zákonem od Klempíře už se vláda zabývat nebude, změní současný, řekl ČT Babiš",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/medialnim-zakonem-od-klempire-uz-se-vlada-zabyvat-nebude-zmeni-soucasny-rekl-ct-babis-374048",
+        "outlet": "ČT24",
+        "fetched_at": "2026-05-31T07:33:42.607Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 3 per rubric §3 — záměr převést financování veřejnoprávních médií ze systému koncesionářských poplatků pod státní rozpočet přímo ohrožuje subkomponentu M2 (nezávislost ČT a ČRo). Financování skrze státní rozpočet by exekutivě poskytlo silnou páku na editoriální politiku médií, což je klasický nástroj nepřímého politického tlaku. Prozatím jde pouze o deklarovaný záměr premiéra bez schválené normy (rubric: de-eskalace −1 za pouhý záměr vs. formální dokument; proto 3 namísto 4). Pokud bude zákon předložen a schválen, severity by měla eskalovat na 4–5 dle rozsahu změn. Sekundárně relevantní pro pilíř governance (G4, transparentnost vládnutí a mediální regulace). Single-source, proto opatrnost — severity 3 je spodní hranice.\n\n[severity capped from 3 to 2 due to source-count rule: 1 unique outlet, 2 required for severity 3]",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-31T07:33:41.535Z"
+  },
+  {
+    "id": "2026-W22-117",
+    "date": "2026-05-29",
+    "headline": "Syn europoslankyně ANO Dostálové získal místo na ministerstvu spravovaném stranou ANO",
+    "summary": "Kevin Dostál, syn europoslankyně ANO Kláry Dostálové, uspěl ve výběrovém řízení na pozici na ministerstvu vedeném jinou poslankyní ANO. Případ vyvolal kritiku pro možný střet zájmů a nepotismus ve veřejné správě. Případ komentovala i poslankyně SPD s ostrými výtkami vůči premiérovi.",
+    "pillar": "corruption",
+    "severity": 2,
+    "direction": -1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Nasaďte Babišovi kloubouček, má těžký úpal! Kde se vzala radikální kritika premiéra od svérázné poslankyně SPD",
+        "url": "https://podcasty.hn.cz/c1-67883830-nasadte-babisovi-klouboucek-ma-tezky-upal-kde-se-vzala-radikalni-kritika-premiera-od-sverazne-poslankyne-spd",
+        "outlet": "Hospodářské noviny",
+        "fetched_at": "2026-05-31T07:33:43.654Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o konkrétní případ potenciálního nepotismu (subkomponenta K1, politická korupce a střet zájmů), který je zaznamenáníhodný, ale sám o sobě neohrožuje instituci. Výběrové řízení formálně proběhlo; bez důkazů o jeho manipulaci nelze klasifikovat jako závažnější porušení. Pokud by existovaly důkazy o záměrném obcházení pravidel, eskalace na 3 by byla opodstatněná. Rubric anti-bias: stejně bych hodnotil případ u jakékoliv jiné strany. Zdroj je paywall HN s podcasem — omezená ověřitelnost, proto opatrná klasifikace. Duration one_off.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-31T07:33:41.535Z",
+    "expires_at": "2026-08-21T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W22-118",
+    "date": "2026-05-31",
+    "headline": "Freedom House řadí Česko mezi světovou špičku svobody, předčí Rakousko i Spojené království",
+    "summary": "Organizace Freedom House zveřejnila zprávu, podle níž Česko patří mezi nejsvobodnější státy světa a ve sledovaném období vlády Petra Fialy předstihlo i zavedené demokracie jako Rakousko nebo Spojené království. Zpráva zároveň poukazuje na výrazné zhoršení USA v Trumpově éře. Jde o externí institucionální hodnocení stavu demokratických svobod v ČR.",
+    "pillar": "governance",
+    "severity": 2,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Svoboda za Fialy: absolutní špička. USA se v Trumpově éře srovnávají s Afričany",
+        "url": "https://zpravy.aktualne.cz/domaci/svoboda-za-fialy-absolutni-spicka-usa-se-v-trumpove-ere-srovnavaji-s-africany/r~aaa29e8c17aec5a423f422e5183ce4dc/",
+        "outlet": "Aktuálně.cz",
+        "fetched_at": "2026-05-31T07:33:44.442Z"
+      }
+    ],
+    "score_impact": 0.5,
+    "rationale": "Severity 2 per rubric §2 — publikace renomovaného externího indexu (Freedom House) potvrzující pozitivní institucionální hodnocení ČR je zaznamenáníhodná událost s omezeným přímým dopadem na konkrétní instituci. Dle rubric pravidel eskalace: pozitivní hodnocení mezinárodního orgánu by mohlo +1 v kontextu potvrzení normy, ale samostatná zpráva bez konkrétního doporučení nebo reakce vlády odpovídá spíše §2. Primárně governance (G3, G4 — stabilita ústavních norem, transparentnost), sekundárně dotýká všech pilířů. Direction +1, neboť hodnocení demokratické kvality ČR posiluje.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-31T07:33:41.535Z",
+    "expires_at": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W22-119",
+    "date": "2026-05-30",
+    "headline": "Roman Roun zvolen novým předsedou KSČM, vystřídal Konečnou",
+    "summary": "Na stranickém sjezdu KSČM byl Roman Roun zvolen novým předsedou strany. Porazil protikandidáta Krajču a nahradil europoslankyni Kateřinu Konečnou, která se o post znovu neucházela.",
+    "pillar": "electoral",
+    "severity": 1,
+    "direction": 0,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Předsedou KSČM se stal Roun, porazil Krajču a vystřídal Konečnou",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-politika-predsedou-kscm-se-stal-roun-porazil-krajcu-a-vystridal-konecnou-307440",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-31T07:33:45.793Z"
+      }
+    ],
+    "score_impact": 0,
+    "rationale": "Severity 1 per rubric §1 — jde o standardní volbu stranického vedení v rámci interních demokratických procesů strany, bez dopadu na volební infrastrukturu, férovost voleb ani politický pluralismus (subkomponenty E1–E4). Výměna předsedy marginální parlamentní strany nepředstavuje žádné oslabení ani posílení demokratických institucí. Direction 0: neutrální institucionální událost bez jasného demokratického dopadu.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-31T07:33:41.535Z",
+    "expires_at": "2026-08-22T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W22-120",
+    "date": "2026-05-30",
+    "headline": "Ministerstvo vnitra ukončí financování právního poradenství NGO pro žadatele o azyl",
+    "summary": "Ministerstvo vnitra se rozhodlo přestat financovat právní poradenství pro uprchlíky zajišťované nevládními organizacemi. Podle dostupných informací byl tento model výhodný pro státní rozpočet i pro cizince žádající o azyl, přesto bude ukončen.",
+    "pillar": "civil",
+    "severity": 2,
+    "direction": -1,
+    "duration": "persistent",
+    "sources": [
+      {
+        "title": "Vzkaz vlády neziskovkám: O uprchlíky se nestarejte, zařídíme si to sami",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-politika-vzkaz-vlady-neziskovkam-o-uprchliky-se-nestarejte-zaridime-si-to-sami-306950",
+        "outlet": "Seznam Zprávy",
+        "fetched_at": "2026-05-31T07:33:45.793Z"
+      }
+    ],
+    "score_impact": -0.5,
+    "rationale": "Severity 2 per rubric §2 — jde o konkrétní administrativní rozhodnutí omezující roli NGO v oblasti právní pomoci zranitelným skupinám (subkomponenta C3 — svoboda sdružování a ochrana před administrativní šikanou NGO, a C4 — ochrana menšin včetně migrantů). Rozhodnutí má přímý dopad na přístup migrantů k právní pomoci, ale samo o sobě neznamená strukturální omezení NGO sektoru jako celku ani zákonnou změnu — jde o výpadek financování jedné agendy. Sekundárně se dotýká pilíře governance (G4 — transparentnost vládnutí a přístup ke státním službám). Duration persistent: rozhodnutí bude mít trvající efekt, dokud nebude revidováno.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-31T07:33:41.535Z"
   }
 ]

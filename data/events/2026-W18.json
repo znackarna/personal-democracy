@@ -1068,7 +1068,7 @@
       }
     ],
     "score_impact": 0,
-    "rationale": "Severity 1 per rubric §1 — jde o standardní rozhodnutí ÚS v individuální kauze korporátního práva bez dopadu na fungování soudnictví jako instituce ani na demokratické pilíře. Subkomponenta J4 (rovnost před zákonem) je zachována — soud aplikoval zákon konzistentně. Žádný indikátor politického tlaku, precedentního zásahu do nezávislosti justice ani strukturálního posunu. Direction 0, protože se jedná o rutinní výkon soudní moci bez jednoznačně pozitivního nebo negativního institucionálního signálu.\n\n[merged with 2026-W18-080 — direction/severity conflict, set status=disputed for reviewer]",
+    "rationale": "Severity 1 per rubric §1 — jde o standardní rozhodnutí ÚS v individuální kauze korporátního práva bez dopadu na fungování soudnictví jako instituce ani na demokratické pilíře. Subkomponenta J4 (rovnost před zákonem) je zachována — soud aplikoval zákon konzistentně. Žádný indikátor politického tlaku, precedentního zásahu do nezávislosti justice ani strukturálního posunu. Direction 0, protože se jedná o rutinní výkon soudní moci bez jednoznačně pozitivního nebo negativního institucionálního signálu.\n\n[merged with 2026-W18-080 — direction/severity conflict, set status=disputed for reviewer]\n\n[merged with 2026-W18-080 — direction/severity conflict, set status=disputed for reviewer]",
     "reviewer": "auto",
     "status": "disputed",
     "created_at": "2026-04-30T07:20:46.380Z",
@@ -1616,9 +1616,9 @@
       }
     ],
     "score_impact": -0.5,
-    "rationale": "Severity 2 per rubric §2 — nález ÚS konstatuje pochybení obecných soudů v konkrétní trestní věci (subkomponenta J2: nezávislost a řádné fungování obecných soudů, procesní práva). Dopad je omezen na individuální kauzu bez systémového precedentu, avšak upozornění na nejednotnost judikatury NS přidává institucionální rozměr. Nesplňuje práh severity 3, protože nejde o politicky motivovaný tlak ani o strukturální ohrožení instituce — jde o standardní korekci pochybení v rámci ústavní stížnosti.\n\n[merged with 2026-W18-079 — same incident, sources combined]",
+    "rationale": "Severity 2 per rubric §2 — nález ÚS konstatuje pochybení obecných soudů v konkrétní trestní věci (subkomponenta J2: nezávislost a řádné fungování obecných soudů, procesní práva). Dopad je omezen na individuální kauzu bez systémového precedentu, avšak upozornění na nejednotnost judikatury NS přidává institucionální rozměr. Nesplňuje práh severity 3, protože nejde o politicky motivovaný tlak ani o strukturální ohrožení instituce — jde o standardní korekci pochybení v rámci ústavní stížnosti.\n\n[merged with 2026-W18-079 — same incident, sources combined]\n\n[merged with 2026-W18-079 — direction/severity conflict, set status=disputed for reviewer]",
     "reviewer": "auto",
-    "status": "active",
+    "status": "disputed",
     "created_at": "2026-05-03T07:04:57.169Z",
     "expires_at": "2026-07-22T00:00:00.000Z"
   },
@@ -1764,6 +1764,30 @@
     "reviewer": "auto",
     "status": "disputed",
     "created_at": "2026-05-07T07:17:07.431Z",
+    "expires_at": "2026-07-22T00:00:00.000Z"
+  },
+  {
+    "id": "2026-W18-078",
+    "date": "2026-04-29",
+    "headline": "ÚS: trestní soudy nedostatečně kompenzovaly zvlášť zranitelnou oběť znásilnění",
+    "summary": "Ústavní soud vyhověl stížnosti nezletilé oběti znásilnění a konstatoval, že obecné soudy jí nepřiznaly adekvátní náhradu nemajetkové újmy, čímž porušily její právo na spravedlivý proces a ochranu zvlášť zranitelných obětí. Nález upřesňuje standardy pro adhezní řízení v případech sexuálního násilí a upozorňuje na riziko sekundární viktimizace.",
+    "pillar": "judicial",
+    "severity": 2,
+    "direction": 1,
+    "duration": "one_off",
+    "sources": [
+      {
+        "title": "Náhrada nemajetkové újmy u zvlášť zranitelné oběti a riziko sekundární viktimizace",
+        "url": "https://www.usoud.cz/aktualne/nahrada-nemajetkove-ujmy-u-zvlast-zranitelne-obeti-a-riziko-sekundarni-viktimizace",
+        "outlet": "Ústavní soud ČR",
+        "fetched_at": "2026-05-31T07:33:54.832Z"
+      }
+    ],
+    "score_impact": 0.5,
+    "rationale": "Severity 2 per rubric §2 — nález posiluje standardy ochrany práv oběti v trestním řízení (subkomponenta J4, rovnost a ochrana zranitelných osob před zákonem). Směr +1, protože ÚS korigoval pochybení nižších soudů a vytvořil precedent ve prospěch ochrany práv. Nedosahuje severity 3, protože jde o individuální případ bez širšího systémového dopadu na fungování institucí; nejde o politicky motivované selhání ani o ohrožení nezávislosti justice.",
+    "reviewer": "auto",
+    "status": "active",
+    "created_at": "2026-05-31T07:33:41.535Z",
     "expires_at": "2026-07-22T00:00:00.000Z"
   }
 ]
